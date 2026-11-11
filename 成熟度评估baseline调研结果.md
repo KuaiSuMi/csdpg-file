@@ -8,11 +8,11 @@
 
 | 方案 | 输入 | 输出内容 | 核心机制 | 选择理由 |
 | --- | --- | --- | --- | --- |
-| feTruth | Java 源码 | 方法移动建议（TSV）；候选方法、目标类、耦合特征和覆盖统计（JSON） | 名称词向量与结构耦合特征识别 Feature Envy 异味 | 将类依赖落实到方法职责和移动建议 |
-| Kivi | Kubernetes 配置模型及待验证性质 | 性质结果、反例路径、搜索状态数和配置差异（JSON、日志） | Promela 建模，SPIN 搜索反例 | 检查调度、扩容约束的组合问题 |
-| Reynard | 微服务、请求、故障设置和业务断言 | 实际故障、调用轨迹、业务响应、断言结果（JSON）；测试汇总（JUnit XML） | 代理注入故障，检查响应；SER 减少重复探索 | 验证服务降级和修改后的业务行为 |
-| Microsoft AppCAT for Java | Java 源码及 Maven 工程描述 | 规则 ID、源码位置、严重程度、修改建议、工作量和命中汇总（JSON） | 按目标云平台规则分析源码与技术使用 | 提供工业云就绪度规则，可在本地完成前后对照 |
-| SUSE Security／NeuVector | 实际 Kubernetes 工作负载与容器状态 | 容器及 Pod 定位、运行身份风险、运行状态、全局风险分数（JSON） | Enforcer 采集，Controller 汇总，API 输出 | 为源码和模型分析补充真实部署证据 |
+| feTruth | Java 源码 | 方法移动建议（TSV）；候选方法、目标类、距离与耦合特征（JSON）；候选及建议数量 | 名称词向量与结构耦合特征识别 Feature Envy 异味 | 将类依赖落实到方法职责和移动建议 |
+| Kivi | Kubernetes 配置模型及待验证性质 | 生成的 Promela 模型、性质结果、反例步骤、搜索状态数、配置补丁 | Promela 建模，SPIN 搜索反例 | 检查调度、扩容约束的组合问题 |
+| Reynard | 微服务、请求、故障设置和业务断言 | 注入记录、调用轨迹、HTTP 响应、断言结果（JSON）；JUnit 汇总；SER 开关的执行次数 | 代理注入故障，检查响应；SER 减少重复探索 | 验证服务降级和修改后的业务行为 |
+| Microsoft AppCAT for Java | Java 源码及 Maven 工程描述 | 规则说明、文件与行号、源码片段、严重程度、工作量、技术栈、依赖清单（JSON／YAML）；HTML 页面 | 按目标云平台规则分析源码与技术使用 | 提供工业云就绪度规则，可在本地完成前后对照 |
+| SUSE Security／NeuVector | 实际 Kubernetes 工作负载与容器状态 | Pod 与容器身份、root／特权标记、进程、资源和网络计数、风险分数；CIS 检查及修复建议、CVE 漏洞及修复版本、软件包清单（JSON） | Enforcer 采集，Controller 汇总，API 输出 | 为源码和模型分析补充真实部署证据 |
 
 ## 2 来源与运行环境
 
@@ -30,7 +30,7 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 
 ## 3 各方案复现与输出
 
-配图展示实际源码、配置、执行命令和输出文本节选，黄色标出关键行。命令中的尖括号为路径或命名空间占位符。
+本轮五项方案均已重新运行，使用 Java 样例、固定部署模型和独立测试服务。配图取自本轮实际输入、命令和输出，黄色标出关键行；尖括号表示需替换的参数。JSON 字段节选与脚本统计分别标注。
 
 ### 3.1 feTruth
 
@@ -44,6 +44,7 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | --- | --- | --- |
 | 方法移动建议 | `Refactoring Type`、`Source Method`、`Target Class` | 重构类型、完整源方法签名、建议迁入的类 |
 | 候选特征 | `source_class_name`、`method_signature`、`target_class_list` 及耦合特征 | 参与推理的方法、候选类及结构关系 |
+| 距离与耦合 | `source_dist`、`source_cbmc`、`source_mcmc` 及对应 `target_*_list` | 方法与源类、候选目标类的 Jaccard 距离、调用耦合、消息传递耦合；目标列表按顺序对应 |
 | 覆盖统计 | `candidate_methods`、`candidate_pairs`、`recommendations` | 候选方法数、方法与目标类组合数、建议数 |
 
 样例得到 1 条 `Move Method` 建议：将 `OrderService.createOrder` 移入 `PaymentService`，涉及 1 个候选方法、2 个候选目标类。
@@ -61,6 +62,7 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | 检查对象与性质 | 资源身份、`intent` | 定位部署模型及待验证性质；本例为 Pod 始终可调度 |
 | 性质结果 | `status`、`spin_errors` | `fail` 表示发现反例；`pass` 表示模型搜索完成且无反例 |
 | 搜索过程 | `stored_states`、反例记录 | 保存的状态数，以及触发失败的状态和动作顺序 |
+| 生成模型 | `main.pml`、`config.pml`、`event.pml`、`intentsCheck.pml` | SPIN 实际执行的模型、资源约束、事件及性质断言 |
 | 输入与修改 | 节点及 Pod 分布、调度约束、配置补丁 | 复查约束变化如何影响验证结果 |
 
 固定拓扑模型有三个节点，分属两个 zone。Pod 从 5 个扩到 6 个时，节点和 zone 的 `maxSkew=1` 无法同时满足。将 zone 的 `maxSkew` 改为 2 后，节点可分布为 2、2、2，两个 zone 分别为 4、2。
@@ -71,6 +73,10 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | 修改后 | pass | 0 | 1,830 |
 
 ![Kivi：部署模型、SPIN 验证和调度结果](assets/baseline-outputs/kivi.png)
+
+反例在第 243 步出现 `No feasible node!`，三个节点均无法接收待调度 Pod。
+
+![Kivi：生成模型、配置补丁和实际反例路径](assets/baseline-outputs/kivi-trace.png)
 
 ### 3.3 Reynard
 
@@ -85,6 +91,7 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | 故障设置与执行 | `faultload`、`fault_count`、`injected_fault` | 注入类型、参数、数量及代理实际执行的故障 |
 | 业务响应 | `http_status`、`body`、`passed` | 状态码、响应体及业务断言结果 |
 | 测试汇总 | `tests`、`failures`、`errors`、`skipped` | 执行数、断言失败数、测试异常数、跳过数 |
+| 探索次数 | SER 开启／关闭的 JUnit 计数 | 作者原生场景分别执行 543／1,849 次，均无失败、异常和跳过 |
 
 场景为 `frontend → recommendations`。健康请求返回 `200 + ["product-1"]`；下游分别返回 HTTP 500、502、503、504 时，入口预期返回 `200 + []`。
 
@@ -98,13 +105,15 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 
 ![Reynard：服务请求、故障注入和业务响应](assets/baseline-outputs/reynard.png)
 
+![Reynard：代理实际注入、全部业务响应、JUnit 和 SER 对照](assets/baseline-outputs/reynard-trace.png)
+
 ### 3.4 Microsoft AppCAT for Java
 
 1. 安装官方 CLI 7.7.0.11 和 JDK 17，准备两份含 POM 的 Maven Java 工程。
 2. 使用 `appcat analyze`，由 `--input`、`--output` 指定输入和结果位置；固定参数为 `--target azure-aks --mode source-only --disable-telemetry --output-format json`，启用默认规则。
 3. 将审计日志从 `FileWriter` 写本地文件改为标准输出，重新扫描，并检查订单结果、非法数量拒绝行为和审计文本。
 
-输出包括原生 JSON 和 HTML 报告。
+另外用 `--mode full` 读取依赖，用 `--output-format yaml` 验证 YAML 导出；依赖样例在 POM 中添加了 `commons-io:commons-io:2.16.1`。
 
 | 输出 | 字段 | 含义 |
 | --- | --- | --- |
@@ -113,6 +122,9 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | 命中位置 | `ruleId`、`incidentId`、`location`、`line`、`snippet` | 规则、命中实例、文件、行号和代码片段 |
 | 分类与工作量 | `severity`、`labels`、`effort` | 必须、可选、潜在或信息项，以及修改工作量估计 |
 | 汇总 | `totalIssues`、`totalIncidents`、`totalEffort` | 规则项数、命中实例数和工作量；规则项包含技术发现信息 |
+| 技术栈 | `properties.appName`、`jdkVersion`、`languages`、`tools` | 本例为 cloud-audit、Java 17、Java、Maven |
+| 依赖清单 | `name`、`version`、`type`、`labels` | 本例识别 commons-io 2.16.1，作用域为 compile |
+| 报告格式 | `report.json`、`report.yaml`、HTML | JSON／YAML 汇总一致；HTML 页面本轮显示 `No data available` |
 
 | 检查 | 修改前 | 修改后 |
 | --- | --- | --- |
@@ -128,12 +140,19 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 
 ![AppCAT：Java 工程、云就绪度扫描和规则命中结果](assets/baseline-outputs/appcat.png)
 
+![AppCAT：原生规则、源码片段、技术栈、依赖和 YAML 汇总](assets/baseline-outputs/appcat-details.png)
+
+自带 HTML 页面实际打开结果：
+
+![AppCAT：原生 HTML 页面显示空列表](assets/baseline-outputs/appcat-html.png)
+
 ### 3.5 SUSE Security／NeuVector
 
-1. 准备 kind 集群，通过官方 Helm Chart 部署 Controller、Enforcer、Manager，三者镜像均指定为 5.6.4。实验使用单节点，CVE Scanner、Updater 关闭。
+1. 准备 kind 集群，通过官方 Helm Chart 部署 Controller、Enforcer、Manager，三者镜像均指定为 5.6.4。先完成运行身份对照，再启用一份 Scanner 做漏洞扫描；Updater 关闭。
 2. 设置本地平台管理员密码，通过端口转发访问 Controller API，并取得登录会话。
 3. 在独立命名空间部署 HTTP 服务，用实际 Pod 的 `containerID` 查询工作负载 API；同时读取容器 UID 和 HTTP 响应。
-4. 将 `securityContext.runAsUser` 从 0 改为 1000，保持镜像和业务代码一致，重复采集并比较结果。
+4. 依次测试普通 root、特权 root、非 root 三种配置，保持镜像和业务代码一致，比较平台字段、进程权限和 HTTP 响应。
+5. 用 `POST /v1/bench/host/<节点ID>/kubernetes` 触发节点合规检查；用 `POST /v1/scan/workload/<容器ID>` 触发漏洞扫描，再从对应 GET 接口读取报告。
 
 输出为平台工作负载 JSON、部署快照和业务检查记录。
 
@@ -142,19 +161,40 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | 对象身份 | `id`、`domain`、`pod_name`、Pod UID 标签 | 实际容器、命名空间和 Pod，绑定平台与集群对象 |
 | 运行风险 | `run_as_root`、`privileged` | 是否以 root 运行、是否为特权容器 |
 | 运行状态 | `running` | 容器是否运行 |
+| 进程及历史 | `name`、`cmdline`、`user`、`root`、`status`、`action` | 实际进程、启动命令、用户、运行状态和允许动作 |
+| 资源和网络 | `cpu`、`memory`、`byte_in/out`、`packet_in/out`、`session_in/out` | 平台采样的 CPU、内存、流量、数据包和连接计数 |
+| 策略状态 | `policy_mode`、`profile_mode`、`quarantine`、`wire` | 当前策略模式、隔离开关及网络配置 |
 | 业务检查 | 实际 UID、HTTP 状态码与响应体 | 核对进程身份和服务行为 |
-| 平台概览 | `security_risk_score` | 全局风险分数，与目标容器字段分别记录 |
+| 平台概览 | `security_scores` | 全局风险、暴露面、服务模式、root、特权、准入及漏洞分项得分 |
+| 节点合规 | `test_number`、`level`、`automated`、`description`、`remediation` | 检查编号、结果、是否自动检查、说明和修复建议；本轮 130 项 |
+| 容器扫描 | `vulnerabilities`、`scan_summary`、`scanned_at` | 漏洞明细、严重程度计数、扫描状态和时间 |
+| 漏洞明细 | `name`、`severity`、`package_name`、`package_version`、`fixed_version`、`score_v3` | CVE 编号、严重程度、受影响包、当前与修复版本、CVSS 分数 |
+| 软件包清单 | `modules[].name`、`version`、`source` | 本轮读取 209 个软件包及其版本、来源 |
 
-| 检查 | 修改前 | 修改后 |
-| --- | --- | --- |
-| 原生 running | true | true |
-| 原生 run_as_root | true | false |
-| 实际进程 UID | 0 | 1000 |
-| HTTP 状态及响应 | 200，`maturity-ok` | 同左 |
-| 原生 privileged | false | false |
-| 全局 security_risk_score | 44 | 44 |
+| 检查 | 普通 root | 特权 root | 非 root |
+| --- | --- | --- | --- |
+| 配置 runAsUser / privileged | 0 / false | 0 / true | 1000 / false |
+| 原生 running | true | true | true |
+| 原生 run_as_root / privileged | true / false | true / true | false / false |
+| 实际进程 UID | 0 | 0 | 1000 |
+| HTTP 状态及响应 | 200，`maturity-ok` | 同左 | 同左 |
+| 全局 security_risk_score | 48 | 48 | 48 |
 
 ![NeuVector：容器部署、运行身份采集和风险字段](assets/baseline-outputs/neuvector.png)
+
+首次特权测试曾返回 `privileged=false`；重新部署后的三组结果与配置一致。采集时同时保存 Pod 配置和实际进程权限，核对平台字段。
+
+![NeuVector：三组测试、实际权限和首次不一致记录](assets/baseline-outputs/neuvector-privileged.png)
+
+![NeuVector：进程、资源与网络统计、风险分数和扫描前状态](assets/baseline-outputs/neuvector-runtime.png)
+
+节点检查输出 CIS 1.8.0 报告，共 130 项：52 项 PASS、38 项 WARN、40 项 MANUAL。MANUAL 项给出人工检查要求；WARN 项保留实际提示及修复建议。
+
+![NeuVector：节点合规检查与修复建议](assets/baseline-outputs/neuvector-cis.png)
+
+随后对同一 `node:22-alpine` 镜像的独立测试容器执行漏洞扫描，状态为 `finished`、结果为 `succeeded`：27 条漏洞记录，其中 High 12 条、Medium 15 条；软件包清单共 209 项。
+
+![NeuVector：漏洞汇总、受影响包、修复版本及软件包清单](assets/baseline-outputs/neuvector-cve.png)
 
 ## 4 项目接入与进度
 
@@ -164,6 +204,12 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | Kivi | Deployment 模型及待验证性质 | 已接入图谱并完成固定模型验证；待接入真实集群配置 |
 | Reynard | Service、调用关系、故障场景 | 已接入图谱；完成示例服务前后验证 |
 | AppCAT | 源码对象、规则 ID、文件及位置 | 已接入图谱；完成原生报告导入和前后命中对照 |
-| NeuVector | Deployment、容器名、Pod UID 和容器 ID | 已接入图谱；完成容器身份核对和运行风险前后对照 |
+| NeuVector | Deployment、容器名、Pod UID 和容器 ID | 身份、root／特权检查及风险分数已接入图谱；CIS、CVE、进程及资源明细已保存原生结果，待扩展读取器 |
+
+五项结果合并为 JSON 图谱：修改前 29 个节点、19 条边，修改后 27 个节点、17 条边。节点保存对象和检查结果；`OBSERVED_BY` 连接对象与检查结果，`CALLS` 保存服务调用关系。
+
+对照输出为 6 项检查由失败转为通过、2 项命中消失、5 项不变。6 项包括 Kivi 的 1 条性质、Reynard 的 4 个故障情形、NeuVector 的 root 检查；两项消失的命中来自 AppCAT 同一处代码修改。
+
+![五项结果导入图谱及逐项对照输出](assets/baseline-outputs/graph.png)
 
 下一步：接入团队 Java 工程和 otel-demo 集群做对照实验，再扩展 Python、FaaS 支持。
