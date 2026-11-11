@@ -163,7 +163,7 @@ Star 数采集于 2026-10-29；商业产品说明依据 Microsoft Learn 和 SUSE
 | feTruth | 类节点及方法签名 | 已接入图谱；方法移动建议待验证 |
 | Kivi | Deployment 模型及待验证性质 | 已接入图谱并完成固定模型验证；待接入真实集群配置 |
 | Reynard | Service、调用关系、故障场景 | 已接入图谱；完成示例服务前后验证 |
-| AppCAT | 源码版本、规则 ID、文件及位置 | 已归档原生报告与业务检查；待实现读取器 |
-| NeuVector | 集群、命名空间、Pod UID、容器 ID | 已归档运行风险与业务检查；待实现读取器 |
+| AppCAT | 源码对象、规则 ID、文件及位置 | 已接入图谱；完成原生报告导入和前后命中对照 |
+| NeuVector | Deployment、容器名、Pod UID 和容器 ID | 已接入图谱；完成容器身份核对和运行风险前后对照 |
 
-下一步：补齐两项商业结果读取器，接入 otel-demo 做对照实验，再扩展 Python、FaaS 支持。
+下一步：接入团队 Java 工程和 otel-demo 集群做对照实验，再扩展 Python、FaaS 支持。
