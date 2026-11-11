@@ -6,13 +6,13 @@
 
 选用 feTruth、Kivi、Reynard、Microsoft AppCAT for Java 和 SUSE Security／NeuVector。源码评估采用 feTruth、AppCAT；实际部署评估采用 NeuVector；Kivi 和 Reynard 分别检查配置模型与故障下的业务行为。
 
-| 方案 | 输入 | 核心机制 | 选择理由 |
-| --- | --- | --- | --- |
-| feTruth | Java 源码 | 结合名称词向量与结构耦合特征，识别方法过多依赖其他类的 Feature Envy 异味 | 将类依赖落实到方法职责和移动建议 |
-| Kivi | 节点、Pod、Deployment、HPA 等配置模型及待验证性质 | 将控制器行为转成 Promela 模型，由 SPIN 搜索反例 | 检查调度、扩容约束的组合问题 |
-| Reynard | 运行中的微服务、请求、故障设置和业务断言 | 代理注入调用故障，检查响应；SER 减少重复探索 | 验证服务降级和修改后的业务行为 |
-| Microsoft AppCAT for Java | Java 源码及 Maven 工程描述 | 按目标云平台的规则分析源码与技术使用 | 提供工业云就绪度规则，可在本地完成前后对照 |
-| SUSE Security／NeuVector | 实际 Kubernetes 工作负载与容器状态 | Enforcer 采集运行信息，Controller 汇总，API 输出风险字段 | 为源码和模型分析补充真实部署证据 |
+| 方案 | 输入 | 输出内容 | 核心机制 | 选择理由 |
+| --- | --- | --- | --- | --- |
+| feTruth | Java 源码 | 方法移动建议（TSV）；候选方法、目标类、耦合特征和覆盖统计（JSON） | 名称词向量与结构耦合特征识别 Feature Envy 异味 | 将类依赖落实到方法职责和移动建议 |
+| Kivi | Kubernetes 配置模型及待验证性质 | 性质结果、反例路径、搜索状态数和配置差异（JSON、日志） | Promela 建模，SPIN 搜索反例 | 检查调度、扩容约束的组合问题 |
+| Reynard | 微服务、请求、故障设置和业务断言 | 实际故障、调用轨迹、业务响应、断言结果（JSON）；测试汇总（JUnit XML） | 代理注入故障，检查响应；SER 减少重复探索 | 验证服务降级和修改后的业务行为 |
+| Microsoft AppCAT for Java | Java 源码及 Maven 工程描述 | 规则 ID、源码位置、严重程度、修改建议、工作量和命中汇总（JSON） | 按目标云平台规则分析源码与技术使用 | 提供工业云就绪度规则，可在本地完成前后对照 |
+| SUSE Security／NeuVector | 实际 Kubernetes 工作负载与容器状态 | 容器及 Pod 定位、运行身份风险、运行状态、全局风险分数（JSON） | Enforcer 采集，Controller 汇总，API 输出 | 为源码和模型分析补充真实部署证据 |
 
 ## 2 来源、部署与版本
 
@@ -42,6 +42,8 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 
 ## 3 各方案复现与输出
 
+截图展示已归档实验的 TSV、日志和 JSON 摘录，按原始字段排版。
+
 ### 3.1 feTruth
 
 1. 获取固定源码、作者模型及词向量，准备索引和两个约 485 MB 的数组文件。
@@ -58,6 +60,8 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 | 运行记录 | 源码与工具提交、模型摘要、阈值、执行时间 | 核对输入、模型和运行条件 |
 
 项目样例产生 1 条 `Move Method` 建议：将 `com.example.OrderService` 的 `createOrder(java.lang.String, double, int):java.lang.String` 移入 `com.example.PaymentService`。本次覆盖 1 个候选方法、2 个候选组合。论文归档重放的 16 条建议与作者记录一致，两组实验分别使用各自固定模型。
+
+![feTruth 实测方法移动建议及运行摘要](assets/baseline-outputs/fetruth.png)
 
 ### 3.2 Kivi
 
@@ -82,6 +86,8 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 | 修改前 | fail | 1 | 220 |
 | 修改后 | pass | 0 | 1,830 |
 
+![Kivi 修改前后的 SPIN 原始输出](assets/baseline-outputs/kivi.png)
+
 ### 3.3 Reynard
 
 1. 获取固定源码，应用启动顺序和 npm ci 补丁，构建 Controller、Proxy 镜像及 Java 工程。
@@ -105,6 +111,8 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 | tests / failures / errors / skipped | 5 / 4 / 0 / 0 | 5 / 0 / 0 / 0 |
 
 四种错误响应检查的是同一个降级问题。另在作者 patterns 场景中，SER 将执行次数从 1,849 降为 543。
+
+![Reynard 修改前后的测试日志与 HTTP 500 故障响应](assets/baseline-outputs/reynard.png)
 
 ### 3.4 Microsoft AppCAT for Java
 
@@ -134,6 +142,8 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 
 移除同一处 `FileWriter` 后，本地存储和默认编码两项提示同时消失。剩余提示为 Java 版本和 Dockerfile。实验覆盖本地源码扫描及业务检查。
 
+![AppCAT 修改前后的原生 JSON 报告摘录](assets/baseline-outputs/appcat.png)
+
 ### 3.5 SUSE Security／NeuVector
 
 1. 准备 kind 集群，通过官方 Helm Chart 部署 Controller、Enforcer、Manager，三者镜像均指定为 5.6.4。实验使用单节点，CVE Scanner、Updater 关闭。
@@ -162,6 +172,8 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 | 全局 security_risk_score | 44 | 44 |
 
 本次完成真实容器的运行身份风险对照，业务响应保持一致，全局分数维持 44。
+
+![NeuVector 修改前后的原生风险字段与业务检查](assets/baseline-outputs/neuvector.png)
 
 ## 4 项目接入与进度
 
