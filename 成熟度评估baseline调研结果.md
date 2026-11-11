@@ -1,117 +1,79 @@
-# 成熟度评估baseline调研结果
+# 成熟度评估 baseline 调研结果
 
-更新：2026-11-04
+更新：2026-11-11
 
-## 1 方案对照
+## 1 方案选择
 
-选用 feTruth、Kivi、Reynard、Fairwinds Insights、阿里云 CGC，分别提供源码、配置模型、运行行为和实际部署的评估结果。
+选用 feTruth、Kivi、Reynard、Microsoft AppCAT for Java 和 SUSE Security／NeuVector。源码评估采用 feTruth、AppCAT；实际部署评估采用 NeuVector；Kivi 和 Reynard 分别检查配置模型与故障下的业务行为。
 
-| Baseline | 输入 | 核心机制 | 输出 | 选择理由 |
-| --- | --- | --- | --- | --- |
-| feTruth | Java 源码 | 结合名称词向量和结构耦合特征，识别方法过多依赖其他类的 Feature Envy 异味 | 方法移动建议、方法与类定位、候选覆盖和模型记录 | 仅需源码，能把类依赖落实到方法职责问题 |
-| Kivi | Deployment、HPA、节点、Pod 分布及待验证性质 | 将配置与控制器行为转成 Promela 模型，由 SPIN 搜索反例 | 性质结果、反例路径、搜索状态数和配置差异 | 能检查调度与扩容约束的组合问题 |
-| Reynard | 运行中的微服务、请求、故障设置、业务断言 | 代理拦截调用并注入故障，检查业务响应；SER 减少重复探索 | 每次请求的故障、调用轨迹、业务响应、断言和测试汇总 | 能检查故障下的业务行为及修改效果 |
-| Fairwinds Insights | 实际 K8s 对象和 Agent 报告 | 集群内执行检查，平台生成并跟踪 Action Item | 检查事项 ID、资源定位、规则、严重程度、上报时间和处理状态 | 适合本地 K8s 的商业对照 |
-| 阿里云 CGC | 受支持云资源的配置与治理状态 | 按治理模型检查资源，汇总风险和维度结果 | 成熟度与维度结果、风险检查项、受影响资源、治理建议及报告 | 补充阿里云商业方案，直接对应云资源治理 |
-
-## 2 来源与商业规模
-
-| 学术 baseline | 正式来源 | 作者仓库 | star（2026-10-29） |
+| 方案 | 输入 | 核心机制 | 选择理由 |
 | --- | --- | --- | --- |
-| feTruth | FSE 2023 Research Papers；DOI：10.1145/3611643.3616353 | feTruth（lyoubo） | 1 |
-| Kivi | USENIX ATC 2024，509–527 页 | Kivi（bingzheliu） | 23 |
-| Reynard | ICSE 2026 Research Track；DOI：10.1145/3744916.3773193 | reynard（reynard-testing） | 4 |
+| feTruth | Java 源码 | 结合名称词向量与结构耦合特征，识别方法过多依赖其他类的 Feature Envy 异味 | 将类依赖落实到方法职责和移动建议 |
+| Kivi | 节点、Pod、Deployment、HPA 等配置模型及待验证性质 | 将控制器行为转成 Promela 模型，由 SPIN 搜索反例 | 检查调度、扩容约束的组合问题 |
+| Reynard | 运行中的微服务、请求、故障设置和业务断言 | 代理注入调用故障，检查响应；SER 减少重复探索 | 验证服务降级和修改后的业务行为 |
+| Microsoft AppCAT for Java | Java 源码及 Maven 工程描述 | 按目标云平台的规则分析源码与技术使用 | 提供工业云就绪度规则，可在本地完成前后对照 |
+| SUSE Security／NeuVector | 实际 Kubernetes 工作负载与容器状态 | Enforcer 采集运行信息，Controller 汇总，API 输出风险字段 | 为源码和模型分析补充真实部署证据 |
 
-| 排名 | 公司与方案 | 公司规模 | 方案使用规模 |
-| --- | --- | --- | --- |
-| 1 | 阿里云：CGC | 阿里巴巴集团 2026-03-31 有 131,462 名全职员工；云智能集团 2026 财年收入 1,581.32 亿元，按分部间抵销前统计 | CGC 团队人数、产品用户总数和累计检测次数未披露 |
-| 2 | Fairwinds：Insights | 美国波士顿 Kubernetes 专业厂商；企业自报 11–50 人 | 2023 年公告披露 2022 年有数百家使用组织；2024 年研究样本覆盖数百家组织、超过 33 万个工作负载；当前精确用户总数未披露 |
+## 2 来源、部署与版本
 
-公司规模来源为《阿里巴巴集团 2026 财年年报》第 63、128 页及 Fairwinds 企业 LinkedIn 页；Insights 使用规模来源为厂商 2023、2024 年 Kubernetes Benchmark Report 公告。产品用户数量方面，Insights 有历史组织数量，CGC 待披露，暂不作两者的数量排名。
-
-## 3 项目部署
-
-使用完整项目交付包，保留代码、配置、依赖清单和实验材料的原有结构。部署环境如下。
-
-| 环境 | 版本与用途 |
+| 方案 | 权威来源 |
 | --- | --- |
-| Git、Python | Python 3.13；获取源码、运行实验包装脚本和图谱适配 |
-| Docker | 使用 Linux engine；运行模型推理、验证器和故障实验 |
-| Java、Maven | JDK 17.0.20.1+1、Maven 3.9.16；源码特征提取及 Java 工程构建 |
-| Kubernetes 工具 | kind 0.27.0、kubectl、Helm 3.19.0；Insights 测试集群使用 K8s 1.32.2 |
-| 商业账号 | Insights 组织与集群凭据；CGC 测试账号及受支持云资源 |
+| feTruth | ESEC/FSE 2023 Research Papers；DOI：10.1145/3611643.3616353；作者仓库 feTruth（lyoubo），1 star |
+| Kivi | USENIX ATC 2024，509–527 页；作者仓库 Kivi（bingzheliu），23 stars |
+| Reynard | ICSE 2026 Research Track；DOI：10.1145/3744916.3773193；作者仓库 reynard（reynard-testing），4 stars |
+| AppCAT | 微软 Azure Migrate 官方工具，7.x 于 2025 年 7 月正式发布；基于 Konveyor 组件，免费使用 |
+| NeuVector | SUSE 容器安全产品及开源实现；本次复现采用 NeuVector 开源发行版，软件使用费为 0 |
 
-部署顺序：
+Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview of Azure Migrate application and code assessment for Java》《CLI command guide for AppCAT 7》，以及 SUSE Security 5.6《Installation》。
 
-1. 创建 Python 虚拟环境，安装交付包中的 `integration-requirements.lock`，再安装 maturity-evaluate 项目。
-2. 按下表固定工具版本，分别准备推理容器、验证器和故障测试镜像。
-3. 先运行各方案的示例，保存原始输出；再替换为待评估项目的源码、部署或业务测试。
-4. 使用 `build_baseline_graph.py` 导入结果，生成 JSON 图谱；使用 `compare_baseline_graphs.py` 比较修改前后结果。
+实验环境：Windows、Python 3.13、JDK 17、Maven 3.9.16、Docker Desktop Linux engine 29.3.1、kind 0.27.0、Kubernetes 1.32.2、Helm 3.19.0。feTruth 的推理依赖单独放在 Python 3.6 容器中。
 
 | 材料 | 固定版本 |
 | --- | --- |
 | maturity-evaluate | 提交 `116706ac26e17e782374c5b5229a93aef6bfa13f` |
-| feTruth | 源码流程：`b4f8d5c4fbf655e5615246f2849ccc3825db8e7d`；论文归档：v1.0.0，`a89644539cd639ee7adc21543aae20f8895c47d6` |
+| feTruth | 源码流程提交 `b4f8d5c4fbf655e5615246f2849ccc3825db8e7d`；论文归档 v1.0.0 |
 | Kivi | 提交 `81e6c253573b0cc41727885948c1240892d1a6e2` |
 | SPIN | 提交 `090f74209025a53297990ec17deca1bd51cb92a5` |
 | Reynard | v0.2.2-artifact，提交 `7fc79c85f5eefd766946a6d878abd441f7641f81` |
-| Insights Agent | Chart 6.19.1，appVersion 9.2.1 |
-| CGC | 托管服务；每次实验记录检测时间、模型版本和资源范围 |
+| AppCAT | Windows amd64 CLI 7.7.0.11 |
+| NeuVector | Controller、Enforcer、Manager 镜像均为 5.6.4；Chart 2.8.13，提交 `c2dd1543957c1d6ba244da36a6d06f7ab90e50ab` |
 
-## 4 各方案复现与输出
+项目部署：创建 Python 虚拟环境，安装 `integration-requirements.lock` 中的依赖和固定版本 maturity-evaluate；按下节准备各工具并执行实验；通过 `build_baseline_graph.py` 导入已有读取器支持的结果，使用 `compare_baseline_graphs.py` 比较前后图谱。
 
-### 4.1 feTruth
+## 3 各方案复现与输出
 
-部署与复现：
+### 3.1 feTruth
 
-1. 获取固定源码和作者词向量，准备索引文件及两个数组文件，每个数组约 485 MB。
-2. 在 Python 3.6 容器中安装固定依赖，包括 TensorFlow 2.4.0、Keras 2.4.3。
-3. 执行 `replay_fetruth_artifact.py`，重放论文归档中的 jsoup 特征。
-4. 执行 `run_fetruth_project.py`，通过 `--source` 指定交付工作区中的 Java 源码，完成特征提取和模型推理。
+1. 获取固定源码、作者模型及词向量，准备索引和两个约 485 MB 的数组文件。
+2. 在 Python 3.6 容器中安装 TensorFlow 2.4.0、Keras 2.4.3 等固定依赖。
+3. 用 `replay_fetruth_artifact.py` 重放作者 jsoup 特征；用 `run_fetruth_project.py` 的 `--source` 参数输入项目 Java 源码，完成特征提取和推理。
 
-输出由方法移动建议、候选特征和运行摘要组成。建议清单为 TSV，特征与摘要为 JSON。
+输出为 TSV 建议清单及 JSON 特征、运行摘要。
 
-| 输出内容 | 字段或记录 | 含义与用途 |
+| 输出 | 字段 | 含义 |
 | --- | --- | --- |
-| 重构类型 | `Refactoring Type` | 当前输出 `Move Method`，表示建议调整方法所属类 |
-| 源方法定位 | `Source Method` | 包含完整类名、方法名、参数类型和返回类型，可区分重载方法 |
-| 建议目标类 | `Target Class` | 方法建议迁入的完整类名，与源方法共同确定一条建议 |
-| 候选特征 | `source_class_name`、`method_signature`、`target_class_list`，以及距离、结构耦合特征 | 记录哪些方法和目标类参与模型推理，用于复查候选来源 |
-| 覆盖统计 | `candidate_methods`、`candidate_pairs`、`recommendations` | 分别表示候选方法数、方法与目标类组合数、最终建议数 |
-| 运行信息 | 源码与工具提交、模型摘要、阈值、执行时间 | 固定实验条件，核对前后是否使用同一模型与输入版本 |
+| 方法移动建议 | `Refactoring Type`、`Source Method`、`Target Class` | 重构类型、完整源方法签名、建议迁入的类 |
+| 候选特征 | `source_class_name`、`method_signature`、`target_class_list` 及耦合特征 | 参与推理的方法、候选类及结构关系 |
+| 覆盖统计 | `candidate_methods`、`candidate_pairs`、`recommendations` | 候选方法数、方法与目标类组合数、建议数 |
+| 运行记录 | 源码与工具提交、模型摘要、阈值、执行时间 | 核对输入、模型和运行条件 |
 
-实际输出示例：
+项目样例产生 1 条 `Move Method` 建议：将 `com.example.OrderService` 的 `createOrder(java.lang.String, double, int):java.lang.String` 移入 `com.example.PaymentService`。本次覆盖 1 个候选方法、2 个候选组合。论文归档重放的 16 条建议与作者记录一致，两组实验分别使用各自固定模型。
 
-| 项目 | 内容 |
-| --- | --- |
-| 重构类型 | `Move Method` |
-| 源类与方法 | `com.example.OrderService` 中的 `createOrder(java.lang.String, double, int):java.lang.String` |
-| 建议目标类 | `com.example.PaymentService` |
-| 本次覆盖 | 1 个候选方法、2 个候选组合、1 条建议 |
+### 3.2 Kivi
 
-这条结果表示模型建议将订单服务中的该方法移入支付服务，后续结合类职责和回归测试验证。论文重放另有 16 条建议与作者记录逐项一致；两组实验使用各自固定模型。
+1. 获取固定版本 Kivi 和 SPIN，在 Linux 容器中构建验证镜像。
+2. 执行 `run_kivi.py`，依次运行作者违规模型、作者对照模型和修改前后模型。
+3. 保存输入模型、SPIN 输出、反例记录及配置补丁。
 
-### 4.2 Kivi
-
-部署与复现：
-
-1. 获取固定版本的 Kivi 和 SPIN。Windows 环境使用 Git 无检出归档，在 Linux 容器中展开源码。
-2. 构建验证镜像，执行 `run_kivi.py`，依次运行作者违规模型、作者对照模型、修改前配置和修改后配置。
-3. 保存 SPIN 原始输出、输入模型、反例执行记录和配置补丁。
-
-输出以“一个部署模型的一条性质”为单位，验证摘要为 JSON，模型为 Promela，执行过程保存在日志中。
-
-| 输出内容 | 字段或记录 | 含义与用途 |
+| 输出 | 字段或记录 | 含义 |
 | --- | --- | --- |
-| 检查对象 | 集群、命名空间、资源类型和名称 | 确定验证针对哪个部署模型 |
-| 待验证性质 | `intent` | 本例为 `pod_always_schedulable`，即 Pod 始终可调度 |
-| 性质结果 | `status` | `fail` 表示发现违反性质的状态；`pass` 表示本次模型搜索完成且未发现反例 |
-| 验证器结果 | `spin_errors`、`stored_states` | 记录 SPIN 报告的错误数和保存的搜索状态数，供核查验证过程 |
-| 反例记录 | 状态变化、控制器动作及失败位置 | 说明在什么执行顺序下出现无法调度的 Pod |
-| 输入与修改 | 初始节点及 Pod 分布、调度约束、`repair.patch` | 对照是哪一项配置变化改变了验证结果 |
-| 验证范围 | `scope`、工具提交和原始日志 | 本例范围为固定拓扑模型，保留版本及完整验证输出 |
+| 检查对象与性质 | 资源身份、`intent` | 定位部署模型及待验证性质；本例为 Pod 始终可调度 |
+| 性质结果 | `status`、`spin_errors` | `fail` 表示发现反例；`pass` 表示模型搜索完成且无反例 |
+| 搜索过程 | `stored_states`、反例记录 | 保存的状态数，以及触发失败的状态和动作顺序 |
+| 输入与修改 | 节点及 Pod 分布、调度约束、配置补丁 | 复查约束变化如何影响验证结果 |
+| 验证范围 | `scope`、工具提交、日志 | 本例为固定拓扑模型，摘要为 JSON，模型为 Promela |
 
-本例有三个节点，分属两个 zone。Pod 从 5 个扩到 6 个时，节点和 zone 的 `maxSkew=1` 无法同时满足。将 zone 的 `maxSkew` 改为 2 后，节点可分布为 2、2、2，两个 zone 分别为 4、2。
+样例有三个节点，分属两个 zone。Pod 从 5 个扩到 6 个时，节点和 zone 的 `maxSkew=1` 无法同时满足。将 zone 的 `maxSkew` 改为 2 后，节点可分布为 2、2、2，两个 zone 分别为 4、2。
 
 | 组别 | 性质结果 | SPIN errors | 搜索状态数 |
 | --- | --- | --- | --- |
@@ -120,122 +82,99 @@
 | 修改前 | fail | 1 | 220 |
 | 修改后 | pass | 0 | 1,830 |
 
-该结果说明放宽跨区分布差值后，给定模型的调度性质通过。真实集群配置的导入及调度对照实验待完成。
+### 3.3 Reynard
 
-### 4.3 Reynard
+1. 获取固定源码，应用启动顺序和 npm ci 补丁，构建 Controller、Proxy 镜像及 Java 工程。
+2. 定义健康响应和故障下允许的响应，用 `run_reynard_contract.py` 执行修改前后实验。
+3. 固定请求、故障集合和断言，保存每次请求的 JSON 记录与 JUnit XML。SER 对照使用同一场景，分别开启和关闭 SER。
 
-部署与复现：
-
-1. 获取固定源码，应用启动顺序和 npm ci 补丁，构建 controller、proxy 镜像及 Java 工程。
-2. 为目标请求定义健康响应和故障下允许的响应，执行 `run_reynard_contract.py` 进行修改前后对照。
-3. 在相同请求、故障集合和业务断言下，保存 JUnit 报告及每次执行的观测记录。SER 对照分别开启和关闭 SER，其余设置一致。
-
-输出分为每次请求的 JSON 观测记录，以及整组实验的 JUnit XML 和汇总结果。
-
-| 输出内容 | 字段或记录 | 含义与用途 |
+| 输出 | 字段 | 含义 |
 | --- | --- | --- |
-| 场景与阶段 | `scenario`、`phase` | 标识业务场景，以及修改前或修改后实验 |
-| 服务与依赖 | `service`、`dependency` | 确定入口服务和被注入故障的下游服务 |
-| 调用轨迹 | `trace_id`、`span_id`、调用栈 | 将入口请求、下游调用和返回结果关联起来 |
-| 故障设置 | `faultload`、`fault_count` | 记录要求注入的故障类型、参数和数量，例如 HTTP 500 |
-| 实际注入 | `trace.reports` 中的 `injected_fault` | 记录代理实际执行的故障，项目据此核对注入是否生效 |
-| 业务响应 | `http_status`、`body` | 保存入口服务最终返回的状态码与响应体 |
-| 业务判定 | `passed` | 表示实际响应是否满足预先定义的业务断言 |
-| 测试汇总 | `tests`、`failures`、`errors`、`skipped` | 分别记录执行数、断言失败数、测试异常数和跳过数 |
+| 场景与依赖 | `scenario`、`phase`、`service`、`dependency` | 业务场景、实验阶段、入口服务和故障依赖 |
+| 调用轨迹 | `trace_id`、`span_id`、调用栈 | 关联入口请求、下游调用和返回结果 |
+| 故障设置与执行 | `faultload`、`fault_count`、`injected_fault` | 注入类型、参数、数量及代理实际执行的故障 |
+| 业务响应 | `http_status`、`body`、`passed` | 状态码、响应体及业务断言结果 |
+| 测试汇总 | `tests`、`failures`、`errors`、`skipped` | 执行数、断言失败数、测试异常数、跳过数 |
 
-实际场景为 `frontend → recommendations`。健康请求应返回 `200 + ["product-1"]`；下游分别返回 500、502、503、504 时，入口应返回 `200 + []`。
+场景为 `frontend → recommendations`。健康请求返回 `200 + ["product-1"]`；下游分别返回 HTTP 500、502、503、504 时，入口预期返回 `200 + []`。
 
-| 检查 | 修改前输出 | 修改后输出 |
+| 检查 | 修改前 | 启用空列表降级后 |
 | --- | --- | --- |
-| 健康请求 | 200，商品列表，断言通过 | 200，商品列表，断言通过 |
-| 四种下游错误 | frontend 返回 500，4 次断言失败 | frontend 返回 200、空列表，4 次断言通过 |
-| 执行总数 / failures / errors / skipped | 5 / 4 / 0 / 0 | 5 / 0 / 0 / 0 |
+| 健康请求 | 200，商品列表，断言通过 | 同左 |
+| 四种下游错误 | 入口返回 500，4 次断言失败 | 入口返回 200、空列表，4 次断言通过 |
+| tests / failures / errors / skipped | 5 / 4 / 0 / 0 | 5 / 0 / 0 / 0 |
 
-修改启用了空列表降级，四种错误响应对应同一个降级问题。原 patterns 场景中，开启 SER 后执行次数由 1,849 降为 543。
+四种错误响应检查的是同一个降级问题。另在作者 patterns 场景中，SER 将执行次数从 1,849 降为 543。
 
-### 4.4 Fairwinds Insights
+### 3.4 Microsoft AppCAT for Java
 
-部署与复现：
+1. 安装官方 CLI 7.7.0.11 和 JDK 17，准备两份含 POM 的 Maven Java 工程。
+2. 使用 `appcat analyze`，由 `--input`、`--output` 指定输入和结果位置；固定参数为 `--target azure-aks --mode source-only --disable-telemetry --output-format json`，启用默认规则。
+3. 将审计日志从 `FileWriter` 写本地文件改为标准输出，重新扫描，并验证订单结果、非法数量拒绝行为和审计文本。项目脚本 `reproduce_appcat.ps1` 执行两个阶段，`verify_appcat.py` 检查结果。
 
-1. 在平台创建组织和集群条目，准备集群上传 token、组织 API token，并在测试集群部署目标工作负载。
-2. 安装固定版本 Agent，启用 Polaris、Workloads，每 10 分钟上传报告；使用 Kubernetes Secret 保存集群凭据。
-3. 平台出现目标 Deployment 的新报告后，保存修改前配置和检查事项。
-4. 修改一项实际报告的问题，检查业务健康，等待新报告；在相同范围导出修改后事项。
-5. 使用组织 API token 读取集群 Action Items 接口，取齐分页后保存 JSON 数组，通过 `--insights` 导入图谱。
+输出包括原生 JSON 和 HTML 报告。
 
-平台输出的基本单位是 Action Item，即一条针对具体资源的检查事项。当前适配字段如下。
-
-| 输出内容 | API 字段 | 含义与用途 |
+| 输出 | 字段 | 含义 |
 | --- | --- | --- |
-| 事项身份 | `ID` | 唯一标识一条事项，用于追踪前后状态 |
-| 组织和集群 | `Organization`、`Cluster` | 确定事项所属环境 |
-| 资源定位 | `ResourceNamespace`、`ResourceKind`、`ResourceName`、`ResourceContainer` | 定位到命名空间、Deployment 和具体容器 |
-| 检查来源 | `ReportType`、`EventType`、`IsCustom` | 区分报告模块、规则类型和自定义检查；当前接入平台原生检查 |
-| 问题说明 | `Title`、`Severity` | 保留原始标题和数值严重程度，用于展示与排序 |
-| 观测时间 | `LastReportedAt` | 记录最后一次上报时间，确认是否属于本轮实验 |
-| 平台处理状态 | `Fixed`、`Resolution`、`DeletedAt` | 记录平台是否标为已修复、处理记录及删除时间 |
-| 原始证据 | 整条 JSON 及数组下标 | 保留原记录，方便复查字段与适配结果 |
+| 分析状态与目标 | `metadata.status`、`targetIds`、起止时间 | 分析是否完成、目标平台及执行时间 |
+| 规则说明 | `rules` 中的 `id`、`title`、`description` | 检查项、问题说明和修改建议 |
+| 命中位置 | `ruleId`、`incidentId`、`location`、`line`、`snippet` | 规则、命中实例、文件、行号和代码片段 |
+| 分类与工作量 | `severity`、`labels`、`effort` | 必须、可选、潜在或信息项，以及修改工作量估计 |
+| 汇总 | `totalIssues`、`totalIncidents`、`totalEffort` | 规则项数、命中实例数和工作量；规则项包含技术发现信息 |
 
-项目将事项状态转换为以下记录；业务健康检查另行保存。
-
-| 原始状态 | 项目记录 | 含义 |
+| 检查 | 修改前 | 修改后 |
 | --- | --- | --- |
-| 存在删除时间 | `vendor-deleted` | 平台事项已删除 |
-| 平台标记已修复 | `vendor-fixed` | 平台记录已修复 |
-| 存在处理记录 | `vendor-resolution-recorded` | 平台已记录处理说明 |
-| 其余事项 | `candidate` | 待核查或处理的问题候选 |
+| 原生报告状态 | Complete | Complete |
+| 本地存储规则 `local-storage-00001` 命中 | 1 | 0 |
+| 默认编码规则 `utf-8-by-default-00000` 命中 | 1 | 0 |
+| totalIssues / totalIncidents | 6 / 7 | 4 / 5 |
+| `type=violation` 实例数 | 5 | 3 |
+| 订单结果、非法数量两项契约 | 2/2 通过 | 2/2 通过 |
+| 审计文本 | `AUDIT ORD-book-2`，写入文件 | 同文，写入标准输出 |
 
-例如，一条资源配置问题应能关联到明确的 Deployment、规则及上报时间；修改后对照同一资源、同一规则的事项状态与业务响应。当前已完成 Agent 预检和接口适配，实际账号输出待取得。
+移除同一处 `FileWriter` 后，本地存储和默认编码两项提示同时消失。剩余提示为 Java 版本和 Dockerfile。实验覆盖本地源码扫描及业务检查。
 
-### 4.5 阿里云 CGC
+### 3.5 SUSE Security／NeuVector
 
-使用托管控制台的自动云治理成熟度检测，输入为受支持云资源的配置与治理状态，包括 ECS、RDS、VPC、OSS、ACK。
+1. 准备 kind 集群，通过官方 Helm Chart 部署 Controller、Enforcer、Manager，三者镜像均指定为 5.6.4。实验使用单节点，CVE Scanner、Updater 关闭。
+2. 设置本地平台管理员密码，通过端口转发访问 Controller API，并取得登录会话。
+3. 在独立命名空间部署 HTTP 服务，用实际 Pod 的 `containerID` 查询工作负载 API；同时读取容器 UID 和 HTTP 响应。
+4. 将 `securityContext.runAsUser` 从 0 改为 1000，保持镜像和业务代码一致，重复采集。项目脚本 `reproduce_neuvector.py` 完成部署、采集和比较。
 
-部署与复现：
+输出为平台工作负载 JSON、部署快照和业务检查记录。
 
-1. 准备实名认证账号和测试资源，由账号管理员开通 CGC 并完成服务关联角色授权。
-2. 固定账号、地域、资源范围，保存配置快照。
-3. 进入“云治理 → 卓越架构 → 云治理成熟度检测”，重新检测，导出 PDF 或 Excel 报告。
-4. 修改一条实际风险对应的配置，验证服务健康，在同一范围复检并保存报告。
-5. 按实际导出结构实现读取器，将资源、检查结果和报告位置接入项目。
-
-根据官方报告功能，输出内容分为以下层次。
-
-| 输出内容 | 具体内容 | 使用方式 |
+| 输出 | 字段或记录 | 含义 |
 | --- | --- | --- |
-| 成熟度概览 | 平台综合检测结果及成熟度评分 | 记录该次云治理检测的整体结果 |
-| 维度结果 | 安全、稳定、成本、效率、性能各维度的检查情况 | 查看风险主要集中在哪类治理问题 |
-| 风险检查项 | 检测项名称、判断条件、检测结果 | 确认触发了哪项规则，以及规则检查什么 |
-| 影响对象 | 检测详情中的云资源或账号对象 | 将风险对应到实际资源与配置 |
-| 治理方案 | 检测项说明、治理建议；部分条目支持快速修复 | 确定调整内容和修复操作 |
-| 导出报告 | PDF、Excel | PDF 用于阅读，Excel 用于逐项整理和接入 |
+| 对象身份 | `id`、`domain`、`pod_name`、Pod UID 标签 | 实际容器、命名空间和 Pod，绑定平台与集群对象 |
+| 镜像身份 | `image`、`image_id` | 镜像名称及内容身份，核对前后所用镜像 |
+| 运行风险 | `run_as_root`、`privileged` | 是否以 root 运行、是否为特权容器 |
+| 运行状态 | `running`、`started_at` | 容器是否运行及启动时间 |
+| 业务检查 | 实际 UID、HTTP 状态码与响应体 | 核对进程身份和服务行为 |
+| 平台概览 | `security_risk_score` | 全局风险分数，与目标容器字段分别记录 |
 
-官方检查项示例为“ACK 集群存在异常的 CoreDNS Pod”：当集群 DNS 组件异常时，报告列出相应风险，后续核对 Pod 状态和修复后的检测结果。这是检测项说明，账号内实验待执行。
-
-本项目同时记录检测时间、模型版本、资源范围和前后配置差异。CGC 已完成调研与实验设计，真实报告及读取器待完成。报告功能来源为阿里云官方《查看云治理成熟度检测数据并下载报告》《支持的检测项（3.0模型）》。
-
-## 5 项目接入与结果
-
-五个方案统一保留对象、检查项、结果、来源和时间，具体结果含义如下。
-
-| 方案 | 图谱对象 | 接入后的结果 |
+| 检查 | 修改前 | 修改后 |
 | --- | --- | --- |
-| feTruth | 类节点，附方法标识 | 方法移动候选、候选覆盖、模型版本 |
-| Kivi | Deployment 模型 | 待验证性质、pass 或 fail、反例及模型范围 |
-| Reynard | Service 和调用关系 | 实际故障、业务响应、断言结果及前后变化 |
-| Insights | Deployment | 平台检查事项、严重程度、上报时间和处理状态 |
-| CGC，待接入 | 云资源或账号 | 检测项、维度、风险结果、治理建议和报告定位 |
+| 原生 running | true | true |
+| 原生 run_as_root | true | false |
+| 实际进程 UID | 0 | 1000 |
+| HTTP 状态及响应 | 200，`maturity-ok` | 同左 |
+| 原生 privileged | false | false |
+| 全局 security_risk_score | 44 | 44 |
 
-JSON 图谱包含被检查对象、Metric 结果、`OBSERVED_BY` 关联和 Provenance 来源记录。已有图谱通过 `--base-graph` 和 `--bindings` 按完整对象身份合并。
+本次完成真实容器的运行身份风险对照，业务响应保持一致，全局分数维持 44。
 
-| 实现入口 | 职责 |
-| --- | --- |
-| `run_fetruth_project.py`、`run_kivi.py`、`run_reynard_contract.py` | 执行实验并归档原始输出 |
-| `native.py`、`insights.py` | 读取原始结果并校验字段与证据 |
-| `collector.py` | 绑定对象，生成指标和来源记录 |
-| `build_baseline_graph.py`、`compare_baseline_graphs.py` | 构图及修改前后结果比较 |
+## 4 项目接入与进度
 
-已有三项会议实验生成的前后图谱均为 13 个节点、9 条边；比较得到 5 条检查转为通过、2 条未变化。转为通过的检查分别是 Kivi 的一条性质、Reynard 的四种错误响应。适配测试已有 32 项通过；Insights 离线渲染生成 17 个对象，包含 2 个 CronJob。
+各方案保留对象、检查项、结果、来源和时间，按源码、模型、运行行为与部署风险分别比较。
 
-后续完成 Insights、CGC 账号实测；将 Reynard 接入团队 otel-demo；补充真实 K8s 到 Kivi 的映射、方法移动验证，以及 Python 和 FaaS 专项评测。
+| 来源 | 对象绑定 | 当前进度 |
+| --- | --- | --- |
+| feTruth | 类节点及方法签名 | 已接入图谱；得到方法移动候选 |
+| Kivi | Deployment 模型及待验证性质 | 已接入图谱；完成固定模型前后验证 |
+| Reynard | Service、调用关系、故障场景 | 已接入图谱；完成示例服务前后验证 |
+| AppCAT | 源码版本、规则 ID、文件及位置 | 已归档原生报告与业务检查；待实现读取器 |
+| NeuVector | 集群、命名空间、Pod UID、容器 ID | 已归档运行风险与业务检查；待实现读取器 |
 
+三项学术实验的前后图谱各有 13 个节点、9 条边；比较得到 5 条检查转为通过，分别为 Kivi 的一条性质和 Reynard 的四种错误响应。
+
+后续工作：实现两项商业结果读取器，接入团队 otel-demo，完成真实 K8s 到 Kivi 的映射、方法移动验证，以及 Python、FaaS、CIS 合规和 CVE 漏洞专项实验。
