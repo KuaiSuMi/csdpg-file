@@ -42,7 +42,7 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 
 ## 3 各方案复现与输出
 
-截图展示已归档实验的 TSV、日志和 JSON 摘录，按原始字段排版。
+配图按“输入 → 运行 → 输出”展示实测工作流，标出样例内容、执行步骤和前后结果；数据取自已归档的源码、配置、日志及报告。
 
 ### 3.1 feTruth
 
@@ -61,7 +61,7 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 
 项目样例产生 1 条 `Move Method` 建议：将 `com.example.OrderService` 的 `createOrder(java.lang.String, double, int):java.lang.String` 移入 `com.example.PaymentService`。本次覆盖 1 个候选方法、2 个候选组合。论文归档重放的 16 条建议与作者记录一致，两组实验分别使用各自固定模型。
 
-![feTruth 实测方法移动建议及运行摘要](assets/baseline-outputs/fetruth.png)
+![feTruth：Java 源码、模型推理和方法移动建议](assets/baseline-outputs/fetruth.png)
 
 ### 3.2 Kivi
 
@@ -86,7 +86,7 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 | 修改前 | fail | 1 | 220 |
 | 修改后 | pass | 0 | 1,830 |
 
-![Kivi 修改前后的 SPIN 原始输出](assets/baseline-outputs/kivi.png)
+![Kivi：部署模型、SPIN 验证和调度结果](assets/baseline-outputs/kivi.png)
 
 ### 3.3 Reynard
 
@@ -112,7 +112,7 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 
 四种错误响应检查的是同一个降级问题。另在作者 patterns 场景中，SER 将执行次数从 1,849 降为 543。
 
-![Reynard 修改前后的测试日志与 HTTP 500 故障响应](assets/baseline-outputs/reynard.png)
+![Reynard：服务请求、故障注入和业务响应](assets/baseline-outputs/reynard.png)
 
 ### 3.4 Microsoft AppCAT for Java
 
@@ -142,7 +142,7 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 
 移除同一处 `FileWriter` 后，本地存储和默认编码两项提示同时消失。剩余提示为 Java 版本和 Dockerfile。实验覆盖本地源码扫描及业务检查。
 
-![AppCAT 修改前后的原生 JSON 报告摘录](assets/baseline-outputs/appcat.png)
+![AppCAT：Java 工程、云就绪度扫描和规则命中结果](assets/baseline-outputs/appcat.png)
 
 ### 3.5 SUSE Security／NeuVector
 
@@ -173,7 +173,7 @@ Star 数采集于 2026-10-29。商业产品依据为 Microsoft Learn《Overview 
 
 本次完成真实容器的运行身份风险对照，业务响应保持一致，全局分数维持 44。
 
-![NeuVector 修改前后的原生风险字段与业务检查](assets/baseline-outputs/neuvector.png)
+![NeuVector：容器部署、运行身份采集和风险字段](assets/baseline-outputs/neuvector.png)
 
 ## 4 项目接入与进度
 
