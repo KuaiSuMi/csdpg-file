@@ -1,6 +1,0 @@
-- name: Fetch service settings
-  uri:
-    url: http://config.example.org/settings
-    user: admin
-    password: example-only-password
-    method: GET

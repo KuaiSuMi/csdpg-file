@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/workspace/scripts/filibuster_container_run.py", line 89, in <module>
-    main()
-  File "/workspace/scripts/filibuster_container_run.py", line 57, in main
-    result.check_returncode()
-  File "/usr/local/lib/python3.9/subprocess.py", line 460, in check_returncode
-    raise CalledProcessError(self.returncode, self.args, self.stdout,
-subprocess.CalledProcessError: Command '['/usr/local/bin/python', '-c', 'from filibuster_cli import test; test()', '--functional-test', 'python /workspace/baselines/sources/filibuster-corpus/cinema-1/functional/test_user_bookings.py']' returned non-zero exit status 1.

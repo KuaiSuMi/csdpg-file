@@ -1,6 +1,0 @@
-/input/tasks.yml,3,sec_https,url:'http://config.example.org/settings'
-/input/tasks.yml,4,sec_def_admin,user:'admin'
-/input/tasks.yml,4,sec_hard_secr,user:'admin'
-/input/tasks.yml,4,sec_hard_user,user:'admin'
-/input/tasks.yml,5,sec_hard_pass,password:'example-only-password'
-/input/tasks.yml,5,sec_hard_secr,password:'example-only-password'

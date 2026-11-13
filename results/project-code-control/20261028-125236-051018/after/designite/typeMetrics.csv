@@ -1,5 +1,0 @@
-Project Name,Package Name,Type Name,NOF,NOPF,NOM,NOPM,LOC,WMC,NC,DIT,LCOM,FANIN,FANOUT
-after,com.example,InventoryService,1,0,3,3,15,3,0,0,1.0,1,0
-after,com.example,OrderService,6,0,5,5,0,20,0,0,0.6,0,2
-after,com.example,PaymentException,0,0,1,1,8,1,0,0,-1.0,0,0
-after,com.example,PaymentService,1,0,2,2,18,4,0,0,1.0,1,0

@@ -1,5 +1,0 @@
-infer: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.36' not found (required by infer)
-infer: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38' not found (required by infer)
-infer: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by infer)
-infer: /lib/x86_64-linux-gnu/libc.so.6: version `GLIBC_2.38' not found (required by /opt/infer-linux-x86_64-v1.3.0/lib/infer/infer/bin/../libso/libgmp.so.10)
-infer: /lib/x86_64-linux-gnu/libm.so.6: version `GLIBC_2.38' not found (required by /opt/infer-linux-x86_64-v1.3.0/lib/infer/infer/bin/../libso/libsqlite3.so.0)

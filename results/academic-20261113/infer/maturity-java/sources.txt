@@ -1,4 +1,0 @@
-/input/com/example/InventoryService.java
-/input/com/example/OrderService.java
-/input/com/example/PaymentException.java
-/input/com/example/PaymentService.java

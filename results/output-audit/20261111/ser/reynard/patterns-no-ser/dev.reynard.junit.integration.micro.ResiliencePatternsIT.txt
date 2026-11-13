@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: dev.reynard.junit.integration.micro.ResiliencePatternsIT
--------------------------------------------------------------------------------
-Tests run: 1849, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 115.0 s -- in dev.reynard.junit.integration.micro.ResiliencePatternsIT

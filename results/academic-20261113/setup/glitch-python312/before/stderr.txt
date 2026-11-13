@@ -1,6 +1,0 @@
-/opt/glitch/glitch/stats/print.py:73: SyntaxWarning: invalid escape sequence '\%'
-  "\\textbf{Smell density (Smell/KLoC)}", "\\textbf{Proportion of scripts (\%)}"])
-/opt/glitch/glitch/stats/print.py:77: SyntaxWarning: invalid escape sequence '\m'
-  latex = latex[:combined] + "\\\\\n\midrule\n" + latex[combined + 3:]
-/opt/glitch/glitch/parsers/cmof.py:7: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
-  from pkg_resources import resource_filename

@@ -1,6 +1,0 @@
-Preprocessing testing data...
-Detecting feature envy methods...
-Refactoring Type	Source Method	Target Class
-Move Method	com.example.OrderService::createOrder(java.lang.String, double, int):java.lang.String 	 com.example.PaymentService
-
-The feature envy methods are appended to the output folder.

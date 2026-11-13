@@ -1,6 +1,0 @@
-Capturing in javac mode...
-Found 1 source file to analyze in /out/infer-out
-NullExample.java starting
-NullExample.java DONE
-NullExample.java starting
-NullExample.java DONE

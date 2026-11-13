@@ -1,1 +1,0 @@
-CONTRACT_OK:2
