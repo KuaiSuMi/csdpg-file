@@ -41,17 +41,9 @@ infer run --pulse-only -- javac -cp dependency.jar -d classes Example.java
 | 可选 HTML、差异报告 | `infer explore --html` 生成浏览器报告；`infer reportdiff` 比较新增、修复和已有问题；多个结果目录可合并去重 |
 | 分析数据与日志 | `capture.db`、`results.db` 保存捕获与分析数据，日志记录编译、分析过程和异常 |
 
-空指针样例中的关键报告字段：
+Infer 实际运行日志（2026-11-13）显示 `NullExample.java:7` 的空指针告警：
 
-```json
-{
-  "bug_type": "NULLPTR_DEREFERENCE",
-  "severity": "ERROR",
-  "file": "NullExample.java",
-  "line": 7,
-  "procedure": "NullExample.main(java.lang.String[]):void"
-}
-```
+![Infer 原生运行日志：空指针告警与源码定位](https://raw.githubusercontent.com/KuaiSuMi/csdpg-file/b008447fde65c6c387e2d534957cacffc6d5873b/assets/run-results/infer-run.png)
 
 对应路径为：第 7 行传入 `null` → 调用 `size` → 第 2 行参数接收 → 第 3 行解引用。增加空值处理后，报告由 1 条变为 0 条。跨项目运行中，jsoup、Commons CLI、项目 Java 示例分别捕获 75、23、4 个 Java 文件，产生 6、0、0 条告警；jsoup 的类型为 `PULSE_RESOURCE_LEAK`。
 
@@ -87,13 +79,9 @@ python feTruth.py -a /workspace/order-service
 
 特征中的 `source_dist/source_cbmc/source_mcmc` 对应原类，`target_class_list` 与 `target_dist_list/target_cbmc_list/target_mcmc_list` 按位置对应各候选类。
 
-实际项目示例提取 1 个方法、2 个候选目标，生成以下建议：
+实际项目示例提取 1 个方法、2 个候选目标，生成 1 条建议。以下为原生推理日志（2026-11-11），包含预处理、检测过程及方法移动结果：
 
-| 字段 | 输出值 |
-| --- | --- |
-| Refactoring Type | `Move Method` |
-| Source Method | `com.example.OrderService::createOrder(java.lang.String, double, int):java.lang.String` |
-| Target Class | `com.example.PaymentService` |
+![feTruth 原生推理日志：Move Method、源方法与目标类](https://raw.githubusercontent.com/KuaiSuMi/csdpg-file/b008447fde65c6c387e2d534957cacffc6d5873b/assets/run-results/fetruth-run.png)
 
 该建议表示将订单服务的 `createOrder` 方法移至支付服务，作为代码评审和重构的候选任务。论文归档工作流重放得到 16 条建议，与归档结果一致；新源码工作流在 jsoup 中提取 204 个方法、300 个候选关系，输出 180 条建议。
 
@@ -180,9 +168,19 @@ Enforcer 采集运行信息，Controller 汇总对象状态并匹配安全策略
 | `running` | true | true |
 | HTTP 健康检查 | 200，`maturity-ok` | 200，`maturity-ok` |
 
-节点 CIS 1.8.0 扫描输出 130 项：52 项 PASS、38 项 WARN、40 项 MANUAL。例如 `K.1.1.1` 检查 API Server 配置文件权限，结果为 PASS，整改字段给出将权限设置为 `600` 的操作。
+修改后的容器权限 API 响应（2026-11-11，节选）：
+
+![NeuVector 原生 API 响应：非 root、非特权及运行状态](https://raw.githubusercontent.com/KuaiSuMi/csdpg-file/b008447fde65c6c387e2d534957cacffc6d5873b/assets/run-results/neuvector-workload.png)
+
+节点 CIS 1.8.0 扫描输出 130 项：52 项 PASS、38 项 WARN、40 项 MANUAL。下面的原生检查项 `K.1.1.10` 返回 WARN，包含 CNI 配置文件匹配结果和文件归属整改命令（2026-11-11）：
+
+![NeuVector 原生 CIS 检查项：WARN、检查编号与整改命令](https://raw.githubusercontent.com/KuaiSuMi/csdpg-file/b008447fde65c6c387e2d534957cacffc6d5873b/assets/run-results/neuvector-cis.png)
 
 `node:22-alpine` 镜像对应的容器扫描输出 209 个软件包、27 条 CVE（12 High、15 Medium）。报告按软件包列出当前版本和修复版本，可直接用于镜像升级排期。
+
+漏洞明细 API 响应（2026-11-11，节选）展示 CVE 编号、软件包版本、修复版本和严重程度：
+
+![NeuVector 原生 CVE 明细：软件包、当前版本、修复版本与严重程度](https://raw.githubusercontent.com/KuaiSuMi/csdpg-file/b008447fde65c6c387e2d534957cacffc6d5873b/assets/run-results/neuvector-cve.png)
 
 ## 6. 学术依据
 
