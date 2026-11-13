@@ -1,0 +1,13 @@
+
+NullExample.java:7: error: Null Dereference(NULLPTR_DEREFERENCE)
+  null (null value originating from line 7) is dereferenced in the call to `NullExample.size(...)`. 
+  5.   
+  6.       public static void main(String[] args) {
+  7. >         System.out.println(size(null));
+  8.       }
+  9.   }
+
+
+Found 1 issue
+             Issue Type(ISSUED_TYPE_ID): #
+  Null Dereference(NULLPTR_DEREFERENCE): 1

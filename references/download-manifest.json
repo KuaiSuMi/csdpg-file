@@ -1,0 +1,178 @@
+{
+  "date": "2026-10-21",
+  "papers": [
+    {
+      "baseline": "feTruth",
+      "file": "papers/fetruth-fse2023.pdf",
+      "source_url": "https://lyoubo.github.io/papers/Deep_Learning_Based_Feature_Envy_Detection_Boosted_by_Real-World_Examples.pdf",
+      "checked_at": "2026-10-21T15:00:01+08:00",
+      "pages": 13,
+      "status": "downloaded",
+      "resolved_url": "https://lyoubo.github.io/papers/Deep_Learning_Based_Feature_Envy_Detection_Boosted_by_Real-World_Examples.pdf",
+      "bytes": 814948,
+      "sha256": "dc841f25e6d9fcc989bb0241c4f453bf81d182f2bc1a1e9b50d4b0182f218e12",
+      "title": "Deep Learning Based Feature Envy Detection Boosted by Real-World Examples",
+      "venue": "ESEC/FSE 2023",
+      "doi": "10.1145/3611643.3616353",
+      "validation": {
+        "pdf_header": true,
+        "all_pages_parsed": true,
+        "first_page_title_matched": true
+      }
+    },
+    {
+      "baseline": "Reynard",
+      "file": "papers/reynard-icse2026.pdf",
+      "source_url": "https://burcuku.github.io/home/assets/pdf/icse26.pdf",
+      "checked_at": "2026-10-21T15:00:01+08:00",
+      "pages": 12,
+      "status": "downloaded",
+      "resolved_url": "https://burcuku.github.io/home/assets/pdf/icse26.pdf",
+      "bytes": 795261,
+      "sha256": "5c37899650ce1f9eba24aa9e02ecf545700d0b3fd7888071936978e7df6ed19a",
+      "title": "Automated Network-Level Fault Injection Testing of Microservice Architectures",
+      "venue": "ICSE 2026",
+      "doi": "10.1145/3744916.3773193",
+      "validation": {
+        "pdf_header": true,
+        "all_pages_parsed": true,
+        "first_page_title_matched": true
+      }
+    },
+    {
+      "baseline": "Filibuster",
+      "file": "papers/filibuster-socc2021.pdf",
+      "source_url": "https://rohan.padhye.org/files/filibuster-socc21.pdf",
+      "checked_at": "2026-10-21T15:00:01+08:00",
+      "pages": 15,
+      "status": "downloaded",
+      "resolved_url": "https://rohan.padhye.org/files/filibuster-socc21.pdf",
+      "bytes": 898904,
+      "sha256": "766d06870f7f697423e8a44467283ac1daf187a86aff76ca08fcde799e9253c2",
+      "title": "Service-Level Fault Injection Testing",
+      "venue": "SoCC 2021",
+      "doi": "10.1145/3472883.3487005",
+      "validation": {
+        "pdf_header": true,
+        "all_pages_parsed": true,
+        "first_page_title_matched": true
+      }
+    },
+    {
+      "baseline": "Arcan",
+      "file": "papers/arcan-2017.pdf",
+      "source_url": "https://boa.unimib.it/retrieve/e39773b3-de57-35a3-e053-3a05fe0aac26/PID4705339.pdf",
+      "checked_at": "2026-10-21T15:00:14+08:00",
+      "pages": 4,
+      "status": "downloaded",
+      "resolved_url": "https://boa.unimib.it/retrieve/e39773b3-de57-35a3-e053-3a05fe0aac26/PID4705339.pdf",
+      "bytes": 306949,
+      "sha256": "a80942fb8d121abd911180373639a2de6f3ce36b09ef9d0fa72ad27d5363b36b",
+      "title": "Arcan: a Tool for Architectural Smells Detection",
+      "venue": "ICSA Workshops (ICSAW) 2017",
+      "doi": "10.1109/ICSAW.2017.16",
+      "validation": {
+        "pdf_header": true,
+        "all_pages_parsed": true,
+        "first_page_title_matched": true
+      }
+    },
+    {
+      "baseline": "DECOR",
+      "file": "papers/decor-tse2010.pdf",
+      "source_url": "https://assets.ptidej.net/Publications/Documents/TSE09.doc.pdf",
+      "checked_at": "2026-10-21T15:00:20+08:00",
+      "pages": 17,
+      "status": "downloaded",
+      "resolved_url": "https://assets.ptidej.net/Publications/Documents/TSE09.doc.pdf",
+      "bytes": 281849,
+      "sha256": "a80beb3c333b3cb6f03b2e423c33c6f22f68c681f505b2f83eb4f4fb5ad046a9",
+      "title": "DECOR: A Method for the Specification and Detection of Code and Design Smells",
+      "venue": "IEEE Transactions on Software Engineering 36(1), 2010",
+      "doi": "10.1109/TSE.2009.50",
+      "validation": {
+        "pdf_header": true,
+        "all_pages_parsed": true,
+        "first_page_title_matched": true
+      }
+    },
+    {
+      "baseline": "RefactoringMiner",
+      "file": "papers/refactoringminer-icse2018.pdf",
+      "source_url": "https://users.encs.concordia.ca/~nikolaos/publications/ICSE_2018.pdf",
+      "resolved_url": "https://users.encs.concordia.ca/~nikolaos/publications/ICSE_2018.pdf",
+      "checked_at": "2026-10-21T15:02:35+08:00",
+      "status": "downloaded",
+      "pages": 12,
+      "bytes": 322854,
+      "sha256": "2c7ed1c6d0f9f22a0a927cbc7694ce51fb62417d4b0b4e8129ea3619982be4de",
+      "doi": "10.1145/3180155.3180206",
+      "source_index": "https://github.com/tsantalis/RefactoringMiner/blob/master/documentation/research.md",
+      "title": "Accurate and Efficient Refactoring Detection in Commit History",
+      "venue": "ICSE 2018",
+      "validation": {
+        "pdf_header": true,
+        "all_pages_parsed": true,
+        "first_page_title_matched": true
+      }
+    },
+    {
+      "baseline": "Kivi",
+      "file": "papers/kivi-atc2024.pdf",
+      "source_url": "https://www.usenix.org/system/files/atc24-liu-bingzhe.pdf",
+      "resolved_url": "https://www.usenix.org/system/files/atc24-liu-bingzhe.pdf",
+      "download_date": "2026-10-28",
+      "checked_at": "2026-10-28T06:37:30.822317+00:00",
+      "pages": 20,
+      "status": "downloaded",
+      "bytes": 1470622,
+      "sha256": "1868b769fc493576a6ea43041745fa30039945a95c1323d3fa9e7e6460f2431f",
+      "title": "Kivi: Verification for Cluster Management",
+      "venue": "USENIX ATC 2024",
+      "proceedings_pages": "509-527",
+      "validation": {
+        "pdf_header": true,
+        "all_pages_parsed": true,
+        "first_page_title_matched": true
+      },
+      "note": "20 PDF pages include the USENIX cover; proceedings page range is 509-527"
+    },
+    {
+      "file": "papers/glitch-ase2022.pdf",
+      "title": "GLITCH: Automated Polyglot Security Smell Detection in Infrastructure as Code",
+      "venue": "ASE 2022",
+      "doi": "10.1145/3551349.3556945",
+      "source_url": "https://sr-lab.github.io/publication/2022/ASE/ase22-glitch.pdf",
+      "checked_at": "2026-11-13",
+      "pages": 12,
+      "bytes": 587665,
+      "sha256": "1af3a44c1b26669527aefebf0a9962521226620e1098d5a2262c503eb37da68e",
+      "status": "downloaded"
+    },
+    {
+      "file": "papers/pulse-cav2020.pdf",
+      "title": "Local Reasoning About the Presence of Bugs: Incorrectness Separation Logic",
+      "venue": "CAV 2020",
+      "doi": "10.1007/978-3-030-53291-8_14",
+      "source_url": "https://jberdine.github.io/pub/2020_cav.pdf",
+      "checked_at": "2026-11-13",
+      "pages": 28,
+      "bytes": 982493,
+      "sha256": "2c27b580a5b43562e166c7da66e1587f9b8d45dcc12f31aeb06a271f5c3ebd55",
+      "status": "downloaded"
+    },
+    {
+      "file": "papers/pulse-x-oopsla2022.pdf",
+      "title": "Finding Real Bugs in Big Programs with Incorrectness Logic",
+      "venue": "OOPSLA 2022",
+      "doi": "10.1145/3527325",
+      "source_url": "https://jvillard.net/pub/pulse-x-LRVBDOoopsla22.pdf",
+      "checked_at": "2026-11-13",
+      "pages": 27,
+      "bytes": 939037,
+      "sha256": "16320a08d8465926d9bb4b1a2a0bb50b55bb8807b5a37ad88b5abd94dd5e4a9c",
+      "status": "downloaded"
+    }
+  ],
+  "updated_at": "2026-11-13"
+}

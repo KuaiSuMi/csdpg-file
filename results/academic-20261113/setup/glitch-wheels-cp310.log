@@ -1,0 +1,116 @@
+Collecting about-time==4.2.1 (from -r baselines/glitch/requirements.lock (line 1))
+  Using cached about_time-4.2.1-py3-none-any.whl.metadata (13 kB)
+Collecting alive-progress==3.1.5 (from -r baselines/glitch/requirements.lock (line 2))
+  Using cached alive_progress-3.1.5-py3-none-any.whl.metadata (68 kB)
+Collecting click==8.1.7 (from -r baselines/glitch/requirements.lock (line 3))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting configparser==5.3.0 (from -r baselines/glitch/requirements.lock (line 4))
+  Using cached configparser-5.3.0-py3-none-any.whl.metadata (11 kB)
+Collecting iniconfig==2.3.1 (from -r baselines/glitch/requirements.lock (line 5))
+  Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting Jinja2==3.1.6 (from -r baselines/glitch/requirements.lock (line 6))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting MarkupSafe==3.0.4 (from -r baselines/glitch/requirements.lock (line 7))
+  Using cached markupsafe-3.0.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting numpy==2.0.2 (from -r baselines/glitch/requirements.lock (line 8))
+  Using cached numpy-2.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
+Collecting packaging==26.3 (from -r baselines/glitch/requirements.lock (line 9))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pandas==2.2.3 (from -r baselines/glitch/requirements.lock (line 10))
+  Using cached pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+Collecting pluggy==1.7.0 (from -r baselines/glitch/requirements.lock (line 11))
+  Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting ply==3.11 (from -r baselines/glitch/requirements.lock (line 12))
+  Using cached ply-3.11-py2.py3-none-any.whl.metadata (844 bytes)
+Collecting prettytable==3.6.0 (from -r baselines/glitch/requirements.lock (line 13))
+  Using cached prettytable-3.6.0-py3-none-any.whl.metadata (25 kB)
+Collecting puppetparser==0.2.14 (from -r baselines/glitch/requirements.lock (line 14))
+  Using cached puppetparser-0.2.14-py3-none-any.whl.metadata (1.8 kB)
+Collecting pytest==7.4.4 (from -r baselines/glitch/requirements.lock (line 15))
+  Using cached pytest-7.4.4-py3-none-any.whl.metadata (7.9 kB)
+Collecting python-dateutil==2.9.0.post0 (from -r baselines/glitch/requirements.lock (line 16))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz==2026.6 (from -r baselines/glitch/requirements.lock (line 17))
+  Downloading pytz-2026.6-py2.py3-none-any.whl.metadata (22 kB)
+Collecting ruamel.yaml==0.17.21 (from -r baselines/glitch/requirements.lock (line 18))
+  Downloading ruamel.yaml-0.17.21-py3-none-any.whl.metadata (13 kB)
+Collecting setuptools==80.9.0 (from -r baselines/glitch/requirements.lock (line 19))
+  Using cached setuptools-80.9.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting tzdata==2026.6 (from -r baselines/glitch/requirements.lock (line 20))
+  Using cached tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting wcwidth==0.9.4 (from -r baselines/glitch/requirements.lock (line 21))
+  Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (23 kB)
+Collecting wheel==0.45.1 (from -r baselines/glitch/requirements.lock (line 22))
+  Downloading wheel-0.45.1-py3-none-any.whl.metadata (2.3 kB)
+Collecting ruamel.yaml.clib==0.2.15 (from -r baselines/glitch/requirements.lock (line 23))
+  Downloading ruamel_yaml_clib-0.2.15-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (3.5 kB)
+Collecting tomli==2.3.0 (from -r baselines/glitch/requirements.lock (line 24))
+  Downloading tomli-2.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting exceptiongroup==1.3.1 (from -r baselines/glitch/requirements.lock (line 25))
+  Downloading exceptiongroup-1.3.1-py3-none-any.whl.metadata (6.7 kB)
+Collecting typing_extensions==4.15.0 (from -r baselines/glitch/requirements.lock (line 26))
+  Using cached typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting six==1.17.0 (from -r baselines/glitch/requirements.lock (line 27))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading about_time-4.2.1-py3-none-any.whl (13 kB)
+Downloading alive_progress-3.1.5-py3-none-any.whl (75 kB)
+Downloading click-8.1.7-py3-none-any.whl (97 kB)
+Downloading configparser-5.3.0-py3-none-any.whl (19 kB)
+Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (20 kB)
+Downloading numpy-2.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (19.5 MB)
+   ---------------------------------------- 19.5/19.5 MB 10.4 MB/s  0:00:02
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.1 MB)
+   ---------------------------------------- 13.1/13.1 MB 11.9 MB/s  0:00:01
+Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading ply-3.11-py2.py3-none-any.whl (49 kB)
+Downloading prettytable-3.6.0-py3-none-any.whl (27 kB)
+Downloading puppetparser-0.2.14-py3-none-any.whl (24 kB)
+Downloading pytest-7.4.4-py3-none-any.whl (325 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pytz-2026.6-py2.py3-none-any.whl (506 kB)
+Downloading ruamel.yaml-0.17.21-py3-none-any.whl (109 kB)
+Using cached setuptools-80.9.0-py3-none-any.whl (1.2 MB)
+Using cached tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Downloading wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (785 kB)
+   ---------------------------------------- 785.9/785.9 kB 11.5 MB/s  0:00:00
+Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+Downloading ruamel_yaml_clib-0.2.15-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (731 kB)
+   ---------------------------------------- 731.3/731.3 kB 9.0 MB/s  0:00:00
+Downloading tomli-2.3.0-py3-none-any.whl (14 kB)
+Downloading exceptiongroup-1.3.1-py3-none-any.whl (16 kB)
+Using cached typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Saved .\.runtime\glitch-wheels\about_time-4.2.1-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\alive_progress-3.1.5-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\click-8.1.7-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\configparser-5.3.0-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\iniconfig-2.3.1-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\jinja2-3.1.6-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\markupsafe-3.0.4-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+Saved .\.runtime\glitch-wheels\numpy-2.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Saved .\.runtime\glitch-wheels\packaging-26.3-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\pandas-2.2.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+Saved .\.runtime\glitch-wheels\pluggy-1.7.0-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\ply-3.11-py2.py3-none-any.whl
+Saved .\.runtime\glitch-wheels\prettytable-3.6.0-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\puppetparser-0.2.14-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\pytest-7.4.4-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\python_dateutil-2.9.0.post0-py2.py3-none-any.whl
+Saved .\.runtime\glitch-wheels\pytz-2026.6-py2.py3-none-any.whl
+Saved .\.runtime\glitch-wheels\ruamel.yaml-0.17.21-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\setuptools-80.9.0-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\tzdata-2026.6-py2.py3-none-any.whl
+Saved .\.runtime\glitch-wheels\wcwidth-0.9.4-cp310-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl
+Saved .\.runtime\glitch-wheels\wheel-0.45.1-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\ruamel_yaml_clib-0.2.15-cp310-cp310-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl
+Saved .\.runtime\glitch-wheels\tomli-2.3.0-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\exceptiongroup-1.3.1-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\typing_extensions-4.15.0-py3-none-any.whl
+Saved .\.runtime\glitch-wheels\six-1.17.0-py2.py3-none-any.whl
+Successfully downloaded about-time alive-progress click configparser iniconfig Jinja2 MarkupSafe numpy packaging pandas pluggy ply prettytable puppetparser pytest python-dateutil pytz ruamel.yaml setuptools tzdata wcwidth wheel ruamel.yaml.clib tomli exceptiongroup typing_extensions six
+
+[notice] A new release of pip is available: 26.0.1 -> 26.3
+[notice] To update, run: python.exe -m pip install --upgrade pip

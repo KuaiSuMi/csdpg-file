@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-11",
+  "status": "completed",
+  "tested_outputs": {
+    "fetruth": [
+      "TSV recommendations",
+      "JSON candidate features and couplings",
+      "coverage statistics",
+      "extraction and inference logs"
+    ],
+    "kivi": [
+      "generated Promela models",
+      "4 property results",
+      "search state counts",
+      "counterexample replay",
+      "YAML patch"
+    ],
+    "reynard": [
+      "requested and actual injected faults",
+      "proxy traces",
+      "10 business responses and assertions",
+      "JUnit XML",
+      "SER 543 versus 1849 executions"
+    ],
+    "appcat": [
+      "native JSON and YAML",
+      "rules, incidents, snippets, severity, effort",
+      "technology properties",
+      "dependency list",
+      "business and audit outputs",
+      "native HTML empty-list result"
+    ],
+    "neuvector": [
+      "3 security configurations",
+      "Pod/container identity",
+      "UID, capabilities and HTTP",
+      "processes and history",
+      "resource and network statistics",
+      "policy configuration",
+      "global score components",
+      "130 node CIS items",
+      "27 vulnerability records and 209 modules",
+      "preserved first-run privilege discrepancy and pre-scan empty responses"
+    ]
+  },
+  "graph_comparison": {
+    "check-passed-after": 6,
+    "not-observed-after": 2,
+    "unchanged": 5
+  },
+  "screenshots": {
+    "assets/baseline-outputs/fetruth.png": [
+      2160,
+      2334
+    ],
+    "assets/baseline-outputs/kivi.png": [
+      2160,
+      1919
+    ],
+    "assets/baseline-outputs/kivi-trace.png": [
+      2160,
+      1878
+    ],
+    "assets/baseline-outputs/reynard.png": [
+      2160,
+      2292
+    ],
+    "assets/baseline-outputs/reynard-trace.png": [
+      2160,
+      2592
+    ],
+    "assets/baseline-outputs/appcat.png": [
+      2160,
+      2360
+    ],
+    "assets/baseline-outputs/appcat-details.png": [
+      2160,
+      2999
+    ],
+    "assets/baseline-outputs/appcat-html.png": [
+      2160,
+      1571
+    ],
+    "assets/baseline-outputs/neuvector.png": [
+      2160,
+      2099
+    ],
+    "assets/baseline-outputs/neuvector-privileged.png": [
+      2160,
+      1892
+    ],
+    "assets/baseline-outputs/neuvector-runtime.png": [
+      2160,
+      3599
+    ],
+    "assets/baseline-outputs/neuvector-cis.png": [
+      2160,
+      2811
+    ],
+    "assets/baseline-outputs/neuvector-cve.png": [
+      2160,
+      3599
+    ],
+    "assets/baseline-outputs/graph.png": [
+      2160,
+      2942
+    ]
+  },
+  "observed_issues": [
+    "AppCAT native HTML displayed No data available",
+    "First NeuVector privileged sample reported false; new three-case run matched configuration"
+  ],
+  "empty_outputs": [
+    "NeuVector container-scope compliance items; node-scope report contains 130 items",
+    "NeuVector pre-scan vulnerability report; completed scan contains 27 records"
+  ],
+  "not_run": [
+    "team otel-demo or full-paper datasets"
+  ],
+  "reused_checks": "53 existing integration tests; readers and their dependencies unchanged"
+}

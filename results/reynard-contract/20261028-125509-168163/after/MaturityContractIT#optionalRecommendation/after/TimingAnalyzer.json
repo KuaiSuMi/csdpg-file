@@ -1,0 +1,60 @@
+{
+  "responses" : [ {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0, mode=null]",
+    "min_ms" : 4.1592488288879395,
+    "average_ms" : 9.124801445007325,
+    "max_ms" : 26.648500442504883,
+    "count" : 5,
+    "values" : [ 26.6485, 5.650807, 4.159249, 4.559063, 4.606388 ]
+  }, {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=null]",
+    "min_ms" : 7.090360164642334,
+    "average_ms" : 7.090360164642334,
+    "max_ms" : 7.090360164642334,
+    "count" : 1,
+    "values" : [ 7.09036 ]
+  } ],
+  "overhead" : [ {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=null]",
+    "min_ms" : 1.2947889566421509,
+    "average_ms" : 1.2947889566421509,
+    "max_ms" : 1.2947889566421509,
+    "count" : 1,
+    "values" : [ 1.294789 ]
+  }, {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0, mode=null]",
+    "min_ms" : 0.8078979849815369,
+    "average_ms" : 1.0419090032577514,
+    "max_ms" : 1.740833044052124,
+    "count" : 5,
+    "values" : [ 1.740833, 0.807898, 0.821149, 0.933532, 0.906133 ]
+  }, {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(503)]",
+    "min_ms" : 0.940904974937439,
+    "average_ms" : 0.940904974937439,
+    "max_ms" : 0.940904974937439,
+    "count" : 1,
+    "values" : [ 0.940905 ]
+  }, {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(502)]",
+    "min_ms" : 0.8044120073318481,
+    "average_ms" : 0.8044120073318481,
+    "max_ms" : 0.8044120073318481,
+    "count" : 1,
+    "values" : [ 0.804412 ]
+  }, {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(500)]",
+    "min_ms" : 0.7745230197906494,
+    "average_ms" : 0.7745230197906494,
+    "max_ms" : 0.7745230197906494,
+    "count" : 1,
+    "values" : [ 0.774523 ]
+  }, {
+    "behaviour" : "Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(504)]",
+    "min_ms" : 0.721917986869812,
+    "average_ms" : 0.721917986869812,
+    "max_ms" : 0.721917986869812,
+    "count" : 1,
+    "values" : [ 0.721918 ]
+  } ]
+}

@@ -1,0 +1,17 @@
+{
+  "tool": "glitch",
+  "project": "before",
+  "input": "baselines\\glitch\\fixtures\\before",
+  "image": "maturity-glitch:1.0.1",
+  "image_id": "sha256:89c325edc764c7221f62103a2752160f297d2bbeedde7afe7f84a9bfb7644cf8",
+  "exit_code": 0,
+  "seconds": 1.122,
+  "coverage": {
+    "files": 1,
+    "lines": 6
+  },
+  "findings": 6,
+  "report": "findings.csv",
+  "report_sha256": "56d586334c449177502d04199d611ddaeedc578478d5ec28167bcacadc7de899",
+  "custom_business_rules": false
+}

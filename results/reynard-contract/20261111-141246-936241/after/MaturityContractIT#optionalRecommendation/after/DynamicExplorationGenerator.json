@@ -1,0 +1,125 @@
+{
+  "stats" : {
+    "failure_modes" : 4,
+    "fault_injection_points" : 1,
+    "redundant_faultloads" : 0,
+    "redundant_fault_points" : 0,
+    "redundant_fault_subsets" : 0,
+    "max_queue_size" : 3,
+    "avg_queue_size" : 1.2,
+    "visited_nodes" : 4,
+    "pruned_nodes" : 0,
+    "simplified_fault_injection_points" : 1
+  },
+  "details" : {
+    "node_order" : "DEPTH_FIRST_POST_ORDER",
+    "breadth_first" : true,
+    "failure_modes" : [ "HTTP_ERROR(500)", "HTTP_ERROR(502)", "HTTP_ERROR(503)", "HTTP_ERROR(504)" ],
+    "fault_injection_point_names" : [ "frontend:GET /#0>recommendations:GET /#0" ],
+    "fault_injection_points" : [ {
+      "stack" : [ {
+        "destination" : "frontend",
+        "signature" : "GET /",
+        "payload" : "",
+        "predecessors" : null,
+        "count" : 0
+      }, {
+        "destination" : "recommendations",
+        "signature" : "GET /",
+        "payload" : "",
+        "predecessors" : null,
+        "count" : 0
+      } ]
+    } ],
+    "simplified_fault_injection_points_names" : [ "frontend:GET /#0>recommendations:GET /#0" ],
+    "simplified_fault_injection_points" : [ {
+      "stack" : [ {
+        "destination" : "frontend",
+        "signature" : "GET /",
+        "payload" : "",
+        "predecessors" : null,
+        "count" : 0
+      }, {
+        "destination" : "recommendations",
+        "signature" : "GET /",
+        "payload" : "",
+        "predecessors" : null,
+        "count" : 0
+      } ]
+    } ],
+    "queue_size" : [ 3, 2, 1, 0, 0 ]
+  },
+  "implications" : {
+    "downstream" : {
+      "count" : 1,
+      "list" : [ {
+        "cause_name" : "frontend:GET /#0",
+        "effect_names" : [ "frontend:GET /#0>recommendations:GET /#0" ]
+      } ]
+    }
+  },
+  "visited" : {
+    "in_order" : [ {
+      "index" : 0,
+      "faultload" : [ ]
+    }, {
+      "index" : 1,
+      "faultload" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(500)"
+      } ]
+    }, {
+      "index" : 2,
+      "faultload" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(504)"
+      } ]
+    }, {
+      "index" : 3,
+      "faultload" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(503)"
+      } ]
+    }, {
+      "index" : 4,
+      "faultload" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(502)"
+      } ]
+    } ]
+  },
+  "tree" : {
+    "index" : 0,
+    "pruned" : false,
+    "node" : [ ],
+    "children" : [ {
+      "index" : 1,
+      "pruned" : false,
+      "node" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(500)"
+      } ]
+    }, {
+      "index" : 2,
+      "pruned" : false,
+      "node" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(504)"
+      } ]
+    }, {
+      "index" : 3,
+      "pruned" : false,
+      "node" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(503)"
+      } ]
+    }, {
+      "index" : 4,
+      "pruned" : false,
+      "node" : [ {
+        "uid" : "frontend:GET /#0>recommendations:GET /#0",
+        "mode" : "HTTP_ERROR(502)"
+      } ]
+    } ]
+  }
+}

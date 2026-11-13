@@ -1,0 +1,939 @@
+ * Serving Flask app "filibuster.server" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5005/ (Press CTRL+C to quit)
+127.0.0.1 - - [21/Oct/2026 06:37:25] "[37mGET /health-check HTTP/1.1[0m" 200 -
+[92m[FILIBUSTER] [NOTICE]: Running test python /workspace/baselines/sources/filibuster-corpus/cinema-1/functional/test_user_bookings.py[0m
+[94m[FILIBUSTER] [INFO]: Running initial non-failing execution (test 1) python /workspace/baselines/sources/filibuster-corpus/cinema-1/functional/test_user_bookings.py[0m
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: [DONE] Running initial non-failing execution (test 1)[0m
+[94m[FILIBUSTER] [INFO]: Running test 2[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 9[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 2[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '8ceb8f53c55a3bb1620ddc783ba105f8')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '503')]
+
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 2 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 3[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 8[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 3[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '8ceb8f53c55a3bb1620ddc783ba105f8')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '503'), ('text', 'd41d8cd98f00b204e9800998ecf8427e')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 3 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 4[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 7[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 4[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '8ceb8f53c55a3bb1620ddc783ba105f8')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '503'), ('text', 'd41d8cd98f00b204e9800998ecf8427e')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '502'), ('text', 'd41d8cd98f00b204e9800998ecf8427e')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:26] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 4 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 5[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 6[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 5[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 5 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 6[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 5[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 6[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 6 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 7[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 4[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 7[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '503')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '503')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '503')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '503')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '503')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '503')]
+
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:27] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 7 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 8[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 3[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 8[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '503'), ('text', 'd41d8cd98f00b204e9800998ecf8427e')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '502')]
+
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 8 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 9[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 2[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 9[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '200'), ('text', '5373923a3c6e2338d27835665066e38a')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '503'), ('text', 'd41d8cd98f00b204e9800998ecf8427e')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+[93m[FILIBUSTER] [WARNING]: subset_match: False[0m
+[93m[FILIBUSTER] [WARNING]: We shouldn't be here because this means we matched on EI but the requests were different.[0m
+
+subset_match: False
+
+previously_ran_completed_request['return_value']
+[('__class__', 'Response'), ('status_code', '502'), ('text', 'd41d8cd98f00b204e9800998ecf8427e')]
+
+failure['failure_metadata']['return_value']
+[('status_code', '500')]
+
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 9 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 10[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 1[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 10[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 10 completed.[0m
+[94m[FILIBUSTER] [INFO]: Running test 11[0m
+[94m[FILIBUSTER] [INFO]: Total tests pruned so far: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests remaining: 0[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 11[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/new-test-execution/users HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPUT /filibuster/create HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mPOST /filibuster/update HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:37:28] "[37mGET /filibuster/fault-injected HTTP/1.1[0m" 200 -
+[94m[FILIBUSTER] [INFO]: Test 11 completed.[0m
+[92m[FILIBUSTER] [NOTICE]: Completed testing python /workspace/baselines/sources/filibuster-corpus/cinema-1/functional/test_user_bookings.py[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Test executions actually ran:[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 1[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: None.[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 2[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 3[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 4[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 5[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 6[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 1 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5001/movies/267eedb8-0f5d-42d5-8f43-72426b9fb3e6'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 2}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["521c997c09adcb4cb1b671283be26548", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["521c997c09adcb4cb1b671283be26548", 1]]: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 7[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: [('return_value', {'status_code': '503'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 8[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: [('return_value', {'status_code': '502'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 9[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with metadata: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: [('return_value', {'status_code': '500'})][0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 10[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: {'name': 'requests.exceptions.Timeout', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: Test number: 11[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: gen_id: 0 [0m
+[94m[FILIBUSTER] [INFO]:   source_service_name: users[0m
+[94m[FILIBUSTER] [INFO]:   module: requests[0m
+[94m[FILIBUSTER] [INFO]:   method: get[0m
+[94m[FILIBUSTER] [INFO]:   args: ['5003/bookings/chris_rivers'][0m
+[94m[FILIBUSTER] [INFO]:   kwargs: {}[0m
+[94m[FILIBUSTER] [INFO]:   vclock: {'users': 1}[0m
+[94m[FILIBUSTER] [INFO]:   origin_vclock: {}[0m
+[94m[FILIBUSTER] [INFO]:   execution_index: [["6d254572e17a9dba41cc00ea054b35c2", 1]][0m
+[94m[FILIBUSTER] [INFO]: * Failed with exception: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Failures for this execution:[0m
+[94m[FILIBUSTER] [INFO]: [["6d254572e17a9dba41cc00ea054b35c2", 1]]: {'name': 'requests.exceptions.ConnectionError', 'metadata': {}}[0m
+[94m[FILIBUSTER] [INFO]: =====================================================================================[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Test executions actually pruned:[0m
+[94m[FILIBUSTER] [INFO]: None.[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Number of tests attempted: 11[0m
+[94m[FILIBUSTER] [INFO]: Number of test executions ran: 11[0m
+[94m[FILIBUSTER] [INFO]: Test executions pruned with only dynamic pruning: 0[0m
+[94m[FILIBUSTER] [INFO]: Total tests: 11[0m
+[94m[FILIBUSTER] [INFO]: [0m
+[94m[FILIBUSTER] [INFO]: Time elapsed: 2.919663190841675 seconds.[0m

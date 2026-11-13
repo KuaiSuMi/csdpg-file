@@ -1,0 +1,10 @@
+{
+  "http_status": 200,
+  "body": {
+    "docker_cis_version": "",
+    "items": [],
+    "kubernetes_cis_version": "",
+    "run_at": "",
+    "run_timestamp": 0
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "output": "results\\output-audit\\20261111\\graph\\before.kg.json",
+  "stats": {
+    "node_count": 29,
+    "edge_count": 19,
+    "nodes_by_type": {
+      "Module": 6,
+      "Metric": 18,
+      "Deployment": 2,
+      "Service": 2,
+      "Infrastructure": 1
+    },
+    "relations_by_type": {
+      "OBSERVED_BY": 18,
+      "CALLS": 1
+    },
+    "provenance_by_source": {
+      "source_code": 47,
+      "document": 8,
+      "runtime": 26
+    }
+  },
+  "baseline_runs": {
+    "baseline-fetruth": {
+      "status": "ok",
+      "observations": 2,
+      "subjects": 2,
+      "findings": 1
+    },
+    "baseline-kivi": {
+      "status": "ok",
+      "observations": 1,
+      "subjects": 1,
+      "findings": 1
+    },
+    "baseline-reynard": {
+      "status": "ok",
+      "observations": 5,
+      "subjects": 2,
+      "findings": 4
+    },
+    "baseline-appcat": {
+      "status": "ok",
+      "observations": 7,
+      "subjects": 4,
+      "findings": 4
+    },
+    "baseline-neuvector": {
+      "status": "ok",
+      "observations": 3,
+      "subjects": 2,
+      "findings": 1
+    }
+  }
+}

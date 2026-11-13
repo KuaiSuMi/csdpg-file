@@ -1,0 +1,2090 @@
+{
+  "http_status": 200,
+  "body": {
+    "cis_version": "1.8.0",
+    "items": [
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the API server pod specification file permissions are set to 600 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 /etc/kubernetes/manifests/kube-apiserver.yaml",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.1",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the API server pod specification file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root /etc/kubernetes/manifests/kube-apiserver.yaml",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.2",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the controller manager pod specification file permissions are set to 600 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 /etc/kubernetes/manifests/kube-controller-manager.yaml",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.3",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the controller manager pod specification file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root /etc/kubernetes/manifests/kube-controller-manager.yaml",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.4",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the scheduler pod specification file permissions are set to 600 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 /etc/kubernetes/manifests/kube-scheduler.yaml",
+        "scored": true,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.1.5",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the scheduler pod specification file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root /etc/kubernetes/manifests/kube-scheduler.yaml",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.6",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the etcd pod specification file permissions are set to 600 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 /etc/kubernetes/manifests/etcd.yaml",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.7",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the etcd pod specification file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root /etc/kubernetes/manifests/etcd.yaml",
+        "scored": true,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.1.8",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the Container Network Interface file permissions are set to 600 or more restrictive - No matching files found in /proc/1/root/etc/cni/net.d",
+        "level": "WARN",
+        "message": [
+          "No matching files found in /proc/1/root/etc/cni/net.d"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 the related files in etc/cni/net.d",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.9",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the Container Network Interface file ownership is set to root:root - No matching files found in /proc/1/root/etc/cni/net.d",
+        "level": "WARN",
+        "message": [
+          "No matching files found in /proc/1/root/etc/cni/net.d"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root the related files in etc/cni/net.d",
+        "scored": false,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.1.10",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the etcd data directory permissions are set to 700 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "On the etcd server node, get the etcd data directory, passed as an argument --data-dir, from the below command: ps -ef | grep etcd Run the below command (based on the etcd data directory found above). For example, chmod 700 /var/lib/etcd",
+        "scored": true,
+        "tags": [
+          "PCI",
+          "GDPR",
+          "HIPAA"
+        ],
+        "test_number": "K.1.1.11",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the etcd data directory ownership is set to etcd:etcd - Wrong ownership for /proc/1/root/var/lib/etcd, expected etcd:etcd, but is root:root",
+        "level": "WARN",
+        "message": [
+          "Wrong ownership for /proc/1/root/var/lib/etcd, expected etcd:etcd, but is root:root"
+        ],
+        "profile": "Level 1",
+        "remediation": "On the etcd server node, get the etcd data directory, passed as an argument --data-dir, from the below command: ps -ef | grep etcd Run the below command (based on the etcd data directory found above). For example, chown etcd:etcd /var/lib/etcd",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.12",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the admin.conf file permissions are set to 600",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 /etc/kubernetes/admin.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.13",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the admin.conf file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root /etc/kubernetes/admin.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.14",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the scheduler.conf file permissions are set to 600 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 /etc/kubernetes/scheduler.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.15",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the scheduler.conf file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root /etc/kubernetes/scheduler.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.16",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the controller-manager.conf file permissions are set to 600 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod 600 /etc/kubernetes/controller-manager.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.17",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the controller-manager.conf file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown root:root /etc/kubernetes/controller-manager.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.18",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the Kubernetes PKI directory and file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chown -R root:root /etc/kubernetes/pki/",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.19",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the Kubernetes PKI certificate file permissions are set to 600 or more restrictive - Wrong permissions for /proc/1/root/etc/kubernetes/pki/apiserver-kubelet-client.crt, expected 600 or less, but is 644",
+        "level": "WARN",
+        "message": [
+          "Wrong permissions for /proc/1/root/etc/kubernetes/pki/apiserver-kubelet-client.crt, expected 600 or less, but is 644"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod -R 600 /etc/kubernetes/pki/*.crt",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.20",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the Kubernetes PKI key file permissions are set to 600",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the master node. For example, chmod -R 600 /etc/kubernetes/pki/*.key",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.1.21",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the --anonymous-auth argument is set to false",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the below parameter. --anonymous-auth=false",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.1",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --token-auth-file parameter is not set",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Follow the documentation and configure alternate mechanisms for authentication. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and remove the --token-auth-file=<filename> parameter.",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.2",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the DenyServiceExternalIPs is set",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and remove the `--DenyServiceExternalIPs'parameter or The Kubernetes API server flag disable-admission-plugins takes a comma-delimited list of admission control plugins to be disabled, even if they are in the list of plugins enabled by default. kube-apiserver --disable-admission-plugins=DenyServiceExternalIPs,AlwaysDeny...\n",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.3",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --kubelet-client-certificate and --kubelet-client-key arguments are set as appropriate - kubelet-client-certificate: /etc/kubernetes/pki/apiserver-kubelet-client.crt, kubelet-client-key: /etc/kubernetes/pki/apiserver-kubelet-client.key",
+        "level": "PASS",
+        "message": [
+          "kubelet-client-certificate: /etc/kubernetes/pki/apiserver-kubelet-client.crt",
+          "kubelet-client-key: /etc/kubernetes/pki/apiserver-kubelet-client.key"
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and set up the TLS connection between the apiserver and kubelets. Then, edit API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the kubelet client certificate and key parameters as below. --kubelet-client-certificate=<path/to/client-certificate-file> --kubelet-client-key=<path/to/client-key-file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.4",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --kubelet-certificate-authority argument is set as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and setup the TLS connection between the apiserver and kubelets. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the -- kubelet-certificate-authority parameter to the path to the cert file for the certificate authority. --kubelet-certificate-authority=<ca-string>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.5",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --authorization-mode argument is not set to AlwaysAllow",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --authorization-mode parameter to values other than AlwaysAllow . One such example could be as below. --authorization-mode=RBAC",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.6",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --authorization-mode argument includes Node",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --authorization-mode parameter to a value that includes Node . --authorization-mode=Node,RBAC",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.7",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --authorization-mode argument includes RBAC",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --authorization-mode parameter to a value that includes RBAC, for example:--authorization-mode=Node,RBAC",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.8",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the admission control plugin EventRateLimit is set",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and set the desired limits in a configuration file. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml and set the below parameters.  --enable-admission-plugins=...,EventRateLimit,... --admission-control-config-file=<path/to/configuration/file>",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.2.9",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the admission control plugin AlwaysAdmit is not set",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and either remove the --enable-admission-plugins parameter, or set it to a value that does not include AlwaysAdmit.",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.2.10",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the admission control plugin AlwaysPullImages is set",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --enable-admission-plugins parameter to include AlwaysPullImages.  --enable-admission-plugins=...,AlwaysPullImages,...",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.2.11",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the admission control plugin SecurityContextDeny is set if PodSecurityPolicy is not used",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --enable-admission-plugins parameter to include SecurityContextDeny, unless PodSecurityPolicy is already in place.  --enable-admission-plugins=...,SecurityContextDeny,...",
+        "scored": false,
+        "tags": [
+          "PCI",
+          "HIPAA"
+        ],
+        "test_number": "K.1.2.12",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the admission control plugin ServiceAccount is set",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Follow the documentation and create ServiceAccount objects as per your environment. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and ensure that the --disable-admission-plugins parameter is set to a value that does not include ServiceAccount.",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.2.13",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the admission control plugin NamespaceLifecycle is set",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --disable-admission-plugins parameter to ensure it does not include NamespaceLifecycle.",
+        "scored": true,
+        "tags": [
+          "PCI",
+          "HIPAA"
+        ],
+        "test_number": "K.1.2.14",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the admission control plugin NodeRestriction is set",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and configure NodeRestriction plug-in on kubelets. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --enable-admission-plugins parameter to a value that includes NodeRestriction. --enable-admission-plugins=...,NodeRestriction,...",
+        "scored": true,
+        "tags": [
+          "PCI",
+          "HIPAA"
+        ],
+        "test_number": "K.1.2.15",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --profiling argument is set to false",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the below parameter. --profiling=false",
+        "scored": true,
+        "test_number": "K.1.2.16",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --audit-log-path argument is set",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --audit-log-path parameter to a suitable path and file where you would like audit logs to be written, for example: --audit-log-path=/var/log/apiserver/audit.log",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.17",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --audit-log-maxage argument is set to 30 or as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --audit-log-maxage parameter to 30 or as an appropriate number of days: --audit-log-maxage=30",
+        "scored": true,
+        "tags": [
+          "GDPR",
+          "HIPAA"
+        ],
+        "test_number": "K.1.2.18",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --audit-log-maxbackup argument is set to 10 or as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --audit-log-maxbackup parameter to 10 or to an appropriate value. --audit-log-maxbackup=10",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.19",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --audit-log-maxsize argument is set to 100 or as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --audit-log-maxsize parameter to an appropriate size in MB. For example, to set it as 100 MB: --audit-log-maxsize=100",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.20",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --request-timeout argument is set as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml and set the below parameter as appropriate and if needed. For example, --request-timeout=300s",
+        "scored": true,
+        "test_number": "K.1.2.21",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --service-account-lookup argument is set to true",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the below parameter. --service-account-lookup=true",
+        "scored": true,
+        "tags": [
+          "PCI",
+          "GDPR",
+          "HIPAA"
+        ],
+        "test_number": "K.1.2.22",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --service-account-key-file argument is set as appropriate - service-account-key-file: /proc/1/root/etc/kubernetes/pki/sa.pub",
+        "level": "PASS",
+        "message": [
+          "service-account-key-file: /proc/1/root/etc/kubernetes/pki/sa.pub"
+        ],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --service-account-key-file parameter to the public key file for service accounts: --service-account-key-file=<filename>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.23",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --etcd-certfile and --etcd-keyfile arguments are set as appropriate - etcd-certfile: /proc/1/root/etc/kubernetes/pki/apiserver-etcd-client.crt, etcd-keyfile: /proc/1/root/etc/kubernetes/pki/apiserver-etcd-client.key",
+        "level": "PASS",
+        "message": [
+          "etcd-certfile: /proc/1/root/etc/kubernetes/pki/apiserver-etcd-client.crt",
+          "etcd-keyfile: /proc/1/root/etc/kubernetes/pki/apiserver-etcd-client.key"
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and set up the TLS connection between the apiserver and etcd. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the etcd certificate and key file parameters.  --etcd-certfile=<path/to/client-certificate-file> --etcd-keyfile=<path/to/client-key-file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.24",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate - tls-cert-file: /proc/1/root/etc/kubernetes/pki/apiserver.crt, tls-private-key-file: /proc/1/root/etc/kubernetes/pki/apiserver.key",
+        "level": "PASS",
+        "message": [
+          "tls-cert-file: /proc/1/root/etc/kubernetes/pki/apiserver.crt",
+          "tls-private-key-file: /proc/1/root/etc/kubernetes/pki/apiserver.key"
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and set up the TLS connection on the apiserver. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the TLS certificate and private key file parameters. --tls-cert-file=<path/to/tls-certificate-file> --tls-private-key-file=<path/to/tls-key-file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.25",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --client-ca-file argument is set as appropriate - client-ca-file: /proc/1/root/etc/kubernetes/pki/ca.crt",
+        "level": "PASS",
+        "message": [
+          "client-ca-file: /proc/1/root/etc/kubernetes/pki/ca.crt"
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and set up the TLS connection on the apiserver. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the client certificate authority file. --client-ca-file=<path/to/client-ca-file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.26",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --etcd-cafile argument is set as appropriate - etcd-cafile: /proc/1/root/etc/kubernetes/pki/etcd/ca.crt",
+        "level": "PASS",
+        "message": [
+          "etcd-cafile: /proc/1/root/etc/kubernetes/pki/etcd/ca.crt"
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and set up the TLS connection between the apiserver and etcd. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the etcd certificate authority file parameter. --etcd-cafile=<path/to/ca-file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.27",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the --encryption-provider-config argument is set as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and configure a EncryptionConfig file. Then, edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the master node and set the --encryption-provider-config parameter to the path of that file: --encryption-provider-config=</path/to/EncryptionConfig/File>",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.28",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that encryption providers are appropriately configured",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Follow the Kubernetes documentation and configure a EncryptionConfig file. In this file, choose aescbc, kms or secretbox as the encryption provider.",
+        "scored": false,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.2.29",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the API Server only makes use of Strong Cryptographic Ciphers",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the API server pod specification file /etc/kubernetes/manifests/kube-apiserver.yaml on the Control Plane node and set the below parameter.\n--tls-cipher-suites=TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384,\nTLS_CHACHA20_POLY1305_SHA256, TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,\nTLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,\nTLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,\nTLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,\nTLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,\nTLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,\nTLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,\nTLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,\nTLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,\nTLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256, TLS_RSA_WITH_3DES_EDE_CBC_SHA,\nTLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256,\nTLS_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_256_GCM_SHA384.\n",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.2.30",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the --terminated-pod-gc-threshold argument is set as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml on the master node and set the --terminated-pod-gc-threshold to an appropriate threshold, for example: --terminated-pod-gc-threshold=10",
+        "scored": false,
+        "test_number": "K.1.3.1",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --profiling argument is set to false",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml on the master node and set the below parameter. --profiling=false",
+        "scored": true,
+        "test_number": "K.1.3.2",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --use-service-account-credentials argument is set to true",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml on the master node to set the below parameter. --use-service-account-credentials=true",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.3.3",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --service-account-private-key-file argument is set as appropriate - service-account-private-key-file: /proc/1/root/etc/kubernetes/pki/sa.key",
+        "level": "PASS",
+        "message": [
+          "service-account-private-key-file: /proc/1/root/etc/kubernetes/pki/sa.key"
+        ],
+        "profile": "Level 1",
+        "remediation": "Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml on the master node and set the --service-account-privat-key-file parameter to the private key file for service accounts. --service-account-private-key-file=<filename>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.1.3.4",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --root-ca-file argument is set as appropriate - root-ca-file: /proc/1/root/etc/kubernetes/pki/ca.crt",
+        "level": "PASS",
+        "message": [
+          "root-ca-file: /proc/1/root/etc/kubernetes/pki/ca.crt"
+        ],
+        "profile": "Level 1",
+        "remediation": "Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml on the master node and set the --root-ca-file parameter to the certificate bundle file`. --root-ca-file=<path/to/file>",
+        "scored": true,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.1.3.5",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the RotateKubeletServerCertificate argument is set to true",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 2",
+        "remediation": "Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml on the master node and set the --feature-gates parameter to include RotateKubeletServerCertificate=true. --feature-gates=RotateKubeletServerCertificate=true",
+        "scored": true,
+        "tags": [
+          "PCI",
+          "GDPR",
+          "HIPAA"
+        ],
+        "test_number": "K.1.3.6",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --bind-address argument is set to 127.0.0.1",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the Controller Manager pod specification file /etc/kubernetes/manifests/kube-controller-manager.yaml on the master node and ensure the correct value for the --bind-address parameter.",
+        "scored": true,
+        "test_number": "K.1.3.7",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --profiling argument is set to false",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the Scheduler pod specification file /etc/kubernetes/manifests/kube-scheduler.yaml file on the master node and set the below parameter. --profiling=false",
+        "scored": true,
+        "test_number": "K.1.4.1",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --bind-address argument is set to 127.0.0.1",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the Scheduler pod specification file /etc/kubernetes/manifests/kube-scheduler.yaml on the master node and ensure the correct value for the --bind-address parameter",
+        "scored": true,
+        "test_number": "K.1.4.2",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --cert-file and --key-file arguments are set as appropriate - cert-file: /proc/1/root/etc/kubernetes/pki/etcd/server.crt, key-file: /proc/1/root/etc/kubernetes/pki/etcd/server.key",
+        "level": "PASS",
+        "message": [
+          "cert-file: /proc/1/root/etc/kubernetes/pki/etcd/server.crt",
+          "key-file: /proc/1/root/etc/kubernetes/pki/etcd/server.key"
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the etcd service documentation and configure TLS encryption. Then, edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the master node and set the below parameters.  --cert-file=</path/to/ca-file> --key-file=</path/to/key-file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.2.1",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --client-cert-auth argument is set to true",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the master node and set the below parameter. --client-cert-auth=\"true\"",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.2.2",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --auto-tls argument is not set to true",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the master node and either remove the --auto-tls parameter or set it to false. --auto-tls=false",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.2.3",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --peer-cert-file and --peer-key-file arguments are set as appropriate - peer-cert-file: /proc/1/root/etc/kubernetes/pki/etcd/peer.crt, peer-key-file: /proc/1/root/etc/kubernetes/pki/etcd/peer.key",
+        "level": "PASS",
+        "message": [
+          "peer-cert-file: /proc/1/root/etc/kubernetes/pki/etcd/peer.crt",
+          "peer-key-file: /proc/1/root/etc/kubernetes/pki/etcd/peer.key"
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the etcd service documentation and configure peer TLS encryption as appropriate for your etcd cluster. Then, edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the master node and set the below parameters.  --peer-cert-file=</path/to/peer-cert-file> --peer-key-file=</path/to/peer-key-file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.2.4",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --peer-client-cert-auth argument is set to true",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the master node and set the below parameter. --peer-client-cert-auth=true",
+        "scored": true,
+        "tags": [
+          "PCI",
+          "GDPR",
+          "HIPAA"
+        ],
+        "test_number": "K.2.5",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --peer-auto-tls argument is not set to true",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the master node and either remove the --peer-auto-tls parameter or set it to false. --peer-auto-tls=false",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.2.6",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that a unique Certificate Authority is used for etcd - The trusted-ca-file and client-ca-file are not the same",
+        "level": "WARN",
+        "message": [
+          "The trusted-ca-file and client-ca-file are not the same"
+        ],
+        "profile": "Level 2",
+        "remediation": "Follow the etcd documentation and create a dedicated certificate authority setup for the etcd service. Then, edit the etcd pod specification file /etc/kubernetes/manifests/etcd.yaml on the master node and set the below parameter. --trusted-ca-file=</path/to/ca-file>",
+        "scored": false,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.2.7",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Client certificate authentication should not be used for users - Review user access to the cluster and ensure that users are not making use of Kubernetes client certificate authentication.",
+        "level": "MANUAL",
+        "message": [
+          "Review user access to the cluster and ensure that users are not making use of Kubernetes client certificate authentication."
+        ],
+        "profile": "Level 1",
+        "remediation": "Alternative mechanisms provided by Kubernetes such as the use of OIDC should be implemented in place of client certificates.",
+        "scored": false,
+        "test_number": "K.3.1.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Service account token authentication should not be used for users - Review user access to the cluster and ensure that users are not making use of service account token authentication.",
+        "level": "MANUAL",
+        "message": [
+          "Review user access to the cluster and ensure that users are not making use of service account token authentication."
+        ],
+        "profile": "Level 1",
+        "remediation": "Alternative mechanisms provided by Kubernetes such as the use of OIDC should be implemented in place of service account tokens.",
+        "scored": false,
+        "test_number": "K.3.1.2",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Bootstrap token authentication should not be used for users - Review user access to the cluster and ensure that users are not making use of bootstrap token authentication.",
+        "level": "MANUAL",
+        "message": [
+          "Review user access to the cluster and ensure that users are not making use of bootstrap token authentication."
+        ],
+        "profile": "Level 1",
+        "remediation": "Alternative mechanisms provided by Kubernetes such as the use of OIDC should be implemented in place of bootstrap tokens.",
+        "scored": false,
+        "test_number": "K.3.1.3",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that a minimal audit policy is created",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Create an audit policy file for your cluster.",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "GDPR"
+        ],
+        "test_number": "K.3.2.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the audit policy covers key security concerns - Access to Secrets managed by the cluster. Care should be taken to only log Metadata for requests to Secrets, ConfigMaps, and TokenReviews, in order to avoid the risk of logging sensitive data., Modification of pod and deployment objects., Use of pods/exec, pods/portforward, pods/proxy and services/proxy.",
+        "level": "MANUAL",
+        "message": [
+          "Access to Secrets managed by the cluster. Care should be taken to only log Metadata for requests to Secrets, ConfigMaps, and TokenReviews, in order to avoid the risk of logging sensitive data.",
+          "Modification of pod and deployment objects.",
+          "Use of pods/exec, pods/portforward, pods/proxy and services/proxy."
+        ],
+        "profile": "Level 2",
+        "remediation": "Consider modification of the audit policy in use on the cluster to include these items, at a minimum.",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "GDPR"
+        ],
+        "test_number": "K.3.2.2",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the cluster-admin role is only used where required - Run kubectl get clusterrolebindings -o=custom-columns=NAME:.metadata.name,ROLE:.roleRef.name,SUBJECT:.subjects[*].name, Review each principal listed and ensure that cluster-admin privilege is required for it.",
+        "level": "MANUAL",
+        "message": [
+          "Run kubectl get clusterrolebindings -o=custom-columns=NAME:.metadata.name,ROLE:.roleRef.name,SUBJECT:.subjects[*].name, Review each principal listed and ensure that cluster-admin privilege is required for it."
+        ],
+        "profile": "Level 1",
+        "remediation": "Identify all clusterrolebindings to the cluster-admin role. Check if they are used and if they need this role or if they could use a role with fewer privileges. Where possible, first bind users to a lower privileged role and then remove the clusterrolebinding to the cluster-admin role : kubectl delete clusterrolebinding [name]",
+        "scored": false,
+        "test_number": "K.5.1.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize access to secrets - Review the users who have get, list or watch access to secrets objects in the Kubernetes API.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have get, list or watch access to secrets objects in the Kubernetes API."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove get, list and watch access to secret objects in the cluster.",
+        "scored": false,
+        "test_number": "K.5.1.2",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize wildcard use in Roles and ClusterRoles - Retrieve the roles defined across each namespaces in the cluster and review for wildcards kubectl get roles --all-namespaces -o yaml Retrieve the cluster roles defined in the cluster and review for wildcards kubectl get clusterroles -o yaml",
+        "level": "MANUAL",
+        "message": [
+          "Retrieve the roles defined across each namespaces in the cluster and review for wildcards kubectl get roles --all-namespaces -o yaml Retrieve the cluster roles defined in the cluster and review for wildcards kubectl get clusterroles -o yaml"
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible replace any use of wildcards in clusterroles and roles with specific objects or actions.",
+        "scored": false,
+        "test_number": "K.5.1.3",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize access to create pods - Review the users who have create access to pod objects in the Kubernetes API.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have create access to pod objects in the Kubernetes API."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove create access to pod objects in the cluster.",
+        "scored": false,
+        "test_number": "K.5.1.4",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that default service accounts are not actively used. - For each namespace in the cluster, review the rights assigned to the default service account and ensure that it has no roles or cluster roles bound to it apart from the defaults. Additionally ensure that the automountServiceAccountToken: false setting is in place for each default service account.",
+        "level": "MANUAL",
+        "message": [
+          "For each namespace in the cluster, review the rights assigned to the default service account and ensure that it has no roles or cluster roles bound to it apart from the defaults. Additionally ensure that the automountServiceAccountToken: false setting is in place for each default service account."
+        ],
+        "profile": "Level 1",
+        "remediation": "Create explicit service accounts wherever a Kubernetes workload requires specific access to the Kubernetes API server. Modify the configuration of each default service account to include this value automountServiceAccountToken: false",
+        "scored": false,
+        "test_number": "K.5.1.5",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that Service Account Tokens are only mounted where necessary - Review pod and service account objects in the cluster and ensure that the option below is set, unless the resource explicitly requires this access. automountServiceAccountToken: false",
+        "level": "MANUAL",
+        "message": [
+          "Review pod and service account objects in the cluster and ensure that the option below is set, unless the resource explicitly requires this access. automountServiceAccountToken: false"
+        ],
+        "profile": "Level 1",
+        "remediation": "Modify the definition of pods and service accounts which do not need to mount service account tokens to disable it.",
+        "scored": false,
+        "test_number": "K.5.1.6",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Avoid use of system:masters group - Review a list of all credentials which have access to the cluster and ensure that the group system:masters is not used.",
+        "level": "MANUAL",
+        "message": [
+          "Review a list of all credentials which have access to the cluster and ensure that the group system:masters is not used."
+        ],
+        "profile": "Level 1",
+        "remediation": "Remove the system:masters group from all users in the cluster.",
+        "scored": false,
+        "test_number": "K.5.1.7",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Limit use of the Bind, Impersonate and Escalate permissions in the Kubernetes cluster - Review the users who have access to cluster roles or roles which provide the impersonate, bind or escalate privileges.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have access to cluster roles or roles which provide the impersonate, bind or escalate privileges."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove the impersonate, bind and escalate rights from subjects.",
+        "scored": false,
+        "test_number": "K.5.1.8",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize access to create persistent volumes - Review the users who have create access to PersistentVolume objects in the Kubernetes API.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have create access to PersistentVolume objects in the Kubernetes API."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove create access to PersistentVolume objects in the cluster.",
+        "scored": false,
+        "test_number": "K.5.1.9",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize access to the proxy sub-resource of nodes - Review the users who have access to the proxy sub-resource of node objects in the Kubernetes API.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have access to the proxy sub-resource of node objects in the Kubernetes API."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove access to the proxy sub-resource of node objects.",
+        "scored": false,
+        "test_number": "K.5.1.10",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize access to the approval sub-resource of certificatesigningrequests objects - Review the users who have access to update the approval sub-resource of certificatesigningrequest objects in the Kubernetes API.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have access to update the approval sub-resource of certificatesigningrequest objects in the Kubernetes API."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove access to the approval sub-resource of certificatesigningrequest objects.",
+        "scored": false,
+        "test_number": "K.5.1.11",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize access to webhook configuration objects - Review the users who have access to validatingwebhookconfigurations or mutatingwebhookconfigurations objects in the Kubernetes API.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have access to validatingwebhookconfigurations or mutatingwebhookconfigurations objects in the Kubernetes API."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove the impersonate, bind and escalate rights from subjects.",
+        "scored": false,
+        "test_number": "K.5.1.12",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize access to the service account token creation - Review the users who have access to create the token sub-resource of serviceaccount objects in the Kubernetes API.",
+        "level": "MANUAL",
+        "message": [
+          "Review the users who have access to create the token sub-resource of serviceaccount objects in the Kubernetes API."
+        ],
+        "profile": "Level 1",
+        "remediation": "Where possible, remove access to the token sub-resource of serviceaccount objects.",
+        "scored": false,
+        "test_number": "K.5.1.13",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the cluster has at least one active policy control mechanism in place - Run get pods -A -o=jsonpath={range .items[*]}{@.metadata.name}:{@..securityContext}, It will produce an inventory of all the privileged use on the cluster, if any (please, refer to a sample below). Further grepping can be done to automate each specific violation detection.calico-kube-controllers-57b57c56f-jtmk4: {} << No Elevated Privileges calico-node-c4xv4: {} {privileged:true} {privileged:true} {privileged:true} {privileged:true} << Violates 5.2.2 dashboard-metrics-scraper-7bc864c59-2m2xw: {seccompProfile:{type:RuntimeDefault}} {allowPrivilegeEscalation:false,readOnlyRootFilesystem:true,runAsGroup:2001,ru nAsUser:1001}",
+        "level": "MANUAL",
+        "message": [
+          "Run get pods -A -o=jsonpath={range .items[*]}{@.metadata.name}:{@..securityContext}",
+          "It will produce an inventory of all the privileged use on the cluster, if any (please, refer to a sample below). Further grepping can be done to automate each specific violation detection.calico-kube-controllers-57b57c56f-jtmk4: {} << No Elevated Privileges calico-node-c4xv4: {} {privileged:true} {privileged:true} {privileged:true} {privileged:true} << Violates 5.2.2 dashboard-metrics-scraper-7bc864c59-2m2xw: {seccompProfile:{type:RuntimeDefault}} {allowPrivilegeEscalation:false,readOnlyRootFilesystem:true,runAsGroup:2001,ru nAsUser:1001}"
+        ],
+        "profile": "Level 1",
+        "remediation": "Ensure that either Pod Security Admission or an external policy control system is in place for every namespace which contains user workloads.",
+        "scored": false,
+        "test_number": "K.5.2.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize the admission of privileged containers - Run get pods -A -o=jsonpath={range .items[*]}{@.metadata.name}:{@..securityContext}, It will produce an inventory of all the privileged use on the cluster, if any (please, refer to a sample below). Further grepping can be done to automate each specific violation detection.calico-kube-controllers-57b57c56f-jtmk4: {} << No Elevated Privileges calico-node-c4xv4: {} {privileged:true} {privileged:true} {privileged:true} {privileged:true} << Violates 5.2.2 dashboard-metrics-scraper-7bc864c59-2m2xw: {seccompProfile:{type:RuntimeDefault}} {allowPrivilegeEscalation:false,readOnlyRootFilesystem:true,runAsGroup:2001,ru nAsUser:1001}",
+        "level": "MANUAL",
+        "message": [
+          "Run get pods -A -o=jsonpath={range .items[*]}{@.metadata.name}:{@..securityContext}",
+          "It will produce an inventory of all the privileged use on the cluster, if any (please, refer to a sample below). Further grepping can be done to automate each specific violation detection.calico-kube-controllers-57b57c56f-jtmk4: {} << No Elevated Privileges calico-node-c4xv4: {} {privileged:true} {privileged:true} {privileged:true} {privileged:true} << Violates 5.2.2 dashboard-metrics-scraper-7bc864c59-2m2xw: {seccompProfile:{type:RuntimeDefault}} {allowPrivilegeEscalation:false,readOnlyRootFilesystem:true,runAsGroup:2001,ru nAsUser:1001}"
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of privileged containers.",
+        "scored": false,
+        "test_number": "K.5.2.2",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers wishing to share the host process ID namespace - List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostPID containers",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostPID containers"
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of hostPID containers.",
+        "scored": false,
+        "test_number": "K.5.2.3",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers wishing to share the host IPC namespace - List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostIPC containers.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostIPC containers."
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of hostIPC containers.",
+        "scored": false,
+        "test_number": "K.5.2.4",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers wishing to share the host network namespace - List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostNetwork containers",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostNetwork containers"
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of hostNetwork containers..",
+        "scored": false,
+        "test_number": "K.5.2.5",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers with allowPrivilegeEscalation - List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of containers which allow privilege escalation.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of containers which allow privilege escalation."
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of containers with .spec.allowPrivilegeEscalationset to true.",
+        "scored": false,
+        "test_number": "K.5.2.6",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of root containers - List the policies in use for each namespace in the cluster, ensure that each policy restricts the use of root containers by setting MustRunAsNonRoot or MustRunAs with the range of UIDs not including 0.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy restricts the use of root containers by setting MustRunAsNonRoot or MustRunAs with the range of UIDs not including 0."
+        ],
+        "profile": "Level 2",
+        "remediation": "Create a policy for each namespace in the cluster, ensuring that either MustRunAsNonRoot or MustRunAs with the range of UIDs not including 0, is set.",
+        "scored": false,
+        "test_number": "K.5.2.7",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers with the NET_RAW capability - List the policies in use for each namespace in the cluster, ensure that at least one policy disallows the admission of containers with the NET_RAW capability.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that at least one policy disallows the admission of containers with the NET_RAW capability."
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of containers with the NET_RAW capability.",
+        "scored": false,
+        "test_number": "K.5.2.8",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers with added capabilities - List the policies in use for each namespace in the cluster, ensure that policies are present which prevent allowedCapabilities to be set to anything other than an empty array.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that policies are present which prevent allowedCapabilities to be set to anything other than an empty array."
+        ],
+        "profile": "Level 1",
+        "remediation": "Ensure that allowedCapabilities is not present in policies for the cluster unless it is set to an empty array.",
+        "scored": false,
+        "test_number": "K.5.2.9",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers with capabilities assigned - List the policies in use for each namespace in the cluster, ensure that at least one policy requires that capabilities are dropped by all containers.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that at least one policy requires that capabilities are dropped by all containers."
+        ],
+        "profile": "Level 1",
+        "remediation": "Review the use of capabilities in applications running on your cluster. Where a namespace contains applications which do not require any Linux capabilities to operate consider adding a policy which forbids the admission of containers which do not drop all capabilities.",
+        "scored": false,
+        "test_number": "K.5.2.10",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of Windows HostProcess Containers - List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostProcess containers.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of hostProcess containers."
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of hostProcess containers.",
+        "scored": false,
+        "test_number": "K.5.2.11",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of HostPath volumes - List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of containers with hostPath volumes.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of containers with hostPath volumes."
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of containers which use hostPath volumes.",
+        "scored": false,
+        "test_number": "K.5.2.12",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Minimize the admission of containers which use HostPorts - List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of containers which have hostPort sections.",
+        "level": "MANUAL",
+        "message": [
+          "List the policies in use for each namespace in the cluster, ensure that each policy disallows the admission of containers which have hostPort sections."
+        ],
+        "profile": "Level 1",
+        "remediation": "Add policies to each namespace in the cluster which has user workloads to restrict the admission of containers which use hostPort sections.",
+        "scored": false,
+        "test_number": "K.5.2.13",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the CNI in use supports Network Policies - Review the documentation of CNI plugin in use by the cluster, and confirm that it supports Ingress and Egress network policies.",
+        "level": "MANUAL",
+        "message": [
+          "Review the documentation of CNI plugin in use by the cluster, and confirm that it supports Ingress and Egress network policies."
+        ],
+        "profile": "Level 1",
+        "remediation": "If the CNI plugin in use does not support network policies, consideration should be given to making use of a different plugin, or finding an alternate mechanism for restricting traffic in the Kubernetes cluster.",
+        "scored": false,
+        "test_number": "K.5.3.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that all Namespaces have Network Policies defined - Run kubectl get networkpolicy --all-namespaces , Ensure that each namespace defined in the cluster has at least one Network Policy.",
+        "level": "MANUAL",
+        "message": [
+          "Run kubectl get networkpolicy --all-namespaces , Ensure that each namespace defined in the cluster has at least one Network Policy."
+        ],
+        "profile": "Level 2",
+        "remediation": "Follow the documentation and create NetworkPolicy objects as you need them.",
+        "scored": false,
+        "test_number": "K.5.3.2",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Prefer using secrets as files over secrets as environment variables - Run the following command to find references to objects which use environment variables defined from secrets. kubectl get all -o jsonpath='{range .items[?(@..secretKeyRef)]} {.kind} {.metadata.name} {\"\\n\"}{end}' -A",
+        "level": "MANUAL",
+        "message": [
+          "Run the following command to find references to objects which use environment variables defined from secrets. kubectl get all -o jsonpath='{range .items[?(@..secretKeyRef)]} {.kind} {.metadata.name} {\"\\n\"}{end}' -A"
+        ],
+        "profile": "Level 2",
+        "remediation": "If possible, rewrite application code to read secrets from mounted secret files, rather than from environment variables.",
+        "scored": false,
+        "test_number": "K.5.4.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Consider external secret storage - Review your secrets management implementation.",
+        "level": "MANUAL",
+        "message": [
+          "Review your secrets management implementation."
+        ],
+        "profile": "Level 2",
+        "remediation": "Refer to the secrets management options offered by your cloud provider or a third-party secrets management solution.",
+        "scored": false,
+        "test_number": "K.5.4.2",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Configure Image Provenance using ImagePolicyWebhook admission controller - Review the pod definitions in your cluster and verify that image provenance is configured as appropriate.",
+        "level": "MANUAL",
+        "message": [
+          "Review the pod definitions in your cluster and verify that image provenance is configured as appropriate."
+        ],
+        "profile": "Level 2",
+        "remediation": "Follow the Kubernetes documentation and setup image provenance.",
+        "scored": false,
+        "test_number": "K.5.5.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Create administrative boundaries between resources using namespaces - Run kubectl get namespaces . Ensure that these namespaces are the ones you need and are adequately administered as per your requirements.",
+        "level": "MANUAL",
+        "message": [
+          "Run kubectl get namespaces . Ensure that these namespaces are the ones you need and are adequately administered as per your requirements."
+        ],
+        "profile": "Level 1",
+        "remediation": "Follow the documentation and create namespaces for objects in your deployment as you need them.",
+        "scored": false,
+        "test_number": "K.5.7.1",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the seccomp profile is set to docker/default in your pod definitions - Use security context to enable the docker/default seccomp profile in your pod definitions.",
+        "level": "MANUAL",
+        "message": [
+          "Use security context to enable the docker/default seccomp profile in your pod definitions."
+        ],
+        "profile": "Level 2",
+        "remediation": "Use security context to enable the docker/default seccomp profile in your pod definitions. \nAn example is as below:\nsecurityContext:\n  seccompProfile:\n    type: RuntimeDefault\n",
+        "scored": false,
+        "test_number": "K.5.7.2",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Apply Security Context to Your Pods and Containers - Review the pod definitions in your cluster and verify that you have security contexts defined as appropriate.",
+        "level": "MANUAL",
+        "message": [
+          "Review the pod definitions in your cluster and verify that you have security contexts defined as appropriate."
+        ],
+        "profile": "Level 2",
+        "remediation": "Follow the Kubernetes documentation and apply security contexts to your pods. For a suggested list of security contexts, you may refer to the CIS Security Benchmark for Docker Containers.",
+        "scored": false,
+        "test_number": "K.5.7.3",
+        "type": "master"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "The default namespace should not be used - Run this command in default namespace.  kubectl get $(kubectl api-resources --verbs=list --namespaced=true -o name | paste -sd, -) --ignore-not-found -n default . The only entries there should be system managed resources such as the kubernetes service",
+        "level": "MANUAL",
+        "message": [
+          "Run this command in default namespace.  kubectl get $(kubectl api-resources --verbs=list --namespaced=true -o name | paste -sd, -) --ignore-not-found -n default . The only entries there should be system managed resources such as the kubernetes service"
+        ],
+        "profile": "Level 2",
+        "remediation": "Ensure that namespaces are created to allow for appropriate segregation of Kubernetes resources and that all new resources are created in a specific namespace.",
+        "scored": false,
+        "test_number": "K.5.7.4",
+        "type": "master"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the kubelet service file permissions are set to 600 or more restrictive - Wrong permissions for /proc/1/root/etc/systemd/system/kubelet.service.d/10-kubeadm.conf, expected 600 or less, but is 644",
+        "level": "WARN",
+        "message": [
+          "Wrong permissions for /proc/1/root/etc/systemd/system/kubelet.service.d/10-kubeadm.conf, expected 600 or less, but is 644"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the each worker node. For example, chmod 600 /etc/systemd/system/kubelet.service.d/kubeadm.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.1",
+        "type": "worker"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the kubelet service file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the each worker node. For example, chown root:root /etc/systemd/system/kubelet.service.d/kubeadm.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.2",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "If proxy kubeconfig file exists ensure permissions are set to 600 or more restrictive - Wrong permissions for /proc/1/root/, expected 600 or less, but is 755",
+        "level": "WARN",
+        "message": [
+          "Wrong permissions for /proc/1/root/, expected 600 or less, but is 755"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the each worker node. For example, chmod 600 <proxy kubeconfig file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.3",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "If proxy kubeconfig file exists ensure ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the each worker node. For example, chown root:root <proxy kubeconfig file>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.4",
+        "type": "worker"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --kubeconfig kubelet.conf file permissions are set to 600 or more restrictive",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the each worker node. For example, chmod 600 /etc/kubernetes/kubelet.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.5",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the --kubeconfig kubelet.conf file ownership is set to root:root",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Run the below command (based on the file location on your system) on the each worker node. For example, chown root:root /etc/kubernetes/kubelet.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.6",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the certificate authorities file permissions are set to 600 or more restrictive - --client-ca-file not set",
+        "level": "WARN",
+        "message": [
+          "--client-ca-file not set"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the following command to modify the file permissions of the --client-ca-file chmod 600 <filename>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.7",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the client certificate authorities file ownership is set to root:root - --client-ca-file not set",
+        "level": "WARN",
+        "message": [
+          "--client-ca-file not set"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the following command to modify the ownership of the --client-ca-file. chown root:root <filename>",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.8",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "if the kubelet config.yaml configuration file is being used validate permissions set to 600 or more restrictive - Wrong permissions for /proc/1/root/var/lib/kubelet/config.yaml, expected 600 or less, but is 644",
+        "level": "WARN",
+        "message": [
+          "Wrong permissions for /proc/1/root/var/lib/kubelet/config.yaml, expected 600 or less, but is 644"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the following command (using the config file location identied in the Audit step) chmod 600 /var/lib/kubelet/config.yaml",
+        "scored": true,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.4.1.9",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "If the kubelet config.yaml configuration file is being used validate file ownership is set to root:root - kubelet configuration file: /proc/1/root/var/lib/kubelet/config.yaml",
+        "level": "PASS",
+        "message": [
+          "kubelet configuration file: /proc/1/root/var/lib/kubelet/config.yaml"
+        ],
+        "profile": "Level 1",
+        "remediation": "Run the following command (using the config file location identied in the Audit step) chown root:root /etc/kubernetes/kubelet.conf",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.1.10",
+        "type": "worker"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --anonymous-auth argument is set to false",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set authentication: anonymous: enabled to false.\nIf using executable arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the below parameter in KUBELET_SYSTEM_PODS_ARGS variable.\n--anonymous-auth=false\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.2.1",
+        "type": "worker"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --authorization-mode argument is not set to AlwaysAllow",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set authorization: mode to Webhook.\nIf using executable arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the below parameter in KUBELET_AUTHZ_ARGS variable.\n--authorization-mode=Webhook\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.2.2",
+        "type": "worker"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --client-ca-file argument is set as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set authentication: x509: clientCAFile to the location of the client CA file.\nIf using command line arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the below parameter in KUBELET_AUTHZ_ARGS variable.\n--client-ca-file=<path/to/client-ca-file>\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.2.3",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Verify that the --read-only-port argument is set to 0",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set readOnlyPort to 0.\nIf using command line arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the below parameter in KUBELET_SYSTEM_PODS_ARGS variable.\n--read-only-port=0\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.2.4",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the --streaming-connection-idle-timeout argument is not set to 0",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set streamingConnectionIdleTimeout to a value other than 0.\nIf using command line arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the below parameter in KUBELET_SYSTEM_PODS_ARGS variable.\n--streaming-connection-idle-timeout=5m\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "test_number": "K.4.2.5",
+        "type": "worker"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --make-iptables-util-chains argument is set to true",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set makeIPTablesUtilChains: true.\nIf using command line arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and remove the --mak-iptables-util-chains argument from the KUBELET_SYSTEM_PODS_ARGS variable.\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "test_number": "K.4.2.6",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the --hostname-override argument is not set",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the kubelet service file /etc/systemd/system/kubelet.service.d/10-kubeadm.conf on each worker node and remove the --hostname-override argument from the KUBELET_SYSTEM_PODS_ARGS variable. Based on your system, restart the kubelet service. For example:  systemctl daemon-reload systemctl restart kubelet.service",
+        "scored": false,
+        "test_number": "K.4.2.7",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the eventRecordQPS argument is set to a level which ensures appropriate event capture - --event-qps is not set",
+        "level": "WARN",
+        "message": [
+          "--event-qps is not set"
+        ],
+        "profile": "Level 2",
+        "remediation": "If using a Kubelet config file, edit the file to set eventRecordQPS: to an appropriate level. If using command line arguments, edit the kubelet service file /etc/systemd/system/kubelet.service.d/10-kubeadm.conf on each worker node and set the below parameter in KUBELET_SYSTEM_PODS_ARGS variable. Based on your system, restart the kubelet service. For example:  systemctl daemon-reload systemctl restart kubelet.service",
+        "scored": false,
+        "test_number": "K.4.2.8",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the --tls-cert-file and --tls-private-key-file arguments are set as appropriate",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set tlsCertFile to the location of the certificate file to use to identify this Kubelet, and tlsPrivateKeyFile to the location of the corresponding private key file.\nIf using command line arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the below parameters in KUBELET_CERTIFICATE_ARGS variable.\n--tls-cert-file=<path/to/tls-certificate-file> --tls-private-key-file=<path/to/tls-key-file>\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.2.9",
+        "type": "worker"
+      },
+      {
+        "automated": true,
+        "category": "kubernetes",
+        "description": "Ensure that the --rotate-certificates argument is not set to false",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to add the line rotateCertificates: true or remove it altogether to use the default value.\nIf using command line arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and remove --rotat-certificates=false argument from the KUBELET_CERTIFICATE_ARGS variable.\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "tags": [
+          "GDPR",
+          "HIPAA",
+          "PCI"
+        ],
+        "test_number": "K.4.2.10",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Verify that the RotateKubeletServerCertificate argument is set to true",
+        "level": "WARN",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "Edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the below parameter in KUBELET_CERTIFICATE_ARGS variable.\n--feature-gates=RotateKubeletServerCertificate=true\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": true,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.2.11",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that the Kubelet only makes use of Strong Cryptographic Ciphers",
+        "level": "PASS",
+        "message": [],
+        "profile": "Level 1",
+        "remediation": "If using a Kubelet config file, edit the file to set TLSCipherSuites: to TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 ,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 ,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384\n,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256 or to a subset of these values.\nIf using executable arguments, edit the kubelet service file /etc/kubernetes/kubelet.conf on each worker node and set the --tls-cipher-suites parameter as follows, or to a subset of these values.\n--tls-ciphe-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_256_GCM_SHA384,TLS_RSA_WITH_AES_128_GCM_SHA256\nBased on your system, restart the kubelet service. For example:\nsystemctl daemon-reload\nsystemctl restart kubelet.service\n",
+        "scored": false,
+        "tags": [
+          "HIPAA",
+          "PCI",
+          "GDPR"
+        ],
+        "test_number": "K.4.2.12",
+        "type": "worker"
+      },
+      {
+        "automated": false,
+        "category": "kubernetes",
+        "description": "Ensure that a limit is set on pod PIDs - Review the Kubelet's start-up parameters for the value of --pod-max-pids, and check the Kubelet configuration file for the PodPidsLimit . If neither of these values is set, then there is no limit in place.",
+        "level": "MANUAL",
+        "message": [
+          "Review the Kubelet's start-up parameters for the value of --pod-max-pids, and check the Kubelet configuration file for the PodPidsLimit . If neither of these values is set, then there is no limit in place."
+        ],
+        "profile": "Level 1",
+        "remediation": "Decide on an appropriate level for this parameter and set it, either via the --pod-max-pids command line parameter or the PodPidsLimit configuration file setting.",
+        "scored": false,
+        "test_number": "K.4.2.13",
+        "type": "worker"
+      }
+    ],
+    "run_at": "2026-11-11T06:27:30Z",
+    "run_timestamp": 1794378450
+  }
+}

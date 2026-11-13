@@ -1,0 +1,19 @@
+{
+  "http_status": 200,
+  "body": {
+    "scanners": [
+      {
+        "cvedb_create_time": "2026-11-10T20:34:46Z",
+        "cvedb_version": "4.323",
+        "id": "10.244.0.19",
+        "joined_timestamp": 1794378721,
+        "port": 18402,
+        "scanned_containers": 1,
+        "scanned_hosts": 0,
+        "scanned_images": 0,
+        "scanned_serverless": 0,
+        "server": "10.244.0.19"
+      }
+    ]
+  }
+}

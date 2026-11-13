@@ -1,0 +1,86 @@
+{
+  "workload": {
+    "app_ports": {
+      "TCP": "8080"
+    },
+    "applications": [
+      "TCP/8080"
+    ],
+    "author": "",
+    "baseline_profile": "basic",
+    "cap_change_mode": true,
+    "cap_quarantine": true,
+    "cap_sniff": true,
+    "children": null,
+    "cpus": "",
+    "created_at": "2026-11-11T06:16:01Z",
+    "display_name": "http",
+    "domain": "maturity-nv-check-20261111061551",
+    "enforcer_id": "4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f",
+    "enforcer_name": "neuvector-enforcer-pod-rzgz7",
+    "exit_code": 0,
+    "finished_at": "",
+    "groups": [
+      "nv.maturity-http.maturity-nv-check-20261111061551",
+      "containers"
+    ],
+    "has_datapath": false,
+    "host_id": "maturity-baselines-control-plane:",
+    "host_name": "maturity-baselines-control-plane",
+    "id": "ed7bf4ed2d5ff7a819937a47d05585598ba0f5649da7927c7cb8421c1db89117",
+    "image": "docker.io/library/node:22-alpine",
+    "image_created_at": "2026-09-23T21:09:27Z",
+    "image_digest": "sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8",
+    "image_id": "7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+    "image_reg_scanned": false,
+    "image_repo_digests": null,
+    "interfaces": {
+      "eth0": [
+        {
+          "gateway": "",
+          "ip": "10.244.0.16",
+          "ip_prefix": 24
+        }
+      ]
+    },
+    "labels": {
+      "io.cri-containerd.kind": "container",
+      "io.kubernetes.container.name": "http",
+      "io.kubernetes.pod.name": "maturity-http-f4d9b5957-gnf7m",
+      "io.kubernetes.pod.namespace": "maturity-nv-check-20261111061551",
+      "io.kubernetes.pod.uid": "e24455bd-761f-4d9a-8640-e618ebb8db6c"
+    },
+    "memory_limit": 134217728,
+    "name": "k8s_http_maturity-http-f4d9b5957-gnf7m_maturity-nv-check-20261111061551_e24455bd-761f-4d9a-8640-e618ebb8db6c_0",
+    "network_mode": "/proc/19501/ns/net",
+    "platform_role": "",
+    "pod_name": "maturity-http-f4d9b5957-gnf7m",
+    "policy_mode": "Discover",
+    "ports": [],
+    "privileged": false,
+    "profile_mode": "Discover",
+    "run_as_root": false,
+    "running": true,
+    "scan_summary": {
+      "base_os": "",
+      "critical": 0,
+      "cvedb_create_time": "",
+      "high": 0,
+      "medium": 0,
+      "result": "",
+      "scanned_at": "",
+      "scanned_timestamp": 0,
+      "scanner_version": "",
+      "status": ""
+    },
+    "secured_at": "2026-11-11T06:16:02Z",
+    "service": "maturity-http.maturity-nv-check-20261111061551",
+    "service_account": "default",
+    "service_group": "nv.maturity-http.maturity-nv-check-20261111061551",
+    "service_mesh": false,
+    "service_mesh_sidecar": false,
+    "share_ns_with": "787ee4cc0fac06751e83366693667c31a79ca83298c18c44f993af259bf0b0cd",
+    "started_at": "2026-11-11T06:16:01Z",
+    "state": "discover"
+  }
+}

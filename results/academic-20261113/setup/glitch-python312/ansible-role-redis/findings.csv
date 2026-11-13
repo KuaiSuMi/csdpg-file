@@ -1,0 +1,4 @@
+/input/defaults/main.yml,38,sec_empty_pass,redis_requirepass:''
+/input/defaults/main.yml,38,sec_hard_pass,redis_requirepass:''
+/input/defaults/main.yml,38,sec_hard_secr,redis_requirepass:''
+/input/defaults/main.yml,55,sec_susp_comm,#  - DEBUG

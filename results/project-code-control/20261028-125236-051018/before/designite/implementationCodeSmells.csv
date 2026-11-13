@@ -1,0 +1,11 @@
+Project Name,Package Name,Type Name,Method Name,Code Smell
+before,com.example,InventoryService,checkStock,Magic Number
+before,com.example,OrderService,createOrder,Magic Number
+before,com.example,OrderService,createOrder,Magic Number
+before,com.example,OrderService,createOrder,Magic Number
+before,com.example,OrderService,createOrder,Magic Number
+before,com.example,OrderService,getOrderStatus,Magic Number
+before,com.example,OrderService,getOrderStatus,Magic Number
+before,com.example,OrderService,getOrderStatus,Magic Number
+before,com.example,OrderService,getOrderStatus,Magic Number
+before,com.example,PaymentService,processPayment,Magic Number

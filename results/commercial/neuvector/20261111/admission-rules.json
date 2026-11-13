@@ -1,0 +1,44 @@
+{
+  "rules": [
+    {
+      "category": "Kubernetes",
+      "cfg_type": "user_created",
+      "comment": "Allow deployments in system namespaces.",
+      "containers": [
+        "containers"
+      ],
+      "criteria": [
+        {
+          "name": "namespace",
+          "op": "containsAny",
+          "value": "kube-system,kube-public,istio-system"
+        }
+      ],
+      "critical": true,
+      "disable": false,
+      "id": 1,
+      "rule_mode": "",
+      "rule_type": "exception"
+    },
+    {
+      "category": "Kubernetes",
+      "cfg_type": "user_created",
+      "comment": "Allow deployments in NeuVector namespace",
+      "containers": [
+        "containers"
+      ],
+      "criteria": [
+        {
+          "name": "namespace",
+          "op": "containsAny",
+          "value": "maturity-neuvector"
+        }
+      ],
+      "critical": true,
+      "disable": false,
+      "id": 2,
+      "rule_mode": "",
+      "rule_type": "exception"
+    }
+  ]
+}

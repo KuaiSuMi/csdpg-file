@@ -1,0 +1,24 @@
+--- before/deploy.yaml
++++ after/deploy.yaml
+@@ -15,7 +15,7 @@
+         foo: bar
+     spec:
+       topologySpreadConstraints:
+-      - maxSkew: 1
++      - maxSkew: 2
+         topologyKey: zone
+         whenUnsatisfiable: DoNotSchedule
+         labelSelector:
+@@ -32,9 +32,9 @@
+         imagePullPolicy: IfNotPresent
+         name: php-apache
+         securityContext:
+-            capabilities:
+-              add:
+-                - NET_ADMIN
++          capabilities:
++            add:
++            - NET_ADMIN
+         ports:
+         - containerPort: 80
+           protocol: TCP

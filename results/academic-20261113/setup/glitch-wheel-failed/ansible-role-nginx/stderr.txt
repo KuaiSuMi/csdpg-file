@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/usr/local/bin/glitch", line 5, in <module>
+    from glitch.__main__ import main
+  File "/usr/local/lib/python3.12/site-packages/glitch/__main__.py", line 4, in <module>
+    from glitch.stats.print import print_stats
+ModuleNotFoundError: No module named 'glitch.stats'

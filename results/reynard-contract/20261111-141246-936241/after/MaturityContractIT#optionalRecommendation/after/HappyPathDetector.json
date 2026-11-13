@@ -1,0 +1,11 @@
+[ {
+  "point" : "frontend:GET /#0",
+  "response" : "[\"product-1\"]",
+  "status" : 200,
+  "durationMs" : 28.672852
+}, {
+  "point" : "frontend:GET /#0>recommendations:GET /#0",
+  "response" : "[\"product-1\"]",
+  "status" : 200,
+  "durationMs" : 6.525828
+} ]

@@ -1,0 +1,109 @@
+{
+  "scenario" : "optional-recommendation",
+  "phase" : "before",
+  "service" : "frontend",
+  "dependency" : "recommendations",
+  "trace_id" : "1478234323514c4c011aad1fa0b8657c",
+  "http_status" : 500,
+  "body" : "Internal Server Error",
+  "passed" : false,
+  "injection_verified" : true,
+  "fault_count" : 1,
+  "faultload" : {
+    "faults" : [ {
+      "uid" : {
+        "stack" : [ {
+          "destination" : "frontend",
+          "signature" : "GET /",
+          "payload" : "",
+          "predecessors" : null,
+          "count" : 0
+        }, {
+          "destination" : "recommendations",
+          "signature" : "GET /",
+          "payload" : "",
+          "predecessors" : null,
+          "count" : 0
+        } ]
+      },
+      "mode" : {
+        "type" : "HTTP_ERROR",
+        "args" : [ "504" ]
+      }
+    } ],
+    "trace_id" : "1478234323514c4c011aad1fa0b8657c"
+  },
+  "trace" : {
+    "reports" : [ {
+      "trace_id" : "1478234323514c4c011aad1fa0b8657c",
+      "span_id" : "44bbe61123770690",
+      "uid" : {
+        "stack" : [ {
+          "destination" : "frontend",
+          "signature" : "GET /",
+          "payload" : "",
+          "predecessors" : null,
+          "count" : 0
+        } ]
+      },
+      "is_initial" : true,
+      "protocol" : "HTTP",
+      "injected_fault" : null,
+      "response" : {
+        "status" : 500,
+        "body" : "Internal Server Error",
+        "duration_ms" : 4.614021999999999,
+        "overhead_duration_ms" : 0.9126980000000007
+      },
+      "concurrent_to" : [ ]
+    }, {
+      "trace_id" : "1478234323514c4c011aad1fa0b8657c",
+      "span_id" : "4bcc6aad1071d4a7",
+      "uid" : {
+        "stack" : [ {
+          "destination" : "frontend",
+          "signature" : "GET /",
+          "payload" : "",
+          "predecessors" : null,
+          "count" : 0
+        }, {
+          "destination" : "recommendations",
+          "signature" : "GET /",
+          "payload" : "",
+          "predecessors" : null,
+          "count" : 0
+        } ]
+      },
+      "is_initial" : false,
+      "protocol" : "HTTP",
+      "injected_fault" : {
+        "uid" : {
+          "stack" : [ {
+            "destination" : "frontend",
+            "signature" : "GET /",
+            "payload" : "",
+            "predecessors" : null,
+            "count" : 0
+          }, {
+            "destination" : "recommendations",
+            "signature" : "GET /",
+            "payload" : "",
+            "predecessors" : null,
+            "count" : 0
+          } ]
+        },
+        "mode" : {
+          "type" : "HTTP_ERROR",
+          "args" : [ "504" ]
+        }
+      },
+      "response" : {
+        "status" : 504,
+        "body" : "Injected fault: HTTP error\n",
+        "duration_ms" : 0,
+        "overhead_duration_ms" : 0.9063800000000001
+      },
+      "concurrent_to" : [ ]
+    } ]
+  }
+}

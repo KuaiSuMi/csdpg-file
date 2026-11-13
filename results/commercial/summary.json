@@ -1,0 +1,118 @@
+{
+  "date_local": "2026-11-11",
+  "note": "Independent baseline results; no combined maturity score",
+  "baselines": [
+    {
+      "id": "microsoft-appcat-java",
+      "results": "results/commercial/appcat/20261111-paired",
+      "summary": {
+        "baseline": "Microsoft AppCAT for Java",
+        "version": "7.7.0.11",
+        "scope": "controlled Java source fixture; azure-aks; source-only",
+        "native_rules_modified": false,
+        "phases": {
+          "before": {
+            "native_status": "Complete",
+            "native_summary": {
+              "totalProjects": 1,
+              "totalIssues": 6,
+              "totalIncidents": 7,
+              "totalEffort": 25,
+              "charts": {
+                "severity": {
+                  "mandatory": 2,
+                  "optional": 2,
+                  "potential": 1,
+                  "information": 2
+                },
+                "category": {
+                  "containerization": 1,
+                  "default-encoding": 1,
+                  "file-system-management": 1,
+                  "java-version-upgrade": 2
+                }
+              }
+            },
+            "local_storage_incidents": 1,
+            "violation_incidents": 5,
+            "contract_checks_passed": 2,
+            "audit_record": "AUDIT ORD-book-2",
+            "source_sha256": {
+              "pom.xml": "260dccacb73ac09cbb620839902101ee80860d84ad41fb15bfc9ac1367aa211a",
+              "src/main/java/com/example/CloudAudit.java": "f93d3f67601d794ac801c36c47dfb1a1dea4d7689a3f62b0d56bd13d0148cd33"
+            }
+          },
+          "after": {
+            "native_status": "Complete",
+            "native_summary": {
+              "totalProjects": 1,
+              "totalIssues": 4,
+              "totalIncidents": 5,
+              "totalEffort": 19,
+              "charts": {
+                "severity": {
+                  "mandatory": 1,
+                  "optional": 2,
+                  "potential": 0,
+                  "information": 2
+                },
+                "category": {
+                  "containerization": 1,
+                  "java-version-upgrade": 2
+                }
+              }
+            },
+            "local_storage_incidents": 0,
+            "violation_incidents": 3,
+            "contract_checks_passed": 2,
+            "audit_record": "AUDIT ORD-book-2",
+            "source_sha256": {
+              "pom.xml": "260dccacb73ac09cbb620839902101ee80860d84ad41fb15bfc9ac1367aa211a",
+              "src/main/java/com/example/CloudAudit.java": "5272c91df19465d6c4c005b0d62629d37628b99121b96996db2d9365ca6fc2d8"
+            }
+          }
+        },
+        "validation": "passed: complete native reports, issue removed, order and audit contracts preserved"
+      }
+    },
+    {
+      "id": "suse-neuvector",
+      "results": "results/commercial/neuvector/20261111-paired",
+      "summary": {
+        "baseline": "SUSE Security / NeuVector open-source distribution",
+        "version": "5.6.4",
+        "namespace": "maturity-nv-check-20261110181528",
+        "native_rules_modified": false,
+        "scope": "live Kubernetes workload root-user risk; not a full compliance or CVE assessment",
+        "phases": {
+          "before": {
+            "run_as_root": true,
+            "running": true,
+            "container_id": "99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925",
+            "image_id": "sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+            "business": {
+              "status": 200,
+              "body": "maturity-ok\n",
+              "uid": 0
+            },
+            "input_sha256": "569500aeb95f3f403820603952458bee83d3395453ee179735553102d7f3180a"
+          },
+          "after": {
+            "run_as_root": false,
+            "running": true,
+            "container_id": "8d8c336fc72f86e2da54237f960ecb631e151c360d45c1bace2bd090e7e0b90c",
+            "image_id": "sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+            "business": {
+              "status": 200,
+              "body": "maturity-ok\n",
+              "uid": 1000
+            },
+            "input_sha256": "e21b0a02f5d7e0f4dc690379ae3cbd0864395848724f63f348d9a223eb32e462"
+          }
+        },
+        "validation": "passed: native root flag true to false; actual UID 0 to 1000; identical HTTP response",
+        "test_namespace_deleted": true
+      }
+    }
+  ]
+}

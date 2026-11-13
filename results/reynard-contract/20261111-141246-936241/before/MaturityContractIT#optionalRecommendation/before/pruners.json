@@ -1,0 +1,53 @@
+{
+  "ErrorPropagationDetector" : {
+    "upstream" : {
+      "count" : 4,
+      "list" : [ {
+        "effect_name" : {
+          "uid" : "frontend:GET /#0",
+          "mode" : "HTTP_ERROR(500)"
+        },
+        "causes_names" : [ {
+          "uid" : "frontend:GET /#0>recommendations:GET /#0",
+          "mode" : "HTTP_ERROR(500)"
+        } ]
+      }, {
+        "effect_name" : {
+          "uid" : "frontend:GET /#0",
+          "mode" : "HTTP_ERROR(500)"
+        },
+        "causes_names" : [ {
+          "uid" : "frontend:GET /#0>recommendations:GET /#0",
+          "mode" : "HTTP_ERROR(504)"
+        } ]
+      }, {
+        "effect_name" : {
+          "uid" : "frontend:GET /#0",
+          "mode" : "HTTP_ERROR(500)"
+        },
+        "causes_names" : [ {
+          "uid" : "frontend:GET /#0>recommendations:GET /#0",
+          "mode" : "HTTP_ERROR(503)"
+        } ]
+      }, {
+        "effect_name" : {
+          "uid" : "frontend:GET /#0",
+          "mode" : "HTTP_ERROR(500)"
+        },
+        "causes_names" : [ {
+          "uid" : "frontend:GET /#0>recommendations:GET /#0",
+          "mode" : "HTTP_ERROR(502)"
+        } ]
+      } ]
+    }
+  },
+  "ParentChildDetector" : {
+    "downstream" : {
+      "count" : 1,
+      "list" : [ {
+        "cause_name" : "frontend:GET /#0",
+        "effect_names" : [ "frontend:GET /#0>recommendations:GET /#0" ]
+      } ]
+    }
+  }
+}

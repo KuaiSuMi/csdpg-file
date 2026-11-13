@@ -1,0 +1,128 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 363B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.9.23-slim-bookworm@sha256:72d2b9b85bf192b477c1b02fbc0e0905b2ac0dd7f8c9355fd39205ad9a1ec43b
+#2 DONE 0.0s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/4] FROM docker.io/library/python:3.9.23-slim-bookworm@sha256:72d2b9b85bf192b477c1b02fbc0e0905b2ac0dd7f8c9355fd39205ad9a1ec43b
+#5 resolve docker.io/library/python:3.9.23-slim-bookworm@sha256:72d2b9b85bf192b477c1b02fbc0e0905b2ac0dd7f8c9355fd39205ad9a1ec43b 0.0s done
+#5 CACHED
+
+#4 [internal] load build context
+#4 transferring context: 654B done
+#4 DONE 0.0s
+
+#6 [2/4] COPY requirements.txt /tmp/requirements.txt
+#6 DONE 0.1s
+
+#7 [3/4] RUN pip install --no-cache-dir -r /tmp/requirements.txt
+#7 20.86 Collecting Flask==1.0
+#7 30.99   Downloading Flask-1.0-py2.py3-none-any.whl (97 kB)
+#7 32.51      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.8/97.8 kB 83.4 kB/s eta 0:00:00
+#7 35.98 Collecting Werkzeug==1.0.1
+#7 38.52   Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+#7 38.79      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 298.6/298.6 kB 1.1 MB/s eta 0:00:00
+#7 42.06 Collecting Jinja2==2.11.3
+#7 44.53   Downloading Jinja2-2.11.3-py2.py3-none-any.whl (125 kB)
+#7 44.55      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.7/125.7 kB 4.9 MB/s eta 0:00:00
+#7 46.53 Collecting MarkupSafe==2.0.1
+#7 47.29   Downloading MarkupSafe-2.0.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_12_x86_64.manylinux2010_x86_64.whl (30 kB)
+#7 47.82 Collecting itsdangerous==1.1.0
+#7 48.31   Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+#7 48.72 Collecting click==7.1.2
+#7 49.05   Downloading click-7.1.2-py2.py3-none-any.whl (82 kB)
+#7 49.20      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 82.8/82.8 kB 499.1 kB/s eta 0:00:00
+#7 49.58 Collecting requests==2.25.1
+#7 49.86   Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
+#7 49.87      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 6.9 MB/s eta 0:00:00
+#7 50.39 Collecting opentelemetry-sdk==1.0.0rc1
+#7 50.63   Downloading opentelemetry_sdk-1.0.0rc1-py3-none-any.whl (35 kB)
+#7 51.26 Collecting opentelemetry-api==1.0.0rc1
+#7 51.59   Downloading opentelemetry_api-1.0.0rc1-py3-none-any.whl (36 kB)
+#7 51.93 Collecting opentelemetry-instrumentation==0.18b0
+#7 52.22   Downloading opentelemetry_instrumentation-0.18b0-py3-none-any.whl (14 kB)
+#7 52.52 Collecting opentelemetry-exporter-jaeger==1.0.0rc1
+#7 52.76   Downloading opentelemetry_exporter_jaeger-1.0.0rc1-py3-none-any.whl (58 kB)
+#7 52.77      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 8.1 MB/s eta 0:00:00
+#7 53.11 Collecting opentelemetry-instrumentation-flask==0.18b1
+#7 53.43   Downloading opentelemetry_instrumentation_flask-0.18b1-py3-none-any.whl (9.9 kB)
+#7 53.79 Collecting opentelemetry-instrumentation-requests==0.18b1
+#7 54.04   Downloading opentelemetry_instrumentation_requests-0.18b1-py3-none-any.whl (10 kB)
+#7 56.11 Collecting wrapt==1.14.1
+#7 56.38   Downloading wrapt-1.14.1-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (77 kB)
+#7 56.39      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.8/77.8 kB 27.1 MB/s eta 0:00:00
+#7 57.59 Collecting protobuf==3.20.3
+#7 57.81   Downloading protobuf-3.20.3-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+#7 58.35      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 1.9 MB/s eta 0:00:00
+#7 60.78 Collecting grpcio==1.64.1
+#7 61.01   Downloading grpcio-1.64.1-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.6 MB)
+#7 61.61      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.6/5.6 MB 9.6 MB/s eta 0:00:00
+#7 61.90 Collecting asgiref==3.11.1
+#7 62.14   Downloading asgiref-3.11.1-py3-none-any.whl (24 kB)
+#7 62.47 Collecting certifi==2026.10.19
+#7 62.71   Downloading certifi-2026.10.19-py3-none-any.whl (136 kB)
+#7 62.72      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 136.5/136.5 kB 15.3 MB/s eta 0:00:00
+#7 63.09 Collecting chardet==4.0.0
+#7 63.40   Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+#7 63.41      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 178.7/178.7 kB 13.4 MB/s eta 0:00:00
+#7 63.68 Collecting googleapis-common-protos==1.52.0
+#7 63.91   Downloading googleapis_common_protos-1.52.0-py2.py3-none-any.whl (100 kB)
+#7 64.34      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100.2/100.2 kB 211.9 kB/s eta 0:00:00
+#7 64.58 Collecting idna==2.10
+#7 64.81   Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+#7 64.81      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.8/58.8 kB 27.8 MB/s eta 0:00:00
+#7 65.07 Collecting opentelemetry-instrumentation-wsgi==0.18b1
+#7 65.86   Downloading opentelemetry_instrumentation_wsgi-0.18b1-py3-none-any.whl (9.6 kB)
+#7 66.13 Collecting opentelemetry-util-http==0.18b1
+#7 66.36   Downloading opentelemetry_util_http-0.18b1-py3-none-any.whl (3.7 kB)
+#7 66.63 Collecting thrift==0.25.0
+#7 66.86   Downloading thrift-0.25.0.tar.gz (95 kB)
+#7 66.87      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.0/96.0 kB 15.0 MB/s eta 0:00:00
+#7 66.89   Installing build dependencies: started
+#7 104.2   Installing build dependencies: finished with status 'done'
+#7 104.2   Getting requirements to build wheel: started
+#7 104.3   Getting requirements to build wheel: finished with status 'done'
+#7 104.3   Preparing metadata (pyproject.toml): started
+#7 104.5   Preparing metadata (pyproject.toml): finished with status 'done'
+#7 104.8 Collecting typing_extensions==4.16.0
+#7 105.0   Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#7 105.0      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 226.3 MB/s eta 0:00:00
+#7 105.3 Collecting urllib3==1.26.20
+#7 105.7   Downloading urllib3-1.26.20-py2.py3-none-any.whl (144 kB)
+#7 105.7      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 144.2/144.2 kB 17.1 MB/s eta 0:00:00
+#7 105.9 Building wheels for collected packages: thrift
+#7 105.9   Building wheel for thrift (pyproject.toml): started
+#7 106.2   Building wheel for thrift (pyproject.toml): finished with status 'done'
+#7 106.2   Created wheel for thrift: filename=thrift-0.25.0-py3-none-any.whl size=168282 sha256=4869a5a18b5f917d9c2c8bc182f17264a0781fd54445e6dff44ec3436b135521
+#7 106.2   Stored in directory: /tmp/pip-ephem-wheel-cache-rnyrbez7/wheels/15/75/50/284a88c1a350ef92961f2785acd9dbd6487ad749aae9107bcc
+#7 106.2 Successfully built thrift
+#7 106.3 Installing collected packages: thrift, wrapt, Werkzeug, urllib3, typing_extensions, protobuf, opentelemetry-api, MarkupSafe, itsdangerous, idna, grpcio, click, chardet, certifi, requests, opentelemetry-sdk, opentelemetry-instrumentation, Jinja2, googleapis-common-protos, asgiref, opentelemetry-util-http, opentelemetry-instrumentation-wsgi, opentelemetry-instrumentation-requests, opentelemetry-exporter-jaeger, Flask, opentelemetry-instrumentation-flask
+#7 107.5 Successfully installed Flask-1.0 Jinja2-2.11.3 MarkupSafe-2.0.1 Werkzeug-1.0.1 asgiref-3.11.1 certifi-2026.10.19 chardet-4.0.0 click-7.1.2 googleapis-common-protos-1.52.0 grpcio-1.64.1 idna-2.10 itsdangerous-1.1.0 opentelemetry-api-1.0.0rc1 opentelemetry-exporter-jaeger-1.0.0rc1 opentelemetry-instrumentation-0.18b0 opentelemetry-instrumentation-flask-0.18b1 opentelemetry-instrumentation-requests-0.18b1 opentelemetry-instrumentation-wsgi-0.18b1 opentelemetry-sdk-1.0.0rc1 opentelemetry-util-http-0.18b1 protobuf-3.20.3 requests-2.25.1 thrift-0.25.0 typing_extensions-4.16.0 urllib3-1.26.20 wrapt-1.14.1
+#7 107.5 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 DONE 112.9s
+
+#8 [4/4] WORKDIR /workspace
+#8 DONE 0.1s
+
+#9 exporting to image
+#9 exporting layers
+#9 exporting layers 1.3s done
+#9 exporting manifest sha256:11c06e4990d2cf7788a263bfd9d25643fade0be6b0f388275ba025ccab13e206 0.0s done
+#9 exporting config sha256:52939cb6741646262a051250721720f37cb6f168c3b9d301440e625c566a8d3a 0.0s done
+#9 exporting attestation manifest sha256:263789d7715b5f0f9d62f44d9cb909a2b265d7e11053d9d6d800348b2d240e1b 0.1s done
+#9 exporting manifest list sha256:00554245498c0fe2119b8316e8330a4f81b246bb1eb5234e9730b197d2a44ee9
+#9 exporting manifest list sha256:00554245498c0fe2119b8316e8330a4f81b246bb1eb5234e9730b197d2a44ee9 0.0s done
+#9 naming to docker.io/library/maturity-filibuster:20261021 done
+#9 unpacking to docker.io/library/maturity-filibuster:20261021
+#9 unpacking to docker.io/library/maturity-filibuster:20261021 0.4s done
+#9 DONE 1.9s

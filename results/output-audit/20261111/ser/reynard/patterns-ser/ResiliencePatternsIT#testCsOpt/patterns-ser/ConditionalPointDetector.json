@@ -1,0 +1,9 @@
+[ {
+  "uid" : "a-backend:GET /{}#0>b-retry:GET /{}#0",
+  "modes" : {
+    "HTTP_ERROR(502)" : 1,
+    "HTTP_ERROR(500)" : 1,
+    "HTTP_ERROR(504)" : 1,
+    "HTTP_ERROR(503)" : 1
+  }
+} ]

@@ -1,0 +1,371 @@
+[1][environment] CWD = /workspace
+[1][environment] No .inferconfig file found
+[1][environment] Project root = /input
+[1][environment] INFER_ARGS =   @/tmp/args.tmp.419ee6 --progress-bar-style plain
+[1][environment] command line arguments:   infer run --pulse-only --jobs 2 --results-dir
+[1][environment]                           /out/infer-out --project-root /input -- javac
+[1][environment]                           -encoding UTF-8 -cp /deps/jsr305-3.0.2.jar -d
+[1][environment]                           /out/classes @/out/sources.txt
+[1][environment] Available memory at startup: 11170 MB
+[1][environment] Active checkers: pulse (C/C++/ObjC, C#/.Net, Erlang, Hack, Java, Python, Rust, Swift)
+[1][environment] Scheduler: restart
+[1][environment] Cores used: 2
+[1][environment] Infer version v1.3.0
+[1][environment] Copyright 2009 - present Facebook. All Rights Reserved.
+[1][environment] 
+[1][   progress] Capturing in javac mode...
+[1][      debug] Current working directory: '/workspace'
+[1][      debug] Trying to execute: javac '-J-Duser.language=en' '@/out/sources.txt' '@/out/infer-out/tmp/javac_args.tmp.2ee994' 2>'/out/infer-out/tmp/javac.tmp.e02523.out'
+[1][      debug] *** Success. Logs:
+[1][      debug] Translating 68 source files (265 classes)
+[1][      debug] Global tenv size global_tenv_size_mb: 0
+[1][      debug] done capturing all files
+[1][      debug] GC stats for capture:
+[1][      debug]   minor_words: 1.18118e+08
+[1][      debug]   promoted_words: 9.22361e+06
+[1][      debug]   major_words: 1.08602e+07
+[1][      debug]   minor_collections: 191
+[1][      debug]   major_collections: 3
+[1][      debug]   compactions: 0
+[1][      debug]   top_heap_words: 14699958
+[1][      debug]   
+[1][environment] Parallel jobs: 2
+[1][   progress] Found 75 source files to analyze in /out/infer-out
+[60][   progress] org/jsoup/examples/Wikipedia.java starting
+[60][   progress] org/jsoup/examples/Wikipedia.java DONE
+[60][   progress] org/jsoup/nodes/CDataNode.java starting
+[60][   progress] org/jsoup/nodes/CDataNode.java DONE
+[60][   progress] org/jsoup/helper/ValidationException.java starting
+[60][   progress] org/jsoup/helper/ValidationException.java DONE
+[60][   progress] org/jsoup/internal/ConstrainableInputStream.java starting
+[60][   progress] org/jsoup/internal/ConstrainableInputStream.java DONE
+[60][   progress] org/jsoup/helper/CookieUtil.java starting
+[60][   progress] org/jsoup/helper/CookieUtil.java DONE
+[60][   progress] org/jsoup/nodes/TextNode.java starting
+[61][   progress] org/jsoup/nodes/Attributes.java starting
+[60][   progress] org/jsoup/nodes/TextNode.java DONE
+[60][   progress] org/jsoup/helper/DataUtil.java starting
+[60][   progress] org/jsoup/helper/DataUtil.java DONE
+[60][   progress] org/jsoup/helper/HttpConnection.java starting
+[61][   progress] org/jsoup/nodes/Attributes.java DONE
+[61][   progress] org/jsoup/internal/package-info.java starting
+[61][   progress] org/jsoup/internal/package-info.java DONE
+[61][   progress] org/jsoup/helper/Validate.java starting
+[61][   progress] org/jsoup/helper/Validate.java DONE
+[61][   progress] org/jsoup/nodes/Document.java starting
+[61][   progress] org/jsoup/nodes/Document.java DONE
+[61][   progress] org/jsoup/parser/package-info.java starting
+[61][   progress] org/jsoup/parser/package-info.java DONE
+[61][   progress] org/jsoup/select/StructuralEvaluator.java starting
+[61][   progress] org/jsoup/select/StructuralEvaluator.java DONE
+[61][   progress] org/jsoup/parser/Tokeniser.java starting
+[60][   progress] org/jsoup/helper/HttpConnection.java DONE
+[60][   progress] org/jsoup/parser/Parser.java starting
+[60][   progress] org/jsoup/parser/Parser.java DONE
+[61][   progress] org/jsoup/parser/Tokeniser.java DONE
+[60][   progress] org/jsoup/parser/HtmlTreeBuilderState.java starting
+[61][   progress] org/jsoup/parser/Token.java starting
+[61][   progress] org/jsoup/parser/Token.java DONE
+[61][   progress] org/jsoup/safety/Cleaner.java starting
+[61][   progress] org/jsoup/safety/Cleaner.java DONE
+[61][   progress] org/jsoup/parser/TreeBuilder.java starting
+[61][   progress] org/jsoup/parser/TreeBuilder.java DONE
+[61][   progress] org/jsoup/SerializationException.java starting
+[61][   progress] org/jsoup/SerializationException.java DONE
+[61][   progress] org/jsoup/select/Collector.java starting
+[60][   progress] org/jsoup/parser/HtmlTreeBuilderState.java DONE
+[60][   progress] org/jsoup/nodes/Element.java starting
+[61][   progress] org/jsoup/select/Collector.java DONE
+[61][   progress] org/jsoup/internal/NonnullByDefault.java starting
+[61][   progress] org/jsoup/internal/NonnullByDefault.java DONE
+[61][   progress] org/jsoup/select/Evaluator.java starting
+[61][   progress] org/jsoup/select/Evaluator.java DONE
+[61][   progress] org/jsoup/internal/Normalizer.java starting
+[61][   progress] org/jsoup/internal/Normalizer.java DONE
+[61][   progress] org/jsoup/helper/ChangeNotifyingArrayList.java starting
+[61][   progress] org/jsoup/helper/ChangeNotifyingArrayList.java DONE
+[61][   progress] org/jsoup/internal/ReturnsAreNonnullByDefault.java starting
+[61][   progress] org/jsoup/internal/ReturnsAreNonnullByDefault.java DONE
+[61][   progress] org/jsoup/select/Elements.java starting
+[60][   progress] org/jsoup/nodes/Element.java DONE
+[60][   progress] org/jsoup/nodes/Entities.java starting
+[60][   progress] org/jsoup/nodes/Entities.java DONE
+[60][   progress] org/jsoup/nodes/Comment.java starting
+[61][   progress] org/jsoup/select/Elements.java DONE
+[61][   progress] org/jsoup/examples/HtmlToPlainText.java starting
+[60][   progress] org/jsoup/nodes/Comment.java DONE
+[60][   progress] org/jsoup/internal/FieldsAreNonnullByDefault.java starting
+[60][   progress] org/jsoup/internal/FieldsAreNonnullByDefault.java DONE
+[60][   progress] org/jsoup/parser/ParseError.java starting
+[61][   progress] org/jsoup/examples/HtmlToPlainText.java DONE
+[61][   progress] org/jsoup/package-info.java starting
+[60][   progress] org/jsoup/parser/ParseError.java DONE
+[61][   progress] org/jsoup/package-info.java DONE
+[60][   progress] org/jsoup/parser/TokenQueue.java starting
+[61][   progress] org/jsoup/parser/ParseErrorList.java starting
+[61][   progress] org/jsoup/parser/ParseErrorList.java DONE
+[61][   progress] org/jsoup/UnsupportedMimeTypeException.java starting
+[61][   progress] org/jsoup/UnsupportedMimeTypeException.java DONE
+[61][   progress] org/jsoup/examples/ListLinks.java starting
+[60][   progress] org/jsoup/parser/TokenQueue.java DONE
+[60][   progress] org/jsoup/nodes/PseudoTextElement.java starting
+[61][   progress] org/jsoup/examples/ListLinks.java DONE
+[61][   progress] org/jsoup/nodes/Attribute.java starting
+[60][   progress] org/jsoup/nodes/PseudoTextElement.java DONE
+[60][   progress] org/jsoup/nodes/LeafNode.java starting
+[60][   progress] org/jsoup/nodes/LeafNode.java DONE
+[61][   progress] org/jsoup/nodes/Attribute.java DONE
+[60][   progress] org/jsoup/internal/StringUtil.java starting
+[61][   progress] org/jsoup/UncheckedIOException.java starting
+[61][   progress] org/jsoup/UncheckedIOException.java DONE
+[61][   progress] org/jsoup/nodes/Range.java starting
+[60][   progress] org/jsoup/internal/StringUtil.java DONE
+[60][   progress] org/jsoup/parser/Tag.java starting
+[61][   progress] org/jsoup/nodes/Range.java DONE
+[61][   progress] org/jsoup/select/Selector.java starting
+[61][   progress] org/jsoup/select/Selector.java DONE
+[61][   progress] org/jsoup/Jsoup.java starting
+[60][   progress] org/jsoup/parser/Tag.java DONE
+[60][   progress] org/jsoup/safety/package-info.java starting
+[60][   progress] org/jsoup/safety/package-info.java DONE
+[60][   progress] org/jsoup/parser/XmlTreeBuilder.java starting
+[61][   progress] org/jsoup/Jsoup.java DONE
+[61][   progress] org/jsoup/helper/W3CDom.java starting
+[60][   progress] org/jsoup/parser/XmlTreeBuilder.java DONE
+[60][   progress] org/jsoup/nodes/FormElement.java starting
+[61][   progress] org/jsoup/helper/W3CDom.java DONE
+[61][   progress] org/jsoup/nodes/Node.java starting
+[60][   progress] org/jsoup/nodes/FormElement.java DONE
+[60][   progress] org/jsoup/examples/package-info.java starting
+[60][   progress] org/jsoup/examples/package-info.java DONE
+[60][   progress] org/jsoup/parser/CharacterReader.java starting
+[60][   progress] org/jsoup/parser/CharacterReader.java DONE
+[60][   progress] org/jsoup/select/package-info.java starting
+[60][   progress] org/jsoup/select/package-info.java DONE
+[60][   progress] org/jsoup/helper/Consumer.java starting
+[60][   progress] org/jsoup/helper/Consumer.java DONE
+[60][   progress] org/jsoup/select/CombiningEvaluator.java starting
+[60][   progress] org/jsoup/select/CombiningEvaluator.java DONE
+[60][   progress] org/jsoup/nodes/EntitiesData.java starting
+[61][   progress] org/jsoup/nodes/Node.java DONE
+[60][   progress] org/jsoup/nodes/EntitiesData.java DONE
+[61][   progress] org/jsoup/HttpStatusException.java starting
+[60][   progress] org/jsoup/nodes/package-info.java starting
+[60][   progress] org/jsoup/nodes/package-info.java DONE
+[61][   progress] org/jsoup/HttpStatusException.java DONE
+[60][   progress] org/jsoup/select/QueryParser.java starting
+[61][   progress] org/jsoup/safety/Safelist.java starting
+[60][   progress] org/jsoup/select/QueryParser.java DONE
+[60][   progress] org/jsoup/select/NodeFilter.java starting
+[60][   progress] org/jsoup/select/NodeFilter.java DONE
+[61][   progress] org/jsoup/safety/Safelist.java DONE
+[60][   progress] org/jsoup/parser/TokeniserState.java starting
+[61][   progress] org/jsoup/select/NodeVisitor.java starting
+[61][   progress] org/jsoup/select/NodeVisitor.java DONE
+[61][   progress] org/jsoup/parser/ParseSettings.java starting
+[61][   progress] org/jsoup/parser/ParseSettings.java DONE
+[61][   progress] org/jsoup/nodes/XmlDeclaration.java starting
+[61][   progress] org/jsoup/nodes/XmlDeclaration.java DONE
+[61][   progress] org/jsoup/nodes/NodeUtils.java starting
+[61][   progress] org/jsoup/nodes/NodeUtils.java DONE
+[61][   progress] org/jsoup/nodes/DocumentType.java starting
+[61][   progress] org/jsoup/nodes/DocumentType.java DONE
+[61][   progress] org/jsoup/parser/HtmlTreeBuilder.java starting
+[61][   progress] org/jsoup/parser/HtmlTreeBuilder.java DONE
+[61][   progress] org/jsoup/Connection.java starting
+[61][   progress] org/jsoup/Connection.java DONE
+[61][   progress] org/jsoup/select/NodeTraversor.java starting
+[60][   progress] org/jsoup/parser/TokeniserState.java DONE
+[60][   progress] org/jsoup/nodes/DataNode.java starting
+[61][   progress] org/jsoup/select/NodeTraversor.java DONE
+[61][   progress] org/jsoup/helper/package-info.java starting
+[61][   progress] org/jsoup/helper/package-info.java DONE
+[60][   progress] org/jsoup/nodes/DataNode.java DONE
+[1][      debug] restart count: 8
+[1][      debug] Backend stats:
+[1][      debug]   cache stats: name=attributes; hit rate=89%; total queries=1151226
+[1][      debug]   cache stats: name=int_widths; hit rate=0%; total queries=82744
+[1][      debug]   cache stats: name=summaries; hit rate=54%; total queries=54331
+[1][      debug]   summary_file_try_load= 24789
+[1][      debug]   summary_read_from_disk= 5459
+[1][      debug]   summary_specializations= 346
+[1][      debug]   ondemand_procs_analyzed= 2211
+[1][      debug]   ondemand_double_analysis_prevented= 0
+[1][      debug]   ondemand_recursion_cycle_restart_limit_hit= 0
+[1][      debug]   ondemand_callchain_limit_hit= 0
+[1][      debug]   proc_locker_lock_time_user= 0.32878800
+[1][      debug]   proc_locker_lock_time_sys= 0.13811500
+[1][      debug]   proc_locker_lock_time_wall= 3.64995148
+[1][      debug]   proc_locker_lock_time_oncpu_pct= 13%
+[1][      debug]   proc_locker_unlock_time_user= 0.17493200
+[1][      debug]   proc_locker_unlock_time_sys= 0.07486900
+[1][      debug]   proc_locker_unlock_time_wall= 1.84040207
+[1][      debug]   proc_locker_unlock_time_oncpu_pct= 14%
+[1][      debug]   restart_scheduler_useful_time_user= 83.07797100
+[1][      debug]   restart_scheduler_useful_time_sys= 12.24839800
+[1][      debug]   restart_scheduler_useful_time_wall= 166.68747925
+[1][      debug]   restart_scheduler_useful_time_oncpu_pct= 57%
+[1][      debug]   restart_scheduler_total_time_user= 84.17256800
+[1][      debug]   restart_scheduler_total_time_sys= 12.33644100
+[1][      debug]   restart_scheduler_total_time_wall= 168.37198199
+[1][      debug]   restart_scheduler_total_time_oncpu_pct= 57%
+[1][      debug]   pulse_aliasing_contradictions= 0
+[1][      debug]   pulse_args_length_contradictions= 0
+[1][      debug]   pulse_captured_vars_length_contradictions= 0
+[1][      debug]   pulse_disjuncts_dropped= 71196
+[1][      debug]   pulse_interrupted_loops= 208
+[1][      debug]   pulse_unknown_calls= 15671
+[1][      debug]   pulse_unknown_calls_on_hack_resource= 0
+[1][      debug]   pulse_summaries_contradictions= 8
+[1][      debug]   pulse_summaries_unsat_for_caller= 777
+[1][      debug]   pulse_summaries_unsat_for_caller_percent= 35
+[1][      debug]   pulse_summaries_with_some_unreachable_nodes= 116
+[1][      debug]   pulse_summaries_with_some_unreachable_nodes_percent= 5
+[1][      debug]   pulse_summaries_with_some_unreachable_returns= 21
+[1][      debug]   pulse_summaries_with_some_unreachable_returns_percent= 0.0%
+[1][      debug]   pulse_summaries_count= [0 -> 4, 1 -> 724, 2 -> 162, 3 -> 73, 4 -> 78, 5 -> 34, 6 -> 25, 7 -> 13, 8 -> 29, 9 -> 24, 10 -> 31, 11 -> 14, 12 -> 17, 13 -> 14, 14 -> 13, 15 -> 12, 16 -> 16, 17 -> 24, 18 -> 27, 19 -> 18, 20 -> 527, 21 -> 104, 22 -> 73, 23 -> 13, 24 -> 23, 25 -> 10, 26 -> 8, 27 -> 10, 28 -> 5, 29 -> 3, 30 -> 18, 31 -> 7, 32 -> 4, 33 -> 2, 34 -> 2, 36 -> 3, 37 -> 2, 38 -> 4, 39 -> 1, 40 -> 40]
+[1][      debug]   pulse_summaries_total_disjuncts= 24270
+[1][      debug]   pulse_summaries_count_0_continue_program= 9
+[1][      debug]   pulse_summaries_count_0_percent= 0
+[1][      debug]   timeouts= 0
+[1][      debug]   timings= timings for pulse:
+[1][      debug]     p10: 0.000911s p20: 0.001566s p30: 0.003234s p40: 0.005276s
+[1][      debug]     p50: 0.009588s p60: 0.016626s p70: 0.032875s p80: 0.067881s
+[1][      debug]     p90: 0.185888s p95: 0.315291s p96: 0.367418s p97: 0.424553s
+[1][      debug]     p98: 0.519850s p99: 0.788006s p99.9: 2.164207s p99.99: 2.260624s 
+[1][      debug]   timings for preanalysis:
+[1][      debug]     p10: 0.002246s p20: 0.002689s p30: 0.003344s p40: 0.004234s
+[1][      debug]     p50: 0.005348s p60: 0.006566s p70: 0.008588s p80: 0.011067s
+[1][      debug]     p90: 0.016667s p95: 0.027962s p96: 0.033428s p97: 0.044744s
+[1][      debug]     p98: 0.065735s p99: 0.105348s p99.9: 0.267374s p99.99: 0.359764s 
+[1][      debug]   
+[1][      debug]   longest_proc_duration_heap= [
+[1][      debug]   32115864us: org/jsoup/examples/Wikipedia.java: void Wikipedia.main(String[])
+[1][      debug]   16602019us: org/jsoup/Jsoup.java: Document Jsoup.parse(File)
+[1][      debug]   16572853us: org/jsoup/helper/DataUtil.java: Document DataUtil.load(File,String,String)
+[1][      debug]   14771037us: org/jsoup/helper/DataUtil.java: Document DataUtil.load(File,String,String,Parser)
+[1][      debug]   14518078us: org/jsoup/helper/DataUtil.java: Document DataUtil.parseInputStream(InputStream,String,String,Parser)
+[1][      debug]   12692404us: org/jsoup/helper/HttpConnection.java: Document HttpConnection.get()
+[1][      debug]   10698181us: org/jsoup/helper/HttpConnection.java: Document HttpConnection.get()
+[1][      debug]   10667777us: org/jsoup/helper/HttpConnection.java: Connection$Response HttpConnection.execute()
+[1][      debug]   10645072us: org/jsoup/helper/HttpConnection.java: HttpConnection$Response HttpConnection$Response.execute(HttpConnection$Request)
+[1][      debug]   10602749us: org/jsoup/helper/HttpConnection.java: HttpConnection$Response HttpConnection$Response.execute(HttpConnection$Request,HttpConnection$Response)
+[1][      debug]   ]
+[1][      debug]   process_times_user= 88.58254800
+[1][      debug]   process_times_sys= 13.18573600
+[1][      debug]   process_times_wall= 180.04838681
+[1][      debug]   process_times_oncpu_pct= 57%
+[1][      debug]   useful_times_user= 88.53310500
+[1][      debug]   useful_times_sys= 13.16592800
+[1][      debug]   useful_times_wall= 179.12831567
+[1][      debug]   useful_times_oncpu_pct= 57%
+[1][      debug]   spec_store_times_user= 1.76514300
+[1][      debug]   spec_store_times_sys= 1.06014900
+[1][      debug]   spec_store_times_wall= 14.97379859
+[1][      debug]   spec_store_times_oncpu_pct= 19%
+[1][      debug]   
+[1][      debug] GC stats for backend_stats.gc_stats_add.:
+[1][      debug]   minor_words: 1.53319e+10
+[1][      debug]   promoted_words: 4.68353e+08
+[1][      debug]   major_words: 7.88393e+08
+[1][      debug]   minor_collections: 14667
+[1][      debug]   major_collections: 92
+[1][      debug]   compactions: 0
+[1][      debug]   top_heap_words: 85329205
+[1][      debug]   
+[1][      debug] GC stats for backend_stats.gc_stats_max.:
+[1][      debug]   minor_words: 8.0605e+09
+[1][      debug]   promoted_words: 2.52859e+08
+[1][      debug]   major_words: 4.15233e+08
+[1][      debug]   minor_collections: 7710
+[1][      debug]   major_collections: 48
+[1][      debug]   compactions: 0
+[1][      debug]   top_heap_words: 42780145
+[1][      debug]   
+[1][      debug] Average over 2 processes
+[1][      debug] GC stats for backend_stats.gc_stats_average.:
+[1][      debug]   minor_words: 7.66594e+09
+[1][      debug]   promoted_words: 2.34177e+08
+[1][      debug]   major_words: 3.94196e+08
+[1][      debug]   minor_collections: 7333
+[1][      debug]   major_collections: 46
+[1][      debug]   compactions: 0
+[1][      debug]   top_heap_words: 42664602
+[1][      debug]   
+[1][      debug] Analysis phase finished in 1min31s
+[1][      debug] backend_stats.scheduler_process_analysis_time_user= 0.22655000
+[1][      debug] backend_stats.scheduler_process_analysis_time_sys= 0.24007700
+[1][      debug] backend_stats.scheduler_process_analysis_time_wall= 90.12380283
+[1][      debug] backend_stats.scheduler_process_analysis_time_oncpu_pct= 1%
+[1][      debug] GC stats for analysis_scheduler:
+[1][      debug]   minor_words: 1.38423e+06
+[1][      debug]   promoted_words: 280864
+[1][      debug]   major_words: 1.01624e+06
+[1][      debug]   minor_collections: 9
+[1][      debug]   major_collections: 4
+[1][      debug]   compactions: 1
+[1][      debug]   top_heap_words: 15023542
+[1][      debug]   
+[1][     result] 
+org/jsoup/helper/DataUtil.java:97: error: Resource Leak(PULSE_RESOURCE_LEAK)
+  Resource dynamically allocated by constructor `java.io.FileInputStream()` on line 95 is not closed after the last access at line 97. 
+  95.               stream = zipped ? new GZIPInputStream(new FileInputStream(file)) : new FileInputStream(file);
+  96.           }
+  97. >         return parseInputStream(stream, charsetName, baseUri, parser);
+  98.       }
+  99.   
+
+org/jsoup/helper/DataUtil.java:252: error: Resource Leak(PULSE_RESOURCE_LEAK)
+  Resource dynamically allocated by constructor `org.jsoup.internal.ConstrainableInputStream()`, indirectly via call to `ConstrainableInputStream.wrap(...)` on line 251 is not closed after the last access at line 252. 
+  250.           Validate.isTrue(maxSize >= 0, "maxSize must be 0 (unlimited) or larger");
+  251.           final ConstrainableInputStream input = ConstrainableInputStream.wrap(inStream, bufferSize, maxSize);
+  252. >         return input.readToByteBuffer(maxSize);
+  253.       }
+  254.   
+
+org/jsoup/helper/HttpConnection.java:1219: error: Resource Leak(PULSE_RESOURCE_LEAK)
+  Resource dynamically allocated by constructor `java.io.BufferedWriter()` on line 1166 is not closed after the last access at line 1219. 
+  1217.               }
+  1218.               w.close();
+  1219. >         }
+  1220.   
+  1221.           // for get url reqs, serialise the data map into the url
+
+org/jsoup/nodes/Entities.java:363: error: Resource Leak(PULSE_RESOURCE_LEAK)
+  Resource dynamically allocated by constructor `java.io.StringReader()`, indirectly via call to `CharacterReader(...)` on line 327 is not closed after the last access at line 363. 
+  361.               reader.close();
+  362.           }
+  363. >     }
+  364.   }
+
+org/jsoup/parser/CharacterReader.java:52: error: Resource Leak(PULSE_RESOURCE_LEAK)
+  Resource dynamically allocated by constructor `java.io.StringReader()` on line 51 is not closed after the last access at line 52. 
+  50.       public CharacterReader(String input) {
+  51.           this(new StringReader(input), input.length());
+  52. >     }
+  53.   
+  54.       public void close() {
+
+
+Found 6 issues (console output truncated to 5, see '/out/infer-out/report.txt' for the full list)
+          Issue Type(ISSUED_TYPE_ID): #
+  Resource Leak(PULSE_RESOURCE_LEAK): 6
+
+[1][      debug] GC stats for report:
+[1][      debug]   minor_words: 1.04838e+06
+[1][      debug]   promoted_words: 1742
+[1][      debug]   major_words: 0
+[1][      debug]   minor_collections: 1
+[1][      debug]   major_collections: 0
+[1][      debug]   compactions: 0
+[1][      debug]   top_heap_words: 15023542
+[1][      debug]   
+[1][      debug] GC stats for main_process_full:
+[1][      debug]   minor_words: 1.24388e+08
+[1][      debug]   promoted_words: 1.0227e+07
+[1][      debug]   major_words: 1.70395e+07
+[1][      debug]   minor_collections: 212
+[1][      debug]   major_collections: 13
+[1][      debug]   compactions: 1
+[1][      debug]   top_heap_words: 15023542
+[1][      debug]   

@@ -1,0 +1,20 @@
+{
+  "http_status": 200,
+  "body": {
+    "processes": [
+      {
+        "action": "allow",
+        "cmdline": "node -e require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\n')}).listen(8080,'0.0.0.0')",
+        "group": 17947,
+        "name": "node",
+        "parent": 17896,
+        "pid": 17947,
+        "root": true,
+        "session": 17947,
+        "start_timestamp": 1794377648,
+        "status": "Sleeping",
+        "user": "root"
+      }
+    ]
+  }
+}

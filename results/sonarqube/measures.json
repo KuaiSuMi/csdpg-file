@@ -1,0 +1,84 @@
+{
+  "component": {
+    "key": "maturity-jsoup-1.15.3",
+    "name": "jsoup 1.15.3 baseline",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "complexity",
+        "value": "3846"
+      },
+      {
+        "metric": "reliability_rating",
+        "value": "4.0",
+        "bestValue": false
+      },
+      {
+        "metric": "code_smells",
+        "value": "20",
+        "bestValue": false
+      },
+      {
+        "metric": "duplicated_lines_density",
+        "value": "1.9",
+        "bestValue": false
+      },
+      {
+        "metric": "functions",
+        "value": "1522"
+      },
+      {
+        "metric": "security_rating",
+        "value": "5.0",
+        "bestValue": false
+      },
+      {
+        "metric": "classes",
+        "value": "162"
+      },
+      {
+        "metric": "sqale_debt_ratio",
+        "value": "0.1",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "sqale_index",
+        "value": "530",
+        "bestValue": false
+      },
+      {
+        "metric": "sqale_rating",
+        "value": "1.0",
+        "bestValue": true
+      },
+      {
+        "metric": "bugs",
+        "value": "7",
+        "bestValue": false
+      },
+      {
+        "metric": "cognitive_complexity",
+        "value": "2193",
+        "bestValue": false
+      },
+      {
+        "metric": "ncloc",
+        "value": "14144"
+      },
+      {
+        "metric": "files",
+        "value": "75"
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "1",
+        "bestValue": false
+      }
+    ]
+  }
+}

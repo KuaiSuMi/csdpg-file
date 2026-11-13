@@ -1,0 +1,9 @@
+{
+  "http_status": 200,
+  "body": {
+    "config": {
+      "quarantine": false,
+      "wire": "default"
+    }
+  }
+}

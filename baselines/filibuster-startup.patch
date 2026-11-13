@@ -1,0 +1,6 @@
+diff --git a/filibuster/lifecycle/__init__.py b/filibuster/lifecycle/__init__.py
+--- a/filibuster/lifecycle/__init__.py
++++ b/filibuster/lifecycle/__init__.py
+@@ -15 +15 @@
+-            debug("! service " + service + " not yet running!")
++            debug("! service " + str(service) + " not yet running!")

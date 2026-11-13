@@ -1,0 +1,157 @@
+{
+  "validated_at": "2026-10-28T06:37:31.410387+00:00",
+  "experiment_date": "2026-10-28",
+  "project_commit": "116706ac26e17e782374c5b5229a93aef6bfa13f",
+  "selected": [
+    "fetruth",
+    "kivi",
+    "reynard"
+  ],
+  "fetruth_paper": {
+    "commit": "a89644539cd639ee7adc21543aae20f8895c47d6",
+    "tag": "v1.0.0",
+    "zenodo_record": 8267775,
+    "input": "author-provided extracted jsoup features; not a new source extraction",
+    "expected_recommendations": 16,
+    "observed_recommendations": 16,
+    "matching_recommendations": 16,
+    "expected_only": [],
+    "observed_only": [],
+    "exact_match": true,
+    "exit_code": 0
+  },
+  "fetruth_project": {
+    "executed_at": "2026-10-28T06:25:07.320898+00:00",
+    "workflow": "author-source-workflow",
+    "source": "D:\\文档\\ChatGPT\\成熟度评估\\baselines\\sources\\maturity-evaluate\\examples\\comprehensive_test_repo\\java_app",
+    "source_commit": "116706ac26e17e782374c5b5229a93aef6bfa13f",
+    "tool_commit": "b4f8d5c4fbf655e5615246f2849ccc3825db8e7d",
+    "candidate_methods": 1,
+    "candidate_pairs": 2,
+    "recommendations": 1,
+    "threshold": 0.95,
+    "exit_code": 0,
+    "model_sha256": "fe8115c2fe0006b9d1d2a5ca9ed7ca23cc6136c2f3c92637d1dcb313f5d7b5e7",
+    "feature_sha256": "8a8b3ee6a9dd0fbb562fa18c176c837bbfc24ccda3a287180cdbab92822ff49c",
+    "scope": "Author source workflow has a known discrepancy with the archived paper model; suggestions need review"
+  },
+  "kivi": {
+    "paper-violation": {
+      "status": "fail",
+      "spin_errors": 1,
+      "stored_states": 207.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt"
+    },
+    "paper-control": {
+      "status": "pass",
+      "spin_errors": 0,
+      "stored_states": 669.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt"
+    },
+    "before": {
+      "status": "fail",
+      "spin_errors": 1,
+      "stored_states": 220.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt"
+    },
+    "after": {
+      "status": "pass",
+      "spin_errors": 0,
+      "stored_states": 1830.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt"
+    }
+  },
+  "reynard_contract": {
+    "before": {
+      "tests": 5,
+      "failures": 4,
+      "errors": 0,
+      "skipped": 0
+    },
+    "after": {
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "same_faultsets_before_after": true,
+  "reynard_ser": {
+    "reynard_ser": {
+      "tests": 543,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reynard_no_ser": {
+      "tests": 1849,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "ser_execution_reduction_percent": 70.6328,
+  "graphs": {
+    "before": {
+      "node_count": 13,
+      "edge_count": 9,
+      "nodes_by_type": {
+        "Module": 2,
+        "Metric": 8,
+        "Deployment": 1,
+        "Service": 2
+      },
+      "relations_by_type": {
+        "OBSERVED_BY": 8,
+        "CALLS": 1
+      },
+      "provenance_by_source": {
+        "source_code": 8,
+        "document": 8,
+        "runtime": 15
+      }
+    },
+    "after": {
+      "node_count": 13,
+      "edge_count": 9,
+      "nodes_by_type": {
+        "Module": 2,
+        "Metric": 8,
+        "Deployment": 1,
+        "Service": 2
+      },
+      "relations_by_type": {
+        "OBSERVED_BY": 8,
+        "CALLS": 1
+      },
+      "provenance_by_source": {
+        "source_code": 8,
+        "document": 8,
+        "runtime": 15
+      }
+    }
+  },
+  "graph_comparison": {
+    "check-passed-after": 5,
+    "unchanged": 2
+  },
+  "interpretation": "Five passed observations are one Kivi intent and four fault modes of one runtime contract; they are not five independent bugs",
+  "not_run": [
+    "team otel-demo prototype",
+    "live Kubernetes C3 fault reproduction",
+    "generic live Kubernetes-to-Kivi exporter",
+    "FaaS platform",
+    "full-paper datasets or model training",
+    "commercial product accounts",
+    "project-wide SCIP/Joern/LLM pipeline",
+    "clean second-machine installation"
+  ]
+}

@@ -1,0 +1,8 @@
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://0.0.0.0:5003/ (Press CTRL+C to quit)
+127.0.0.1 - - [21/Oct/2026 06:35:35] "[37mGET /health-check HTTP/1.1[0m" 200 -
+127.0.0.1 - - [21/Oct/2026 06:35:35] "[37mGET /bookings/chris_rivers HTTP/1.1[0m" 200 -

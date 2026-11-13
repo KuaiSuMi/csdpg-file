@@ -1,0 +1,86 @@
+{
+  "workload": {
+    "app_ports": {
+      "TCP": "8080"
+    },
+    "applications": [
+      "TCP/8080"
+    ],
+    "author": "",
+    "baseline_profile": "basic",
+    "cap_change_mode": true,
+    "cap_quarantine": true,
+    "cap_sniff": true,
+    "children": null,
+    "cpus": "",
+    "created_at": "2026-11-11T06:15:54Z",
+    "display_name": "http",
+    "domain": "maturity-nv-check-20261111061551",
+    "enforcer_id": "4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f",
+    "enforcer_name": "neuvector-enforcer-pod-rzgz7",
+    "exit_code": 0,
+    "finished_at": "",
+    "groups": [
+      "nv.maturity-http.maturity-nv-check-20261111061551",
+      "containers"
+    ],
+    "has_datapath": false,
+    "host_id": "maturity-baselines-control-plane:",
+    "host_name": "maturity-baselines-control-plane",
+    "id": "d45cadd86ddf38cb9d856877cc003d86caf3e20e32d18ca03920faa267953016",
+    "image": "docker.io/library/node:22-alpine",
+    "image_created_at": "2026-09-23T21:09:27Z",
+    "image_digest": "sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8",
+    "image_id": "7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+    "image_reg_scanned": false,
+    "image_repo_digests": null,
+    "interfaces": {
+      "eth0": [
+        {
+          "gateway": "",
+          "ip": "10.244.0.15",
+          "ip_prefix": 24
+        }
+      ]
+    },
+    "labels": {
+      "io.cri-containerd.kind": "container",
+      "io.kubernetes.container.name": "http",
+      "io.kubernetes.pod.name": "maturity-http-5b5669749c-v98wk",
+      "io.kubernetes.pod.namespace": "maturity-nv-check-20261111061551",
+      "io.kubernetes.pod.uid": "df1c9c3c-69c4-42f0-bfa8-8be8f4c294a4"
+    },
+    "memory_limit": 134217728,
+    "name": "k8s_http_maturity-http-5b5669749c-v98wk_maturity-nv-check-20261111061551_df1c9c3c-69c4-42f0-bfa8-8be8f4c294a4_0",
+    "network_mode": "/proc/18985/ns/net",
+    "platform_role": "",
+    "pod_name": "maturity-http-5b5669749c-v98wk",
+    "policy_mode": "Discover",
+    "ports": [],
+    "privileged": true,
+    "profile_mode": "Discover",
+    "run_as_root": true,
+    "running": true,
+    "scan_summary": {
+      "base_os": "",
+      "critical": 0,
+      "cvedb_create_time": "",
+      "high": 0,
+      "medium": 0,
+      "result": "",
+      "scanned_at": "",
+      "scanned_timestamp": 0,
+      "scanner_version": "",
+      "status": ""
+    },
+    "secured_at": "2026-11-11T06:15:55Z",
+    "service": "maturity-http.maturity-nv-check-20261111061551",
+    "service_account": "default",
+    "service_group": "nv.maturity-http.maturity-nv-check-20261111061551",
+    "service_mesh": false,
+    "service_mesh_sidecar": false,
+    "share_ns_with": "01c52bc0db9f6346d7c341eeb1aa9fb0fddad29122c359d932ec98774707f990",
+    "started_at": "2026-11-11T06:15:54Z",
+    "state": "discover"
+  }
+}

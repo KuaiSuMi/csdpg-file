@@ -1,0 +1,51 @@
+Working on the intents: pod_always_schedulable 
+========================
+1 failure(s) are found!
+-----Failure #1-----
+Counterexample:
+[00][Scheduler] Scheduler started.
+[11][nodeController] Node controller started.
+[22] kubelet controller started.
+[33][HPA] HPA working on deployment 1
+[44][HPA] HPA finished on deployment 1
+[5][createTargetDeployment] Created deployment 1
+[66][Deployment] Start to work on deployment 1
+[7][Deployment] Too few replicas, need to create 5
+[8][Deployment] Adding a new pod 1 to deployment 1
+[9][Deployment] Adding a new pod 2 to deployment 1
+[10][Deployment] Adding a new pod 3 to deployment 1
+[11][Deployment] Adding a new pod 4 to deployment 1
+[12][Deployment] Adding a new pod 5 to deployment 1
+[1313][Scheduler] Attempting to schedule Pod 1
+[14][Scheduler] Pod 1 is scheduled on node 1
+[1515][Scheduler] Attempting to schedule Pod 2
+[16][Scheduler] Pod 2 is scheduled on node 3
+[1717][Scheduler] Attempting to schedule Pod 3
+[18][Scheduler] Pod 3 is scheduled on node 2
+[1919][Scheduler] Attempting to schedule Pod 4
+[20][Scheduler] Pod 4 is scheduled on node 3
+[2121][Scheduler] Attempting to schedule Pod 5
+[22][Scheduler] Pod 5 is scheduled on node 1
+[23][Kubelet] Created pod 1 on node 1, deployment 1 now have 1 replicas
+[24][Kubelet] Created pod 2 on node 3, deployment 1 now have 2 replicas
+[25][Kubelet] Created pod 3 on node 2, deployment 1 now have 3 replicas
+[26][Kubelet] Created pod 4 on node 3, deployment 1 now have 4 replicas
+[27][Kubelet] Created pod 5 on node 1, deployment 1 now have 5 replicas
+[2828][HPA] HPA working on deployment 1
+[2929][HPA] Exceed the HPA tolerence
+[3030][HPA] Got new desiredReplicas 10, was 5
+[31][HPA] Need to rescale, pod number change from 5 to 6
+[3232][HPA] HPA finished on deployment 1
+[3333][Deployment] Start to work on deployment 1
+[34][Deployment] Too few replicas, need to create 1
+[35][Deployment] Adding a new pod 6 to deployment 1
+[3636][Scheduler] Attempting to schedule Pod 6
+[37][Scheduler - no_feasible_node] No feasible node!
+
+
+
+Summary:
+    1 failure(s) found!
+    Violating intent(s): pod_always_schedulable 
+    Elapsed time: 1.28 seconds
+

@@ -1,0 +1,113 @@
+{
+  "observations": [
+    {
+      "id": "Metric/appcat_6079f94cd96acc171ad5#76d000e2602d",
+      "baseline": "appcat",
+      "rule": "azure-java-version-02000",
+      "before_count": 2,
+      "after_count": 2,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/appcat_6c396601dd633ed62cb5#3648ab44abcc",
+      "baseline": "appcat",
+      "rule": "utf-8-by-default-00000",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "not-observed-after"
+    },
+    {
+      "id": "Metric/appcat_7ccd8544e264a3eed8bf#03fa7d225a03",
+      "baseline": "appcat",
+      "rule": "local-storage-00001",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "not-observed-after"
+    },
+    {
+      "id": "Metric/appcat_8bcd70db16983145bfd5#b2a9609dd786",
+      "baseline": "appcat",
+      "rule": "dockerfile-00000",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/fetruth_f613336c4be56ee2935f#e114bdbbe6a5",
+      "baseline": "fetruth",
+      "rule": "Feature Envy",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/kivi_6777216ac4d3b8598005#13a704778767",
+      "baseline": "kivi",
+      "rule": "pod_always_schedulable",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/neuvector_99389e47f24723c7a5d1#e7ecdd3b85d3",
+      "baseline": "neuvector",
+      "rule": "run_as_root",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/neuvector_d8c1bedd7c56585231f1#b4a88689c465",
+      "baseline": "neuvector",
+      "rule": "privileged",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/reynard_46524bc4bb2e237460f6#140619229164",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/reynard_5dbcaf7f275320bd174f#f4d1f5068664",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/reynard_60bd66719c3d4aa7ac24#8ed1c45010d3",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/reynard_baae9ee50d376ad56db4#ee11c049baf4",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/reynard_fa03ee607ecfacbc142c#b6ce27c3dcf6",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    }
+  ],
+  "counts": {
+    "check-passed-after": 6,
+    "not-observed-after": 2,
+    "unchanged": 5
+  }
+}

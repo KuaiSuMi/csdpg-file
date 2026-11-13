@@ -1,0 +1,17 @@
+Collecting grapheme==0.6.0
+  Downloading grapheme-0.6.0.tar.gz (207 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: grapheme
+  Building wheel for grapheme (pyproject.toml): started
+  Building wheel for grapheme (pyproject.toml): finished with status 'done'
+  Created wheel for grapheme: filename=grapheme-0.6.0-py3-none-any.whl size=210167 sha256=1491e53116b8601cdd5d4b01494e7c9e77fbab6f4aa56465aa19059d2eb566ef
+  Stored in directory: c:\users\yurui\appdata\local\pip\cache\wheels\e0\96\66\ab223d7755e401981953430b7f2d562afba01a71296a74c893
+Successfully built grapheme
+
+[notice] A new release of pip is available: 26.0.1 -> 26.3
+[notice] To update, run: python.exe -m pip install --upgrade pip

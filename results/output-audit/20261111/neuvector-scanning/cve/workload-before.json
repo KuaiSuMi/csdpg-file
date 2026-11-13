@@ -1,0 +1,86 @@
+{
+  "workload": {
+    "app_ports": {
+      "TCP": "8080"
+    },
+    "applications": [
+      "TCP/8080"
+    ],
+    "author": "",
+    "baseline_profile": "basic",
+    "cap_change_mode": true,
+    "cap_quarantine": true,
+    "cap_sniff": true,
+    "children": null,
+    "cpus": "",
+    "created_at": "2026-11-11T06:33:42Z",
+    "display_name": "http",
+    "domain": "maturity-cve-20261111063342",
+    "enforcer_id": "4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f",
+    "enforcer_name": "neuvector-enforcer-pod-rzgz7",
+    "exit_code": 0,
+    "finished_at": "",
+    "groups": [
+      "nv.maturity-http.maturity-cve-20261111063342",
+      "containers"
+    ],
+    "has_datapath": false,
+    "host_id": "maturity-baselines-control-plane:",
+    "host_name": "maturity-baselines-control-plane",
+    "id": "92d796b24aa25652849b9af3d6af99acc93399864a994510ab3965ca278907a0",
+    "image": "docker.io/library/node:22-alpine",
+    "image_created_at": "2026-09-23T21:09:27Z",
+    "image_digest": "sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8",
+    "image_id": "7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+    "image_reg_scanned": false,
+    "image_repo_digests": null,
+    "interfaces": {
+      "eth0": [
+        {
+          "gateway": "",
+          "ip": "10.244.0.21",
+          "ip_prefix": 24
+        }
+      ]
+    },
+    "labels": {
+      "io.cri-containerd.kind": "container",
+      "io.kubernetes.container.name": "http",
+      "io.kubernetes.pod.name": "maturity-http-65b79d96bd-bdz7j",
+      "io.kubernetes.pod.namespace": "maturity-cve-20261111063342",
+      "io.kubernetes.pod.uid": "82e28f99-2e91-4074-b9cc-0320da8cc1b4"
+    },
+    "memory_limit": 134217728,
+    "name": "k8s_http_maturity-http-65b79d96bd-bdz7j_maturity-cve-20261111063342_82e28f99-2e91-4074-b9cc-0320da8cc1b4_0",
+    "network_mode": "/proc/28088/ns/net",
+    "platform_role": "",
+    "pod_name": "maturity-http-65b79d96bd-bdz7j",
+    "policy_mode": "Discover",
+    "ports": [],
+    "privileged": false,
+    "profile_mode": "Discover",
+    "run_as_root": true,
+    "running": true,
+    "scan_summary": {
+      "base_os": "",
+      "critical": 0,
+      "cvedb_create_time": "",
+      "high": 0,
+      "medium": 0,
+      "result": "",
+      "scanned_at": "",
+      "scanned_timestamp": 0,
+      "scanner_version": "",
+      "status": ""
+    },
+    "secured_at": "2026-11-11T06:33:44Z",
+    "service": "maturity-http.maturity-cve-20261111063342",
+    "service_account": "default",
+    "service_group": "nv.maturity-http.maturity-cve-20261111063342",
+    "service_mesh": false,
+    "service_mesh_sidecar": false,
+    "share_ns_with": "448d10b3b244a38068d9651eab8160d4bfdf3d47d179c8c0c2e1fdd087c801e6",
+    "started_at": "2026-11-11T06:33:42Z",
+    "state": "discover"
+  }
+}

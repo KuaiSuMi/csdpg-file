@@ -1,0 +1,186 @@
+{
+  "schema_version": "1.0",
+  "stats": {
+    "node_count": 4,
+    "edge_count": 2,
+    "nodes_by_type": {
+      "Module": 2,
+      "Metric": 2
+    },
+    "relations_by_type": {
+      "OBSERVED_BY": 2
+    },
+    "provenance_by_source": {
+      "source_code": 4
+    }
+  },
+  "meta": {
+    "baseline_runs": {
+      "baseline-glitch": {
+        "status": "ok",
+        "observations": 1,
+        "subjects": 1,
+        "findings": 0
+      },
+      "baseline-infer": {
+        "status": "ok",
+        "observations": 1,
+        "subjects": 1,
+        "findings": 0
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "Module/glitch-analysis:after#bfb35c8c39f2",
+      "type": "Module",
+      "name": "glitch-analysis:after",
+      "canonical_name": "glitch-analysis:after",
+      "namespace": "academic-control",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/academic-20261113/glitch/after/summary.json#",
+          "evidence": "{\"coverage\": {\"files\": 1, \"lines\": 6}, \"custom_business_rules\": false, \"exit_code\": 0, \"findings\": 0, \"image\": \"maturity-glitch:1.0.1\", \"image_id\": \"sha256:a0f576245e0bed113d00bb7e62b8add2932783e569e32861b5a6a2f57a74a8e2\", \"input\": \"baselines\\\\glitch\\\\fixtures\\\\after\", \"project\": \"after\", \"report\": \"findings.csv\", \"report_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"seconds\": 0.963, \"tool\": \"glitch\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "glitch",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-12T18:17:12+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/glitch_f598c467e28ad55d666a#41063bf29c87",
+      "type": "Metric",
+      "name": "analysis-coverage",
+      "canonical_name": "[\"glitch\",\"glitch-analysis:after\",[\"analysis-coverage\"]]",
+      "namespace": "academic-control",
+      "attributes": {
+        "baseline": "glitch",
+        "status": "measured",
+        "subject_key": "glitch-analysis:after",
+        "project": "after",
+        "coverage": {
+          "files": 1,
+          "lines": 6
+        },
+        "findings": 0,
+        "image_id": "sha256:a0f576245e0bed113d00bb7e62b8add2932783e569e32861b5a6a2f57a74a8e2"
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/academic-20261113/glitch/after/summary.json#",
+          "evidence": "{\"coverage\": {\"files\": 1, \"lines\": 6}, \"custom_business_rules\": false, \"exit_code\": 0, \"findings\": 0, \"image\": \"maturity-glitch:1.0.1\", \"image_id\": \"sha256:a0f576245e0bed113d00bb7e62b8add2932783e569e32861b5a6a2f57a74a8e2\", \"input\": \"baselines\\\\glitch\\\\fixtures\\\\after\", \"project\": \"after\", \"report\": \"findings.csv\", \"report_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"seconds\": 0.963, \"tool\": \"glitch\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "glitch",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-12T18:17:12+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Module/infer-analysis:after#65ec8ca5fa13",
+      "type": "Module",
+      "name": "infer-analysis:after",
+      "canonical_name": "infer-analysis:after",
+      "namespace": "academic-control",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/academic-20261113/infer/after/summary.json#",
+          "evidence": "{\"coverage\": {\"files\": 1}, \"custom_business_rules\": false, \"exit_code\": 0, \"findings\": 0, \"image\": \"maturity-infer:1.3.0\", \"image_id\": \"sha256:3955a2b64a1d773255a72994811c77f7fa56bb4a672fcdeb24074dd0761f9715\", \"input\": \"baselines\\\\infer\\\\fixtures\\\\after\", \"project\": \"after\", \"report\": \"infer-out\\\\report.json\", \"report_sha256\": \"37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570\", \"seconds\": 4.805, \"tool\": \"infer\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "infer",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-12T18:17:12+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/infer_74b2c75d8e5de18c7398#7a4470da97b8",
+      "type": "Metric",
+      "name": "analysis-coverage",
+      "canonical_name": "[\"infer\",\"infer-analysis:after\",[\"analysis-coverage\"]]",
+      "namespace": "academic-control",
+      "attributes": {
+        "baseline": "infer",
+        "status": "measured",
+        "subject_key": "infer-analysis:after",
+        "project": "after",
+        "coverage": {
+          "files": 1
+        },
+        "findings": 0,
+        "image_id": "sha256:3955a2b64a1d773255a72994811c77f7fa56bb4a672fcdeb24074dd0761f9715"
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/academic-20261113/infer/after/summary.json#",
+          "evidence": "{\"coverage\": {\"files\": 1}, \"custom_business_rules\": false, \"exit_code\": 0, \"findings\": 0, \"image\": \"maturity-infer:1.3.0\", \"image_id\": \"sha256:3955a2b64a1d773255a72994811c77f7fa56bb4a672fcdeb24074dd0761f9715\", \"input\": \"baselines\\\\infer\\\\fixtures\\\\after\", \"project\": \"after\", \"report\": \"infer-out\\\\report.json\", \"report_sha256\": \"37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570\", \"seconds\": 4.805, \"tool\": \"infer\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "infer",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-12T18:17:12+00:00"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "Module/glitch-analysis:after#bfb35c8c39f2",
+      "target": "Metric/glitch_f598c467e28ad55d666a#41063bf29c87",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/academic-20261113/glitch/after/summary.json#",
+          "evidence": "{\"coverage\": {\"files\": 1, \"lines\": 6}, \"custom_business_rules\": false, \"exit_code\": 0, \"findings\": 0, \"image\": \"maturity-glitch:1.0.1\", \"image_id\": \"sha256:a0f576245e0bed113d00bb7e62b8add2932783e569e32861b5a6a2f57a74a8e2\", \"input\": \"baselines\\\\glitch\\\\fixtures\\\\after\", \"project\": \"after\", \"report\": \"findings.csv\", \"report_sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"seconds\": 0.963, \"tool\": \"glitch\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "glitch",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-12T18:17:12+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Module/infer-analysis:after#65ec8ca5fa13",
+      "target": "Metric/infer_74b2c75d8e5de18c7398#7a4470da97b8",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/academic-20261113/infer/after/summary.json#",
+          "evidence": "{\"coverage\": {\"files\": 1}, \"custom_business_rules\": false, \"exit_code\": 0, \"findings\": 0, \"image\": \"maturity-infer:1.3.0\", \"image_id\": \"sha256:3955a2b64a1d773255a72994811c77f7fa56bb4a672fcdeb24074dd0761f9715\", \"input\": \"baselines\\\\infer\\\\fixtures\\\\after\", \"project\": \"after\", \"report\": \"infer-out\\\\report.json\", \"report_sha256\": \"37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570\", \"seconds\": 4.805, \"tool\": \"infer\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "infer",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-12T18:17:12+00:00"
+        }
+      ]
+    }
+  ]
+}

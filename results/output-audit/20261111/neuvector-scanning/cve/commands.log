@@ -1,0 +1,365 @@
+["kubectl", "--kubeconfig", ".runtime/tools/maturity-kubeconfig", "create", "namespace", "maturity-cve-20261111063342"]
+namespace/maturity-cve-20261111063342 created
+
+["kubectl", "--kubeconfig", ".runtime/tools/maturity-kubeconfig", "-n", "maturity-cve-20261111063342", "apply", "-f", "baselines/fixtures/neuvector/before.yaml"]
+deployment.apps/maturity-http created
+
+["kubectl", "--kubeconfig", ".runtime/tools/maturity-kubeconfig", "-n", "maturity-cve-20261111063342", "rollout", "status", "deployment/maturity-http", "--timeout=180s"]
+Waiting for deployment "maturity-http" rollout to finish: 0 of 1 updated replicas are available...
+deployment "maturity-http" successfully rolled out
+
+["kubectl", "--kubeconfig", ".runtime/tools/maturity-kubeconfig", "-n", "maturity-cve-20261111063342", "get", "pods", "-l", "app=maturity-http", "-o", "json"]
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "creationTimestamp": "2026-11-11T06:33:42Z",
+                "generateName": "maturity-http-65b79d96bd-",
+                "labels": {
+                    "app": "maturity-http",
+                    "pod-template-hash": "65b79d96bd"
+                },
+                "name": "maturity-http-65b79d96bd-bdz7j",
+                "namespace": "maturity-cve-20261111063342",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "maturity-http-65b79d96bd",
+                        "uid": "f9a9986a-7b49-42fd-a2ce-1e794595ca16"
+                    }
+                ],
+                "resourceVersion": "287615",
+                "uid": "82e28f99-2e91-4074-b9cc-0320da8cc1b4"
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "args": [
+                            "require('http').createServer((q,s)=\u003e{s.writeHead(200);s.end('maturity-ok\\n')}).listen(8080,'0.0.0.0')"
+                        ],
+                        "command": [
+                            "node",
+                            "-e"
+                        ],
+                        "image": "node:22-alpine",
+                        "imagePullPolicy": "Never",
+                        "name": "http",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 2,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "200m",
+                                "memory": "128Mi"
+                            },
+                            "requests": {
+                                "cpu": "50m",
+                                "memory": "64Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "runAsUser": 0
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-5jcbv",
+                                "readOnly": true
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "maturity-baselines-control-plane",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "kube-api-access-5jcbv",
+                        "projected": {
+                            "defaultMode": 420,
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ],
+                                        "name": "kube-root-ca.crt"
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                },
+                                                "path": "namespace"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-11T06:33:43Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-11T06:33:42Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-11T06:33:43Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-11T06:33:43Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-11T06:33:42Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://92d796b24aa25652849b9af3d6af99acc93399864a994510ab3965ca278907a0",
+                        "image": "docker.io/library/node:22-alpine",
+                        "imageID": "sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+                        "lastState": {},
+                        "name": "http",
+                        "ready": true,
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2026-11-11T06:33:42Z"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "name": "kube-api-access-5jcbv",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "172.20.0.2",
+                "hostIPs": [
+                    {
+                        "ip": "172.20.0.2"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.244.0.21",
+                "podIPs": [
+                    {
+                        "ip": "10.244.0.21"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-11T06:33:42Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}
+
+["kubectl", "--kubeconfig", ".runtime/tools/maturity-kubeconfig", "-n", "maturity-cve-20261111063342", "get", "deployment", "maturity-http", "-o", "json"]
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+        "annotations": {
+            "deployment.kubernetes.io/revision": "1",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"maturity-http\",\"namespace\":\"maturity-cve-20261111063342\"},\"spec\":{\"replicas\":1,\"selector\":{\"matchLabels\":{\"app\":\"maturity-http\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"maturity-http\"}},\"spec\":{\"containers\":[{\"args\":[\"require('http').createServer((q,s)=\\u003e{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"],\"command\":[\"node\",\"-e\"],\"image\":\"node:22-alpine\",\"imagePullPolicy\":\"Never\",\"name\":\"http\",\"ports\":[{\"containerPort\":8080}],\"readinessProbe\":{\"httpGet\":{\"path\":\"/\",\"port\":8080},\"periodSeconds\":2},\"resources\":{\"limits\":{\"cpu\":\"200m\",\"memory\":\"128Mi\"},\"requests\":{\"cpu\":\"50m\",\"memory\":\"64Mi\"}},\"securityContext\":{\"runAsUser\":0}}]}}}}\n"
+        },
+        "creationTimestamp": "2026-11-11T06:33:42Z",
+        "generation": 1,
+        "name": "maturity-http",
+        "namespace": "maturity-cve-20261111063342",
+        "resourceVersion": "287617",
+        "uid": "503deae4-a2e9-4070-92cc-9e18dce0f8b1"
+    },
+    "spec": {
+        "progressDeadlineSeconds": 600,
+        "replicas": 1,
+        "revisionHistoryLimit": 10,
+        "selector": {
+            "matchLabels": {
+                "app": "maturity-http"
+            }
+        },
+        "strategy": {
+            "rollingUpdate": {
+                "maxSurge": "25%",
+                "maxUnavailable": "25%"
+            },
+            "type": "RollingUpdate"
+        },
+        "template": {
+            "metadata": {
+                "creationTimestamp": null,
+                "labels": {
+                    "app": "maturity-http"
+                }
+            },
+            "spec": {
+                "containers": [
+                    {
+                        "args": [
+                            "require('http').createServer((q,s)=\u003e{s.writeHead(200);s.end('maturity-ok\\n')}).listen(8080,'0.0.0.0')"
+                        ],
+                        "command": [
+                            "node",
+                            "-e"
+                        ],
+                        "image": "node:22-alpine",
+                        "imagePullPolicy": "Never",
+                        "name": "http",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 2,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "200m",
+                                "memory": "128Mi"
+                            },
+                            "requests": {
+                                "cpu": "50m",
+                                "memory": "64Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "runAsUser": 0
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {},
+                "terminationGracePeriodSeconds": 30
+            }
+        }
+    },
+    "status": {
+        "availableReplicas": 1,
+        "conditions": [
+            {
+                "lastTransitionTime": "2026-11-11T06:33:43Z",
+                "lastUpdateTime": "2026-11-11T06:33:43Z",
+                "message": "Deployment has minimum availability.",
+                "reason": "MinimumReplicasAvailable",
+                "status": "True",
+                "type": "Available"
+            },
+            {
+                "lastTransitionTime": "2026-11-11T06:33:42Z",
+                "lastUpdateTime": "2026-11-11T06:33:43Z",
+                "message": "ReplicaSet \"maturity-http-65b79d96bd\" has successfully progressed.",
+                "reason": "NewReplicaSetAvailable",
+                "status": "True",
+                "type": "Progressing"
+            }
+        ],
+        "observedGeneration": 1,
+        "readyReplicas": 1,
+        "replicas": 1,
+        "updatedReplicas": 1
+    }
+}
+
+["kubectl", "--kubeconfig", ".runtime/tools/maturity-kubeconfig", "delete", "namespace", "maturity-cve-20261111063342", "--wait=true", "--timeout=180s"]
+namespace "maturity-cve-20261111063342" deleted
+

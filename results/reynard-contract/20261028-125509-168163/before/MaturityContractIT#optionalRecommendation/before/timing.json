@@ -1,0 +1,644 @@
+{
+  "stats" : {
+    "nextFaultload" : {
+      "count" : 6,
+      "average" : {
+        "ns" : 3941066.6666666665,
+        "us" : 3941.0666666666666,
+        "ms" : 3.9410666666666665,
+        "s" : 0.003941066666666666
+      },
+      "min" : {
+        "ns" : 273500,
+        "us" : 273.5,
+        "ms" : 0.2735,
+        "s" : 2.735E-4
+      },
+      "max" : {
+        "ns" : 17457500,
+        "us" : 17457.5,
+        "ms" : 17.4575,
+        "s" : 0.0174575
+      }
+    },
+    "Per test" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 6.47858E7,
+        "us" : 64785.8,
+        "ms" : 64.7858,
+        "s" : 0.0647858
+      },
+      "min" : {
+        "ns" : 22763200,
+        "us" : 22763.2,
+        "ms" : 22.7632,
+        "s" : 0.0227632
+      },
+      "max" : {
+        "ns" : 201477200,
+        "us" : 201477.2,
+        "ms" : 201.4772,
+        "s" : 0.2014772
+      }
+    },
+    "registerFaultload" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 1.474174E7,
+        "us" : 14741.74,
+        "ms" : 14.74174,
+        "s" : 0.01474174
+      },
+      "min" : {
+        "ns" : 2750000,
+        "us" : 2750.0,
+        "ms" : 2.75,
+        "s" : 0.00275
+      },
+      "max" : {
+        "ns" : 50734400,
+        "us" : 50734.4,
+        "ms" : 50.7344,
+        "s" : 0.0507344
+      }
+    },
+    "testMethod" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 3.580628E7,
+        "us" : 35806.28,
+        "ms" : 35.80628,
+        "s" : 0.03580628
+      },
+      "min" : {
+        "ns" : 15602100,
+        "us" : 15602.1,
+        "ms" : 15.6021,
+        "s" : 0.0156021
+      },
+      "max" : {
+        "ns" : 109047400,
+        "us" : 109047.4,
+        "ms" : 109.0474,
+        "s" : 0.1090474
+      }
+    },
+    "getTraceWithDelay" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 3.713134E7,
+        "us" : 37131.34,
+        "ms" : 37.13134,
+        "s" : 0.03713134
+      },
+      "min" : {
+        "ns" : 13037400,
+        "us" : 13037.4,
+        "ms" : 13.0374,
+        "s" : 0.0130374
+      },
+      "max" : {
+        "ns" : 115779900,
+        "us" : 115779.9,
+        "ms" : 115.7799,
+        "s" : 0.1157799
+      }
+    },
+    "getTrace" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 1.757014E7,
+        "us" : 17570.14,
+        "ms" : 17.57014,
+        "s" : 0.01757014
+      },
+      "min" : {
+        "ns" : 5161400,
+        "us" : 5161.4,
+        "ms" : 5.1614,
+        "s" : 0.0051614
+      },
+      "max" : {
+        "ns" : 63675600,
+        "us" : 63675.6,
+        "ms" : 63.6756,
+        "s" : 0.0636756
+      }
+    },
+    "handleResult" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 1.056704E7,
+        "us" : 10567.04,
+        "ms" : 10.56704,
+        "s" : 0.01056704
+      },
+      "min" : {
+        "ns" : 1393300,
+        "us" : 1393.3,
+        "ms" : 1.3933,
+        "s" : 0.0013933
+      },
+      "max" : {
+        "ns" : 35365000,
+        "us" : 35365.0,
+        "ms" : 35.365,
+        "s" : 0.035365
+      }
+    },
+    "StrategyRunner.analyze" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 1.042148E7,
+        "us" : 10421.48,
+        "ms" : 10.42148,
+        "s" : 0.01042148
+      },
+      "min" : {
+        "ns" : 1345300,
+        "us" : 1345.3,
+        "ms" : 1.3453,
+        "s" : 0.0013453
+      },
+      "max" : {
+        "ns" : 34921600,
+        "us" : 34921.6,
+        "ms" : 34.9216,
+        "s" : 0.0349216
+      }
+    },
+    "DynamicExplorationGenerator.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 3825440.0,
+        "us" : 3825.44,
+        "ms" : 3.82544,
+        "s" : 0.00382544
+      },
+      "min" : {
+        "ns" : 140500,
+        "us" : 140.5,
+        "ms" : 0.1405,
+        "s" : 1.405E-4
+      },
+      "max" : {
+        "ns" : 18424300,
+        "us" : 18424.3,
+        "ms" : 18.4243,
+        "s" : 0.0184243
+      }
+    },
+    "HappyPathDetector.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 82260.0,
+        "us" : 82.26,
+        "ms" : 0.08226,
+        "s" : 8.226E-5
+      },
+      "min" : {
+        "ns" : 3200,
+        "us" : 3.2,
+        "ms" : 0.0032,
+        "s" : 3.2E-6
+      },
+      "max" : {
+        "ns" : 395200,
+        "us" : 395.2,
+        "ms" : 0.3952,
+        "s" : 3.952E-4
+      }
+    },
+    "ParentChildDetector.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 2381240.0,
+        "us" : 2381.24,
+        "ms" : 2.38124,
+        "s" : 0.00238124
+      },
+      "min" : {
+        "ns" : 47100,
+        "us" : 47.1,
+        "ms" : 0.0471,
+        "s" : 4.71E-5
+      },
+      "max" : {
+        "ns" : 11615600,
+        "us" : 11615.6,
+        "ms" : 11.6156,
+        "s" : 0.0116156
+      }
+    },
+    "HappensBeforeNeighbourDetector.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 390680.0,
+        "us" : 390.68,
+        "ms" : 0.39068,
+        "s" : 3.9068E-4
+      },
+      "min" : {
+        "ns" : 15400,
+        "us" : 15.4,
+        "ms" : 0.0154,
+        "s" : 1.54E-5
+      },
+      "max" : {
+        "ns" : 981300,
+        "us" : 981.3,
+        "ms" : 0.9813,
+        "s" : 9.813E-4
+      }
+    },
+    "ErrorPropagationDetector.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 617900.0,
+        "us" : 617.9,
+        "ms" : 0.6179,
+        "s" : 6.179E-4
+      },
+      "min" : {
+        "ns" : 19100,
+        "us" : 19.1,
+        "ms" : 0.0191,
+        "s" : 1.91E-5
+      },
+      "max" : {
+        "ns" : 1924400,
+        "us" : 1924.4,
+        "ms" : 1.9244,
+        "s" : 0.0019244
+      }
+    },
+    "ConditionalPointDetector.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 863580.0,
+        "us" : 863.58,
+        "ms" : 0.86358,
+        "s" : 8.6358E-4
+      },
+      "min" : {
+        "ns" : 135900,
+        "us" : 135.9,
+        "ms" : 0.1359,
+        "s" : 1.359E-4
+      },
+      "max" : {
+        "ns" : 3519500,
+        "us" : 3519.5,
+        "ms" : 3.5195,
+        "s" : 0.0035195
+      }
+    },
+    "RedundancyAnalyzer.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 40760.0,
+        "us" : 40.76,
+        "ms" : 0.04076,
+        "s" : 4.076E-5
+      },
+      "min" : {
+        "ns" : 22700,
+        "us" : 22.7,
+        "ms" : 0.0227,
+        "s" : 2.27E-5
+      },
+      "max" : {
+        "ns" : 81500,
+        "us" : 81.5,
+        "ms" : 0.0815,
+        "s" : 8.15E-5
+      }
+    },
+    "StatusAnalyzer.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 27980.0,
+        "us" : 27.98,
+        "ms" : 0.02798,
+        "s" : 2.798E-5
+      },
+      "min" : {
+        "ns" : 4300,
+        "us" : 4.3,
+        "ms" : 0.0043,
+        "s" : 4.3E-6
+      },
+      "max" : {
+        "ns" : 113900,
+        "us" : 113.9,
+        "ms" : 0.1139,
+        "s" : 1.139E-4
+      }
+    },
+    "BehaviorAnalyzer.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 1889300.0,
+        "us" : 1889.3,
+        "ms" : 1.8893,
+        "s" : 0.0018893
+      },
+      "min" : {
+        "ns" : 268900,
+        "us" : 268.9,
+        "ms" : 0.2689,
+        "s" : 2.689E-4
+      },
+      "max" : {
+        "ns" : 8120700,
+        "us" : 8120.7,
+        "ms" : 8.1207,
+        "s" : 0.0081207
+      }
+    },
+    "TimingAnalyzer.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 172000.0,
+        "us" : 172.0,
+        "ms" : 0.172,
+        "s" : 1.72E-4
+      },
+      "min" : {
+        "ns" : 61500,
+        "us" : 61.5,
+        "ms" : 0.0615,
+        "s" : 6.15E-5
+      },
+      "max" : {
+        "ns" : 324300,
+        "us" : 324.3,
+        "ms" : 0.3243,
+        "s" : 3.243E-4
+      }
+    },
+    "StatusPropagationOracle.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 7520.0,
+        "us" : 7.52,
+        "ms" : 0.00752,
+        "s" : 7.52E-6
+      },
+      "min" : {
+        "ns" : 3100,
+        "us" : 3.1,
+        "ms" : 0.0031,
+        "s" : 3.1E-6
+      },
+      "max" : {
+        "ns" : 17500,
+        "us" : 17.5,
+        "ms" : 0.0175,
+        "s" : 1.75E-5
+      }
+    },
+    "FaultsWithoutCauseOracle.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 51280.0,
+        "us" : 51.28,
+        "ms" : 0.05128,
+        "s" : 5.128E-5
+      },
+      "min" : {
+        "ns" : 3600,
+        "us" : 3.6,
+        "ms" : 0.0036,
+        "s" : 3.6E-6
+      },
+      "max" : {
+        "ns" : 197100,
+        "us" : 197.1,
+        "ms" : 0.1971,
+        "s" : 1.971E-4
+      }
+    },
+    "ConcurrencyDetector.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 10300.0,
+        "us" : 10.3,
+        "ms" : 0.0103,
+        "s" : 1.03E-5
+      },
+      "min" : {
+        "ns" : 7700,
+        "us" : 7.7,
+        "ms" : 0.0077,
+        "s" : 7.7E-6
+      },
+      "max" : {
+        "ns" : 16000,
+        "us" : 16.0,
+        "ms" : 0.016,
+        "s" : 1.6E-5
+      }
+    },
+    "NoImpactPruner.handleFeedback<Analyzer>" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 18900.0,
+        "us" : 18.9,
+        "ms" : 0.0189,
+        "s" : 1.89E-5
+      },
+      "min" : {
+        "ns" : 6000,
+        "us" : 6.0,
+        "ms" : 0.006,
+        "s" : 6.0E-6
+      },
+      "max" : {
+        "ns" : 49900,
+        "us" : 49.9,
+        "ms" : 0.0499,
+        "s" : 4.99E-5
+      }
+    },
+    "unregisterFautload" : {
+      "count" : 5,
+      "average" : {
+        "ns" : 2778740.0,
+        "us" : 2778.74,
+        "ms" : 2.77874,
+        "s" : 0.00277874
+      },
+      "min" : {
+        "ns" : 2571400,
+        "us" : 2571.4,
+        "ms" : 2.5714,
+        "s" : 0.0025714
+      },
+      "max" : {
+        "ns" : 2982900,
+        "us" : 2982.9,
+        "ms" : 2.9829,
+        "s" : 0.0029829
+      }
+    },
+    "getExpectedPoints" : {
+      "count" : 8,
+      "average" : {
+        "ns" : 181125.0,
+        "us" : 181.125,
+        "ms" : 0.181125,
+        "s" : 1.81125E-4
+      },
+      "min" : {
+        "ns" : 95700,
+        "us" : 95.7,
+        "ms" : 0.0957,
+        "s" : 9.57E-5
+      },
+      "max" : {
+        "ns" : 351900,
+        "us" : 351.9,
+        "ms" : 0.3519,
+        "s" : 3.519E-4
+      }
+    },
+    "UnreachabilityPruner.prune<Pruner>" : {
+      "count" : 8,
+      "average" : {
+        "ns" : 218150.0,
+        "us" : 218.15,
+        "ms" : 0.21815,
+        "s" : 2.1815E-4
+      },
+      "min" : {
+        "ns" : 107800,
+        "us" : 107.8,
+        "ms" : 0.1078,
+        "s" : 1.078E-4
+      },
+      "max" : {
+        "ns" : 435900,
+        "us" : 435.9,
+        "ms" : 0.4359,
+        "s" : 4.359E-4
+      }
+    },
+    "NoImpactPruner.prune<Pruner>" : {
+      "count" : 8,
+      "average" : {
+        "ns" : 3375.0,
+        "us" : 3.375,
+        "ms" : 0.003375,
+        "s" : 3.375E-6
+      },
+      "min" : {
+        "ns" : 1200,
+        "us" : 1.2,
+        "ms" : 0.0012,
+        "s" : 1.2E-6
+      },
+      "max" : {
+        "ns" : 14800,
+        "us" : 14.8,
+        "ms" : 0.0148,
+        "s" : 1.48E-5
+      }
+    },
+    "getExpectedBehaviours" : {
+      "count" : 8,
+      "average" : {
+        "ns" : 106475.0,
+        "us" : 106.475,
+        "ms" : 0.106475,
+        "s" : 1.06475E-4
+      },
+      "min" : {
+        "ns" : 75400,
+        "us" : 75.4,
+        "ms" : 0.0754,
+        "s" : 7.54E-5
+      },
+      "max" : {
+        "ns" : 159100,
+        "us" : 159.1,
+        "ms" : 0.1591,
+        "s" : 1.591E-4
+      }
+    },
+    "DynamicReductionPruner.prune<Pruner>" : {
+      "count" : 8,
+      "average" : {
+        "ns" : 233975.0,
+        "us" : 233.975,
+        "ms" : 0.233975,
+        "s" : 2.33975E-4
+      },
+      "min" : {
+        "ns" : 122500,
+        "us" : 122.5,
+        "ms" : 0.1225,
+        "s" : 1.225E-4
+      },
+      "max" : {
+        "ns" : 840100,
+        "us" : 840.1,
+        "ms" : 0.8401,
+        "s" : 8.401E-4
+      }
+    },
+    "Total test time" : {
+      "count" : 1,
+      "average" : {
+        "ns" : 3.989317E8,
+        "us" : 398931.7,
+        "ms" : 398.9317,
+        "s" : 0.3989317
+      },
+      "min" : {
+        "ns" : 398931700,
+        "us" : 398931.7,
+        "ms" : 398.9317,
+        "s" : 0.3989317
+      },
+      "max" : {
+        "ns" : 398931700,
+        "us" : 398931.7,
+        "ms" : 398.9317,
+        "s" : 0.3989317
+      }
+    }
+  },
+  "details" : {
+    "nextFaultload" : [ 1556600, 17457500, 1543600, 1410000, 1405200, 273500 ],
+    "Per test" : [ 201477200, 51170000, 24636300, 23882300, 22763200 ],
+    "registerFaultload" : [ 50734400, 14404100, 3056900, 2763300, 2750000 ],
+    "testMethod" : [ 109047400, 21499800, 16531500, 16350600, 15602100 ],
+    "getTraceWithDelay" : [ 115779900, 27857800, 14662100, 14319500, 13037400 ],
+    "getTrace" : [ 63675600, 6466800, 6401200, 6145700, 5161400 ],
+    "handleResult" : [ 35365000, 12201800, 2019100, 1856000, 1393300 ],
+    "StrategyRunner.analyze" : [ 34921600, 12141000, 1936700, 1762800, 1345300 ],
+    "DynamicExplorationGenerator.handleFeedback<Analyzer>" : [ 18424300, 178200, 163400, 220800, 140500 ],
+    "HappyPathDetector.handleFeedback<Analyzer>" : [ 395200, 3400, 3500, 6000, 3200 ],
+    "ParentChildDetector.handleFeedback<Analyzer>" : [ 11615600, 65800, 88700, 89000, 47100 ],
+    "HappensBeforeNeighbourDetector.handleFeedback<Analyzer>" : [ 15400, 981300, 364800, 363400, 228500 ],
+    "ErrorPropagationDetector.handleFeedback<Analyzer>" : [ 19100, 1924400, 400700, 397900, 347400 ],
+    "ConditionalPointDetector.handleFeedback<Analyzer>" : [ 3519500, 333800, 135900, 186100, 142600 ],
+    "RedundancyAnalyzer.handleFeedback<Analyzer>" : [ 22700, 81500, 35300, 29600, 34700 ],
+    "StatusAnalyzer.handleFeedback<Analyzer>" : [ 113900, 5000, 11000, 5700, 4300 ],
+    "BehaviorAnalyzer.handleFeedback<Analyzer>" : [ 403100, 8120700, 335800, 318000, 268900 ],
+    "TimingAnalyzer.handleFeedback<Analyzer>" : [ 281900, 127000, 324300, 61500, 65300 ],
+    "StatusPropagationOracle.handleFeedback<Analyzer>" : [ 8400, 17500, 5100, 3100, 3500 ],
+    "FaultsWithoutCauseOracle.handleFeedback<Analyzer>" : [ 3600, 197100, 17400, 25200, 13100 ],
+    "ConcurrencyDetector.handleFeedback<Analyzer>" : [ 16000, 11500, 7800, 8500, 7700 ],
+    "NoImpactPruner.handleFeedback<Analyzer>" : [ 6000, 49900, 14000, 12400, 12200 ],
+    "unregisterFautload" : [ 2982900, 2811600, 2731100, 2571400, 2796700 ],
+    "getExpectedPoints" : [ 351900, 146200, 206000, 95700, 200600, 138200, 164500, 145900 ],
+    "UnreachabilityPruner.prune<Pruner>" : [ 435900, 215800, 231900, 107800, 220600, 151700, 202200, 179300 ],
+    "NoImpactPruner.prune<Pruner>" : [ 14800, 2300, 2300, 1200, 1700, 1200, 2100, 1400 ],
+    "getExpectedBehaviours" : [ 159100, 109700, 156800, 90700, 96300, 87000, 75400, 76800 ],
+    "DynamicReductionPruner.prune<Pruner>" : [ 840100, 155000, 207500, 136000, 142000, 136100, 122500, 132600 ],
+    "Total test time" : [ 398931700 ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "date_local": "2026-11-11",
+  "timezone": "Asia/Shanghai",
+  "selected": [
+    "microsoft-appcat-java",
+    "suse-neuvector"
+  ],
+  "ranking_priority": [
+    "authority",
+    "deployment and reproducibility",
+    "open source"
+  ],
+  "baselines": [
+    {
+      "id": "microsoft-appcat-java",
+      "name": "Microsoft AppCAT for Java",
+      "version": "7.7.0.11",
+      "distribution": "official Windows amd64 CLI",
+      "license_scope": "free open-source-based vendor tool; bundled LICENSE and NOTICE retained",
+      "package_sha256": "191f7ce9f1fefd77585fe4865dc6d21f0ee7819df8842e7d8714b65c6bfef017",
+      "download": "https://download.visualstudio.microsoft.com/download/pr/95eb0363-282b-4e95-bcb7-ff1e3b4f9fe9/Java_Engineering_Group/AppCAT-for-java-cli/7.7.0.11/azure-migrate-appcat-for-java-cli-windows-amd64-7.7.0.11.zip",
+      "sources": [
+        "https://learn.microsoft.com/en-us/azure/migrate/appcat/java?view=migrate",
+        "https://learn.microsoft.com/en-us/azure/migrate/appcat/appcat-7-cli-guide?view=migrate"
+      ],
+      "status": "paired-controlled-reproduction-passed",
+      "results": "results/commercial/appcat/20261111-paired",
+      "runner": "scripts/reproduce_appcat.ps1",
+      "verification": "scripts/verify_appcat.py",
+      "scope": "Java source-only analysis, azure-aks target; native local-storage rule; not an Azure deployment or Python evaluation",
+      "cost": "CLI license fee 0; local compute only"
+    },
+    {
+      "id": "suse-neuvector",
+      "name": "SUSE Security / NeuVector open-source distribution",
+      "version": "5.6.4",
+      "chart_version": "2.8.13",
+      "chart_appVersion_field": "5.5.1; actual images explicitly set to 5.6.4",
+      "chart_repository": "https://github.com/neuvector/neuvector-helm",
+      "chart_commit": "c2dd1543957c1d6ba244da36a6d06f7ab90e50ab",
+      "license_scope": "NeuVector open-source release; not a paid SUSE subscription acceptance test",
+      "sources": [
+        "https://documentation.suse.com/en-us/cloudnative/security/5.6/en/installation.html",
+        "https://github.com/neuvector/neuvector/tree/v5.6.4",
+        "https://open-docs.neuvector.com/automation/automation/"
+      ],
+      "status": "paired-live-kubernetes-reproduction-passed",
+      "results": "results/commercial/neuvector/20261111-paired",
+      "runner": "scripts/reproduce_neuvector.py",
+      "scope": "Native run_as_root risk field; workload identity matched to actual container ID; full CIS, CVE and traffic enforcement not evaluated",
+      "cost": "Open-source license fee 0; local compute only"
+    }
+  ],
+  "native_rules_modified": false,
+  "commercial_graph_adapter_implemented": true,
+  "research_document": "docs/成熟度评估baseline调研结果.md",
+  "reproduction_guide": "docs/两项商用基线复现.md"
+}

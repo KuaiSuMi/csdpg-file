@@ -1,0 +1,264 @@
+[INFO] Scanning for projects...
+[INFO] Inspecting build with total of 2 modules
+[INFO] Installing Central Publishing features
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] Fault Injection Testing for Service-Oriented Distributed Systems   [pom]
+[INFO] Automated Fault Injection Testing Library                          [jar]
+[INFO] 
+[INFO] ------------------------< dev.reynard:project >-------------------------
+[INFO] Building Fault Injection Testing for Service-Oriented Distributed Systems 0.0.1 [1/2]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] -------------------------< dev.reynard:junit >--------------------------
+[INFO] Building Automated Fault Injection Testing Library 0.1.3           [2/2]
+[INFO]   from library\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ junit ---
+[INFO] skip non existing resourceDirectory D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.0:compile (default-compile) @ junit ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ junit ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.14.0:testCompile (default-testCompile) @ junit ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 32 source files with javac [debug release 17] to target\test-classes
+[INFO] 
+[INFO] --- surefire:3.5.3:test (default-test) @ junit ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running dev.reynard.junit.integration.micro.MaturityContractIT
+14:13:43.934 main [ INFO] [d.r.j.FiTestExtension]: Exporting reports to: D:\文档\ChatGPT\成熟度评估\results\reynard-contract\20261111-141246-936241\before
+14:13:43.937 main [ INFO] [d.r.j.s.StrategyRunner]: Starting with initial empty faultload!
+14:13:43.992 main [ INFO] [d.r.j.FiTestExtension]: Test [1] TraceId=34a7db2ebc9778af9aafd0a594b38737 Faultload=
+14:13:44.175 main [ INFO] [d.r.j.FiTestExtension]: Invariant: HOLDS
+14:13:44.178 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 200
+14:13:44.178 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=34a7db2ebc9778af9aafd0a594b38737
+14:13:44.199 main [ INFO] [d.r.j.s.c.a.ParentChildDetector]: frontend:GET /#0 is the parent of:
+14:13:44.200 main [ INFO] [d.r.j.s.c.a.ParentChildDetector]: 	--> frontend:GET /#0>recommendations:GET /#0
+14:13:44.233 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.234 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 3
+14:13:44.234 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.236 main [ INFO] [d.r.j.FiTestExtension]: Test [2] TraceId=cbdc1dae3334300994a18f52b3cedfd4 Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [500])
+14:13:44.272 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.273 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.273 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=cbdc1dae3334300994a18f52b3cedfd4
+14:13:44.275 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(500)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.277 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: Detected failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] for cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(500)]]
+14:13:44.293 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.294 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 2
+14:13:44.294 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.295 main [ INFO] [d.r.j.FiTestExtension]: Test [3] TraceId=1478234323514c4c011aad1fa0b8657c Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [504])
+14:13:44.315 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.315 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.315 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=1478234323514c4c011aad1fa0b8657c
+14:13:44.316 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(504)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.317 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: For failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] discovered new cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(504)]]
+14:13:44.322 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.322 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 1
+14:13:44.322 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.324 main [ INFO] [d.r.j.FiTestExtension]: Test [4] TraceId=91fc17bf8483dadb1b3156425c490996 Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [503])
+14:13:44.344 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.344 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.344 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=91fc17bf8483dadb1b3156425c490996
+14:13:44.345 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(503)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.346 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: For failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] discovered new cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(503)]]
+14:13:44.350 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.350 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 0
+14:13:44.350 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.352 main [ INFO] [d.r.j.FiTestExtension]: Test [5] TraceId=c84e8cf04118a70d32d7cc1323712154 Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [502])
+14:13:44.374 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.374 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.374 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=c84e8cf04118a70d32d7cc1323712154
+14:13:44.375 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(502)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.376 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: For failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] discovered new cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(502)]]
+14:13:44.380 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found no candidate after 0 attempt(s)!
+14:13:44.380 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 0
+14:13:44.380 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.380 main [ INFO] [d.r.j.s.StrategyRunner]: No new faultload generated, stopping!
+[ERROR] Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 45.58 s <<< FAILURE! -- in dev.reynard.junit.integration.micro.MaturityContractIT
+[ERROR] dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(TrackedFaultload)[2] -- Time elapsed: 0.055 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[ERROR] dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(TrackedFaultload)[3] -- Time elapsed: 0.025 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[ERROR] dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(TrackedFaultload)[4] -- Time elapsed: 0.025 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[ERROR] dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(TrackedFaultload)[5] -- Time elapsed: 0.027 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   MaturityContractIT.optionalRecommendation:86 optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+[ERROR]   MaturityContractIT.optionalRecommendation:86 optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+[ERROR]   MaturityContractIT.optionalRecommendation:86 optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+[ERROR]   MaturityContractIT.optionalRecommendation:86 optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+[INFO] 
+[ERROR] Tests run: 5, Failures: 4, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary:
+[INFO] 
+[INFO] Fault Injection Testing for Service-Oriented Distributed Systems 0.0.1 SUCCESS [  0.000 s]
+[INFO] Automated Fault Injection Testing Library 0.1.3 .... FAILURE [ 54.186 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  55.615 s
+[INFO] Finished at: 2026-11-11T14:13:46+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.3:test (default-test) on project junit: There are test failures.
+[ERROR] 
+[ERROR] See D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+[ERROR] 
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :junit

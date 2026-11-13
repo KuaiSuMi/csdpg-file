@@ -1,0 +1,41 @@
+{
+  "date": "2026-11-13",
+  "repositories": {
+    "glitch": {
+      "url": "https://github.com/sr-lab/GLITCH.git",
+      "commit": "b518fb3ad3b9a45bf2b9aa0d3e1e452f8eb2d122",
+      "status": ""
+    },
+    "ansible-role-nginx": {
+      "url": "https://github.com/geerlingguy/ansible-role-nginx.git",
+      "commit": "5ff0b235006390a0d5666fd4cce7477410982cdf",
+      "status": ""
+    },
+    "ansible-role-redis": {
+      "url": "https://github.com/geerlingguy/ansible-role-redis.git",
+      "commit": "9e8c2faa4ed44add3860c117e708d9cbada99ff5",
+      "status": ""
+    },
+    "jsoup": {
+      "url": "https://github.com/jhy/jsoup.git",
+      "commit": "c5964172763e1495786ad584c368ac3346d0ca8c",
+      "status": ""
+    },
+    "commons-cli": {
+      "url": "https://github.com/apache/commons-cli.git",
+      "commit": "e81a871025cd2dd5bc1d3b473c3c495533e7b8f4",
+      "status": ""
+    },
+    "maturity-evaluate": {
+      "url": "https://github.com/xiaorenwu234/maturity-evaluate.git",
+      "commit": "116706ac26e17e782374c5b5229a93aef6bfa13f",
+      "status": ""
+    }
+  },
+  "infer_binary": {
+    "url": "https://github.com/meta/infer/releases/download/v1.3.0/infer-linux-x86_64-v1.3.0.tar.xz",
+    "bytes": 275901768,
+    "sha256": "02be62ba931cb43e2d42bbf7abf4bd9a410cf8464cce5453934e25c90a825850"
+  },
+  "ccf_pdf_sha256": "271b630b576bf8a4f802e767f5694caded93680e22b3a19bef7902591c45c1d3"
+}

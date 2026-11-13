@@ -1,0 +1,186 @@
+[
+  {
+    "name": "fetruth-io",
+    "number": 3,
+    "title": "feTruth：完整输入与输出类型",
+    "inputs": [
+      [
+        "新项目分析",
+        "Java 工程目录 + 特征提取 JAR",
+        "已实测"
+      ],
+      [
+        "论文重放",
+        "归档 JSON / 名称与耦合特征文本",
+        "已实测；不重新提取源码"
+      ],
+      [
+        "固定资源",
+        "feTruth.h5 + Word2Vec 及两个大数组",
+        "首次准备，换项目复用"
+      ],
+      [
+        "可选训练",
+        "有标签正负样本、训练代码与参数",
+        "作者提供；本轮不训练"
+      ]
+    ],
+    "outputs": [
+      [
+        "原生最终结果",
+        "output/<project>.txt / stdout：Move Method、Source Method、Target Class"
+      ],
+      [
+        "中间材料",
+        "RECORDS 特征 JSON；test_name / test_dist / test_cbmc / test_mcmc"
+      ],
+      [
+        "本地归档",
+        "recommendations.tsv、summary.json、extraction.log、inference.log"
+      ],
+      [
+        "结果状态",
+        "有建议 / 零建议 / 无候选 / 提取或模型失败，分别报告"
+      ]
+    ],
+    "note": "只输出方法移动候选，不生成补丁；模型内部概率没有写入原生结果文件。论文重放 16 条与新源码 180 条属于不同输入和工作流。"
+  },
+  {
+    "name": "infer-io",
+    "number": 14,
+    "title": "Infer/Pulse：完整输入与输出类型",
+    "inputs": [
+      [
+        "构建捕获",
+        "源码 + 编译依赖 + javac / clang 等构建命令",
+        "Java 已实测"
+      ],
+      [
+        "编译数据库",
+        "C/C++ compile_commands.json + 源码、头文件",
+        "官方入口；未实测"
+      ],
+      [
+        "分阶段执行",
+        "已有 capture.db 等捕获目录 → analyze → report",
+        "入口已核对"
+      ],
+      [
+        "语言范围",
+        "Java、C/C++/ObjC、Hack；Erlang / Rust 为实验性",
+        "本轮仅 Java；Python 不支持"
+      ]
+    ],
+    "outputs": [
+      [
+        "原生诊断",
+        "report.json、report.txt、控制台：类型、位置、原因、bug_trace"
+      ],
+      [
+        "可选原生输出",
+        "explore --html；report --issues-tests；reportdiff 差异；合并 JSON"
+      ],
+      [
+        "分析与执行材料",
+        "capture.db、results.db、logs、stats；本地 process.json、summary.json"
+      ],
+      [
+        "结果状态",
+        "有告警 / 已覆盖且零告警 / 零捕获 / 编译或分析失败 / 未支持"
+      ]
+    ],
+    "note": "官方 Pulse 1.3.0 目录列出 86 个问题类型，受语言、选项和模型限制；本地只复现空指针与资源告警，不将所有 Infer 检查器计入 Pulse。"
+  },
+  {
+    "name": "appcat-io",
+    "number": 15,
+    "title": "AppCAT：完整输入与输出类型",
+    "inputs": [
+      [
+        "应用输入",
+        "源码目录或二进制文件；支持多个输入",
+        "Java 源码已实测；二进制未实测"
+      ],
+      [
+        "分析模式",
+        "issue-only / source-only / full",
+        "本地 7.7.0.11 CLI 核对；后两项实测"
+      ],
+      [
+        "迁移范围",
+        "source、target、capability、os、包过滤、Maven 设置",
+        "AKS 实测；完整枚举另附"
+      ],
+      [
+        "检测规则",
+        "默认规则；可选额外规则与标签过滤",
+        "本轮仅内置规则，无业务规则"
+      ]
+    ],
+    "outputs": [
+      [
+        "结构化结果",
+        "report.json 或 report.yaml：metadata、summary、projects、rules"
+      ],
+      [
+        "诊断内容",
+        "严重程度、规则、命中位置、代码片段、建议、工作量、技术发现"
+      ],
+      [
+        "其他原生文件",
+        "dependencies.json（依模式）；static-report HTML；执行日志"
+      ],
+      [
+        "结果状态",
+        "完成且有问题 / 完成且零问题 / 分析失败；信息项不等于迁移问题"
+      ]
+    ],
+    "note": "issue-only 与 JSON 默认值以本地 7.7.0.11 帮助为准。截图为原生数据重排，不是原生 UI；批量与二进制模式不冒充已实测。"
+  },
+  {
+    "name": "neuvector-io",
+    "number": 16,
+    "title": "NeuVector：完整输入与输出类型",
+    "inputs": [
+      [
+        "部署与身份",
+        "已安装平台的集群、节点、工作负载 / 容器 ID",
+        "权限与 UID 已实测"
+      ],
+      [
+        "运行监测",
+        "进程、资源使用、网络连接及策略模式",
+        "读取接口已实测；未测拦截"
+      ],
+      [
+        "安全扫描",
+        "节点 CIS、运行容器镜像；需扫描组件和漏洞库",
+        "CIS / CVE 已实测"
+      ],
+      [
+        "其他入口",
+        "镜像仓库、CI 镜像、准入与安全策略、响应规则",
+        "官方支持；未实测"
+      ]
+    ],
+    "outputs": [
+      [
+        "API 原生 JSON",
+        "权限标记、进程/历史、统计、配置、集群风险分项"
+      ],
+      [
+        "合规与漏洞",
+        "PASS / WARN / MANUAL、编号、修复建议；CVE、软件包、版本、CVSS"
+      ],
+      [
+        "其他展示/集成",
+        "管理控制台、报告、API；安全/流量事件与通知依配置启用"
+      ],
+      [
+        "结果状态",
+        "成功有数据 / 成功为空 / 待扫描或扫描失败 / 鉴权或对象错误"
+      ]
+    ],
+    "note": "空列表不能解释为通过；全局分数属于整个集群。业务 HTTP、UID 与部署 YAML 是本地实验辅助证据，不是 NeuVector 原生诊断输出。"
+  }
+]

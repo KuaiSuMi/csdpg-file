@@ -1,0 +1,115 @@
+{
+  "date": "2026-10-28",
+  "selected": [
+    "fetruth",
+    "kivi",
+    "reynard"
+  ],
+  "excluded_by_user": [
+    "sonarqube"
+  ],
+  "project": {
+    "url": "https://github.com/xiaorenwu234/maturity-evaluate",
+    "commit": "116706ac26e17e782374c5b5229a93aef6bfa13f",
+    "source_dir": "baselines/sources/maturity-evaluate"
+  },
+  "repositories": {
+    "fetruth": {
+      "url": "https://github.com/lyoubo/feTruth",
+      "commit": "b4f8d5c4fbf655e5615246f2849ccc3825db8e7d",
+      "paper_commit": "a89644539cd639ee7adc21543aae20f8895c47d6",
+      "paper_tag": "v1.0.0",
+      "venue": "ESEC/FSE 2023 Research Papers",
+      "doi": "10.1145/3611643.3616353",
+      "publication_url": "https://2023.esec-fse.org/details/fse-2023-research-papers/112/Deep-Learning-Based-Feature-Envy-Detection-Boosted-by-Real-World-Examples",
+      "source_dir": "baselines/sources/feTruth",
+      "known_difference": "Archived inference and later source-input workflow are distinct; see results/fetruth-model-diagnostics.json"
+    },
+    "kivi": {
+      "url": "https://github.com/bingzheliu/Kivi",
+      "commit": "81e6c253573b0cc41727885948c1240892d1a6e2",
+      "venue": "USENIX ATC 2024",
+      "pages": "509-527",
+      "publication_url": "https://www.usenix.org/conference/atc24/presentation/liu-bingzhe",
+      "license": "MIT",
+      "source_dir": "baselines/sources/kivi",
+      "source_archive": ".runtime/kivi-build/source.tar",
+      "spin_commit": "090f74209025a53297990ec17deca1bd51cb92a5",
+      "spin_version": "6.5.2 -- 18 September 2025",
+      "model_changes": [],
+      "observation_wrapper": "baselines/kivi/observe.py"
+    },
+    "reynard": {
+      "url": "https://github.com/reynard-testing/reynard",
+      "commit": "7fc79c85f5eefd766946a6d878abd441f7641f81",
+      "version": "v0.2.2-artifact",
+      "venue": "ICSE 2026 Research Track",
+      "doi": "10.1145/3744916.3773193",
+      "source_dir": "baselines/sources/reynard",
+      "patches": [
+        "baselines/reynard-sequential-start.patch",
+        "baselines/reynard-locked-npm.patch"
+      ],
+      "business_fixture": "baselines/fixtures/reynard/MaturityContractIT.java",
+      "license_declarations": {
+        "pom.xml": "MIT",
+        "codemeta.json": "Apache-2.0",
+        "note": "Conflicting upstream metadata; no LICENSE file in the pinned tree. Confirm before redistribution."
+      },
+      "publication_url": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/151/Automated-Network-Level-Fault-Injection-Testing-of-Microservice-Architectures"
+    }
+  },
+  "results": {
+    "fetruth_paper": "results/fetruth-paper",
+    "fetruth_project": "results/fetruth-project/20261028-142453-172415",
+    "kivi": "results/kivi/20261028-143054-347369",
+    "reynard_contract": "results/reynard-contract/20261028-125509-168163",
+    "reynard_ser": "results/selected/reproduction/reynard/patterns-ser",
+    "reynard_no_ser": "results/selected/reproduction/reynard/patterns-no-ser",
+    "before_graph": "results/selected-conference/before.kg.json",
+    "after_graph": "results/selected-conference/after.kg.json",
+    "comparison": "results/selected-conference/comparison.json",
+    "summary": "results/selected-conference/summary.json"
+  },
+  "environment": {
+    "host": "Windows",
+    "python": "3.13.7",
+    "python_lock": "baselines/integration-requirements.lock",
+    "jdk": "17.0.20.1+1",
+    "maven": "3.9.16",
+    "docker": "29.3.1",
+    "kind": "0.27.0",
+    "kubernetes": "1.32.2",
+    "context": "kind-maturity-baselines",
+    "namespace": "maturity-audit"
+  },
+  "images": {
+    "fit-proxy:latest": "sha256:8b595fb0fbffd9bf957d9f379651d47624305ab6eb7a13f402d56d435f75d9d9",
+    "fit-controller:latest": "sha256:30321f47d66e80a2ff9263855c817de3f315c2740be79852e5f0cbec6683e06f",
+    "node:22-alpine": "sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402",
+    "kindest/node:v1.32.2": "sha256:a37b679ad8c1cfa7c64aca1734cc4299dc833258d6c131ed0204c8cd2bd56ff7",
+    "maturity-kivi:atc2024": "sha256:890f3ff7676bc5e6b0a0e891d91114164ed21185fac556e7606308c72216893b"
+  },
+  "scope": {
+    "code": "Archived feTruth inference replay and separate source-input run on the public project's Java example; no automatic move-method repair",
+    "deployment": "Original Kivi C3 fixed-topology model verification and YAML change; not a live cluster experiment",
+    "runtime": "Unchanged original SER evidence plus controlled optional-recommendation contract before/after",
+    "integration": "Original kg_builder interfaces, 13 nodes/9 edges, validated node-binding behavior; no live C3-to-existing-deployment binding",
+    "not_run": [
+      "team otel-demo prototype",
+      "live Kubernetes C3 fault reproduction",
+      "generic live Kubernetes-to-Kivi exporter",
+      "FaaS platform",
+      "full-paper datasets or model training",
+      "commercial product accounts",
+      "project-wide SCIP/Joern/LLM pipeline",
+      "clean second-machine installation"
+    ]
+  },
+  "selection_requirement": "Commercial product OR formally published authoritative conference paper; retain Reynard",
+  "supplementary_only": [
+    "DesigniteJava OSS",
+    "Polaris OSS"
+  ],
+  "additional_commercial_manifest": "baselines/fairwinds-insights-manifest.json"
+}

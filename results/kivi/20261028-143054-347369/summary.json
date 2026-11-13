@@ -1,0 +1,52 @@
+{
+  "executed_at": "2026-10-28T06:31:01.856534+00:00",
+  "tool_commit": "81e6c253573b0cc41727885948c1240892d1a6e2",
+  "cases": {
+    "paper-violation": {
+      "status": "fail",
+      "spin_errors": 1,
+      "stored_states": 207.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt",
+      "tool_commit": "81e6c253573b0cc41727885948c1240892d1a6e2",
+      "input_source": "document",
+      "subject": "k8s:kivi-c3/default/Deployment/php-apache"
+    },
+    "paper-control": {
+      "status": "pass",
+      "spin_errors": 0,
+      "stored_states": 669.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt",
+      "tool_commit": "81e6c253573b0cc41727885948c1240892d1a6e2",
+      "input_source": "document",
+      "subject": "k8s:kivi-c3/default/Deployment/php-apache"
+    },
+    "before": {
+      "status": "fail",
+      "spin_errors": 1,
+      "stored_states": 220.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt",
+      "tool_commit": "81e6c253573b0cc41727885948c1240892d1a6e2",
+      "input_source": "document",
+      "subject": "k8s:kivi-c3/default/Deployment/php-apache"
+    },
+    "after": {
+      "status": "pass",
+      "spin_errors": 0,
+      "stored_states": 1830.0,
+      "intent": "pod_always_schedulable",
+      "scope": "fixed-topology-model",
+      "native_stdout": "process-2.stdout.txt",
+      "tool_commit": "81e6c253573b0cc41727885948c1240892d1a6e2",
+      "input_source": "document",
+      "subject": "k8s:kivi-c3/default/Deployment/php-apache"
+    }
+  },
+  "repair": "zone topologySpreadConstraints maxSkew: 1 -> 2",
+  "scope": "Original model checker; no live Kubernetes failure reproduction"
+}

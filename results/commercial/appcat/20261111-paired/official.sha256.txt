@@ -1,0 +1,1 @@
+191f7ce9f1fefd77585fe4865dc6d21f0ee7819df8842e7d8714b65c6bfef017  azure-migrate-appcat-for-java-cli-windows-amd64-7.7.0.11.zip

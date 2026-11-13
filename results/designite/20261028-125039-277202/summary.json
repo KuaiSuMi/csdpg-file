@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-28T04:50:39.277424+00:00",
+  "jar_sha256": "3d2663adc8b03bda63cb76dcdb5fdd1664cdff1039330c5ba867f3468c8afa40",
+  "cases": {
+    "project": {
+      "elapsed_seconds": 0.6811728999964544,
+      "rows": {
+        "designCodeSmells.csv": 2,
+        "implementationCodeSmells.csv": 10,
+        "typeMetrics.csv": 4,
+        "methodMetrics.csv": 11
+      },
+      "smells": {
+        "designCodeSmells.csv": {
+          "Unutilized Abstraction": 2
+        },
+        "implementationCodeSmells.csv": {
+          "Magic Number": 10
+        }
+      }
+    }
+  }
+}

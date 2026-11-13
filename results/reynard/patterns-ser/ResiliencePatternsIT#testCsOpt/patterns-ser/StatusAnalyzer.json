@@ -1,0 +1,9 @@
+{
+  "c-fallback" : [ 200 ],
+  "e-propagate" : [ 200, 500 ],
+  "d-leaf" : [ 200 ],
+  "a-backend" : [ 200, 500 ],
+  "f-leaf" : [ 200 ],
+  "g-fallback-f" : [ 200 ],
+  "b-retry" : [ 200 ]
+}

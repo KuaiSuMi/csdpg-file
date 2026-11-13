@@ -1,0 +1,12 @@
+diff --git a/library/src/test/java/dev/reynard/junit/integration/micro/ResiliencePatternsIT.java b/library/src/test/java/dev/reynard/junit/integration/micro/ResiliencePatternsIT.java
+--- a/library/src/test/java/dev/reynard/junit/integration/micro/ResiliencePatternsIT.java
++++ b/library/src/test/java/dev/reynard/junit/integration/micro/ResiliencePatternsIT.java
+@@ -27,7 +27,7 @@
+ import okhttp3.Response;
+ 
+-@Testcontainers(parallel = true)
++@Testcontainers(parallel = false)
+ public class ResiliencePatternsIT {
+     public static final InstrumentedApp app = new InstrumentedApp().withJaeger();
+ 
+     // B is called with a retry (n=2)

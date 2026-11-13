@@ -1,0 +1,23 @@
+{
+  "summary": {
+    "component_versions": [
+      "v5.6.4"
+    ],
+    "controllers": 1,
+    "cvedb_create_time": "",
+    "cvedb_version": "",
+    "disconnected_enforcers": 0,
+    "domains": 6,
+    "enforcers": 1,
+    "hosts": 1,
+    "kube_version": "1.32.2",
+    "openshift_version": "",
+    "platform": "Kubernetes",
+    "policy_rules": 11,
+    "running_pods": 10,
+    "running_workloads": 20,
+    "scanners": 0,
+    "services": 10,
+    "workloads": 40
+  }
+}

@@ -1,0 +1,17 @@
+Working on the intents: pod_always_schedulable 
+Traceback (most recent call last):
+  File "/observe.py", line 55, in <module>
+    main.Kivi().run()
+  File "/opt/kivi/kivi/main.py", line 68, in run
+    verifier_operator.operator()
+  File "/opt/kivi/kivi/verifier_operator.py", line 84, in operator
+    new_failures = self.verify_one_setup(self.json_config)
+  File "/opt/kivi/kivi/verifier_operator.py", line 111, in verify_one_setup
+    new_failures = self.verify_one_topology(cur_json_config, queue_size)
+  File "/opt/kivi/kivi/verifier_operator.py", line 125, in verify_one_topology
+    success, stdout, stderr = run_script([self.file_base + '/libs/Spin/Src/spin', '-a', self.pml_base_path + "/" + main_filename], True)
+  File "/observe.py", line 27, in observed_run
+    result.check_returncode()
+  File "/usr/local/lib/python3.9/subprocess.py", line 460, in check_returncode
+    raise CalledProcessError(self.returncode, self.args, self.stdout,
+subprocess.CalledProcessError: Command '['/opt/kivi/libs/Spin/Src/spin', '-a', '/opt/kivi/temp/s3/3/main.pml']' returned non-zero exit status 122.

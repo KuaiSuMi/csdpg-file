@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-29T16:17:02.555818+00:00",
+  "scope": "documentation and authority evidence only",
+  "candidates": 18,
+  "company_records": 7,
+  "repository_references_matched": 12,
+  "github_repositories": 11,
+  "gitlab_repositories": 1,
+  "markdown_files_checked": 7,
+  "local_links_resolved": 101,
+  "original_requirements_sha256": "d19561663d71a7541af30021dc32d9787ab36ea65d65b7a9374d970e918fbc77",
+  "status": "passed",
+  "tests_not_rerun": "Baseline implementations and experiment inputs unchanged; no commercial account run performed."
+}

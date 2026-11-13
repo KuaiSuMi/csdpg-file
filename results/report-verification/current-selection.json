@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-13",
+  "status": "passed",
+  "selected": [
+    "infer",
+    "fetruth"
+  ],
+  "reused_native_runs": {
+    "infer/jsoup": {
+      "files": 75,
+      "findings": 6
+    },
+    "infer/commons-cli": {
+      "files": 23,
+      "findings": 0
+    },
+    "infer/maturity-java": {
+      "files": 4,
+      "findings": 0
+    },
+    "infer/before": {
+      "files": 1,
+      "findings": 1
+    },
+    "infer/after": {
+      "files": 1,
+      "findings": 0
+    },
+    "results/fetruth": {
+      "methods": 204,
+      "pairs": 300,
+      "recommendations": 180
+    },
+    "results/fetruth-project/20261111-141246-910830": {
+      "methods": 1,
+      "pairs": 2,
+      "recommendations": 1
+    }
+  },
+  "fetruth_paper_matches": 16,
+  "screenshots": 16,
+  "shared_style": "docs/assets/baseline-report.css",
+  "local_links_checked": 184,
+  "not_run": [
+    "new native scans",
+    "model training",
+    "full-paper experiments",
+    "unchanged graph integration tests"
+  ]
+}

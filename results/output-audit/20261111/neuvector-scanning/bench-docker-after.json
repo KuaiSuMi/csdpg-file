@@ -1,0 +1,8 @@
+{
+  "http_status": 500,
+  "body": {
+    "code": 9,
+    "error": "Read from cluster failed",
+    "message": "Failed to read benchmark report"
+  }
+}

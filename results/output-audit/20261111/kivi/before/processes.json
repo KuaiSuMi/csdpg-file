@@ -1,0 +1,45 @@
+[
+  {
+    "command": [
+      "/opt/kivi/libs/Spin/Src/spin",
+      "-a",
+      "/opt/kivi/temp/input/3/main.pml"
+    ],
+    "exit_code": 0,
+    "stdout": "process-0.stdout.txt",
+    "stderr": "process-0.stderr.txt"
+  },
+  {
+    "command": [
+      "gcc",
+      "-o",
+      "pan",
+      "pan.c",
+      "-DVECTORSZ=100000",
+      "-DT_RAND",
+      "-DP_RAND"
+    ],
+    "exit_code": 0,
+    "stdout": "process-1.stdout.txt",
+    "stderr": "process-1.stderr.txt"
+  },
+  {
+    "command": [
+      "./pan",
+      "-m100000"
+    ],
+    "exit_code": 0,
+    "stdout": "process-2.stdout.txt",
+    "stderr": "process-2.stderr.txt"
+  },
+  {
+    "command": [
+      "./pan",
+      "-r",
+      "main.pml.trail"
+    ],
+    "exit_code": 0,
+    "stdout": "process-3.stdout.txt",
+    "stderr": "process-3.stderr.txt"
+  }
+]

@@ -1,0 +1,42 @@
+{
+  "output": "results\\selected\\after.kg.json",
+  "stats": {
+    "node_count": 62,
+    "edge_count": 56,
+    "nodes_by_type": {
+      "Module": 4,
+      "Metric": 55,
+      "Deployment": 1,
+      "Service": 2
+    },
+    "relations_by_type": {
+      "OBSERVED_BY": 55,
+      "CALLS": 1
+    },
+    "provenance_by_source": {
+      "source_code": 42,
+      "deployment": 64,
+      "runtime": 15
+    }
+  },
+  "baseline_runs": {
+    "baseline-designite": {
+      "status": "ok",
+      "observations": 18,
+      "subjects": 4,
+      "findings": 3
+    },
+    "baseline-polaris": {
+      "status": "ok",
+      "observations": 32,
+      "subjects": 1,
+      "findings": 7
+    },
+    "baseline-reynard": {
+      "status": "ok",
+      "observations": 5,
+      "subjects": 2,
+      "findings": 0
+    }
+  }
+}

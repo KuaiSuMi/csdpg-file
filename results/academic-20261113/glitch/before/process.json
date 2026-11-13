@@ -1,0 +1,25 @@
+{
+  "command": [
+    "docker",
+    "run",
+    "--rm",
+    "--network",
+    "none",
+    "-v",
+    "D:\\文档\\ChatGPT\\成熟度评估\\baselines\\glitch\\fixtures\\before:/input:ro",
+    "-v",
+    "D:\\文档\\ChatGPT\\成熟度评估\\results\\academic-20261113\\glitch\\before:/out",
+    "maturity-glitch:1.0.1",
+    "--tech",
+    "ansible",
+    "--smells",
+    "security",
+    "--csv",
+    "--type",
+    "tasks",
+    "/input/tasks.yml",
+    "/out/findings.csv"
+  ],
+  "exit_code": 0,
+  "seconds": 0.959
+}

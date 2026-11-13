@@ -1,0 +1,157 @@
+Preprocessing testing data...
+Detecting feature envy methods...
+Refactoring Type	Source Method	Target Class
+Move Method	org.jsoup.examples.HtmlToPlainText::getPlainText(org.jsoup.nodes.Element):java.lang.String 	 org.jsoup.examples.HtmlToPlainText.FormattingVisitor
+Move Method	org.jsoup.helper.DataUtil::readToByteBuffer(java.io.InputStream, int):java.nio.ByteBuffer 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.helper.DataUtil::mimeBoundary():java.lang.String 	 org.jsoup.internal.StringUtil
+Move Method	org.jsoup.helper.HttpConnection::connect(java.lang.String):org.jsoup.Connection 	 org.jsoup.Connection
+Move Method	org.jsoup.helper.HttpConnection::connect(java.net.URL):org.jsoup.Connection 	 org.jsoup.Connection
+Move Method	org.jsoup.helper.HttpConnection.Response::prepareByteData():void 	 org.jsoup.Connection.Request
+Move Method	org.jsoup.helper.HttpConnection.Response::createConnection(org.jsoup.Connection.Request):java.net.HttpURLConnection 	 org.jsoup.Connection.Method
+Move Method	org.jsoup.helper.HttpConnection.Response::processResponseHeaders(java.util.Map<java.lang.String,java.util.List<java.lang.String>>):void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.helper.HttpConnection.Response::setOutputContentType(org.jsoup.Connection.Request):java.lang.String 	 org.jsoup.helper.DataUtil
+Move Method	org.jsoup.helper.HttpConnection.Response::writePost(org.jsoup.Connection.Request, java.io.OutputStream, java.lang.String):void 	 org.jsoup.helper.HttpConnection
+Move Method	org.jsoup.helper.HttpConnection.Response::getRequestCookieString(org.jsoup.Connection.Request):java.lang.String 	 org.jsoup.internal.StringUtil
+Move Method	org.jsoup.helper.HttpConnection.Response::serialiseRequestUrl(org.jsoup.Connection.Request):void 	 org.jsoup.internal.StringUtil
+Move Method	org.jsoup.helper.W3CDom::convert(org.jsoup.nodes.Document, org.w3c.dom.Document):void 	 org.jsoup.nodes.Document
+Move Method	org.jsoup.helper.W3CDom.W3CBuilder::copyAttributes(org.jsoup.nodes.Node, org.w3c.dom.Element):void 	 org.jsoup.nodes.Node
+Move Method	org.jsoup.helper.W3CDom.W3CBuilder::updateNamespaces(org.jsoup.nodes.Element):java.lang.String 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.internal.StringUtil::releaseBuilder(java.lang.StringBuilder):java.lang.String 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.Jsoup::parse(java.lang.String, java.lang.String, org.jsoup.parser.Parser):org.jsoup.nodes.Document 	 org.jsoup.parser.Parser
+Move Method	org.jsoup.Jsoup::parse(java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.parser.Parser
+Move Method	org.jsoup.Jsoup::parse(java.io.File, java.lang.String, java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.helper.DataUtil
+Move Method	org.jsoup.Jsoup::parse(java.io.File, java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.helper.DataUtil
+Move Method	org.jsoup.Jsoup::parse(java.io.InputStream, java.lang.String, java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.helper.DataUtil
+Move Method	org.jsoup.Jsoup::parse(java.io.InputStream, java.lang.String, java.lang.String, org.jsoup.parser.Parser):org.jsoup.nodes.Document 	 org.jsoup.helper.DataUtil
+Move Method	org.jsoup.Jsoup::parseBodyFragment(java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.parser.Parser
+Move Method	org.jsoup.Jsoup::parse(java.net.URL, int):org.jsoup.nodes.Document 	 org.jsoup.helper.HttpConnection
+Move Method	org.jsoup.Jsoup::clean(java.lang.String, java.lang.String, org.jsoup.safety.Whitelist):java.lang.String 	 org.jsoup.safety.Cleaner
+Move Method	org.jsoup.Jsoup::clean(java.lang.String, java.lang.String, org.jsoup.safety.Whitelist, org.jsoup.nodes.Document.OutputSettings):java.lang.String 	 org.jsoup.nodes.Document
+Move Method	org.jsoup.Jsoup::isValid(java.lang.String, org.jsoup.safety.Whitelist):boolean 	 org.jsoup.safety.Cleaner
+Move Method	org.jsoup.nodes.Attribute::setKey(java.lang.String):void 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Attribute::html(java.lang.String, java.lang.String, java.lang.Appendable, org.jsoup.nodes.Document.OutputSettings):void 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Attribute::createFromEncoded(java.lang.String, java.lang.String):org.jsoup.nodes.Attribute 	 org.jsoup.nodes.Entities
+Move Method	org.jsoup.nodes.Attribute::isDataAttribute(java.lang.String):boolean 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Attribute::shouldCollapseAttribute(java.lang.String, java.lang.String, org.jsoup.nodes.Document.OutputSettings):boolean 	 org.jsoup.nodes.Document.OutputSettings
+Move Method	org.jsoup.nodes.Attributes::put(org.jsoup.nodes.Attribute):org.jsoup.nodes.Attributes 	 org.jsoup.nodes.Attribute
+Move Method	org.jsoup.nodes.Attributes::deduplicate(org.jsoup.parser.ParseSettings):int 	 org.jsoup.parser.ParseSettings
+Move Method	org.jsoup.nodes.DataNode::createFromEncoded(java.lang.String, java.lang.String):org.jsoup.nodes.DataNode 	 org.jsoup.nodes.Entities
+Move Method	org.jsoup.nodes.Element::tagName():java.lang.String 	 org.jsoup.parser.Tag
+Move Method	org.jsoup.nodes.Element::id():java.lang.String 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Element::attr(java.lang.String, boolean):org.jsoup.nodes.Element 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Element::dataset():java.util.Map<java.lang.String,java.lang.String> 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Element::is(org.jsoup.select.Evaluator):boolean 	 org.jsoup.select.Evaluator
+Move Method	org.jsoup.nodes.Element::nextElementSiblings(boolean):org.jsoup.select.Elements 	 org.jsoup.select.Elements
+Move Method	org.jsoup.nodes.Element::text():java.lang.String 	 org.jsoup.parser.Tag
+Move Method	org.jsoup.nodes.Element::wholeText():java.lang.String 	 org.jsoup.nodes.TextNode
+Move Method	org.jsoup.nodes.Element::appendNormalisedText(java.lang.StringBuilder, org.jsoup.nodes.TextNode):void 	 org.jsoup.internal.StringUtil
+Move Method	org.jsoup.nodes.Element::appendWhitespaceIfBr(org.jsoup.nodes.Element, java.lang.StringBuilder):void 	 org.jsoup.nodes.TextNode
+Move Method	org.jsoup.nodes.Element::hasText():boolean 	 org.jsoup.nodes.TextNode
+Move Method	org.jsoup.nodes.Element::data():java.lang.String 	 org.jsoup.nodes.Comment
+Move Method	org.jsoup.nodes.Element::classNames(java.util.Set<java.lang.String>):org.jsoup.nodes.Element 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Element::hasClass(java.lang.String):boolean 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.nodes.Entities::isNamedEntity(java.lang.String):boolean 	 org.jsoup.nodes.Entities.EscapeMode
+Move Method	org.jsoup.nodes.Entities::isBaseNamedEntity(java.lang.String):boolean 	 org.jsoup.nodes.Entities.EscapeMode
+Move Method	org.jsoup.nodes.Entities::getCharacterByName(java.lang.String):java.lang.Character 	 org.jsoup.nodes.Entities.EscapeMode
+Move Method	org.jsoup.nodes.Entities::getByName(java.lang.String):java.lang.String 	 org.jsoup.nodes.Entities.EscapeMode
+Move Method	org.jsoup.nodes.Entities::codepointsForName(java.lang.String, int[]):int 	 org.jsoup.nodes.Entities.EscapeMode
+Move Method	org.jsoup.nodes.Entities::escape(java.lang.String, org.jsoup.nodes.Document.OutputSettings):java.lang.String 	 org.jsoup.internal.StringUtil
+Move Method	org.jsoup.nodes.Entities::escape(java.lang.Appendable, java.lang.String, org.jsoup.nodes.Document.OutputSettings, boolean, boolean, boolean):void 	 org.jsoup.nodes.Document.OutputSettings
+Move Method	org.jsoup.nodes.Entities::appendEncoded(java.lang.Appendable, org.jsoup.nodes.Entities.EscapeMode, int):void 	 org.jsoup.nodes.Entities.EscapeMode
+Move Method	org.jsoup.nodes.Entities::unescape(java.lang.String, boolean):java.lang.String 	 org.jsoup.parser.Parser
+Move Method	org.jsoup.nodes.Entities::load(org.jsoup.nodes.Entities.EscapeMode, java.lang.String, int):void 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.nodes.Node::indent(java.lang.Appendable, int, org.jsoup.nodes.Document.OutputSettings):void 	 org.jsoup.nodes.Document.OutputSettings
+Move Method	org.jsoup.nodes.NodeUtils::outputSettings(org.jsoup.nodes.Node):org.jsoup.nodes.Document.OutputSettings 	 org.jsoup.nodes.Node
+Move Method	org.jsoup.nodes.NodeUtils::parser(org.jsoup.nodes.Node):org.jsoup.parser.Parser 	 org.jsoup.nodes.Node
+Move Method	org.jsoup.nodes.TextNode::createFromEncoded(java.lang.String, java.lang.String):org.jsoup.nodes.TextNode 	 org.jsoup.nodes.Entities
+Move Method	org.jsoup.nodes.TextNode::createFromEncoded(java.lang.String):org.jsoup.nodes.TextNode 	 org.jsoup.nodes.Entities
+Move Method	org.jsoup.parser.HtmlTreeBuilder::error(org.jsoup.parser.HtmlTreeBuilderState):void 	 org.jsoup.parser.Parser
+Move Method	org.jsoup.parser.HtmlTreeBuilder::insertEmpty(org.jsoup.parser.Token.StartTag):org.jsoup.nodes.Element 	 org.jsoup.parser.Tokeniser
+Move Method	org.jsoup.parser.HtmlTreeBuilder::insert(org.jsoup.parser.Token.Comment):void 	 org.jsoup.parser.Token.Comment
+Move Method	org.jsoup.parser.HtmlTreeBuilder::getFromStack(java.lang.String):org.jsoup.nodes.Element 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::popStackToClose(java.lang.String):void 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::popStackToClose(java.lang.String[]):void 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::popStackToBefore(java.lang.String):void 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::clearStackToContext(java.lang.String[]):void 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::resetInsertionMode():void 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::inSpecificScope(java.lang.String[], java.lang.String[], java.lang.String[]):boolean 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::inSelectScope(java.lang.String):boolean 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::isSpecial(org.jsoup.nodes.Element):boolean 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::isSameFormattingElement(org.jsoup.nodes.Element, org.jsoup.nodes.Element):boolean 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::reconstructFormattingElements():void 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::getActiveFormattingElement(java.lang.String):org.jsoup.nodes.Element 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilder::insertInFosterParent(org.jsoup.nodes.Node):void 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.parser.HtmlTreeBuilderState::handleRcData(org.jsoup.parser.Token.StartTag, org.jsoup.parser.HtmlTreeBuilder):void 	 org.jsoup.parser.HtmlTreeBuilder
+Move Method	org.jsoup.parser.HtmlTreeBuilderState::handleRawtext(org.jsoup.parser.Token.StartTag, org.jsoup.parser.HtmlTreeBuilder):void 	 org.jsoup.parser.HtmlTreeBuilder
+Move Method	org.jsoup.parser.Parser::parseInput(java.lang.String, java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.parser.TreeBuilder
+Move Method	org.jsoup.parser.Parser::parseInput(java.io.Reader, java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.parser.TreeBuilder
+Move Method	org.jsoup.parser.Parser::parseFragmentInput(java.lang.String, org.jsoup.nodes.Element, java.lang.String):java.util.List<org.jsoup.nodes.Node> 	 org.jsoup.parser.TreeBuilder
+Move Method	org.jsoup.parser.Parser::isTrackErrors():boolean 	 org.jsoup.parser.ParseErrorList
+Move Method	org.jsoup.parser.Parser::parse(java.lang.String, java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.parser.TreeBuilder
+Move Method	org.jsoup.parser.Parser::parseFragment(java.lang.String, org.jsoup.nodes.Element, java.lang.String):java.util.List<org.jsoup.nodes.Node> 	 org.jsoup.parser.HtmlTreeBuilder
+Move Method	org.jsoup.parser.Parser::parseXmlFragment(java.lang.String, java.lang.String):java.util.List<org.jsoup.nodes.Node> 	 org.jsoup.parser.XmlTreeBuilder
+Move Method	org.jsoup.parser.Parser::parseBodyFragment(java.lang.String, java.lang.String):org.jsoup.nodes.Document 	 org.jsoup.nodes.Document
+Move Method	org.jsoup.parser.Parser::unescapeEntities(java.lang.String, boolean):java.lang.String 	 org.jsoup.parser.Tokeniser
+Move Method	org.jsoup.parser.ParseSettings::normalizeAttributes(org.jsoup.nodes.Attributes):org.jsoup.nodes.Attributes 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.parser.Tag::valueOf(java.lang.String, org.jsoup.parser.ParseSettings):org.jsoup.parser.Tag 	 org.jsoup.parser.ParseSettings
+Move Method	org.jsoup.parser.Tag::valueOf(java.lang.String):org.jsoup.parser.Tag 	 org.jsoup.parser.ParseSettings
+Move Method	org.jsoup.parser.Tokeniser::read():org.jsoup.parser.Token 	 org.jsoup.parser.Token.Character
+Move Method	org.jsoup.parser.Tokeniser::emit(org.jsoup.parser.Token):void 	 org.jsoup.parser.Token
+Move Method	org.jsoup.parser.Tokeniser::createTagPending(boolean):org.jsoup.parser.Token.Tag 	 org.jsoup.parser.Token.StartTag
+Move Method	org.jsoup.parser.Tokeniser::createCommentPending():void 	 org.jsoup.parser.Token.Comment
+Move Method	org.jsoup.parser.Tokeniser::createDoctypePending():void 	 org.jsoup.parser.Token.Doctype
+Move Method	org.jsoup.parser.Tokeniser::createTempBuffer():void 	 org.jsoup.parser.Token
+Move Method	org.jsoup.parser.Tokeniser::isAppropriateEndTagToken():boolean 	 org.jsoup.parser.Token.Tag
+Move Method	org.jsoup.parser.Tokeniser::error(org.jsoup.parser.TokeniserState):void 	 org.jsoup.parser.ParseErrorList
+Move Method	org.jsoup.parser.Tokeniser::eofError(org.jsoup.parser.TokeniserState):void 	 org.jsoup.parser.ParseErrorList
+Move Method	org.jsoup.parser.Tokeniser::characterReferenceError(java.lang.String):void 	 org.jsoup.parser.ParseErrorList
+Move Method	org.jsoup.parser.Tokeniser::error(java.lang.String):void 	 org.jsoup.parser.ParseErrorList
+Move Method	org.jsoup.parser.Tokeniser::unescapeEntities(boolean):java.lang.String 	 org.jsoup.parser.CharacterReader
+Move Method	org.jsoup.parser.TokeniserState::handleDataEndTag(org.jsoup.parser.Tokeniser, org.jsoup.parser.CharacterReader, org.jsoup.parser.TokeniserState):void 	 org.jsoup.parser.Tokeniser
+Move Method	org.jsoup.parser.TokeniserState::readData(org.jsoup.parser.Tokeniser, org.jsoup.parser.CharacterReader, org.jsoup.parser.TokeniserState, org.jsoup.parser.TokeniserState):void 	 org.jsoup.parser.Tokeniser
+Move Method	org.jsoup.parser.TokeniserState::readCharRef(org.jsoup.parser.Tokeniser, org.jsoup.parser.TokeniserState):void 	 org.jsoup.parser.Tokeniser
+Move Method	org.jsoup.parser.TokeniserState::readEndTag(org.jsoup.parser.Tokeniser, org.jsoup.parser.CharacterReader, org.jsoup.parser.TokeniserState, org.jsoup.parser.TokeniserState):void 	 org.jsoup.parser.Tokeniser
+Move Method	org.jsoup.parser.TokeniserState::handleDataDoubleEscapeTag(org.jsoup.parser.Tokeniser, org.jsoup.parser.CharacterReader, org.jsoup.parser.TokeniserState, org.jsoup.parser.TokeniserState):void 	 org.jsoup.parser.Tokeniser
+Move Method	org.jsoup.parser.TokenQueue::unescape(java.lang.String):java.lang.String 	 org.jsoup.internal.StringUtil
+Move Method	org.jsoup.parser.TreeBuilder::initialiseParse(java.io.Reader, java.lang.String, org.jsoup.parser.Parser):void 	 org.jsoup.parser.Parser
+Move Method	org.jsoup.parser.TreeBuilder::runParser():void 	 org.jsoup.parser.Token
+Move Method	org.jsoup.parser.TreeBuilder::error(java.lang.String):void 	 org.jsoup.parser.Parser
+Move Method	org.jsoup.parser.XmlTreeBuilder::insert(org.jsoup.parser.Token.StartTag):org.jsoup.nodes.Element 	 org.jsoup.parser.Tag
+Move Method	org.jsoup.parser.XmlTreeBuilder::insert(org.jsoup.parser.Token.Comment):void 	 org.jsoup.nodes.Comment
+Move Method	org.jsoup.parser.XmlTreeBuilder::insert(org.jsoup.parser.Token.Doctype):void 	 org.jsoup.parser.Token.Doctype
+Move Method	org.jsoup.parser.XmlTreeBuilder::popStackToClose(org.jsoup.parser.Token.EndTag):void 	 org.jsoup.parser.ParseSettings
+Move Method	org.jsoup.safety.Cleaner::clean(org.jsoup.nodes.Document):org.jsoup.nodes.Document 	 org.jsoup.nodes.Document
+Move Method	org.jsoup.safety.Cleaner::isValid(org.jsoup.nodes.Document):boolean 	 org.jsoup.nodes.Document
+Move Method	org.jsoup.safety.Cleaner::isValidBodyHtml(java.lang.String):boolean 	 org.jsoup.nodes.Document
+Move Method	org.jsoup.safety.Cleaner::copySafeNodes(org.jsoup.nodes.Element, org.jsoup.nodes.Element):int 	 org.jsoup.safety.Cleaner.CleaningVisitor
+Move Method	org.jsoup.safety.Cleaner::createSafeElement(org.jsoup.nodes.Element):org.jsoup.safety.Cleaner.ElementMeta 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.safety.Whitelist::testValidProtocol(org.jsoup.nodes.Element, org.jsoup.nodes.Attribute, java.util.Set<org.jsoup.safety.Whitelist.Protocol>):boolean 	 org.jsoup.nodes.Attribute
+Move Method	org.jsoup.safety.Whitelist::getEnforcedAttributes(java.lang.String):org.jsoup.nodes.Attributes 	 org.jsoup.nodes.Attributes
+Move Method	org.jsoup.select.Collector::collect(org.jsoup.select.Evaluator, org.jsoup.nodes.Element):org.jsoup.select.Elements 	 org.jsoup.select.NodeTraversor
+Move Method	org.jsoup.select.Collector::findFirst(org.jsoup.select.Evaluator, org.jsoup.nodes.Element):org.jsoup.nodes.Element 	 org.jsoup.select.NodeTraversor
+Move Method	org.jsoup.select.Elements::siblings(java.lang.String, boolean, boolean):org.jsoup.select.Elements 	 org.jsoup.nodes.Element
+Move Method	org.jsoup.select.NodeTraversor::traverse(org.jsoup.select.NodeVisitor, org.jsoup.nodes.Node):void 	 org.jsoup.nodes.Node
+Move Method	org.jsoup.select.NodeTraversor::traverse(org.jsoup.select.NodeVisitor, org.jsoup.select.Elements):void 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.select.NodeTraversor::filter(org.jsoup.select.NodeFilter, org.jsoup.nodes.Node):org.jsoup.select.NodeFilter.FilterResult 	 org.jsoup.nodes.Node
+Move Method	org.jsoup.select.NodeTraversor::filter(org.jsoup.select.NodeFilter, org.jsoup.select.Elements):void 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.select.QueryParser::parse():org.jsoup.select.Evaluator 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::combinator(char):void 	 org.jsoup.select.CombiningEvaluator.Or
+Move Method	org.jsoup.select.QueryParser::consumeSubQuery():java.lang.String 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::byId():void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::byClass():void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::byTag():void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::byAttribute():void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::cssNthChild(boolean, boolean):void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::consumeIndex():int 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::has():void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::contains(boolean):void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::containsData():void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::matches(boolean):void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.QueryParser::not():void 	 org.jsoup.parser.TokenQueue
+Move Method	org.jsoup.select.Selector::select(java.lang.String, org.jsoup.nodes.Element):org.jsoup.select.Elements 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.select.Selector::select(org.jsoup.select.Evaluator, org.jsoup.nodes.Element):org.jsoup.select.Elements 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.select.Selector::select(java.lang.String, java.lang.Iterable<org.jsoup.nodes.Element>):org.jsoup.select.Elements 	 org.jsoup.helper.Validate
+Move Method	org.jsoup.select.Selector::filterOut(java.util.Collection<org.jsoup.nodes.Element>, java.util.Collection<org.jsoup.nodes.Element>):org.jsoup.select.Elements 	 org.jsoup.nodes.Node
+Move Method	org.jsoup.select.Selector::selectFirst(java.lang.String, org.jsoup.nodes.Element):org.jsoup.nodes.Element 	 org.jsoup.select.QueryParser
+
+The feature envy methods are appended to the output folder.

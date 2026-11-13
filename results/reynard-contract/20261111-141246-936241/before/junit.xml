@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="dev.reynard.junit.integration.micro.MaturityContractIT" time="45.577" tests="5" errors="0" skipped="0" failures="4">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.class.path" value="D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library\target\test-classes;D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library\target\classes;C:\Users\YuRui\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\YuRui\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\YuRui\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\YuRui\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\YuRui\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\YuRui\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\YuRui\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\YuRui\.m2\repository\org\mockito\mockito-core\4.0.0\mockito-core-4.0.0.jar;C:\Users\YuRui\.m2\repository\net\bytebuddy\byte-buddy\1.11.19\byte-buddy-1.11.19.jar;C:\Users\YuRui\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.19\byte-buddy-agent-1.11.19.jar;C:\Users\YuRui\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\YuRui\.m2\repository\org\testcontainers\testcontainers\1.20.4\testcontainers-1.20.4.jar;C:\Users\YuRui\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\YuRui\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\YuRui\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\YuRui\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\YuRui\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\YuRui\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.4.0\docker-java-transport-zerodep-3.4.0.jar;C:\Users\YuRui\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\YuRui\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\YuRui\.m2\repository\org\testcontainers\junit-jupiter\1.20.4\junit-jupiter-1.20.4.jar;C:\Users\YuRui\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-layout-template-json\2.24.3\log4j-layout-template-json-2.24.3.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.24.3\log4j-slf4j-impl-2.24.3.jar;C:\Users\YuRui\.m2\repository\com\squareup\okhttp3\okhttp\4.12.0\okhttp-4.12.0.jar;C:\Users\YuRui\.m2\repository\com\squareup\okio\okio\3.6.0\okio-3.6.0.jar;C:\Users\YuRui\.m2\repository\com\squareup\okio\okio-jvm\3.6.0\okio-jvm-3.6.0.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.9.10\kotlin-stdlib-common-1.9.10.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.8.21\kotlin-stdlib-jdk8-1.8.21.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.8.21\kotlin-stdlib-1.8.21.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.8.21\kotlin-stdlib-jdk7-1.8.21.jar;C:\Users\YuRui\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.1\jackson-core-2.18.1.jar;C:\Users\YuRui\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.1\jackson-databind-2.18.1.jar;C:\Users\YuRui\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.1\jackson-annotations-2.18.1.jar;"/>
+    <property name="java.vm.vendor" value="Eclipse Adoptium"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptium.net/"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.boot.library.path" value="D:\文档\ChatGPT\成熟度评估\.runtime\jdk17\jdk-17.0.20.1+1\bin"/>
+    <property name="sun.java.command" value="C:\Users\YuRui\AppData\Local\Temp\surefire6741387672357664425\surefirebooter-20261111141300078_3.jar C:\Users\YuRui\AppData\Local\Temp\surefire6741387672357664425 2026-11-11T14-12-59_830-jvmRun1 surefire-20261111141300078_1tmp surefire_0-20261111141300078_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="dev.reynard.junit.integration.micro.MaturityContractIT"/>
+    <property name="surefire.test.class.path" value="D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library\target\test-classes;D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library\target\classes;C:\Users\YuRui\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\YuRui\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\YuRui\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\YuRui\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\YuRui\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\YuRui\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\YuRui\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\YuRui\.m2\repository\org\mockito\mockito-core\4.0.0\mockito-core-4.0.0.jar;C:\Users\YuRui\.m2\repository\net\bytebuddy\byte-buddy\1.11.19\byte-buddy-1.11.19.jar;C:\Users\YuRui\.m2\repository\net\bytebuddy\byte-buddy-agent\1.11.19\byte-buddy-agent-1.11.19.jar;C:\Users\YuRui\.m2\repository\org\objenesis\objenesis\3.2\objenesis-3.2.jar;C:\Users\YuRui\.m2\repository\org\testcontainers\testcontainers\1.20.4\testcontainers-1.20.4.jar;C:\Users\YuRui\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\YuRui\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\YuRui\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\YuRui\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\YuRui\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\YuRui\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.4.0\docker-java-transport-zerodep-3.4.0.jar;C:\Users\YuRui\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\YuRui\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\YuRui\.m2\repository\org\testcontainers\junit-jupiter\1.20.4\junit-jupiter-1.20.4.jar;C:\Users\YuRui\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-core\2.24.3\log4j-core-2.24.3.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-layout-template-json\2.24.3\log4j-layout-template-json-2.24.3.jar;C:\Users\YuRui\.m2\repository\org\apache\logging\log4j\log4j-slf4j-impl\2.24.3\log4j-slf4j-impl-2.24.3.jar;C:\Users\YuRui\.m2\repository\com\squareup\okhttp3\okhttp\4.12.0\okhttp-4.12.0.jar;C:\Users\YuRui\.m2\repository\com\squareup\okio\okio\3.6.0\okio-3.6.0.jar;C:\Users\YuRui\.m2\repository\com\squareup\okio\okio-jvm\3.6.0\okio-jvm-3.6.0.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.9.10\kotlin-stdlib-common-1.9.10.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk8\1.8.21\kotlin-stdlib-jdk8-1.8.21.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.8.21\kotlin-stdlib-1.8.21.jar;C:\Users\YuRui\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-jdk7\1.8.21\kotlin-stdlib-jdk7-1.8.21.jar;C:\Users\YuRui\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.1\jackson-core-2.18.1.jar;C:\Users\YuRui\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.1\jackson-databind-2.18.1.jar;C:\Users\YuRui\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.1\jackson-annotations-2.18.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\YuRui"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-08-18"/>
+    <property name="java.home" value="D:\文档\ChatGPT\成熟度评估\.runtime\jdk17\jdk-17.0.20.1+1"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\YuRui\AppData\Local\Temp\surefire6741387672357664425\surefirebooter-20261111141300078_3.jar"/>
+    <property name="api.version" value="1.44"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.20.1+1"/>
+    <property name="user.name" value="YuRui"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="surefire.failIfNoSpecifiedTests" value="false"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Temurin-17.0.20.1+1"/>
+    <property name="localRepository" value="C:\Users\YuRui\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/adoptium/adoptium-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\YuRui\AppData\Local\Temp\"/>
+    <property name="java.version" value="17.0.20.1"/>
+    <property name="user.dir" value="D:\文档\ChatGPT\成熟度评估\baselines\sources\reynard\library"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\文档\ChatGPT\成熟度评估\.runtime\jdk17\jdk-17.0.20.1+1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\文档\ChatGPT\成熟度评估\.runtime\jdk17\jdk-17.0.20.1+1\bin;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell;C:\Users\YuRui\.codex\tmp\arg0-windows\codex-arg0Z4jCmG;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\libheif\libheif\bin;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\jxrlib\jxrlib\bin;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\poppler\Library\bin;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\override;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;D:\Program Files\Java\jdk-25\bin;C:\Python313\Scripts\;C:\Python313\;C:\Python312\Scripts\;C:\Python312\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Code\mingw64\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\dotnet\;D:\Program Files\Git\cmd;D:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;D:\Program Files\Java\jdk-25\bin;C:\Users\YuRui\AppData\Local\Android\Sdk\platform-tools;C:\Users\YuRui\AppData\Local\Android\Sdk\tools;C:\Users\YuRui\AppData\Local\Android\Sdk\build-tools\33.0.2??????;C:\Users\YuRui\AppData\Roaming\Python\Python313\Scripts;D:\Program Files\WinSCP\;C:\Program Files\MySQL\MySQL Workbench 8.0;;C:\Program Files\Docker\Docker\resources\bin;D:\Program Files\pcsuite\;C:\Program Files\Common Files\PACE\Fusion\6\lib\;C:\Program Files\Tailscale\;C:\Program Files\WSL\;D:\texlive\2026\bin\windows;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Program Files\PostgreSQL\17\bin;C:\Users\YuRui\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\YuRui\AppData\Local\Programs\cs-demo-manager;C:\Users\YuRui\AppData\Roaming\npm;D:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2025.2.4\bin;D:\Program Files\JetBrains\IntelliJ IDEA 2025.2.4\bin;D:\Program Files\Huawei\DevEco Studio\bin;C:\Users\YuRui\Tools\apache-maven-3.9.16\bin;C:\Users\YuRui\AppData\Local\Programs\GitHub CLI;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell;C:\Users\YuRui\AppData\Local\Microsoft\WindowsApps;C:\Users\YuRui\AppData\Local\Microsoft\WinGet\Packages\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\ffmpeg-9.0.1-full_build\bin;C:\Users\YuRui\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\YuRui\.dotnet\tools;C:\Program Files\Prince\engine\bin;C:\Users\YuRui\AppData\Local\Programs\Microsoft VS Code\bin\copilot-shim;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\bin\fallback;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin;C:\Users\YuRui\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\git\cmd;C:\Users\YuRui\AppData\Local\OpenAI\Codex\bin\a7d4c4900eafc659;C:\Users\YuRui\AppData\Local\OpenAI\Codex\bin\5449c1f0f26f1f98;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Eclipse Adoptium"/>
+    <property name="java.vm.version" value="17.0.20.1+1"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+  <testcase name="optionalRecommendation(TrackedFaultload)[1]" classname="dev.reynard.junit.integration.micro.MaturityContractIT" time="0.228">
+    <system-out><![CDATA[14:13:43.934 main [ INFO] [d.r.j.FiTestExtension]: Exporting reports to: D:\文档\ChatGPT\成熟度评估\results\reynard-contract\20261111-141246-936241\before
+14:13:43.937 main [ INFO] [d.r.j.s.StrategyRunner]: Starting with initial empty faultload!
+14:13:43.992 main [ INFO] [d.r.j.FiTestExtension]: Test [1] TraceId=34a7db2ebc9778af9aafd0a594b38737 Faultload=
+14:13:44.175 main [ INFO] [d.r.j.FiTestExtension]: Invariant: HOLDS
+14:13:44.178 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 200
+14:13:44.178 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=34a7db2ebc9778af9aafd0a594b38737
+14:13:44.199 main [ INFO] [d.r.j.s.c.a.ParentChildDetector]: frontend:GET /#0 is the parent of:
+14:13:44.200 main [ INFO] [d.r.j.s.c.a.ParentChildDetector]: 	--> frontend:GET /#0>recommendations:GET /#0
+]]></system-out>
+  </testcase>
+  <testcase name="optionalRecommendation(TrackedFaultload)[2]" classname="dev.reynard.junit.integration.micro.MaturityContractIT" time="0.055">
+    <failure message="optional dependency must not take down the frontend ==&gt; expected: &lt;200&gt; but was: &lt;500&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[14:13:44.233 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.234 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 3
+14:13:44.234 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.236 main [ INFO] [d.r.j.FiTestExtension]: Test [2] TraceId=cbdc1dae3334300994a18f52b3cedfd4 Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [500])
+14:13:44.272 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.273 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.273 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=cbdc1dae3334300994a18f52b3cedfd4
+14:13:44.275 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(500)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.277 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: Detected failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] for cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(500)]]
+]]></system-out>
+  </testcase>
+  <testcase name="optionalRecommendation(TrackedFaultload)[3]" classname="dev.reynard.junit.integration.micro.MaturityContractIT" time="0.025">
+    <failure message="optional dependency must not take down the frontend ==&gt; expected: &lt;200&gt; but was: &lt;500&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[14:13:44.293 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.294 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 2
+14:13:44.294 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.295 main [ INFO] [d.r.j.FiTestExtension]: Test [3] TraceId=1478234323514c4c011aad1fa0b8657c Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [504])
+14:13:44.315 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.315 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.315 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=1478234323514c4c011aad1fa0b8657c
+14:13:44.316 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(504)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.317 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: For failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] discovered new cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(504)]]
+]]></system-out>
+  </testcase>
+  <testcase name="optionalRecommendation(TrackedFaultload)[4]" classname="dev.reynard.junit.integration.micro.MaturityContractIT" time="0.025">
+    <failure message="optional dependency must not take down the frontend ==&gt; expected: &lt;200&gt; but was: &lt;500&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[14:13:44.322 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.322 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 1
+14:13:44.322 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.324 main [ INFO] [d.r.j.FiTestExtension]: Test [4] TraceId=91fc17bf8483dadb1b3156425c490996 Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [503])
+14:13:44.344 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.344 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.344 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=91fc17bf8483dadb1b3156425c490996
+14:13:44.345 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(503)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.346 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: For failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] discovered new cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(503)]]
+]]></system-out>
+  </testcase>
+  <testcase name="optionalRecommendation(TrackedFaultload)[5]" classname="dev.reynard.junit.integration.micro.MaturityContractIT" time="0.027">
+    <failure message="optional dependency must not take down the frontend ==&gt; expected: &lt;200&gt; but was: &lt;500&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: optional dependency must not take down the frontend ==> expected: <200> but was: <500>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:150)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:559)
+	at dev.reynard.junit.integration.micro.MaturityContractIT.optionalRecommendation(MaturityContractIT.java:86)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+	at java.base/java.util.stream.WhileOps$1$1.accept(WhileOps.java:99)
+	at java.base/java.util.stream.StreamSpliterators$InfiniteSupplyingSpliterator$OfRef.tryAdvance(StreamSpliterators.java:1358)
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.stream.ReferencePipeline$7$1.accept(ReferencePipeline.java:276)
+	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+]]></failure>
+    <system-out><![CDATA[14:13:44.350 main [ INFO] [d.r.j.s.c.g.DynamicExplorationGenerator]: Found a candidate after 1 attempt(s)
+14:13:44.350 main [ INFO] [d.r.j.s.StrategyRunner]: Generator queue size: 0
+14:13:44.350 main [ INFO] [d.r.j.s.StrategyRunner]: Generated 1 and pruned 0 faultloads
+14:13:44.352 main [ INFO] [d.r.j.FiTestExtension]: Test [5] TraceId=c84e8cf04118a70d32d7cc1323712154 Faultload=frontend:GET /#0>recommendations:GET /#0(HTTP_ERROR [502])
+14:13:44.374 main [ INFO] [d.r.j.FiTestExtension]: Invariant: VIOLATED
+14:13:44.374 main [ INFO] [d.r.j.FiTestExtension]: Client responded with HTTP status: 500
+14:13:44.374 main [ INFO] [d.r.j.s.StrategyRunner]: Analyzing result of running faultload with traceId=c84e8cf04118a70d32d7cc1323712154
+14:13:44.375 main [ INFO] [d.r.j.s.c.a.ErrorPropagationDetector]: Found that [Behaviour[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(502)]] causes error Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)]
+14:13:44.376 main [ INFO] [d.r.j.s.c.a.BehaviorAnalyzer]: For failure Fault[uid=frontend:GET /#0, mode=HTTP_ERROR(500)] discovered new cause: [Fault[uid=frontend:GET /#0>recommendations:GET /#0, mode=HTTP_ERROR(502)]]
+]]></system-out>
+  </testcase>
+</testsuite>

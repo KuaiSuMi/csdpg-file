@@ -1,0 +1,70 @@
+[
+  {
+    "tool": "glitch",
+    "project": "ansible-role-nginx",
+    "input": "baselines\\sources\\ansible-role-nginx",
+    "image": "maturity-glitch:1.0.1",
+    "image_id": "sha256:89c325edc764c7221f62103a2752160f297d2bbeedde7afe7f84a9bfb7644cf8",
+    "exit_code": 0,
+    "seconds": 1.961,
+    "coverage": {
+      "files": 19,
+      "lines": 367
+    },
+    "findings": 17,
+    "report": "findings.csv",
+    "report_sha256": "ce08ed8fb4c513408d6069e7848d5b79bfcb0833d0c02074eedfbae90f05db89",
+    "custom_business_rules": false
+  },
+  {
+    "tool": "glitch",
+    "project": "ansible-role-redis",
+    "input": "baselines\\sources\\ansible-role-redis",
+    "image": "maturity-glitch:1.0.1",
+    "image_id": "sha256:89c325edc764c7221f62103a2752160f297d2bbeedde7afe7f84a9bfb7644cf8",
+    "exit_code": 0,
+    "seconds": 1.696,
+    "coverage": {
+      "files": 10,
+      "lines": 142
+    },
+    "findings": 4,
+    "report": "findings.csv",
+    "report_sha256": "793df29a160f63a7ab5fa9c238251065437f66b2b83a8be99e57c9fe8ab7ee53",
+    "custom_business_rules": false
+  },
+  {
+    "tool": "glitch",
+    "project": "before",
+    "input": "baselines\\glitch\\fixtures\\before",
+    "image": "maturity-glitch:1.0.1",
+    "image_id": "sha256:89c325edc764c7221f62103a2752160f297d2bbeedde7afe7f84a9bfb7644cf8",
+    "exit_code": 0,
+    "seconds": 1.122,
+    "coverage": {
+      "files": 1,
+      "lines": 6
+    },
+    "findings": 6,
+    "report": "findings.csv",
+    "report_sha256": "56d586334c449177502d04199d611ddaeedc578478d5ec28167bcacadc7de899",
+    "custom_business_rules": false
+  },
+  {
+    "tool": "glitch",
+    "project": "after",
+    "input": "baselines\\glitch\\fixtures\\after",
+    "image": "maturity-glitch:1.0.1",
+    "image_id": "sha256:89c325edc764c7221f62103a2752160f297d2bbeedde7afe7f84a9bfb7644cf8",
+    "exit_code": 0,
+    "seconds": 1.096,
+    "coverage": {
+      "files": 1,
+      "lines": 6
+    },
+    "findings": 0,
+    "report": "findings.csv",
+    "report_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "custom_business_rules": false
+  }
+]

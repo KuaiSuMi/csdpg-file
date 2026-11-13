@@ -1,0 +1,9 @@
+/.runtime/
+/baselines/sources/
+**/__pycache__/
+/.secrets/
+/tmp/
+**/*.class
+**/infer-out/*.db
+**/infer-out/db.lock
+**/infer-out/tmp/

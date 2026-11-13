@@ -1,0 +1,18 @@
+Found 1 smells in D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\parfum-smoke\control-before.Dockerfile.
+[VIOLATION] -> npmCacheCleanUseForce at 2:4 to 2:19
+        Using the --force flag with npm cache clean can override the default behavior of npm and force the cache to be cleaned, even if it is not more than 3 days old or if npm is in a "read-only" state.
+                npm cache clean
+The repaired Dockerfile was written in D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\parfum-smoke\control-after.Dockerfile
+The changes:
+
+Index: D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\parfum-smoke\control-before.Dockerfile
+===================================================================
+--- D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\parfum-smoke\control-before.Dockerfile
++++ D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\parfum-smoke\control-before.Dockerfile
+@@ -1,2 +1,2 @@
+-FROM node:20-bookworm-slim
+-RUN npm cache clean
++FROM node:20-bookworm-slim
++RUN npm cache clean --force
+\ No newline at end of file
+

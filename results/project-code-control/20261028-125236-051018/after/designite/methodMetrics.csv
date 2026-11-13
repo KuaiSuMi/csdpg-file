@@ -1,0 +1,12 @@
+Project Name,Package Name,Type Name,MethodName,LOC,CC,PC
+after,com.example,InventoryService,checkStock,3,1,2
+after,com.example,InventoryService,reserveStock,3,1,2
+after,com.example,InventoryService,releaseStock,3,1,2
+after,com.example,OrderService,OrderService,4,1,2
+after,com.example,OrderService,createOrder,36,6,3
+after,com.example,OrderService,batchProcessOrders,23,3,2
+after,com.example,OrderService,getOrderStatus,0,7,1
+after,com.example,OrderService,calculateFactorial,9,3,1
+after,com.example,PaymentException,PaymentException,3,1,1
+after,com.example,PaymentService,processPayment,9,3,1
+after,com.example,PaymentService,refund,3,1,1

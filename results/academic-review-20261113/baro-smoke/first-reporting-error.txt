@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\baro-smoke\run.py", line 34, in <module>
+    "anomaly_times": [data["time"].iloc[index].item() for index in anomalies],
+                      ~~~~~~~~~~~~~~~~~^^^^^^^
+  File "D:\文档\ChatGPT\成熟度评估\.runtime\academic-review-20261113\baro-venv\Lib\site-packages\pandas\core\indexing.py", line 1342, in __getitem__
+    return self._getitem_axis(maybe_callable, axis=axis)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\文档\ChatGPT\成熟度评估\.runtime\academic-review-20261113\baro-venv\Lib\site-packages\pandas\core\indexing.py", line 2432, in _getitem_axis
+    self._validate_integer(key, axis)
+  File "D:\文档\ChatGPT\成熟度评估\.runtime\academic-review-20261113\baro-venv\Lib\site-packages\pandas\core\indexing.py", line 2365, in _validate_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds

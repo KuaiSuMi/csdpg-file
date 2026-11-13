@@ -1,0 +1,17 @@
+Collecting wrapt==1.12.1
+  Downloading wrapt-1.12.1.tar.gz (27 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: wrapt
+  Building wheel for wrapt (pyproject.toml): started
+  Building wheel for wrapt (pyproject.toml): finished with status 'done'
+  Created wheel for wrapt: filename=wrapt-1.12.1-py3-none-any.whl size=19673 sha256=3749c569f1bdcf3eb0265d735e46c100ef52150cd0ed2b378ddcb3bfb83bf207
+  Stored in directory: c:\users\yurui\appdata\local\pip\cache\wheels\a1\45\00\0edc09ca419aaad7f02c9fcc77b2c7457c6bbc671a9a4b3147
+Successfully built wrapt
+
+[notice] A new release of pip is available: 26.0.1 -> 26.2.1
+[notice] To update, run: python.exe -m pip install --upgrade pip

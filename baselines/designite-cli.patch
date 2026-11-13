@@ -1,0 +1,6 @@
+diff --git a/src/Designite/utils/Constants.java b/src/Designite/utils/Constants.java
+--- a/src/Designite/utils/Constants.java
++++ b/src/Designite/utils/Constants.java
+@@ -57 +57 @@
+-	public static final boolean DEBUG = true;
++	public static final boolean DEBUG = false;

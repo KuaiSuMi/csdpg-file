@@ -1,0 +1,217 @@
+{
+  "version": "1.0.0",
+  "producer": "Java AppCAT CLI",
+  "metadata": {
+    "analysisStartTime": "2026-11-11T06:13:13.1782719Z",
+    "analysisEndTime": "2026-11-11T06:13:30.0507779Z",
+    "status": "Complete",
+    "privacyMode": "Unrestricted",
+    "privacyModeHelpUrl": "https://aka.ms/appcat-privacy-mode",
+    "targetIds": [
+      "azure-aks"
+    ],
+    "targetDisplayNames": [
+      "Azure Kubernetes Service"
+    ],
+    "capabilities": [],
+    "os": []
+  },
+  "summary": {
+    "totalProjects": 1,
+    "totalIssues": 4,
+    "totalIncidents": 5,
+    "totalEffort": 19,
+    "charts": {
+      "severity": {
+        "mandatory": 1,
+        "optional": 2,
+        "potential": 0,
+        "information": 2
+      },
+      "category": {
+        "containerization": 1,
+        "java-version-upgrade": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": ".",
+      "issues": 4,
+      "storyPoints": 19,
+      "properties": {
+        "appName": "cloud-audit",
+        "jdkVersion": "17",
+        "frameworks": null,
+        "languages": [
+          "Java"
+        ],
+        "tools": [
+          "Maven"
+        ]
+      },
+      "incidents": [
+        {
+          "ruleId": "azure-java-version-02000",
+          "incidentId": "916d9b91-1d93-49b0-84d4-19836409ed5b",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "snippet": "  1  \u003cproject xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  2           xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\"\u003e\n  3    \u003cmodelVersion\u003e4.0.0\u003c/modelVersion\u003e\n  4    \u003cgroupId\u003ecom.example\u003c/groupId\u003e\n  5    \u003cartifactId\u003ecloud-audit\u003c/artifactId\u003e\n  6    \u003cversion\u003e1.0.0\u003c/version\u003e\n  7    \u003cproperties\u003e\n  8      \u003cmaven.compiler.source\u003e17\u003c/maven.compiler.source\u003e\n  9      \u003cmaven.compiler.target\u003e17\u003c/maven.compiler.target\u003e\n 10      \u003cproject.build.sourceEncoding\u003eUTF-8\u003c/project.build.sourceEncoding\u003e\n 11    \u003c/properties\u003e\n 12  \u003c/project\u003e\n",
+          "line": 8,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "azure-java-version-02000",
+          "incidentId": "2eeb453e-8f8b-4494-b7f5-e53a955f54a3",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "snippet": "  1  \u003cproject xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  2           xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\"\u003e\n  3    \u003cmodelVersion\u003e4.0.0\u003c/modelVersion\u003e\n  4    \u003cgroupId\u003ecom.example\u003c/groupId\u003e\n  5    \u003cartifactId\u003ecloud-audit\u003c/artifactId\u003e\n  6    \u003cversion\u003e1.0.0\u003c/version\u003e\n  7    \u003cproperties\u003e\n  8      \u003cmaven.compiler.source\u003e17\u003c/maven.compiler.source\u003e\n  9      \u003cmaven.compiler.target\u003e17\u003c/maven.compiler.target\u003e\n 10      \u003cproject.build.sourceEncoding\u003eUTF-8\u003c/project.build.sourceEncoding\u003e\n 11    \u003c/properties\u003e\n 12  \u003c/project\u003e\n",
+          "line": 9,
+          "column": 0,
+          "targets": {
+            "azure-aks": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-appservice": {
+              "effort": 8,
+              "severity": "optional"
+            },
+            "azure-container-apps": {
+              "effort": 8,
+              "severity": "optional"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=azure/springboot"
+          ]
+        },
+        {
+          "ruleId": "dockerfile-00000",
+          "incidentId": "a1e0d218-51f7-4dac-8d4e-d278ba4ba91f",
+          "location": "",
+          "locationKind": "",
+          "targets": {
+            "azure-aks": {
+              "effort": 3,
+              "severity": "mandatory"
+            },
+            "azure-container-apps": {
+              "effort": 3,
+              "severity": "mandatory"
+            }
+          },
+          "labels": [
+            "type=violation",
+            "ruleset=cloud-readiness"
+          ]
+        },
+        {
+          "ruleId": "discover-java-files",
+          "incidentId": "0e562585-46e8-494d-9615-3eb5b1e6a3dc",
+          "location": "src/main/java/com/example/CloudAudit.java",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        },
+        {
+          "ruleId": "discover-maven-xml",
+          "incidentId": "eac17cec-9195-4232-8b43-8bd9a3f18bc9",
+          "location": "pom.xml",
+          "locationKind": "File",
+          "labels": [
+            "type=insight",
+            "ruleset=discovery-rules"
+          ]
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "azure-java-version-02000": {
+      "id": "azure-java-version-02000",
+      "description": "The application is not using the latest LTS Java version. It is recommended to consider upgrading to the latest LTS version to take advantage of the newest language features, performance improvements, and extended support timelines.\nUpgrading to the latest LTS version ensures your application benefits from the most recent security enhancements and a longer support lifecycle.",
+      "title": "Java Version is not the latest LTS",
+      "severity": "optional",
+      "effort": 8,
+      "labels": [
+        "target=azure-appservice",
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "source",
+        "domain=java-upgrade",
+        "category=java-version-upgrade",
+        "version",
+        "os=windows",
+        "os=linux"
+      ]
+    },
+    "discover-java-files": {
+      "id": "discover-java-files",
+      "description": "",
+      "title": "Java source files",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "discovery",
+        "tag=Java Source"
+      ]
+    },
+    "discover-maven-xml": {
+      "id": "discover-maven-xml",
+      "description": "",
+      "title": "Maven XML file",
+      "severity": "information",
+      "effort": 0,
+      "labels": [
+        "discovery",
+        "tag=Maven XML"
+      ]
+    },
+    "dockerfile-00000": {
+      "id": "dockerfile-00000",
+      "description": "No Dockerfile was found in the project. This suggests the application may not yet be containerized. \nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.",
+      "title": "No Dockerfile found",
+      "severity": "mandatory",
+      "effort": 3,
+      "links": [
+        {
+          "url": "https://www.baeldung.com/java-dockerize-app",
+          "title": "Dockerizing a Java Application"
+        }
+      ],
+      "labels": [
+        "target=azure-aks",
+        "target=azure-container-apps",
+        "capability=containerization",
+        "source",
+        "domain=cloud-readiness",
+        "category=containerization",
+        "containerization",
+        "os=windows",
+        "os=linux"
+      ]
+    }
+  }
+}

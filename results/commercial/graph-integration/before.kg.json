@@ -1,0 +1,1443 @@
+{
+  "schema_version": "1.0",
+  "stats": {
+    "node_count": 16,
+    "edge_count": 10,
+    "nodes_by_type": {
+      "Module": 4,
+      "Metric": 10,
+      "Deployment": 1,
+      "Infrastructure": 1
+    },
+    "relations_by_type": {
+      "OBSERVED_BY": 10
+    },
+    "provenance_by_source": {
+      "source_code": 39,
+      "runtime": 11
+    }
+  },
+  "meta": {
+    "baseline_runs": {
+      "baseline-appcat": {
+        "status": "ok",
+        "observations": 7,
+        "subjects": 4,
+        "findings": 4
+      },
+      "baseline-neuvector": {
+        "status": "ok",
+        "observations": 3,
+        "subjects": 2,
+        "findings": 1
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": "Module/appcat:.:<project>#233e45d26b6f",
+      "type": "Module",
+      "name": "appcat:.:<project>",
+      "canonical_name": "appcat:.:<project>",
+      "namespace": "maturity-commercial",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/2",
+          "evidence": "{\"incidentId\": \"df31d57d-bdd6-49b6-b197-4a7b40f82549\", \"labels\": [\"type=violation\", \"ruleset=cloud-readiness\"], \"location\": \"\", \"locationKind\": \"\", \"ruleId\": \"dockerfile-00000\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"mandatory\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/dockerfile-00000",
+          "evidence": "{\"description\": \"No Dockerfile was found in the project. This suggests the application may not yet be containerized. \\nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.\", \"effort\": 3, \"id\": \"dockerfile-00000\", \"labels\": [\"target=azure-aks\", \"target=azure-container-apps\", \"capability=containerization\", \"source\", \"domain=cloud-readiness\", \"category=containerization\", \"containerization\", \"os=windows\", \"os=linux\"], \"links\": [{\"title\": \"Dockerizing a Java Application\", \"url\": \"https://www.baeldung.com/java-dockerize-app\"}], \"severity\": \"mandatory\", \"title\": \"No Dockerfile found\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/appcat_8bcd70db16983145bfd5#7aeba2d1f75c",
+      "type": "Metric",
+      "name": "dockerfile-00000",
+      "canonical_name": "[\"appcat\",\"appcat:.:<project>\",[\"azure-aks\",\"dockerfile-00000\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "appcat",
+        "status": "candidate",
+        "subject_key": "appcat:.:<project>",
+        "target": "azure-aks",
+        "project": ".",
+        "location": "",
+        "title": "No Dockerfile found",
+        "description": "No Dockerfile was found in the project. This suggests the application may not yet be containerized. \nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.",
+        "severity": "mandatory",
+        "effort": 3,
+        "occurrences": 1,
+        "analysis_status": "Complete",
+        "observed_at": "2026-11-10T18:09:23.3697823Z",
+        "coverage": "reported-incidents",
+        "locations": [
+          {
+            "incidentId": "df31d57d-bdd6-49b6-b197-4a7b40f82549",
+            "location": ""
+          }
+        ]
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/2",
+          "evidence": "{\"incidentId\": \"df31d57d-bdd6-49b6-b197-4a7b40f82549\", \"labels\": [\"type=violation\", \"ruleset=cloud-readiness\"], \"location\": \"\", \"locationKind\": \"\", \"ruleId\": \"dockerfile-00000\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"mandatory\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/dockerfile-00000",
+          "evidence": "{\"description\": \"No Dockerfile was found in the project. This suggests the application may not yet be containerized. \\nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.\", \"effort\": 3, \"id\": \"dockerfile-00000\", \"labels\": [\"target=azure-aks\", \"target=azure-container-apps\", \"capability=containerization\", \"source\", \"domain=cloud-readiness\", \"category=containerization\", \"containerization\", \"os=windows\", \"os=linux\"], \"links\": [{\"title\": \"Dockerizing a Java Application\", \"url\": \"https://www.baeldung.com/java-dockerize-app\"}], \"severity\": \"mandatory\", \"title\": \"No Dockerfile found\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Module/appcat:.:pom.xml#c200dfe42a8b",
+      "type": "Module",
+      "name": "appcat:.:pom.xml",
+      "canonical_name": "appcat:.:pom.xml",
+      "namespace": "maturity-commercial",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/0",
+          "evidence": "{\"column\": 0, \"incidentId\": \"787a15cf-ba4d-4508-97fc-813a787ae572\", \"labels\": [\"type=violation\", \"ruleset=azure/springboot\"], \"line\": 8, \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"azure-java-version-02000\", \"snippet\": \"  1  <project xmlns=\\\"http://maven.apache.org/POM/4.0.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"\\n  2           xsi:schemaLocation=\\\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\\\">\\n  3    <modelVersion>4.0.0</modelVersion>\\n  4    <groupId>com.example</groupId>\\n  5    <artifactId>cloud-audit</artifactId>\\n  6    <version>1.0.0</version>\\n  7    <properties>\\n  8      <maven.compiler.source>17</maven.compiler.source>\\n  9      <maven.compiler.target>17</maven.compiler.target>\\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\\n 11    </properties>\\n 12  </project>\\n\", \"targets\": {\"azure-aks\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-appservice\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-container-apps\": {\"effort\": 8, \"severity\": \"optional\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/1",
+          "evidence": "{\"column\": 0, \"incidentId\": \"318cc67c-fa5c-4844-bc65-6c5c5ceb11e4\", \"labels\": [\"type=violation\", \"ruleset=azure/springboot\"], \"line\": 9, \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"azure-java-version-02000\", \"snippet\": \"  1  <project xmlns=\\\"http://maven.apache.org/POM/4.0.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"\\n  2           xsi:schemaLocation=\\\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\\\">\\n  3    <modelVersion>4.0.0</modelVersion>\\n  4    <groupId>com.example</groupId>\\n  5    <artifactId>cloud-audit</artifactId>\\n  6    <version>1.0.0</version>\\n  7    <properties>\\n  8      <maven.compiler.source>17</maven.compiler.source>\\n  9      <maven.compiler.target>17</maven.compiler.target>\\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\\n 11    </properties>\\n 12  </project>\\n\", \"targets\": {\"azure-aks\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-appservice\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-container-apps\": {\"effort\": 8, \"severity\": \"optional\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/azure-java-version-02000",
+          "evidence": "{\"description\": \"The application is not using the latest LTS Java version. It is recommended to consider upgrading to the latest LTS version to take advantage of the newest language features, performance improvements, and extended support timelines.\\nUpgrading to the latest LTS version ensures your application benefits from the most recent security enhancements and a longer support lifecycle.\", \"effort\": 8, \"id\": \"azure-java-version-02000\", \"labels\": [\"target=azure-appservice\", \"target=azure-aks\", \"target=azure-container-apps\", \"source\", \"domain=java-upgrade\", \"category=java-version-upgrade\", \"version\", \"os=windows\", \"os=linux\"], \"severity\": \"optional\", \"title\": \"Java Version is not the latest LTS\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/5",
+          "evidence": "{\"incidentId\": \"159ec3ef-b976-4ca5-8a3a-990b22ea7602\", \"labels\": [\"type=insight\", \"ruleset=discovery-rules\"], \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"discover-maven-xml\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/discover-maven-xml",
+          "evidence": "{\"description\": \"\", \"effort\": 0, \"id\": \"discover-maven-xml\", \"labels\": [\"discovery\", \"tag=Maven XML\"], \"severity\": \"information\", \"title\": \"Maven XML file\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/appcat_6079f94cd96acc171ad5#8d513f324d43",
+      "type": "Metric",
+      "name": "azure-java-version-02000",
+      "canonical_name": "[\"appcat\",\"appcat:.:pom.xml\",[\"azure-aks\",\"azure-java-version-02000\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "appcat",
+        "status": "candidate",
+        "subject_key": "appcat:.:pom.xml",
+        "target": "azure-aks",
+        "project": ".",
+        "location": "pom.xml",
+        "title": "Java Version is not the latest LTS",
+        "description": "The application is not using the latest LTS Java version. It is recommended to consider upgrading to the latest LTS version to take advantage of the newest language features, performance improvements, and extended support timelines.\nUpgrading to the latest LTS version ensures your application benefits from the most recent security enhancements and a longer support lifecycle.",
+        "severity": "optional",
+        "effort": 8,
+        "occurrences": 2,
+        "analysis_status": "Complete",
+        "observed_at": "2026-11-10T18:09:23.3697823Z",
+        "coverage": "reported-incidents",
+        "locations": [
+          {
+            "incidentId": "787a15cf-ba4d-4508-97fc-813a787ae572",
+            "location": "pom.xml",
+            "line": 8,
+            "column": 0,
+            "snippet": "  1  <project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  2           xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  3    <modelVersion>4.0.0</modelVersion>\n  4    <groupId>com.example</groupId>\n  5    <artifactId>cloud-audit</artifactId>\n  6    <version>1.0.0</version>\n  7    <properties>\n  8      <maven.compiler.source>17</maven.compiler.source>\n  9      <maven.compiler.target>17</maven.compiler.target>\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n 11    </properties>\n 12  </project>\n"
+          },
+          {
+            "incidentId": "318cc67c-fa5c-4844-bc65-6c5c5ceb11e4",
+            "location": "pom.xml",
+            "line": 9,
+            "column": 0,
+            "snippet": "  1  <project xmlns=\"http://maven.apache.org/POM/4.0.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\"\n  2           xsi:schemaLocation=\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\">\n  3    <modelVersion>4.0.0</modelVersion>\n  4    <groupId>com.example</groupId>\n  5    <artifactId>cloud-audit</artifactId>\n  6    <version>1.0.0</version>\n  7    <properties>\n  8      <maven.compiler.source>17</maven.compiler.source>\n  9      <maven.compiler.target>17</maven.compiler.target>\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\n 11    </properties>\n 12  </project>\n"
+          }
+        ]
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/0",
+          "evidence": "{\"column\": 0, \"incidentId\": \"787a15cf-ba4d-4508-97fc-813a787ae572\", \"labels\": [\"type=violation\", \"ruleset=azure/springboot\"], \"line\": 8, \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"azure-java-version-02000\", \"snippet\": \"  1  <project xmlns=\\\"http://maven.apache.org/POM/4.0.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"\\n  2           xsi:schemaLocation=\\\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\\\">\\n  3    <modelVersion>4.0.0</modelVersion>\\n  4    <groupId>com.example</groupId>\\n  5    <artifactId>cloud-audit</artifactId>\\n  6    <version>1.0.0</version>\\n  7    <properties>\\n  8      <maven.compiler.source>17</maven.compiler.source>\\n  9      <maven.compiler.target>17</maven.compiler.target>\\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\\n 11    </properties>\\n 12  </project>\\n\", \"targets\": {\"azure-aks\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-appservice\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-container-apps\": {\"effort\": 8, \"severity\": \"optional\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/1",
+          "evidence": "{\"column\": 0, \"incidentId\": \"318cc67c-fa5c-4844-bc65-6c5c5ceb11e4\", \"labels\": [\"type=violation\", \"ruleset=azure/springboot\"], \"line\": 9, \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"azure-java-version-02000\", \"snippet\": \"  1  <project xmlns=\\\"http://maven.apache.org/POM/4.0.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"\\n  2           xsi:schemaLocation=\\\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\\\">\\n  3    <modelVersion>4.0.0</modelVersion>\\n  4    <groupId>com.example</groupId>\\n  5    <artifactId>cloud-audit</artifactId>\\n  6    <version>1.0.0</version>\\n  7    <properties>\\n  8      <maven.compiler.source>17</maven.compiler.source>\\n  9      <maven.compiler.target>17</maven.compiler.target>\\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\\n 11    </properties>\\n 12  </project>\\n\", \"targets\": {\"azure-aks\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-appservice\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-container-apps\": {\"effort\": 8, \"severity\": \"optional\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/azure-java-version-02000",
+          "evidence": "{\"description\": \"The application is not using the latest LTS Java version. It is recommended to consider upgrading to the latest LTS version to take advantage of the newest language features, performance improvements, and extended support timelines.\\nUpgrading to the latest LTS version ensures your application benefits from the most recent security enhancements and a longer support lifecycle.\", \"effort\": 8, \"id\": \"azure-java-version-02000\", \"labels\": [\"target=azure-appservice\", \"target=azure-aks\", \"target=azure-container-apps\", \"source\", \"domain=java-upgrade\", \"category=java-version-upgrade\", \"version\", \"os=windows\", \"os=linux\"], \"severity\": \"optional\", \"title\": \"Java Version is not the latest LTS\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/appcat_85f96f997b1853f98099#1f9740d88680",
+      "type": "Metric",
+      "name": "discover-maven-xml",
+      "canonical_name": "[\"appcat\",\"appcat:.:pom.xml\",[\"azure-aks\",\"discover-maven-xml\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "appcat",
+        "status": "measured",
+        "subject_key": "appcat:.:pom.xml",
+        "target": "azure-aks",
+        "project": ".",
+        "location": "pom.xml",
+        "title": "Maven XML file",
+        "description": "",
+        "severity": "information",
+        "effort": 0,
+        "occurrences": 1,
+        "analysis_status": "Complete",
+        "observed_at": "2026-11-10T18:09:23.3697823Z",
+        "coverage": "reported-incidents",
+        "locations": [
+          {
+            "incidentId": "159ec3ef-b976-4ca5-8a3a-990b22ea7602",
+            "location": "pom.xml"
+          }
+        ]
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/5",
+          "evidence": "{\"incidentId\": \"159ec3ef-b976-4ca5-8a3a-990b22ea7602\", \"labels\": [\"type=insight\", \"ruleset=discovery-rules\"], \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"discover-maven-xml\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/discover-maven-xml",
+          "evidence": "{\"description\": \"\", \"effort\": 0, \"id\": \"discover-maven-xml\", \"labels\": [\"discovery\", \"tag=Maven XML\"], \"severity\": \"information\", \"title\": \"Maven XML file\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Module/appcat:.:src_main_java_com_example_CloudAudit.java#eb0b66e2ad80",
+      "type": "Module",
+      "name": "appcat:.:src/main/java/com/example/CloudAudit.java",
+      "canonical_name": "appcat:.:src/main/java/com/example/CloudAudit.java",
+      "namespace": "maturity-commercial",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/4",
+          "evidence": "{\"incidentId\": \"b73a3444-9338-48ac-ad62-d8f979cf696d\", \"labels\": [\"type=insight\", \"ruleset=discovery-rules\"], \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"discover-java-files\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/discover-java-files",
+          "evidence": "{\"description\": \"\", \"effort\": 0, \"id\": \"discover-java-files\", \"labels\": [\"discovery\", \"tag=Java Source\"], \"severity\": \"information\", \"title\": \"Java source files\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/3",
+          "evidence": "{\"column\": 0, \"incidentId\": \"885ee1a4-bcb5-440e-9bdf-f40084fa0cba\", \"labels\": [\"type=violation\", \"ruleset=cloud-readiness\"], \"line\": 3, \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"local-storage-00001\", \"snippet\": \"  1  package com.example;\\n  2  \\n  3  import java.io.FileWriter;\\n  4  import java.io.IOException;\\n  5  \\n  6  public class CloudAudit {\\n  7      public String createOrder(String item, int quantity) throws IOException {\\n  8          if (quantity <= 0) throw new IllegalArgumentException(\\\"quantity\\\");\\n  9          String order = \\\"ORD-\\\" + item + \\\"-\\\" + quantity;\\n 10          try (FileWriter audit = new FileWriter(\\\"orders.log\\\", true)) {\\n 11              audit.write(\\\"AUDIT \\\" + order + System.lineSeparator());\\n 12          }\\n 13          return order;\\n 14      }\\n 15  }\\n\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-appservice\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"mandatory\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/local-storage-00001",
+          "evidence": "{\"description\": \"When migrating an application that relies on the file system to Azure, it's important to consider the limitations of local storage in a cloud environment.\\n An application running inside a container could lose access to a file in local storage.\\n\\n The following recommendations depend on the function of the file in local storage:\\n * Determine the **storage needs** for your application: Ephemeral storage or persistent storage. Ephemeral storage only persists until the cloud environment is restarted. Persistent storage is required for data that needs to persist across restarts.\\n \\n * If persistent storage is needed, consider **mounting Azure File Share** or **using Azure Blob Storage**. Mount Azure file share allows your application to access files via the mount location. Azure blob storage is a scalable object store for data objects, such as text or binary files.\\n\\n * **Logging**: Log to standard output and use Azure Monitor to collect and analyze the logs.\\n\\n * **Caching**: Use Azure Managed Redis as a cache backing service.\\n\\n * **Configuration**: Store configuration in Azure App Configuration instead of using the file system. Also store configuration settings in environment variables so that they can be updated without code changes.\", \"effort\": 3, \"id\": \"local-storage-00001\", \"labels\": [\"target=azure-aks\", \"target=azure-container-apps\", \"target=azure-appservice\", \"capability=containerization\", \"source\", \"domain=cloud-readiness\", \"category=file-system-management\", \"storage\", \"containerization\", \"os=windows\", \"os=linux\"], \"links\": [{\"title\": \"Azure Storage documentation\", \"url\": \"https://learn.microsoft.com/azure/storage\"}, {\"title\": \"Create an Azure Files volume mount in Azure Container Apps\", \"url\": \"https://learn.microsoft.com/azure/container-apps/storage-mounts-azure-files\"}, {\"title\": \"Use storage mounts in Azure Container Apps\", \"url\": \"https://learn.microsoft.com/azure/container-apps/storage-mounts\"}, {\"title\": \"Azure Monitor Logs overview\", \"url\": \"https://learn.microsoft.com/azure/azure-monitor/logs/data-platform-logs\"}, {\"title\": \"Azure Cache for Redis documentation\", \"url\": \"https://learn.microsoft.com/azure/azure-cache-for-redis\"}, {\"title\": \"Azure App Configuration documentation\", \"url\": \"https://learn.microsoft.com/azure/azure-app-configuration\"}], \"severity\": \"mandatory\", \"title\": \"File system - Java IO\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/6",
+          "evidence": "{\"column\": 0, \"incidentId\": \"4a9df596-cbc9-4fff-95e6-7c23aeb07965\", \"labels\": [\"type=violation\", \"ruleset=openjdk21/openjdk17\"], \"line\": 10, \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"utf-8-by-default-00000\", \"snippet\": \"  1  package com.example;\\n  2  \\n  3  import java.io.FileWriter;\\n  4  import java.io.IOException;\\n  5  \\n  6  public class CloudAudit {\\n  7      public String createOrder(String item, int quantity) throws IOException {\\n  8          if (quantity <= 0) throw new IllegalArgumentException(\\\"quantity\\\");\\n  9          String order = \\\"ORD-\\\" + item + \\\"-\\\" + quantity;\\n 10          try (FileWriter audit = new FileWriter(\\\"orders.log\\\", true)) {\\n 11              audit.write(\\\"AUDIT \\\" + order + System.lineSeparator());\\n 12          }\\n 13          return order;\\n 14      }\\n 15  }\\n\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"potential\"}, \"azure-appservice\": {\"effort\": 3, \"severity\": \"potential\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"potential\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/utf-8-by-default-00000",
+          "evidence": "{\"description\": \"If not supplied, the `java.io.{{className}}` constructor uses UTF-8 by default. \\n If you haven't provided the character set, and UTF-8 is not appropriate for your class, then supply the appropriate character set to the constructor call.\", \"effort\": 3, \"id\": \"utf-8-by-default-00000\", \"labels\": [\"capability=openjdk18+\", \"capability=openjdk\", \"source\", \"domain=cloud-readiness\", \"category=default-encoding\", \"os=windows\", \"os=linux\", \"target=azure-appservice\", \"target=azure-aks\", \"target=azure-container-apps\"], \"links\": [{\"title\": \"JEP 400: UTF-8 by Default\", \"url\": \"https://openjdk.org/jeps/400\"}], \"severity\": \"potential\", \"title\": \"The 'java.io' constructor defaults to UTF-8\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/appcat_1f8e3bfa4e09cfdba349#98a06edd4117",
+      "type": "Metric",
+      "name": "discover-java-files",
+      "canonical_name": "[\"appcat\",\"appcat:.:src/main/java/com/example/CloudAudit.java\",[\"azure-aks\",\"discover-java-files\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "appcat",
+        "status": "measured",
+        "subject_key": "appcat:.:src/main/java/com/example/CloudAudit.java",
+        "target": "azure-aks",
+        "project": ".",
+        "location": "src/main/java/com/example/CloudAudit.java",
+        "title": "Java source files",
+        "description": "",
+        "severity": "information",
+        "effort": 0,
+        "occurrences": 1,
+        "analysis_status": "Complete",
+        "observed_at": "2026-11-10T18:09:23.3697823Z",
+        "coverage": "reported-incidents",
+        "locations": [
+          {
+            "incidentId": "b73a3444-9338-48ac-ad62-d8f979cf696d",
+            "location": "src/main/java/com/example/CloudAudit.java"
+          }
+        ]
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/4",
+          "evidence": "{\"incidentId\": \"b73a3444-9338-48ac-ad62-d8f979cf696d\", \"labels\": [\"type=insight\", \"ruleset=discovery-rules\"], \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"discover-java-files\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/discover-java-files",
+          "evidence": "{\"description\": \"\", \"effort\": 0, \"id\": \"discover-java-files\", \"labels\": [\"discovery\", \"tag=Java Source\"], \"severity\": \"information\", \"title\": \"Java source files\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/appcat_7ccd8544e264a3eed8bf#b78b88ee8490",
+      "type": "Metric",
+      "name": "local-storage-00001",
+      "canonical_name": "[\"appcat\",\"appcat:.:src/main/java/com/example/CloudAudit.java\",[\"azure-aks\",\"local-storage-00001\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "appcat",
+        "status": "candidate",
+        "subject_key": "appcat:.:src/main/java/com/example/CloudAudit.java",
+        "target": "azure-aks",
+        "project": ".",
+        "location": "src/main/java/com/example/CloudAudit.java",
+        "title": "File system - Java IO",
+        "description": "When migrating an application that relies on the file system to Azure, it's important to consider the limitations of local storage in a cloud environment.\n An application running inside a container could lose access to a file in local storage.\n\n The following recommendations depend on the function of the file in local storage:\n * Determine the **storage needs** for your application: Ephemeral storage or persistent storage. Ephemeral storage only persists until the cloud environment is restarted. Persistent storage is required for data that needs to persist across restarts.\n \n * If persistent storage is needed, consider **mounting Azure File Share** or **using Azure Blob Storage**. Mount Azure file share allows your application to access files via the mount location. Azure blob storage is a scalable object store for data objects, such as text or binary files.\n\n * **Logging**: Log to standard output and use Azure Monitor to collect and analyze the logs.\n\n * **Caching**: Use Azure Managed Redis as a cache backing service.\n\n * **Configuration**: Store configuration in Azure App Configuration instead of using the file system. Also store configuration settings in environment variables so that they can be updated without code changes.",
+        "severity": "mandatory",
+        "effort": 3,
+        "occurrences": 1,
+        "analysis_status": "Complete",
+        "observed_at": "2026-11-10T18:09:23.3697823Z",
+        "coverage": "reported-incidents",
+        "locations": [
+          {
+            "incidentId": "885ee1a4-bcb5-440e-9bdf-f40084fa0cba",
+            "location": "src/main/java/com/example/CloudAudit.java",
+            "line": 3,
+            "column": 0,
+            "snippet": "  1  package com.example;\n  2  \n  3  import java.io.FileWriter;\n  4  import java.io.IOException;\n  5  \n  6  public class CloudAudit {\n  7      public String createOrder(String item, int quantity) throws IOException {\n  8          if (quantity <= 0) throw new IllegalArgumentException(\"quantity\");\n  9          String order = \"ORD-\" + item + \"-\" + quantity;\n 10          try (FileWriter audit = new FileWriter(\"orders.log\", true)) {\n 11              audit.write(\"AUDIT \" + order + System.lineSeparator());\n 12          }\n 13          return order;\n 14      }\n 15  }\n"
+          }
+        ]
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/3",
+          "evidence": "{\"column\": 0, \"incidentId\": \"885ee1a4-bcb5-440e-9bdf-f40084fa0cba\", \"labels\": [\"type=violation\", \"ruleset=cloud-readiness\"], \"line\": 3, \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"local-storage-00001\", \"snippet\": \"  1  package com.example;\\n  2  \\n  3  import java.io.FileWriter;\\n  4  import java.io.IOException;\\n  5  \\n  6  public class CloudAudit {\\n  7      public String createOrder(String item, int quantity) throws IOException {\\n  8          if (quantity <= 0) throw new IllegalArgumentException(\\\"quantity\\\");\\n  9          String order = \\\"ORD-\\\" + item + \\\"-\\\" + quantity;\\n 10          try (FileWriter audit = new FileWriter(\\\"orders.log\\\", true)) {\\n 11              audit.write(\\\"AUDIT \\\" + order + System.lineSeparator());\\n 12          }\\n 13          return order;\\n 14      }\\n 15  }\\n\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-appservice\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"mandatory\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/local-storage-00001",
+          "evidence": "{\"description\": \"When migrating an application that relies on the file system to Azure, it's important to consider the limitations of local storage in a cloud environment.\\n An application running inside a container could lose access to a file in local storage.\\n\\n The following recommendations depend on the function of the file in local storage:\\n * Determine the **storage needs** for your application: Ephemeral storage or persistent storage. Ephemeral storage only persists until the cloud environment is restarted. Persistent storage is required for data that needs to persist across restarts.\\n \\n * If persistent storage is needed, consider **mounting Azure File Share** or **using Azure Blob Storage**. Mount Azure file share allows your application to access files via the mount location. Azure blob storage is a scalable object store for data objects, such as text or binary files.\\n\\n * **Logging**: Log to standard output and use Azure Monitor to collect and analyze the logs.\\n\\n * **Caching**: Use Azure Managed Redis as a cache backing service.\\n\\n * **Configuration**: Store configuration in Azure App Configuration instead of using the file system. Also store configuration settings in environment variables so that they can be updated without code changes.\", \"effort\": 3, \"id\": \"local-storage-00001\", \"labels\": [\"target=azure-aks\", \"target=azure-container-apps\", \"target=azure-appservice\", \"capability=containerization\", \"source\", \"domain=cloud-readiness\", \"category=file-system-management\", \"storage\", \"containerization\", \"os=windows\", \"os=linux\"], \"links\": [{\"title\": \"Azure Storage documentation\", \"url\": \"https://learn.microsoft.com/azure/storage\"}, {\"title\": \"Create an Azure Files volume mount in Azure Container Apps\", \"url\": \"https://learn.microsoft.com/azure/container-apps/storage-mounts-azure-files\"}, {\"title\": \"Use storage mounts in Azure Container Apps\", \"url\": \"https://learn.microsoft.com/azure/container-apps/storage-mounts\"}, {\"title\": \"Azure Monitor Logs overview\", \"url\": \"https://learn.microsoft.com/azure/azure-monitor/logs/data-platform-logs\"}, {\"title\": \"Azure Cache for Redis documentation\", \"url\": \"https://learn.microsoft.com/azure/azure-cache-for-redis\"}, {\"title\": \"Azure App Configuration documentation\", \"url\": \"https://learn.microsoft.com/azure/azure-app-configuration\"}], \"severity\": \"mandatory\", \"title\": \"File system - Java IO\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/appcat_6c396601dd633ed62cb5#a526f1094ae7",
+      "type": "Metric",
+      "name": "utf-8-by-default-00000",
+      "canonical_name": "[\"appcat\",\"appcat:.:src/main/java/com/example/CloudAudit.java\",[\"azure-aks\",\"utf-8-by-default-00000\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "appcat",
+        "status": "candidate",
+        "subject_key": "appcat:.:src/main/java/com/example/CloudAudit.java",
+        "target": "azure-aks",
+        "project": ".",
+        "location": "src/main/java/com/example/CloudAudit.java",
+        "title": "The 'java.io' constructor defaults to UTF-8",
+        "description": "If not supplied, the `java.io.{{className}}` constructor uses UTF-8 by default. \n If you haven't provided the character set, and UTF-8 is not appropriate for your class, then supply the appropriate character set to the constructor call.",
+        "severity": "potential",
+        "effort": 3,
+        "occurrences": 1,
+        "analysis_status": "Complete",
+        "observed_at": "2026-11-10T18:09:23.3697823Z",
+        "coverage": "reported-incidents",
+        "locations": [
+          {
+            "incidentId": "4a9df596-cbc9-4fff-95e6-7c23aeb07965",
+            "location": "src/main/java/com/example/CloudAudit.java",
+            "line": 10,
+            "column": 0,
+            "snippet": "  1  package com.example;\n  2  \n  3  import java.io.FileWriter;\n  4  import java.io.IOException;\n  5  \n  6  public class CloudAudit {\n  7      public String createOrder(String item, int quantity) throws IOException {\n  8          if (quantity <= 0) throw new IllegalArgumentException(\"quantity\");\n  9          String order = \"ORD-\" + item + \"-\" + quantity;\n 10          try (FileWriter audit = new FileWriter(\"orders.log\", true)) {\n 11              audit.write(\"AUDIT \" + order + System.lineSeparator());\n 12          }\n 13          return order;\n 14      }\n 15  }\n"
+          }
+        ]
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/6",
+          "evidence": "{\"column\": 0, \"incidentId\": \"4a9df596-cbc9-4fff-95e6-7c23aeb07965\", \"labels\": [\"type=violation\", \"ruleset=openjdk21/openjdk17\"], \"line\": 10, \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"utf-8-by-default-00000\", \"snippet\": \"  1  package com.example;\\n  2  \\n  3  import java.io.FileWriter;\\n  4  import java.io.IOException;\\n  5  \\n  6  public class CloudAudit {\\n  7      public String createOrder(String item, int quantity) throws IOException {\\n  8          if (quantity <= 0) throw new IllegalArgumentException(\\\"quantity\\\");\\n  9          String order = \\\"ORD-\\\" + item + \\\"-\\\" + quantity;\\n 10          try (FileWriter audit = new FileWriter(\\\"orders.log\\\", true)) {\\n 11              audit.write(\\\"AUDIT \\\" + order + System.lineSeparator());\\n 12          }\\n 13          return order;\\n 14      }\\n 15  }\\n\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"potential\"}, \"azure-appservice\": {\"effort\": 3, \"severity\": \"potential\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"potential\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/utf-8-by-default-00000",
+          "evidence": "{\"description\": \"If not supplied, the `java.io.{{className}}` constructor uses UTF-8 by default. \\n If you haven't provided the character set, and UTF-8 is not appropriate for your class, then supply the appropriate character set to the constructor call.\", \"effort\": 3, \"id\": \"utf-8-by-default-00000\", \"labels\": [\"capability=openjdk18+\", \"capability=openjdk\", \"source\", \"domain=cloud-readiness\", \"category=default-encoding\", \"os=windows\", \"os=linux\", \"target=azure-appservice\", \"target=azure-aks\", \"target=azure-container-apps\"], \"links\": [{\"title\": \"JEP 400: UTF-8 by Default\", \"url\": \"https://openjdk.org/jeps/400\"}], \"severity\": \"potential\", \"title\": \"The 'java.io' constructor defaults to UTF-8\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Module/appcat:analysis#d4dcc369b05f",
+      "type": "Module",
+      "name": "appcat:analysis",
+      "canonical_name": "appcat:analysis",
+      "namespace": "maturity-commercial",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/summary",
+          "evidence": "{\"charts\": {\"category\": {\"containerization\": 1, \"default-encoding\": 1, \"file-system-management\": 1, \"java-version-upgrade\": 2}, \"severity\": {\"information\": 2, \"mandatory\": 2, \"optional\": 2, \"potential\": 1}}, \"totalEffort\": 25, \"totalIncidents\": 7, \"totalIssues\": 6, \"totalProjects\": 1}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/appcat_ea963cc2011cbbec5648#743eec46a36c",
+      "type": "Metric",
+      "name": "report-summary",
+      "canonical_name": "[\"appcat\",\"appcat:analysis\",[\"report-summary\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "appcat",
+        "status": "measured",
+        "subject_key": "appcat:analysis",
+        "analysis_status": "Complete",
+        "targets": [
+          "azure-aks"
+        ],
+        "observed_at": "2026-11-10T18:09:23.3697823Z",
+        "summary": {
+          "totalProjects": 1,
+          "totalIssues": 6,
+          "totalIncidents": 7,
+          "totalEffort": 25,
+          "charts": {
+            "severity": {
+              "mandatory": 2,
+              "optional": 2,
+              "potential": 1,
+              "information": 2
+            },
+            "category": {
+              "containerization": 1,
+              "default-encoding": 1,
+              "file-system-management": 1,
+              "java-version-upgrade": 2
+            }
+          }
+        },
+        "coverage": "reported-incidents"
+      },
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/summary",
+          "evidence": "{\"charts\": {\"category\": {\"containerization\": 1, \"default-encoding\": 1, \"file-system-management\": 1, \"java-version-upgrade\": 2}, \"severity\": {\"information\": 2, \"mandatory\": 2, \"optional\": 2, \"potential\": 1}}, \"totalEffort\": 25, \"totalIncidents\": 7, \"totalIssues\": 6, \"totalProjects\": 1}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Deployment/k8s:maturity-baselines_maturity-nv-check-20261110181528_Deployment_maturity-http#21d03ca41b95",
+      "type": "Deployment",
+      "name": "k8s:maturity-baselines/maturity-nv-check-20261110181528/Deployment/maturity-http",
+      "canonical_name": "k8s:maturity-baselines/maturity-nv-check-20261110181528/Deployment/maturity-http",
+      "namespace": "maturity-commercial",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/workload.json#/workload",
+          "evidence": "{\"app_ports\": {\"TCP\": \"8080\"}, \"applications\": [\"TCP/8080\"], \"author\": \"\", \"baseline_profile\": \"basic\", \"cap_change_mode\": true, \"cap_quarantine\": true, \"cap_sniff\": true, \"children\": null, \"cpus\": \"\", \"created_at\": \"2026-11-10T18:15:29Z\", \"display_name\": \"http\", \"domain\": \"maturity-nv-check-20261110181528\", \"enforcer_id\": \"4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f\", \"enforcer_name\": \"neuvector-enforcer-pod-rzgz7\", \"exit_code\": 0, \"finished_at\": \"\", \"groups\": [\"nv.maturity-http.maturity-nv-check-20261110181528\", \"containers\"], \"has_datapath\": false, \"host_id\": \"maturity-baselines-control-plane:\", \"host_name\": \"maturity-baselines-control-plane\", \"id\": \"99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"image_created_at\": \"2026-09-23T21:09:27Z\", \"image_digest\": \"sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8\", \"image_id\": \"7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"image_reg_scanned\": false, \"image_repo_digests\": null, \"interfaces\": {\"eth0\": [{\"gateway\": \"\", \"ip\": \"10.244.0.10\", \"ip_prefix\": 24}]}, \"labels\": {\"io.cri-containerd.kind\": \"container\", \"io.kubernetes.container.name\": \"http\", \"io.kubernetes.pod.name\": \"maturity-http-65b79d96bd-zsbx9\", \"io.kubernetes.pod.namespace\": \"maturity-nv-check-20261110181528\", \"io.kubernetes.pod.uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"memory_limit\": 134217728, \"name\": \"k8s_http_maturity-http-65b79d96bd-zsbx9_maturity-nv-check-20261110181528_078edf97-4cae-4354-b3e9-a0f1f844a168_0\", \"network_mode\": \"/proc/9797/ns/net\", \"platform_role\": \"\", \"pod_name\": \"maturity-http-65b79d96bd-zsbx9\", \"policy_mode\": \"Discover\", \"ports\": [], \"privileged\": false, \"profile_mode\": \"Discover\", \"run_as_root\": true, \"running\": true, \"scan_summary\": {\"base_os\": \"\", \"critical\": 0, \"cvedb_create_time\": \"\", \"high\": 0, \"medium\": 0, \"result\": \"\", \"scanned_at\": \"\", \"scanned_timestamp\": 0, \"scanner_version\": \"\", \"status\": \"\"}, \"secured_at\": \"2026-11-10T18:15:31Z\", \"service\": \"maturity-http.maturity-nv-check-20261110181528\", \"service_account\": \"default\", \"service_group\": \"nv.maturity-http.maturity-nv-check-20261110181528\", \"service_mesh\": false, \"service_mesh_sidecar\": false, \"share_ns_with\": \"5e982b1e271e401381f8caab778252d8d5575906a132bf176d3c6263fdb69a84\", \"started_at\": \"2026-11-10T18:15:29Z\", \"state\": \"discover\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/pods.json#/items/0",
+          "evidence": "{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generateName\": \"maturity-http-65b79d96bd-\", \"labels\": {\"app\": \"maturity-http\", \"pod-template-hash\": \"65b79d96bd\"}, \"name\": \"maturity-http-65b79d96bd-zsbx9\", \"namespace\": \"maturity-nv-check-20261110181528\", \"ownerReferences\": [{\"apiVersion\": \"apps/v1\", \"blockOwnerDeletion\": true, \"controller\": true, \"kind\": \"ReplicaSet\", \"name\": \"maturity-http-65b79d96bd\", \"uid\": \"2189ecd9-b993-4157-b2db-0972621616ef\"}], \"resourceVersion\": \"230099\", \"uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\", \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true}]}], \"dnsPolicy\": \"ClusterFirst\", \"enableServiceLinks\": true, \"nodeName\": \"maturity-baselines-control-plane\", \"preemptionPolicy\": \"PreemptLowerPriority\", \"priority\": 0, \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"serviceAccount\": \"default\", \"serviceAccountName\": \"default\", \"terminationGracePeriodSeconds\": 30, \"tolerations\": [{\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/not-ready\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}, {\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/unreachable\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}], \"volumes\": [{\"name\": \"kube-api-access-8j5hj\", \"projected\": {\"defaultMode\": 420, \"sources\": [{\"serviceAccountToken\": {\"expirationSeconds\": 3607, \"path\": \"token\"}}, {\"configMap\": {\"items\": [{\"key\": \"ca.crt\", \"path\": \"ca.crt\"}], \"name\": \"kube-root-ca.crt\"}}, {\"downwardAPI\": {\"items\": [{\"fieldRef\": {\"apiVersion\": \"v1\", \"fieldPath\": \"metadata.namespace\"}, \"path\": \"namespace\"}]}}]}}]}, \"status\": {\"conditions\": [{\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:29Z\", \"status\": \"True\", \"type\": \"PodReadyToStartContainers\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"Initialized\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"Ready\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"ContainersReady\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"PodScheduled\"}], \"containerStatuses\": [{\"containerID\": \"containerd://99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"imageID\": \"sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"lastState\": {}, \"name\": \"http\", \"ready\": true, \"restartCount\": 0, \"started\": true, \"state\": {\"running\": {\"startedAt\": \"2026-11-10T18:15:29Z\"}}, \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true, \"recursiveReadOnly\": \"Disabled\"}]}], \"hostIP\": \"172.20.0.2\", \"hostIPs\": [{\"ip\": \"172.20.0.2\"}], \"phase\": \"Running\", \"podIP\": \"10.244.0.10\", \"podIPs\": [{\"ip\": \"10.244.0.10\"}], \"qosClass\": \"Burstable\", \"startTime\": \"2026-11-10T18:15:28Z\"}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/deployment.json#",
+          "evidence": "{\"apiVersion\": \"apps/v1\", \"kind\": \"Deployment\", \"metadata\": {\"annotations\": {\"deployment.kubernetes.io/revision\": \"1\", \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"apps/v1\\\",\\\"kind\\\":\\\"Deployment\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"maturity-http\\\",\\\"namespace\\\":\\\"maturity-nv-check-20261110181528\\\"},\\\"spec\\\":{\\\"replicas\\\":1,\\\"selector\\\":{\\\"matchLabels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"template\\\":{\\\"metadata\\\":{\\\"labels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"spec\\\":{\\\"containers\\\":[{\\\"args\\\":[\\\"require('http').createServer((q,s)=\\\\u003e{s.writeHead(200);s.end('maturity-ok\\\\\\\\n')}).listen(8080,'0.0.0.0')\\\"],\\\"command\\\":[\\\"node\\\",\\\"-e\\\"],\\\"image\\\":\\\"node:22-alpine\\\",\\\"imagePullPolicy\\\":\\\"Never\\\",\\\"name\\\":\\\"http\\\",\\\"ports\\\":[{\\\"containerPort\\\":8080}],\\\"readinessProbe\\\":{\\\"httpGet\\\":{\\\"path\\\":\\\"/\\\",\\\"port\\\":8080},\\\"periodSeconds\\\":2},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"200m\\\",\\\"memory\\\":\\\"128Mi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"50m\\\",\\\"memory\\\":\\\"64Mi\\\"}},\\\"securityContext\\\":{\\\"runAsUser\\\":0}}]}}}}\\n\"}, \"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generation\": 1, \"name\": \"maturity-http\", \"namespace\": \"maturity-nv-check-20261110181528\", \"resourceVersion\": \"230101\", \"uid\": \"7d99684b-35a5-4c90-a15a-048da8b97805\"}, \"spec\": {\"progressDeadlineSeconds\": 600, \"replicas\": 1, \"revisionHistoryLimit\": 10, \"selector\": {\"matchLabels\": {\"app\": \"maturity-http\"}}, \"strategy\": {\"rollingUpdate\": {\"maxSurge\": \"25%\", \"maxUnavailable\": \"25%\"}, \"type\": \"RollingUpdate\"}, \"template\": {\"metadata\": {\"creationTimestamp\": null, \"labels\": {\"app\": \"maturity-http\"}}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\"}], \"dnsPolicy\": \"ClusterFirst\", \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"terminationGracePeriodSeconds\": 30}}}, \"status\": {\"availableReplicas\": 1, \"conditions\": [{\"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"Deployment has minimum availability.\", \"reason\": \"MinimumReplicasAvailable\", \"status\": \"True\", \"type\": \"Available\"}, {\"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"ReplicaSet \\\"maturity-http-65b79d96bd\\\" has successfully progressed.\", \"reason\": \"NewReplicaSetAvailable\", \"status\": \"True\", \"type\": \"Progressing\"}], \"observedGeneration\": 1, \"readyReplicas\": 1, \"replicas\": 1, \"updatedReplicas\": 1}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/neuvector_7d189cc5131973950903#e3cccb9b96c5",
+      "type": "Metric",
+      "name": "run_as_root",
+      "canonical_name": "[\"neuvector\",\"k8s:maturity-baselines/maturity-nv-check-20261110181528/Deployment/maturity-http\",[\"http\",\"run_as_root\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "neuvector",
+        "status": "fail",
+        "subject_key": "k8s:maturity-baselines/maturity-nv-check-20261110181528/Deployment/maturity-http",
+        "cluster": "maturity-baselines",
+        "resource_namespace": "maturity-nv-check-20261110181528",
+        "deployment": "maturity-http",
+        "deployment_uid": "7d99684b-35a5-4c90-a15a-048da8b97805",
+        "container_name": "http",
+        "container_id": "99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925",
+        "pod_name": "maturity-http-65b79d96bd-zsbx9",
+        "pod_uid": "078edf97-4cae-4354-b3e9-a0f1f844a168",
+        "image": "docker.io/library/node:22-alpine",
+        "running": true,
+        "started_at": "2026-11-10T18:15:29Z",
+        "coverage": "observed-container",
+        "binding_basis": "selected-deployment-selector-and-container-identity",
+        "run_as_root": true,
+        "occurrences": 1
+      },
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/workload.json#/workload",
+          "evidence": "{\"app_ports\": {\"TCP\": \"8080\"}, \"applications\": [\"TCP/8080\"], \"author\": \"\", \"baseline_profile\": \"basic\", \"cap_change_mode\": true, \"cap_quarantine\": true, \"cap_sniff\": true, \"children\": null, \"cpus\": \"\", \"created_at\": \"2026-11-10T18:15:29Z\", \"display_name\": \"http\", \"domain\": \"maturity-nv-check-20261110181528\", \"enforcer_id\": \"4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f\", \"enforcer_name\": \"neuvector-enforcer-pod-rzgz7\", \"exit_code\": 0, \"finished_at\": \"\", \"groups\": [\"nv.maturity-http.maturity-nv-check-20261110181528\", \"containers\"], \"has_datapath\": false, \"host_id\": \"maturity-baselines-control-plane:\", \"host_name\": \"maturity-baselines-control-plane\", \"id\": \"99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"image_created_at\": \"2026-09-23T21:09:27Z\", \"image_digest\": \"sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8\", \"image_id\": \"7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"image_reg_scanned\": false, \"image_repo_digests\": null, \"interfaces\": {\"eth0\": [{\"gateway\": \"\", \"ip\": \"10.244.0.10\", \"ip_prefix\": 24}]}, \"labels\": {\"io.cri-containerd.kind\": \"container\", \"io.kubernetes.container.name\": \"http\", \"io.kubernetes.pod.name\": \"maturity-http-65b79d96bd-zsbx9\", \"io.kubernetes.pod.namespace\": \"maturity-nv-check-20261110181528\", \"io.kubernetes.pod.uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"memory_limit\": 134217728, \"name\": \"k8s_http_maturity-http-65b79d96bd-zsbx9_maturity-nv-check-20261110181528_078edf97-4cae-4354-b3e9-a0f1f844a168_0\", \"network_mode\": \"/proc/9797/ns/net\", \"platform_role\": \"\", \"pod_name\": \"maturity-http-65b79d96bd-zsbx9\", \"policy_mode\": \"Discover\", \"ports\": [], \"privileged\": false, \"profile_mode\": \"Discover\", \"run_as_root\": true, \"running\": true, \"scan_summary\": {\"base_os\": \"\", \"critical\": 0, \"cvedb_create_time\": \"\", \"high\": 0, \"medium\": 0, \"result\": \"\", \"scanned_at\": \"\", \"scanned_timestamp\": 0, \"scanner_version\": \"\", \"status\": \"\"}, \"secured_at\": \"2026-11-10T18:15:31Z\", \"service\": \"maturity-http.maturity-nv-check-20261110181528\", \"service_account\": \"default\", \"service_group\": \"nv.maturity-http.maturity-nv-check-20261110181528\", \"service_mesh\": false, \"service_mesh_sidecar\": false, \"share_ns_with\": \"5e982b1e271e401381f8caab778252d8d5575906a132bf176d3c6263fdb69a84\", \"started_at\": \"2026-11-10T18:15:29Z\", \"state\": \"discover\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/pods.json#/items/0",
+          "evidence": "{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generateName\": \"maturity-http-65b79d96bd-\", \"labels\": {\"app\": \"maturity-http\", \"pod-template-hash\": \"65b79d96bd\"}, \"name\": \"maturity-http-65b79d96bd-zsbx9\", \"namespace\": \"maturity-nv-check-20261110181528\", \"ownerReferences\": [{\"apiVersion\": \"apps/v1\", \"blockOwnerDeletion\": true, \"controller\": true, \"kind\": \"ReplicaSet\", \"name\": \"maturity-http-65b79d96bd\", \"uid\": \"2189ecd9-b993-4157-b2db-0972621616ef\"}], \"resourceVersion\": \"230099\", \"uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\", \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true}]}], \"dnsPolicy\": \"ClusterFirst\", \"enableServiceLinks\": true, \"nodeName\": \"maturity-baselines-control-plane\", \"preemptionPolicy\": \"PreemptLowerPriority\", \"priority\": 0, \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"serviceAccount\": \"default\", \"serviceAccountName\": \"default\", \"terminationGracePeriodSeconds\": 30, \"tolerations\": [{\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/not-ready\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}, {\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/unreachable\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}], \"volumes\": [{\"name\": \"kube-api-access-8j5hj\", \"projected\": {\"defaultMode\": 420, \"sources\": [{\"serviceAccountToken\": {\"expirationSeconds\": 3607, \"path\": \"token\"}}, {\"configMap\": {\"items\": [{\"key\": \"ca.crt\", \"path\": \"ca.crt\"}], \"name\": \"kube-root-ca.crt\"}}, {\"downwardAPI\": {\"items\": [{\"fieldRef\": {\"apiVersion\": \"v1\", \"fieldPath\": \"metadata.namespace\"}, \"path\": \"namespace\"}]}}]}}]}, \"status\": {\"conditions\": [{\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:29Z\", \"status\": \"True\", \"type\": \"PodReadyToStartContainers\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"Initialized\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"Ready\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"ContainersReady\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"PodScheduled\"}], \"containerStatuses\": [{\"containerID\": \"containerd://99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"imageID\": \"sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"lastState\": {}, \"name\": \"http\", \"ready\": true, \"restartCount\": 0, \"started\": true, \"state\": {\"running\": {\"startedAt\": \"2026-11-10T18:15:29Z\"}}, \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true, \"recursiveReadOnly\": \"Disabled\"}]}], \"hostIP\": \"172.20.0.2\", \"hostIPs\": [{\"ip\": \"172.20.0.2\"}], \"phase\": \"Running\", \"podIP\": \"10.244.0.10\", \"podIPs\": [{\"ip\": \"10.244.0.10\"}], \"qosClass\": \"Burstable\", \"startTime\": \"2026-11-10T18:15:28Z\"}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/deployment.json#",
+          "evidence": "{\"apiVersion\": \"apps/v1\", \"kind\": \"Deployment\", \"metadata\": {\"annotations\": {\"deployment.kubernetes.io/revision\": \"1\", \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"apps/v1\\\",\\\"kind\\\":\\\"Deployment\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"maturity-http\\\",\\\"namespace\\\":\\\"maturity-nv-check-20261110181528\\\"},\\\"spec\\\":{\\\"replicas\\\":1,\\\"selector\\\":{\\\"matchLabels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"template\\\":{\\\"metadata\\\":{\\\"labels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"spec\\\":{\\\"containers\\\":[{\\\"args\\\":[\\\"require('http').createServer((q,s)=\\\\u003e{s.writeHead(200);s.end('maturity-ok\\\\\\\\n')}).listen(8080,'0.0.0.0')\\\"],\\\"command\\\":[\\\"node\\\",\\\"-e\\\"],\\\"image\\\":\\\"node:22-alpine\\\",\\\"imagePullPolicy\\\":\\\"Never\\\",\\\"name\\\":\\\"http\\\",\\\"ports\\\":[{\\\"containerPort\\\":8080}],\\\"readinessProbe\\\":{\\\"httpGet\\\":{\\\"path\\\":\\\"/\\\",\\\"port\\\":8080},\\\"periodSeconds\\\":2},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"200m\\\",\\\"memory\\\":\\\"128Mi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"50m\\\",\\\"memory\\\":\\\"64Mi\\\"}},\\\"securityContext\\\":{\\\"runAsUser\\\":0}}]}}}}\\n\"}, \"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generation\": 1, \"name\": \"maturity-http\", \"namespace\": \"maturity-nv-check-20261110181528\", \"resourceVersion\": \"230101\", \"uid\": \"7d99684b-35a5-4c90-a15a-048da8b97805\"}, \"spec\": {\"progressDeadlineSeconds\": 600, \"replicas\": 1, \"revisionHistoryLimit\": 10, \"selector\": {\"matchLabels\": {\"app\": \"maturity-http\"}}, \"strategy\": {\"rollingUpdate\": {\"maxSurge\": \"25%\", \"maxUnavailable\": \"25%\"}, \"type\": \"RollingUpdate\"}, \"template\": {\"metadata\": {\"creationTimestamp\": null, \"labels\": {\"app\": \"maturity-http\"}}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\"}], \"dnsPolicy\": \"ClusterFirst\", \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"terminationGracePeriodSeconds\": 30}}}, \"status\": {\"availableReplicas\": 1, \"conditions\": [{\"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"Deployment has minimum availability.\", \"reason\": \"MinimumReplicasAvailable\", \"status\": \"True\", \"type\": \"Available\"}, {\"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"ReplicaSet \\\"maturity-http-65b79d96bd\\\" has successfully progressed.\", \"reason\": \"NewReplicaSetAvailable\", \"status\": \"True\", \"type\": \"Progressing\"}], \"observedGeneration\": 1, \"readyReplicas\": 1, \"replicas\": 1, \"updatedReplicas\": 1}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/neuvector_1d13098c7bdabccf7fb9#7f9487586996",
+      "type": "Metric",
+      "name": "privileged",
+      "canonical_name": "[\"neuvector\",\"k8s:maturity-baselines/maturity-nv-check-20261110181528/Deployment/maturity-http\",[\"http\",\"privileged\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "neuvector",
+        "status": "pass",
+        "subject_key": "k8s:maturity-baselines/maturity-nv-check-20261110181528/Deployment/maturity-http",
+        "cluster": "maturity-baselines",
+        "resource_namespace": "maturity-nv-check-20261110181528",
+        "deployment": "maturity-http",
+        "deployment_uid": "7d99684b-35a5-4c90-a15a-048da8b97805",
+        "container_name": "http",
+        "container_id": "99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925",
+        "pod_name": "maturity-http-65b79d96bd-zsbx9",
+        "pod_uid": "078edf97-4cae-4354-b3e9-a0f1f844a168",
+        "image": "docker.io/library/node:22-alpine",
+        "running": true,
+        "started_at": "2026-11-10T18:15:29Z",
+        "coverage": "observed-container",
+        "binding_basis": "selected-deployment-selector-and-container-identity",
+        "privileged": false,
+        "occurrences": 0
+      },
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/workload.json#/workload",
+          "evidence": "{\"app_ports\": {\"TCP\": \"8080\"}, \"applications\": [\"TCP/8080\"], \"author\": \"\", \"baseline_profile\": \"basic\", \"cap_change_mode\": true, \"cap_quarantine\": true, \"cap_sniff\": true, \"children\": null, \"cpus\": \"\", \"created_at\": \"2026-11-10T18:15:29Z\", \"display_name\": \"http\", \"domain\": \"maturity-nv-check-20261110181528\", \"enforcer_id\": \"4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f\", \"enforcer_name\": \"neuvector-enforcer-pod-rzgz7\", \"exit_code\": 0, \"finished_at\": \"\", \"groups\": [\"nv.maturity-http.maturity-nv-check-20261110181528\", \"containers\"], \"has_datapath\": false, \"host_id\": \"maturity-baselines-control-plane:\", \"host_name\": \"maturity-baselines-control-plane\", \"id\": \"99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"image_created_at\": \"2026-09-23T21:09:27Z\", \"image_digest\": \"sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8\", \"image_id\": \"7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"image_reg_scanned\": false, \"image_repo_digests\": null, \"interfaces\": {\"eth0\": [{\"gateway\": \"\", \"ip\": \"10.244.0.10\", \"ip_prefix\": 24}]}, \"labels\": {\"io.cri-containerd.kind\": \"container\", \"io.kubernetes.container.name\": \"http\", \"io.kubernetes.pod.name\": \"maturity-http-65b79d96bd-zsbx9\", \"io.kubernetes.pod.namespace\": \"maturity-nv-check-20261110181528\", \"io.kubernetes.pod.uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"memory_limit\": 134217728, \"name\": \"k8s_http_maturity-http-65b79d96bd-zsbx9_maturity-nv-check-20261110181528_078edf97-4cae-4354-b3e9-a0f1f844a168_0\", \"network_mode\": \"/proc/9797/ns/net\", \"platform_role\": \"\", \"pod_name\": \"maturity-http-65b79d96bd-zsbx9\", \"policy_mode\": \"Discover\", \"ports\": [], \"privileged\": false, \"profile_mode\": \"Discover\", \"run_as_root\": true, \"running\": true, \"scan_summary\": {\"base_os\": \"\", \"critical\": 0, \"cvedb_create_time\": \"\", \"high\": 0, \"medium\": 0, \"result\": \"\", \"scanned_at\": \"\", \"scanned_timestamp\": 0, \"scanner_version\": \"\", \"status\": \"\"}, \"secured_at\": \"2026-11-10T18:15:31Z\", \"service\": \"maturity-http.maturity-nv-check-20261110181528\", \"service_account\": \"default\", \"service_group\": \"nv.maturity-http.maturity-nv-check-20261110181528\", \"service_mesh\": false, \"service_mesh_sidecar\": false, \"share_ns_with\": \"5e982b1e271e401381f8caab778252d8d5575906a132bf176d3c6263fdb69a84\", \"started_at\": \"2026-11-10T18:15:29Z\", \"state\": \"discover\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "pass"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/pods.json#/items/0",
+          "evidence": "{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generateName\": \"maturity-http-65b79d96bd-\", \"labels\": {\"app\": \"maturity-http\", \"pod-template-hash\": \"65b79d96bd\"}, \"name\": \"maturity-http-65b79d96bd-zsbx9\", \"namespace\": \"maturity-nv-check-20261110181528\", \"ownerReferences\": [{\"apiVersion\": \"apps/v1\", \"blockOwnerDeletion\": true, \"controller\": true, \"kind\": \"ReplicaSet\", \"name\": \"maturity-http-65b79d96bd\", \"uid\": \"2189ecd9-b993-4157-b2db-0972621616ef\"}], \"resourceVersion\": \"230099\", \"uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\", \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true}]}], \"dnsPolicy\": \"ClusterFirst\", \"enableServiceLinks\": true, \"nodeName\": \"maturity-baselines-control-plane\", \"preemptionPolicy\": \"PreemptLowerPriority\", \"priority\": 0, \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"serviceAccount\": \"default\", \"serviceAccountName\": \"default\", \"terminationGracePeriodSeconds\": 30, \"tolerations\": [{\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/not-ready\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}, {\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/unreachable\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}], \"volumes\": [{\"name\": \"kube-api-access-8j5hj\", \"projected\": {\"defaultMode\": 420, \"sources\": [{\"serviceAccountToken\": {\"expirationSeconds\": 3607, \"path\": \"token\"}}, {\"configMap\": {\"items\": [{\"key\": \"ca.crt\", \"path\": \"ca.crt\"}], \"name\": \"kube-root-ca.crt\"}}, {\"downwardAPI\": {\"items\": [{\"fieldRef\": {\"apiVersion\": \"v1\", \"fieldPath\": \"metadata.namespace\"}, \"path\": \"namespace\"}]}}]}}]}, \"status\": {\"conditions\": [{\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:29Z\", \"status\": \"True\", \"type\": \"PodReadyToStartContainers\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"Initialized\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"Ready\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"ContainersReady\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"PodScheduled\"}], \"containerStatuses\": [{\"containerID\": \"containerd://99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"imageID\": \"sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"lastState\": {}, \"name\": \"http\", \"ready\": true, \"restartCount\": 0, \"started\": true, \"state\": {\"running\": {\"startedAt\": \"2026-11-10T18:15:29Z\"}}, \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true, \"recursiveReadOnly\": \"Disabled\"}]}], \"hostIP\": \"172.20.0.2\", \"hostIPs\": [{\"ip\": \"172.20.0.2\"}], \"phase\": \"Running\", \"podIP\": \"10.244.0.10\", \"podIPs\": [{\"ip\": \"10.244.0.10\"}], \"qosClass\": \"Burstable\", \"startTime\": \"2026-11-10T18:15:28Z\"}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "pass"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/deployment.json#",
+          "evidence": "{\"apiVersion\": \"apps/v1\", \"kind\": \"Deployment\", \"metadata\": {\"annotations\": {\"deployment.kubernetes.io/revision\": \"1\", \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"apps/v1\\\",\\\"kind\\\":\\\"Deployment\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"maturity-http\\\",\\\"namespace\\\":\\\"maturity-nv-check-20261110181528\\\"},\\\"spec\\\":{\\\"replicas\\\":1,\\\"selector\\\":{\\\"matchLabels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"template\\\":{\\\"metadata\\\":{\\\"labels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"spec\\\":{\\\"containers\\\":[{\\\"args\\\":[\\\"require('http').createServer((q,s)=\\\\u003e{s.writeHead(200);s.end('maturity-ok\\\\\\\\n')}).listen(8080,'0.0.0.0')\\\"],\\\"command\\\":[\\\"node\\\",\\\"-e\\\"],\\\"image\\\":\\\"node:22-alpine\\\",\\\"imagePullPolicy\\\":\\\"Never\\\",\\\"name\\\":\\\"http\\\",\\\"ports\\\":[{\\\"containerPort\\\":8080}],\\\"readinessProbe\\\":{\\\"httpGet\\\":{\\\"path\\\":\\\"/\\\",\\\"port\\\":8080},\\\"periodSeconds\\\":2},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"200m\\\",\\\"memory\\\":\\\"128Mi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"50m\\\",\\\"memory\\\":\\\"64Mi\\\"}},\\\"securityContext\\\":{\\\"runAsUser\\\":0}}]}}}}\\n\"}, \"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generation\": 1, \"name\": \"maturity-http\", \"namespace\": \"maturity-nv-check-20261110181528\", \"resourceVersion\": \"230101\", \"uid\": \"7d99684b-35a5-4c90-a15a-048da8b97805\"}, \"spec\": {\"progressDeadlineSeconds\": 600, \"replicas\": 1, \"revisionHistoryLimit\": 10, \"selector\": {\"matchLabels\": {\"app\": \"maturity-http\"}}, \"strategy\": {\"rollingUpdate\": {\"maxSurge\": \"25%\", \"maxUnavailable\": \"25%\"}, \"type\": \"RollingUpdate\"}, \"template\": {\"metadata\": {\"creationTimestamp\": null, \"labels\": {\"app\": \"maturity-http\"}}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\"}], \"dnsPolicy\": \"ClusterFirst\", \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"terminationGracePeriodSeconds\": 30}}}, \"status\": {\"availableReplicas\": 1, \"conditions\": [{\"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"Deployment has minimum availability.\", \"reason\": \"MinimumReplicasAvailable\", \"status\": \"True\", \"type\": \"Available\"}, {\"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"ReplicaSet \\\"maturity-http-65b79d96bd\\\" has successfully progressed.\", \"reason\": \"NewReplicaSetAvailable\", \"status\": \"True\", \"type\": \"Progressing\"}], \"observedGeneration\": 1, \"readyReplicas\": 1, \"replicas\": 1, \"updatedReplicas\": 1}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "pass"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Infrastructure/k8s:maturity-baselines#2f7eee8cdb1d",
+      "type": "Infrastructure",
+      "name": "k8s:maturity-baselines",
+      "canonical_name": "k8s:maturity-baselines",
+      "namespace": "maturity-commercial",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/score-metrics.json#/security_scores",
+          "evidence": "{\"admission_rule_score\": 4, \"exposure_score\": 2, \"exposure_score_by_100\": 5, \"new_service_mode_score\": 4, \"privileged_container_score\": 4, \"run_as_root_score\": 4, \"security_risk_score\": 44, \"service_mode_score\": 26, \"service_mode_score_by_100\": 100, \"vulnerability_score\": 0, \"vulnerability_score_by_100\": 0}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "id": "Metric/neuvector_192c7dd08bd769434a8b#c166ddc47ad4",
+      "type": "Metric",
+      "name": "security_risk_score",
+      "canonical_name": "[\"neuvector\",\"k8s:maturity-baselines\",[\"security_risk_score\"]]",
+      "namespace": "maturity-commercial",
+      "attributes": {
+        "baseline": "neuvector",
+        "status": "measured",
+        "subject_key": "k8s:maturity-baselines",
+        "cluster": "maturity-baselines",
+        "coverage": "cluster-overview",
+        "admission_rule_score": 4,
+        "exposure_score": 2,
+        "exposure_score_by_100": 5,
+        "new_service_mode_score": 4,
+        "privileged_container_score": 4,
+        "run_as_root_score": 4,
+        "security_risk_score": 44,
+        "service_mode_score": 26,
+        "service_mode_score_by_100": 100,
+        "vulnerability_score": 0,
+        "vulnerability_score_by_100": 0
+      },
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/score-metrics.json#/security_scores",
+          "evidence": "{\"admission_rule_score\": 4, \"exposure_score\": 2, \"exposure_score_by_100\": 5, \"new_service_mode_score\": 4, \"privileged_container_score\": 4, \"run_as_root_score\": 4, \"security_risk_score\": 44, \"service_mode_score\": 26, \"service_mode_score_by_100\": 100, \"vulnerability_score\": 0, \"vulnerability_score_by_100\": 0}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "Module/appcat:.:<project>#233e45d26b6f",
+      "target": "Metric/appcat_8bcd70db16983145bfd5#7aeba2d1f75c",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/2",
+          "evidence": "{\"incidentId\": \"df31d57d-bdd6-49b6-b197-4a7b40f82549\", \"labels\": [\"type=violation\", \"ruleset=cloud-readiness\"], \"location\": \"\", \"locationKind\": \"\", \"ruleId\": \"dockerfile-00000\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"mandatory\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/dockerfile-00000",
+          "evidence": "{\"description\": \"No Dockerfile was found in the project. This suggests the application may not yet be containerized. \\nConsider creating a Dockerfile to enable container-based replatforming to Azure services such as Azure Container Apps or AKS.\", \"effort\": 3, \"id\": \"dockerfile-00000\", \"labels\": [\"target=azure-aks\", \"target=azure-container-apps\", \"capability=containerization\", \"source\", \"domain=cloud-readiness\", \"category=containerization\", \"containerization\", \"os=windows\", \"os=linux\"], \"links\": [{\"title\": \"Dockerizing a Java Application\", \"url\": \"https://www.baeldung.com/java-dockerize-app\"}], \"severity\": \"mandatory\", \"title\": \"No Dockerfile found\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Module/appcat:.:pom.xml#c200dfe42a8b",
+      "target": "Metric/appcat_6079f94cd96acc171ad5#8d513f324d43",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/0",
+          "evidence": "{\"column\": 0, \"incidentId\": \"787a15cf-ba4d-4508-97fc-813a787ae572\", \"labels\": [\"type=violation\", \"ruleset=azure/springboot\"], \"line\": 8, \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"azure-java-version-02000\", \"snippet\": \"  1  <project xmlns=\\\"http://maven.apache.org/POM/4.0.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"\\n  2           xsi:schemaLocation=\\\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\\\">\\n  3    <modelVersion>4.0.0</modelVersion>\\n  4    <groupId>com.example</groupId>\\n  5    <artifactId>cloud-audit</artifactId>\\n  6    <version>1.0.0</version>\\n  7    <properties>\\n  8      <maven.compiler.source>17</maven.compiler.source>\\n  9      <maven.compiler.target>17</maven.compiler.target>\\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\\n 11    </properties>\\n 12  </project>\\n\", \"targets\": {\"azure-aks\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-appservice\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-container-apps\": {\"effort\": 8, \"severity\": \"optional\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/1",
+          "evidence": "{\"column\": 0, \"incidentId\": \"318cc67c-fa5c-4844-bc65-6c5c5ceb11e4\", \"labels\": [\"type=violation\", \"ruleset=azure/springboot\"], \"line\": 9, \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"azure-java-version-02000\", \"snippet\": \"  1  <project xmlns=\\\"http://maven.apache.org/POM/4.0.0\\\" xmlns:xsi=\\\"http://www.w3.org/2001/XMLSchema-instance\\\"\\n  2           xsi:schemaLocation=\\\"http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd\\\">\\n  3    <modelVersion>4.0.0</modelVersion>\\n  4    <groupId>com.example</groupId>\\n  5    <artifactId>cloud-audit</artifactId>\\n  6    <version>1.0.0</version>\\n  7    <properties>\\n  8      <maven.compiler.source>17</maven.compiler.source>\\n  9      <maven.compiler.target>17</maven.compiler.target>\\n 10      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>\\n 11    </properties>\\n 12  </project>\\n\", \"targets\": {\"azure-aks\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-appservice\": {\"effort\": 8, \"severity\": \"optional\"}, \"azure-container-apps\": {\"effort\": 8, \"severity\": \"optional\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/azure-java-version-02000",
+          "evidence": "{\"description\": \"The application is not using the latest LTS Java version. It is recommended to consider upgrading to the latest LTS version to take advantage of the newest language features, performance improvements, and extended support timelines.\\nUpgrading to the latest LTS version ensures your application benefits from the most recent security enhancements and a longer support lifecycle.\", \"effort\": 8, \"id\": \"azure-java-version-02000\", \"labels\": [\"target=azure-appservice\", \"target=azure-aks\", \"target=azure-container-apps\", \"source\", \"domain=java-upgrade\", \"category=java-version-upgrade\", \"version\", \"os=windows\", \"os=linux\"], \"severity\": \"optional\", \"title\": \"Java Version is not the latest LTS\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Module/appcat:.:pom.xml#c200dfe42a8b",
+      "target": "Metric/appcat_85f96f997b1853f98099#1f9740d88680",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/5",
+          "evidence": "{\"incidentId\": \"159ec3ef-b976-4ca5-8a3a-990b22ea7602\", \"labels\": [\"type=insight\", \"ruleset=discovery-rules\"], \"location\": \"pom.xml\", \"locationKind\": \"File\", \"ruleId\": \"discover-maven-xml\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/discover-maven-xml",
+          "evidence": "{\"description\": \"\", \"effort\": 0, \"id\": \"discover-maven-xml\", \"labels\": [\"discovery\", \"tag=Maven XML\"], \"severity\": \"information\", \"title\": \"Maven XML file\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Module/appcat:.:src_main_java_com_example_CloudAudit.java#eb0b66e2ad80",
+      "target": "Metric/appcat_1f8e3bfa4e09cfdba349#98a06edd4117",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/4",
+          "evidence": "{\"incidentId\": \"b73a3444-9338-48ac-ad62-d8f979cf696d\", \"labels\": [\"type=insight\", \"ruleset=discovery-rules\"], \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"discover-java-files\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/discover-java-files",
+          "evidence": "{\"description\": \"\", \"effort\": 0, \"id\": \"discover-java-files\", \"labels\": [\"discovery\", \"tag=Java Source\"], \"severity\": \"information\", \"title\": \"Java source files\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Module/appcat:.:src_main_java_com_example_CloudAudit.java#eb0b66e2ad80",
+      "target": "Metric/appcat_7ccd8544e264a3eed8bf#b78b88ee8490",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/3",
+          "evidence": "{\"column\": 0, \"incidentId\": \"885ee1a4-bcb5-440e-9bdf-f40084fa0cba\", \"labels\": [\"type=violation\", \"ruleset=cloud-readiness\"], \"line\": 3, \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"local-storage-00001\", \"snippet\": \"  1  package com.example;\\n  2  \\n  3  import java.io.FileWriter;\\n  4  import java.io.IOException;\\n  5  \\n  6  public class CloudAudit {\\n  7      public String createOrder(String item, int quantity) throws IOException {\\n  8          if (quantity <= 0) throw new IllegalArgumentException(\\\"quantity\\\");\\n  9          String order = \\\"ORD-\\\" + item + \\\"-\\\" + quantity;\\n 10          try (FileWriter audit = new FileWriter(\\\"orders.log\\\", true)) {\\n 11              audit.write(\\\"AUDIT \\\" + order + System.lineSeparator());\\n 12          }\\n 13          return order;\\n 14      }\\n 15  }\\n\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-appservice\": {\"effort\": 3, \"severity\": \"mandatory\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"mandatory\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/local-storage-00001",
+          "evidence": "{\"description\": \"When migrating an application that relies on the file system to Azure, it's important to consider the limitations of local storage in a cloud environment.\\n An application running inside a container could lose access to a file in local storage.\\n\\n The following recommendations depend on the function of the file in local storage:\\n * Determine the **storage needs** for your application: Ephemeral storage or persistent storage. Ephemeral storage only persists until the cloud environment is restarted. Persistent storage is required for data that needs to persist across restarts.\\n \\n * If persistent storage is needed, consider **mounting Azure File Share** or **using Azure Blob Storage**. Mount Azure file share allows your application to access files via the mount location. Azure blob storage is a scalable object store for data objects, such as text or binary files.\\n\\n * **Logging**: Log to standard output and use Azure Monitor to collect and analyze the logs.\\n\\n * **Caching**: Use Azure Managed Redis as a cache backing service.\\n\\n * **Configuration**: Store configuration in Azure App Configuration instead of using the file system. Also store configuration settings in environment variables so that they can be updated without code changes.\", \"effort\": 3, \"id\": \"local-storage-00001\", \"labels\": [\"target=azure-aks\", \"target=azure-container-apps\", \"target=azure-appservice\", \"capability=containerization\", \"source\", \"domain=cloud-readiness\", \"category=file-system-management\", \"storage\", \"containerization\", \"os=windows\", \"os=linux\"], \"links\": [{\"title\": \"Azure Storage documentation\", \"url\": \"https://learn.microsoft.com/azure/storage\"}, {\"title\": \"Create an Azure Files volume mount in Azure Container Apps\", \"url\": \"https://learn.microsoft.com/azure/container-apps/storage-mounts-azure-files\"}, {\"title\": \"Use storage mounts in Azure Container Apps\", \"url\": \"https://learn.microsoft.com/azure/container-apps/storage-mounts\"}, {\"title\": \"Azure Monitor Logs overview\", \"url\": \"https://learn.microsoft.com/azure/azure-monitor/logs/data-platform-logs\"}, {\"title\": \"Azure Cache for Redis documentation\", \"url\": \"https://learn.microsoft.com/azure/azure-cache-for-redis\"}, {\"title\": \"Azure App Configuration documentation\", \"url\": \"https://learn.microsoft.com/azure/azure-app-configuration\"}], \"severity\": \"mandatory\", \"title\": \"File system - Java IO\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Module/appcat:.:src_main_java_com_example_CloudAudit.java#eb0b66e2ad80",
+      "target": "Metric/appcat_6c396601dd633ed62cb5#a526f1094ae7",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/projects/0/incidents/6",
+          "evidence": "{\"column\": 0, \"incidentId\": \"4a9df596-cbc9-4fff-95e6-7c23aeb07965\", \"labels\": [\"type=violation\", \"ruleset=openjdk21/openjdk17\"], \"line\": 10, \"location\": \"src/main/java/com/example/CloudAudit.java\", \"locationKind\": \"File\", \"ruleId\": \"utf-8-by-default-00000\", \"snippet\": \"  1  package com.example;\\n  2  \\n  3  import java.io.FileWriter;\\n  4  import java.io.IOException;\\n  5  \\n  6  public class CloudAudit {\\n  7      public String createOrder(String item, int quantity) throws IOException {\\n  8          if (quantity <= 0) throw new IllegalArgumentException(\\\"quantity\\\");\\n  9          String order = \\\"ORD-\\\" + item + \\\"-\\\" + quantity;\\n 10          try (FileWriter audit = new FileWriter(\\\"orders.log\\\", true)) {\\n 11              audit.write(\\\"AUDIT \\\" + order + System.lineSeparator());\\n 12          }\\n 13          return order;\\n 14      }\\n 15  }\\n\", \"targets\": {\"azure-aks\": {\"effort\": 3, \"severity\": \"potential\"}, \"azure-appservice\": {\"effort\": 3, \"severity\": \"potential\"}, \"azure-container-apps\": {\"effort\": 3, \"severity\": \"potential\"}}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/rules/utf-8-by-default-00000",
+          "evidence": "{\"description\": \"If not supplied, the `java.io.{{className}}` constructor uses UTF-8 by default. \\n If you haven't provided the character set, and UTF-8 is not appropriate for your class, then supply the appropriate character set to the constructor call.\", \"effort\": 3, \"id\": \"utf-8-by-default-00000\", \"labels\": [\"capability=openjdk18+\", \"capability=openjdk\", \"source\", \"domain=cloud-readiness\", \"category=default-encoding\", \"os=windows\", \"os=linux\", \"target=azure-appservice\", \"target=azure-aks\", \"target=azure-container-apps\"], \"links\": [{\"title\": \"JEP 400: UTF-8 by Default\", \"url\": \"https://openjdk.org/jeps/400\"}], \"severity\": \"potential\", \"title\": \"The 'java.io' constructor defaults to UTF-8\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "candidate"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Module/appcat:analysis#d4dcc369b05f",
+      "target": "Metric/appcat_ea963cc2011cbbec5648#743eec46a36c",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/summary",
+          "evidence": "{\"charts\": {\"category\": {\"containerization\": 1, \"default-encoding\": 1, \"file-system-management\": 1, \"java-version-upgrade\": 2}, \"severity\": {\"information\": 2, \"mandatory\": 2, \"optional\": 2, \"potential\": 1}}, \"totalEffort\": 25, \"totalIncidents\": 7, \"totalIssues\": 6, \"totalProjects\": 1}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "source_code",
+          "source_id": "results/commercial/appcat/20261111-paired/before/report.json#/metadata",
+          "evidence": "{\"analysisEndTime\": \"2026-11-10T18:09:23.3697823Z\", \"analysisStartTime\": \"2026-11-10T18:08:41.5389259Z\", \"capabilities\": [], \"os\": [], \"privacyMode\": \"Unrestricted\", \"privacyModeHelpUrl\": \"https://aka.ms/appcat-privacy-mode\", \"status\": \"Complete\", \"targetDisplayNames\": [\"Azure Kubernetes Service\"], \"targetIds\": [\"azure-aks\"]}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "appcat",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Deployment/k8s:maturity-baselines_maturity-nv-check-20261110181528_Deployment_maturity-http#21d03ca41b95",
+      "target": "Metric/neuvector_7d189cc5131973950903#e3cccb9b96c5",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/workload.json#/workload",
+          "evidence": "{\"app_ports\": {\"TCP\": \"8080\"}, \"applications\": [\"TCP/8080\"], \"author\": \"\", \"baseline_profile\": \"basic\", \"cap_change_mode\": true, \"cap_quarantine\": true, \"cap_sniff\": true, \"children\": null, \"cpus\": \"\", \"created_at\": \"2026-11-10T18:15:29Z\", \"display_name\": \"http\", \"domain\": \"maturity-nv-check-20261110181528\", \"enforcer_id\": \"4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f\", \"enforcer_name\": \"neuvector-enforcer-pod-rzgz7\", \"exit_code\": 0, \"finished_at\": \"\", \"groups\": [\"nv.maturity-http.maturity-nv-check-20261110181528\", \"containers\"], \"has_datapath\": false, \"host_id\": \"maturity-baselines-control-plane:\", \"host_name\": \"maturity-baselines-control-plane\", \"id\": \"99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"image_created_at\": \"2026-09-23T21:09:27Z\", \"image_digest\": \"sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8\", \"image_id\": \"7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"image_reg_scanned\": false, \"image_repo_digests\": null, \"interfaces\": {\"eth0\": [{\"gateway\": \"\", \"ip\": \"10.244.0.10\", \"ip_prefix\": 24}]}, \"labels\": {\"io.cri-containerd.kind\": \"container\", \"io.kubernetes.container.name\": \"http\", \"io.kubernetes.pod.name\": \"maturity-http-65b79d96bd-zsbx9\", \"io.kubernetes.pod.namespace\": \"maturity-nv-check-20261110181528\", \"io.kubernetes.pod.uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"memory_limit\": 134217728, \"name\": \"k8s_http_maturity-http-65b79d96bd-zsbx9_maturity-nv-check-20261110181528_078edf97-4cae-4354-b3e9-a0f1f844a168_0\", \"network_mode\": \"/proc/9797/ns/net\", \"platform_role\": \"\", \"pod_name\": \"maturity-http-65b79d96bd-zsbx9\", \"policy_mode\": \"Discover\", \"ports\": [], \"privileged\": false, \"profile_mode\": \"Discover\", \"run_as_root\": true, \"running\": true, \"scan_summary\": {\"base_os\": \"\", \"critical\": 0, \"cvedb_create_time\": \"\", \"high\": 0, \"medium\": 0, \"result\": \"\", \"scanned_at\": \"\", \"scanned_timestamp\": 0, \"scanner_version\": \"\", \"status\": \"\"}, \"secured_at\": \"2026-11-10T18:15:31Z\", \"service\": \"maturity-http.maturity-nv-check-20261110181528\", \"service_account\": \"default\", \"service_group\": \"nv.maturity-http.maturity-nv-check-20261110181528\", \"service_mesh\": false, \"service_mesh_sidecar\": false, \"share_ns_with\": \"5e982b1e271e401381f8caab778252d8d5575906a132bf176d3c6263fdb69a84\", \"started_at\": \"2026-11-10T18:15:29Z\", \"state\": \"discover\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/pods.json#/items/0",
+          "evidence": "{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generateName\": \"maturity-http-65b79d96bd-\", \"labels\": {\"app\": \"maturity-http\", \"pod-template-hash\": \"65b79d96bd\"}, \"name\": \"maturity-http-65b79d96bd-zsbx9\", \"namespace\": \"maturity-nv-check-20261110181528\", \"ownerReferences\": [{\"apiVersion\": \"apps/v1\", \"blockOwnerDeletion\": true, \"controller\": true, \"kind\": \"ReplicaSet\", \"name\": \"maturity-http-65b79d96bd\", \"uid\": \"2189ecd9-b993-4157-b2db-0972621616ef\"}], \"resourceVersion\": \"230099\", \"uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\", \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true}]}], \"dnsPolicy\": \"ClusterFirst\", \"enableServiceLinks\": true, \"nodeName\": \"maturity-baselines-control-plane\", \"preemptionPolicy\": \"PreemptLowerPriority\", \"priority\": 0, \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"serviceAccount\": \"default\", \"serviceAccountName\": \"default\", \"terminationGracePeriodSeconds\": 30, \"tolerations\": [{\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/not-ready\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}, {\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/unreachable\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}], \"volumes\": [{\"name\": \"kube-api-access-8j5hj\", \"projected\": {\"defaultMode\": 420, \"sources\": [{\"serviceAccountToken\": {\"expirationSeconds\": 3607, \"path\": \"token\"}}, {\"configMap\": {\"items\": [{\"key\": \"ca.crt\", \"path\": \"ca.crt\"}], \"name\": \"kube-root-ca.crt\"}}, {\"downwardAPI\": {\"items\": [{\"fieldRef\": {\"apiVersion\": \"v1\", \"fieldPath\": \"metadata.namespace\"}, \"path\": \"namespace\"}]}}]}}]}, \"status\": {\"conditions\": [{\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:29Z\", \"status\": \"True\", \"type\": \"PodReadyToStartContainers\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"Initialized\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"Ready\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"ContainersReady\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"PodScheduled\"}], \"containerStatuses\": [{\"containerID\": \"containerd://99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"imageID\": \"sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"lastState\": {}, \"name\": \"http\", \"ready\": true, \"restartCount\": 0, \"started\": true, \"state\": {\"running\": {\"startedAt\": \"2026-11-10T18:15:29Z\"}}, \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true, \"recursiveReadOnly\": \"Disabled\"}]}], \"hostIP\": \"172.20.0.2\", \"hostIPs\": [{\"ip\": \"172.20.0.2\"}], \"phase\": \"Running\", \"podIP\": \"10.244.0.10\", \"podIPs\": [{\"ip\": \"10.244.0.10\"}], \"qosClass\": \"Burstable\", \"startTime\": \"2026-11-10T18:15:28Z\"}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/deployment.json#",
+          "evidence": "{\"apiVersion\": \"apps/v1\", \"kind\": \"Deployment\", \"metadata\": {\"annotations\": {\"deployment.kubernetes.io/revision\": \"1\", \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"apps/v1\\\",\\\"kind\\\":\\\"Deployment\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"maturity-http\\\",\\\"namespace\\\":\\\"maturity-nv-check-20261110181528\\\"},\\\"spec\\\":{\\\"replicas\\\":1,\\\"selector\\\":{\\\"matchLabels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"template\\\":{\\\"metadata\\\":{\\\"labels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"spec\\\":{\\\"containers\\\":[{\\\"args\\\":[\\\"require('http').createServer((q,s)=\\\\u003e{s.writeHead(200);s.end('maturity-ok\\\\\\\\n')}).listen(8080,'0.0.0.0')\\\"],\\\"command\\\":[\\\"node\\\",\\\"-e\\\"],\\\"image\\\":\\\"node:22-alpine\\\",\\\"imagePullPolicy\\\":\\\"Never\\\",\\\"name\\\":\\\"http\\\",\\\"ports\\\":[{\\\"containerPort\\\":8080}],\\\"readinessProbe\\\":{\\\"httpGet\\\":{\\\"path\\\":\\\"/\\\",\\\"port\\\":8080},\\\"periodSeconds\\\":2},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"200m\\\",\\\"memory\\\":\\\"128Mi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"50m\\\",\\\"memory\\\":\\\"64Mi\\\"}},\\\"securityContext\\\":{\\\"runAsUser\\\":0}}]}}}}\\n\"}, \"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generation\": 1, \"name\": \"maturity-http\", \"namespace\": \"maturity-nv-check-20261110181528\", \"resourceVersion\": \"230101\", \"uid\": \"7d99684b-35a5-4c90-a15a-048da8b97805\"}, \"spec\": {\"progressDeadlineSeconds\": 600, \"replicas\": 1, \"revisionHistoryLimit\": 10, \"selector\": {\"matchLabels\": {\"app\": \"maturity-http\"}}, \"strategy\": {\"rollingUpdate\": {\"maxSurge\": \"25%\", \"maxUnavailable\": \"25%\"}, \"type\": \"RollingUpdate\"}, \"template\": {\"metadata\": {\"creationTimestamp\": null, \"labels\": {\"app\": \"maturity-http\"}}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\"}], \"dnsPolicy\": \"ClusterFirst\", \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"terminationGracePeriodSeconds\": 30}}}, \"status\": {\"availableReplicas\": 1, \"conditions\": [{\"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"Deployment has minimum availability.\", \"reason\": \"MinimumReplicasAvailable\", \"status\": \"True\", \"type\": \"Available\"}, {\"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"ReplicaSet \\\"maturity-http-65b79d96bd\\\" has successfully progressed.\", \"reason\": \"NewReplicaSetAvailable\", \"status\": \"True\", \"type\": \"Progressing\"}], \"observedGeneration\": 1, \"readyReplicas\": 1, \"replicas\": 1, \"updatedReplicas\": 1}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "fail"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Deployment/k8s:maturity-baselines_maturity-nv-check-20261110181528_Deployment_maturity-http#21d03ca41b95",
+      "target": "Metric/neuvector_1d13098c7bdabccf7fb9#7f9487586996",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/workload.json#/workload",
+          "evidence": "{\"app_ports\": {\"TCP\": \"8080\"}, \"applications\": [\"TCP/8080\"], \"author\": \"\", \"baseline_profile\": \"basic\", \"cap_change_mode\": true, \"cap_quarantine\": true, \"cap_sniff\": true, \"children\": null, \"cpus\": \"\", \"created_at\": \"2026-11-10T18:15:29Z\", \"display_name\": \"http\", \"domain\": \"maturity-nv-check-20261110181528\", \"enforcer_id\": \"4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f\", \"enforcer_name\": \"neuvector-enforcer-pod-rzgz7\", \"exit_code\": 0, \"finished_at\": \"\", \"groups\": [\"nv.maturity-http.maturity-nv-check-20261110181528\", \"containers\"], \"has_datapath\": false, \"host_id\": \"maturity-baselines-control-plane:\", \"host_name\": \"maturity-baselines-control-plane\", \"id\": \"99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"image_created_at\": \"2026-09-23T21:09:27Z\", \"image_digest\": \"sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8\", \"image_id\": \"7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"image_reg_scanned\": false, \"image_repo_digests\": null, \"interfaces\": {\"eth0\": [{\"gateway\": \"\", \"ip\": \"10.244.0.10\", \"ip_prefix\": 24}]}, \"labels\": {\"io.cri-containerd.kind\": \"container\", \"io.kubernetes.container.name\": \"http\", \"io.kubernetes.pod.name\": \"maturity-http-65b79d96bd-zsbx9\", \"io.kubernetes.pod.namespace\": \"maturity-nv-check-20261110181528\", \"io.kubernetes.pod.uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"memory_limit\": 134217728, \"name\": \"k8s_http_maturity-http-65b79d96bd-zsbx9_maturity-nv-check-20261110181528_078edf97-4cae-4354-b3e9-a0f1f844a168_0\", \"network_mode\": \"/proc/9797/ns/net\", \"platform_role\": \"\", \"pod_name\": \"maturity-http-65b79d96bd-zsbx9\", \"policy_mode\": \"Discover\", \"ports\": [], \"privileged\": false, \"profile_mode\": \"Discover\", \"run_as_root\": true, \"running\": true, \"scan_summary\": {\"base_os\": \"\", \"critical\": 0, \"cvedb_create_time\": \"\", \"high\": 0, \"medium\": 0, \"result\": \"\", \"scanned_at\": \"\", \"scanned_timestamp\": 0, \"scanner_version\": \"\", \"status\": \"\"}, \"secured_at\": \"2026-11-10T18:15:31Z\", \"service\": \"maturity-http.maturity-nv-check-20261110181528\", \"service_account\": \"default\", \"service_group\": \"nv.maturity-http.maturity-nv-check-20261110181528\", \"service_mesh\": false, \"service_mesh_sidecar\": false, \"share_ns_with\": \"5e982b1e271e401381f8caab778252d8d5575906a132bf176d3c6263fdb69a84\", \"started_at\": \"2026-11-10T18:15:29Z\", \"state\": \"discover\"}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "pass"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/pods.json#/items/0",
+          "evidence": "{\"apiVersion\": \"v1\", \"kind\": \"Pod\", \"metadata\": {\"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generateName\": \"maturity-http-65b79d96bd-\", \"labels\": {\"app\": \"maturity-http\", \"pod-template-hash\": \"65b79d96bd\"}, \"name\": \"maturity-http-65b79d96bd-zsbx9\", \"namespace\": \"maturity-nv-check-20261110181528\", \"ownerReferences\": [{\"apiVersion\": \"apps/v1\", \"blockOwnerDeletion\": true, \"controller\": true, \"kind\": \"ReplicaSet\", \"name\": \"maturity-http-65b79d96bd\", \"uid\": \"2189ecd9-b993-4157-b2db-0972621616ef\"}], \"resourceVersion\": \"230099\", \"uid\": \"078edf97-4cae-4354-b3e9-a0f1f844a168\"}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\", \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true}]}], \"dnsPolicy\": \"ClusterFirst\", \"enableServiceLinks\": true, \"nodeName\": \"maturity-baselines-control-plane\", \"preemptionPolicy\": \"PreemptLowerPriority\", \"priority\": 0, \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"serviceAccount\": \"default\", \"serviceAccountName\": \"default\", \"terminationGracePeriodSeconds\": 30, \"tolerations\": [{\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/not-ready\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}, {\"effect\": \"NoExecute\", \"key\": \"node.kubernetes.io/unreachable\", \"operator\": \"Exists\", \"tolerationSeconds\": 300}], \"volumes\": [{\"name\": \"kube-api-access-8j5hj\", \"projected\": {\"defaultMode\": 420, \"sources\": [{\"serviceAccountToken\": {\"expirationSeconds\": 3607, \"path\": \"token\"}}, {\"configMap\": {\"items\": [{\"key\": \"ca.crt\", \"path\": \"ca.crt\"}], \"name\": \"kube-root-ca.crt\"}}, {\"downwardAPI\": {\"items\": [{\"fieldRef\": {\"apiVersion\": \"v1\", \"fieldPath\": \"metadata.namespace\"}, \"path\": \"namespace\"}]}}]}}]}, \"status\": {\"conditions\": [{\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:29Z\", \"status\": \"True\", \"type\": \"PodReadyToStartContainers\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"Initialized\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"Ready\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"status\": \"True\", \"type\": \"ContainersReady\"}, {\"lastProbeTime\": null, \"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"status\": \"True\", \"type\": \"PodScheduled\"}], \"containerStatuses\": [{\"containerID\": \"containerd://99b88f42ce44202eb0d2a36605c193f0a6bc0490a66df2cff3a06b7c96765925\", \"image\": \"docker.io/library/node:22-alpine\", \"imageID\": \"sha256:7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c\", \"lastState\": {}, \"name\": \"http\", \"ready\": true, \"restartCount\": 0, \"started\": true, \"state\": {\"running\": {\"startedAt\": \"2026-11-10T18:15:29Z\"}}, \"volumeMounts\": [{\"mountPath\": \"/var/run/secrets/kubernetes.io/serviceaccount\", \"name\": \"kube-api-access-8j5hj\", \"readOnly\": true, \"recursiveReadOnly\": \"Disabled\"}]}], \"hostIP\": \"172.20.0.2\", \"hostIPs\": [{\"ip\": \"172.20.0.2\"}], \"phase\": \"Running\", \"podIP\": \"10.244.0.10\", \"podIPs\": [{\"ip\": \"10.244.0.10\"}], \"qosClass\": \"Burstable\", \"startTime\": \"2026-11-10T18:15:28Z\"}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "pass"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        },
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/deployment.json#",
+          "evidence": "{\"apiVersion\": \"apps/v1\", \"kind\": \"Deployment\", \"metadata\": {\"annotations\": {\"deployment.kubernetes.io/revision\": \"1\", \"kubectl.kubernetes.io/last-applied-configuration\": \"{\\\"apiVersion\\\":\\\"apps/v1\\\",\\\"kind\\\":\\\"Deployment\\\",\\\"metadata\\\":{\\\"annotations\\\":{},\\\"name\\\":\\\"maturity-http\\\",\\\"namespace\\\":\\\"maturity-nv-check-20261110181528\\\"},\\\"spec\\\":{\\\"replicas\\\":1,\\\"selector\\\":{\\\"matchLabels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"template\\\":{\\\"metadata\\\":{\\\"labels\\\":{\\\"app\\\":\\\"maturity-http\\\"}},\\\"spec\\\":{\\\"containers\\\":[{\\\"args\\\":[\\\"require('http').createServer((q,s)=\\\\u003e{s.writeHead(200);s.end('maturity-ok\\\\\\\\n')}).listen(8080,'0.0.0.0')\\\"],\\\"command\\\":[\\\"node\\\",\\\"-e\\\"],\\\"image\\\":\\\"node:22-alpine\\\",\\\"imagePullPolicy\\\":\\\"Never\\\",\\\"name\\\":\\\"http\\\",\\\"ports\\\":[{\\\"containerPort\\\":8080}],\\\"readinessProbe\\\":{\\\"httpGet\\\":{\\\"path\\\":\\\"/\\\",\\\"port\\\":8080},\\\"periodSeconds\\\":2},\\\"resources\\\":{\\\"limits\\\":{\\\"cpu\\\":\\\"200m\\\",\\\"memory\\\":\\\"128Mi\\\"},\\\"requests\\\":{\\\"cpu\\\":\\\"50m\\\",\\\"memory\\\":\\\"64Mi\\\"}},\\\"securityContext\\\":{\\\"runAsUser\\\":0}}]}}}}\\n\"}, \"creationTimestamp\": \"2026-11-10T18:15:28Z\", \"generation\": 1, \"name\": \"maturity-http\", \"namespace\": \"maturity-nv-check-20261110181528\", \"resourceVersion\": \"230101\", \"uid\": \"7d99684b-35a5-4c90-a15a-048da8b97805\"}, \"spec\": {\"progressDeadlineSeconds\": 600, \"replicas\": 1, \"revisionHistoryLimit\": 10, \"selector\": {\"matchLabels\": {\"app\": \"maturity-http\"}}, \"strategy\": {\"rollingUpdate\": {\"maxSurge\": \"25%\", \"maxUnavailable\": \"25%\"}, \"type\": \"RollingUpdate\"}, \"template\": {\"metadata\": {\"creationTimestamp\": null, \"labels\": {\"app\": \"maturity-http\"}}, \"spec\": {\"containers\": [{\"args\": [\"require('http').createServer((q,s)=>{s.writeHead(200);s.end('maturity-ok\\\\n')}).listen(8080,'0.0.0.0')\"], \"command\": [\"node\", \"-e\"], \"image\": \"node:22-alpine\", \"imagePullPolicy\": \"Never\", \"name\": \"http\", \"ports\": [{\"containerPort\": 8080, \"protocol\": \"TCP\"}], \"readinessProbe\": {\"failureThreshold\": 3, \"httpGet\": {\"path\": \"/\", \"port\": 8080, \"scheme\": \"HTTP\"}, \"periodSeconds\": 2, \"successThreshold\": 1, \"timeoutSeconds\": 1}, \"resources\": {\"limits\": {\"cpu\": \"200m\", \"memory\": \"128Mi\"}, \"requests\": {\"cpu\": \"50m\", \"memory\": \"64Mi\"}}, \"securityContext\": {\"runAsUser\": 0}, \"terminationMessagePath\": \"/dev/termination-log\", \"terminationMessagePolicy\": \"File\"}], \"dnsPolicy\": \"ClusterFirst\", \"restartPolicy\": \"Always\", \"schedulerName\": \"default-scheduler\", \"securityContext\": {}, \"terminationGracePeriodSeconds\": 30}}}, \"status\": {\"availableReplicas\": 1, \"conditions\": [{\"lastTransitionTime\": \"2026-11-10T18:15:30Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"Deployment has minimum availability.\", \"reason\": \"MinimumReplicasAvailable\", \"status\": \"True\", \"type\": \"Available\"}, {\"lastTransitionTime\": \"2026-11-10T18:15:28Z\", \"lastUpdateTime\": \"2026-11-10T18:15:30Z\", \"message\": \"ReplicaSet \\\"maturity-http-65b79d96bd\\\" has successfully progressed.\", \"reason\": \"NewReplicaSetAvailable\", \"status\": \"True\", \"type\": \"Progressing\"}], \"observedGeneration\": 1, \"readyReplicas\": 1, \"replicas\": 1, \"updatedReplicas\": 1}}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "pass"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    },
+    {
+      "source": "Infrastructure/k8s:maturity-baselines#2f7eee8cdb1d",
+      "target": "Metric/neuvector_192c7dd08bd769434a8b#c166ddc47ad4",
+      "relation": "OBSERVED_BY",
+      "attributes": {},
+      "provenance": [
+        {
+          "source_type": "runtime",
+          "source_id": "results/commercial/neuvector/20261111-paired/before/score-metrics.json#/security_scores",
+          "evidence": "{\"admission_rule_score\": 4, \"exposure_score\": 2, \"exposure_score_by_100\": 5, \"new_service_mode_score\": 4, \"privileged_container_score\": 4, \"run_as_root_score\": 4, \"security_risk_score\": 44, \"service_mode_score\": 26, \"service_mode_score_by_100\": 100, \"vulnerability_score\": 0, \"vulnerability_score_by_100\": 0}",
+          "confidence": 1.0,
+          "detail": {
+            "tool": "neuvector",
+            "evidence_type": "tool-output",
+            "interpretation": "measured"
+          },
+          "collected_at": "2026-11-11T05:55:51+00:00"
+        }
+      ]
+    }
+  ]
+}

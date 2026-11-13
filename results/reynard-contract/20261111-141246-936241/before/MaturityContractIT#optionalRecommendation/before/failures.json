@@ -1,0 +1,61 @@
+[ {
+  "faultload" : [ {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "mode" : "HTTP_ERROR(500)"
+  } ],
+  "observed" : [ {
+    "point" : "frontend:GET /#0",
+    "response_status" : 500,
+    "response_duration_ms" : 5.944338,
+    "fault" : "HTTP_ERROR(500)"
+  }, {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "response_status" : 500,
+    "injected_fault" : "HTTP_ERROR(500)"
+  } ]
+}, {
+  "faultload" : [ {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "mode" : "HTTP_ERROR(504)"
+  } ],
+  "observed" : [ {
+    "point" : "frontend:GET /#0",
+    "response_status" : 500,
+    "response_duration_ms" : 4.614022,
+    "fault" : "HTTP_ERROR(500)"
+  }, {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "response_status" : 504,
+    "injected_fault" : "HTTP_ERROR(504)"
+  } ]
+}, {
+  "faultload" : [ {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "mode" : "HTTP_ERROR(503)"
+  } ],
+  "observed" : [ {
+    "point" : "frontend:GET /#0",
+    "response_status" : 500,
+    "response_duration_ms" : 4.58749,
+    "fault" : "HTTP_ERROR(500)"
+  }, {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "response_status" : 503,
+    "injected_fault" : "HTTP_ERROR(503)"
+  } ]
+}, {
+  "faultload" : [ {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "mode" : "HTTP_ERROR(502)"
+  } ],
+  "observed" : [ {
+    "point" : "frontend:GET /#0",
+    "response_status" : 500,
+    "response_duration_ms" : 5.095202,
+    "fault" : "HTTP_ERROR(500)"
+  }, {
+    "point" : "frontend:GET /#0>recommendations:GET /#0",
+    "response_status" : 502,
+    "injected_fault" : "HTTP_ERROR(502)"
+  } ]
+} ]

@@ -1,0 +1,6 @@
+- name: Fetch service settings
+  uri:
+    url: https://config.example.org/settings
+    user: "{{ service_user }}"
+    password: "{{ vault_service_password }}"
+    method: GET

@@ -1,0 +1,2 @@
+{"int":{"is_main_process":1,"pid":1,"time":1794506850,"value":11208},"normal":{"command":"run","event":"count.startup_mem_avail_MB","hostname":"6ad960fcceab","infer_commit":"410a6d93"},"tags":{}}
+{"int":{"is_main_process":1,"pid":1,"time":1794506850,"value":4},"normal":{"command":"run","event":"time.run_prologue","hostname":"6ad960fcceab","infer_commit":"410a6d93"},"tags":{}}

@@ -1,0 +1,5 @@
+Analyzing D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\parfum-smoke\control-before.Dockerfile
+Found 1 smells in D:\文档\ChatGPT\成熟度评估\results\academic-review-20261113\parfum-smoke\control-before.Dockerfile.
+[VIOLATION] -> npmCacheCleanUseForce at 2:4 to 2:19
+        Using the --force flag with npm cache clean can override the default behavior of npm and force the cache to be cleaned, even if it is not more than 3 days old or if npm is in a "read-only" state.
+                npm cache clean

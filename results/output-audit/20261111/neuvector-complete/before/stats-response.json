@@ -1,0 +1,51 @@
+{
+  "http_status": 200,
+  "body": {
+    "id": "0c5ae211d1cf627c5b50be25d9500cf78c0acc28f3d6ce5dd3ec5be4b8f873ad",
+    "read_at": "2026-11-11T06:15:54Z",
+    "stats": {
+      "interval": 5,
+      "span_1": {
+        "byte_in": 0,
+        "byte_out": 0,
+        "cpu": 0,
+        "memory": 0,
+        "packet_in": 0,
+        "packet_out": 0,
+        "session_in": 0,
+        "session_out": 0
+      },
+      "span_12": {
+        "byte_in": 0,
+        "byte_out": 0,
+        "cpu": 0,
+        "memory": 0,
+        "packet_in": 0,
+        "packet_out": 0,
+        "session_in": 0,
+        "session_out": 0
+      },
+      "span_60": {
+        "byte_in": 0,
+        "byte_out": 0,
+        "cpu": 0,
+        "memory": 0,
+        "packet_in": 0,
+        "packet_out": 0,
+        "session_in": 0,
+        "session_out": 0
+      },
+      "total": {
+        "byte_in": 507,
+        "byte_out": 689,
+        "cpu": 0,
+        "cur_session_in": 1,
+        "memory": 0,
+        "packet_in": 6,
+        "packet_out": 8,
+        "session_in": 1,
+        "session_out": 0
+      }
+    }
+  }
+}

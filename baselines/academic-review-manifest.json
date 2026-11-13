@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-13",
+  "decision": "User-selected academic pair: Infer/Pulse and feTruth",
+  "selected": [
+    "infer",
+    "fetruth"
+  ],
+  "commercial_selected": [
+    "appcat",
+    "neuvector"
+  ],
+  "criteria": {
+    "minimum_ccf": "B",
+    "minimum_ccf_A_count": 1,
+    "custom_business_rules": false,
+    "deployment_input_requirement": "covered by NeuVector in the complete four-baseline set; both academic methods use source-side evidence"
+  },
+  "infer": {
+    "ccf": "A",
+    "venue": "CAV 2020",
+    "doi": "10.1007/978-3-030-53291-8_14",
+    "executed_version": "1.3.0",
+    "status": "prior pinned public-tool functional reproduction reused; not exact paper-artifact replication",
+    "results": "results/academic-20261113/infer/summary.json"
+  },
+  "fetruth": {
+    "ccf": "A",
+    "venue": "ESEC/FSE 2023 Research Papers",
+    "doi": "10.1145/3611643.3616353",
+    "repository": "https://github.com/lyoubo/feTruth",
+    "source_workflow_commit": "b4f8d5c4fbf655e5615246f2849ccc3825db8e7d",
+    "paper_artifact": {
+      "tag": "v1.0.0",
+      "commit": "a89644539cd639ee7adc21543aae20f8895c47d6",
+      "zenodo": "https://doi.org/10.5281/zenodo.8267775",
+      "mode": "original code and pretrained model on original extracted jsoup features",
+      "result": "16 recommendations, all match archived output"
+    },
+    "status": "Existing paper replay and source-workflow evidence reused; model/workflow differences retained; not full-paper retraining",
+    "results": "results/fetruth-project/20261111-141246-910830/summary.json",
+    "paper_results": "results/fetruth-paper/comparison.json",
+    "jsoup_source_results": "results/fetruth/execution.json",
+    "model_diagnostics": "results/fetruth-model-diagnostics.json"
+  },
+  "historical_candidates": [
+    "glitch",
+    "baro",
+    "parfum",
+    "kivi",
+    "reynard"
+  ],
+  "previous_reproduction_manifest": "baselines/selected-manifest.json",
+  "review": "docs/学术基线复审结论.md",
+  "input_output_catalog": "docs/基线输入输出清单.md",
+  "report": "docs/成熟度评估baseline调研结果.md",
+  "not_claimed": [
+    "all-language support",
+    "confirmed defects from alert counts",
+    "automatic patch validation",
+    "new four-tool combined graph experiment",
+    "full-paper dataset reruns or model retraining",
+    "unified maturity score"
+  ]
+}

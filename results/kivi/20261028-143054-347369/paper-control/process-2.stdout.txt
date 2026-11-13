@@ -1,0 +1,293 @@
+
+(Spin Version 6.5.2 -- 18 September 2025)
+	+ Partial Order Reduction
+	+ Randomized Transition Ordering
+	+ Randomized Process Ordering
+
+Full statespace search for:
+	never claim         	- (none specified)
+	assertion violations	+
+	acceptance   cycles 	- (not selected)
+	invalid end states	+
+
+State-vector 972 byte, depth reached 221, errors: 0
+      669 states, stored
+      116 states, matched
+      785 transitions (= stored+matched)
+      703 atomic steps
+hash conflicts:         0 (resolved)
+
+Stats on memory usage (in Megabytes):
+    0.638	equivalent memory usage for states (stored*(State-vector + overhead))
+   14.670	actual memory usage for states
+  128.000	memory used for hash table (-w24)
+    6.867	memory used for DFS stack (-m100000)
+    2.477	memory lost to fragmentation
+  147.073	total actual memory usage
+
+
+unreached in proctype deploymentController
+	/opt/kivi/kivi/templates/../templates/deployment.pml:273, state 2026, "-end-"
+	(1 of 2026 states)
+unreached in proctype scheduler
+	/opt/kivi/kivi/templates/../templates/scheduler.pml:221, state 1254, "-end-"
+	(1 of 1254 states)
+unreached in proctype hpa
+	/opt/kivi/kivi/templates/../templates/hpa.pml:312, state 302, "-end-"
+	(1 of 302 states)
+unreached in proctype nodeController
+	/opt/kivi/kivi/templates/../templates/nodeController.pml:25, state 110, "D_STEP25"
+	/opt/kivi/kivi/templates/../templates/nodeController.pml:19, state 111, "((ncIndex!=ncTail))"
+	/opt/kivi/kivi/templates/../templates/nodeController.pml:59, state 115, "-end-"
+	(3 of 115 states)
+unreached in proctype kubelet
+	/opt/kivi/kivi/templates/../templates/kubelet.pml:114, state 438, "-end-"
+	(1 of 438 states)
+unreached in proctype descheduler
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:15, state 1, "printf('[**][Descheduler] Descheduler started!\n')"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:30, state 4, "i = 1"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:31, state 5, "j = 0"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:32, state 6, "i = 1"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:32, state 16, "((i<=3))"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:32, state 16, "else"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:54, state 26, "ii = 0"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:56, state 29, "jj = 0"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:61, state 32, "(1)"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:64, state 34, "printf('[*Warning] Unknown types of deschedule Plugins!\n')"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:59, state 35, "((deschedulerProfiles[ii].deschedulePlugins[jj]==1))"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:59, state 35, "else"
+	/opt/kivi/kivi/templates/../templates/descheduler.pml:72, state 52, "jj = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:172, state 57, "i = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:174, state 60, "duplicatePods[i].exist = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:175, state 61, "j = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:177, state 64, "k = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:177, state 67, "k = (k+1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:193, state 96, "j = (j+1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:38, state 118, "(((pods[j].status==0)||(pods[j].status==3)))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:38, state 118, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:59, state 120, "(1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:208, state 125, "duplicatePods[pods[j].workloadId].exist = 1"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:209, state 126, "duplicatePods[pods[j].workloadId].nodePods[i].numPods = (duplicatePods[pods[j].workloadId].nodePods[i].numPods+1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:211, state 128, "duplicateKeysMap[pods[j].workloadId] = 1"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:206, state 129, "((duplicateKeysMap[pods[j].workloadId]==1))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:206, state 129, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:197, state 137, "((j<=6))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:197, state 137, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:216, state 140, "(1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:93, state 153, "matchingNodes = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:93, state 154, "m = 1"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:96, state 159, "((nodes[m].status!=1))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:96, state 159, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:114, state 168, "n = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:118, state 172, "k = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:114, state 191, "((n<=(podTemplates[d[i].podTemplateId].numRules-1)))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:114, state 191, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:134, state 200, "(1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:93, state 202, "m = (m+1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:93, state 205, "((m<=3))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:93, state 205, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:146, state 215, "n = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:147, state 216, "k = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:148, state 217, "matchingNodes = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:92, state 218, "m = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:232, state 222, "upperAvg = 0"
+	/opt/kivi/kivi/templates/../templates/util.pml:58, state 227, "upperAvg = ((ownerKeyOccurence[i]/targetNodes)+1)"
+	/opt/kivi/kivi/templates/../templates/util.pml:55, state 231, "(((ownerKeyOccurence[i]%targetNodes)==0))"
+	/opt/kivi/kivi/templates/../templates/util.pml:55, state 231, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:241, state 236, "k = 1"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:249, state 241, "flag = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:69, state 244, "flag = 1"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:71, state 246, "printf('[*][Descheduler] Pod %d on node %d pending for deletion!\n',k,pods[k].loc)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:74, state 248, "pods[k].status = 3"
+	/opt/kivi/kivi/templates/../templates/util.pml:292, state 323, "D_STEP292"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:77, state 324, "nodePodCount[pods[k].loc] = (nodePodCount[pods[k].loc]+1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:67, state 328, "((((nodePodCount[pods[k].loc]+1)>5000)||((namespacePodCount[podsStable[k].namespace]+1)>5000)))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:67, state 328, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:244, state 340, "((count<(duplicatePods[i].nodePods[j].numPods-(upperAvg-1))))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:244, state 340, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:241, state 345, "((k<=6))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:241, state 345, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:239, state 349, "(((duplicatePods[i].nodePods[j].numPods>0)&&((duplicatePods[i].nodePods[j].numPods+1)>upperAvg)))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:239, state 349, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:267, state 351, "(1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:224, state 358, "((targetNodes<2))"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:224, state 358, "else"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:218, state 365, "i = (i+1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:279, state 374, "duplicatePods[i].exist = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:280, state 375, "j = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:282, state 378, "k = 0"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:282, state 381, "k = (k+1)"
+	/opt/kivi/kivi/templates/../templates/deschedulerPlugins.pml:171, state 400, "ownerKeyOccurence[0] = 0"
+	/opt/kivi/temp/s3/3/main.pml:437, state 406, "i = (i+1)"
+	/opt/kivi/temp/s3/3/main.pml:444, state 417, "k = 1"
+	/opt/kivi/temp/s3/3/main.pml:446, state 420, "topologyValueToPods[k].numPods = 0"
+	/opt/kivi/temp/s3/3/main.pml:447, state 421, "p = 0"
+	/opt/kivi/temp/s3/3/main.pml:447, state 424, "p = (p+1)"
+	/opt/kivi/temp/s3/3/main.pml:444, state 433, "((k<=5))"
+	/opt/kivi/temp/s3/3/main.pml:444, state 433, "else"
+	/opt/kivi/temp/s3/3/main.pml:456, state 438, "sumValues = 0"
+	/opt/kivi/temp/s3/3/main.pml:456, state 439, "sumPods = 0"
+	/opt/kivi/temp/s3/3/main.pml:457, state 440, "sumValues = 0"
+	/opt/kivi/temp/s3/3/main.pml:458, state 441, "k = 1"
+	/opt/kivi/temp/s3/3/main.pml:462, state 445, "topologyValueToPods[nodesStable[k].labelKeyValue[podTemplates[i].topoSpreadConstraints[j].topologyKey]].exist = 1"
+	/opt/kivi/temp/s3/3/main.pml:38, state 471, "(((pods[k].status==0)||(pods[k].status==3)))"
+	/opt/kivi/temp/s3/3/main.pml:38, state 471, "else"
+	/opt/kivi/temp/s3/3/main.pml:475, state 474, "p = 0"
+	/opt/kivi/temp/s3/3/main.pml:475, state 485, "((p<=(podTemplates[i].topoSpreadConstraints[j].numMatchedLabel-1)))"
+	/opt/kivi/temp/s3/3/main.pml:475, state 485, "else"
+	/opt/kivi/temp/s3/3/main.pml:486, state 490, "topologyValueToPods[curVal].pods[k] = 1"
+	/opt/kivi/temp/s3/3/main.pml:487, state 491, "topologyValueToPods[curVal].numPods = (topologyValueToPods[curVal].numPods+1)"
+	/opt/kivi/temp/s3/3/main.pml:488, state 492, "sumPods = (sumPods+1)"
+	/opt/kivi/temp/s3/3/main.pml:317, state 508, "k = 1"
+	/opt/kivi/temp/s3/3/main.pml:321, state 512, "maxDomainSize = ( ((topologyValueToPods[k].numPods>maxDomainSize)) -> (topologyValueToPods[k].numPods) : (maxDomainSize) )"
+	/opt/kivi/temp/s3/3/main.pml:315, state 530, "minDomainSize = 6"
+	/opt/kivi/temp/s3/3/main.pml:359, state 535, "idealAvgFloor = (sumPods/sumValues)"
+	/opt/kivi/temp/s3/3/main.pml:360, state 536, "idealAvgCeil = 0"
+	/opt/kivi/temp/s3/3/main.pml:58, state 540, "idealAvgCeil = ((sumPods/sumValues)+1)"
+	/opt/kivi/temp/s3/3/main.pml:55, state 544, "(((sumPods%sumValues)==0))"
+	/opt/kivi/temp/s3/3/main.pml:55, state 544, "else"
+	/opt/kivi/temp/s3/3/main.pml:371, state 550, "sortedDomains[p].index = k"
+	/opt/kivi/temp/s3/3/main.pml:372, state 551, "sortedDomains[p].evictedNumPods = 0"
+	/opt/kivi/temp/s3/3/main.pml:373, state 552, "p = (p+1)"
+	/opt/kivi/temp/s3/3/main.pml:367, state 559, "((k<=5))"
+	/opt/kivi/temp/s3/3/main.pml:367, state 559, "else"
+	/opt/kivi/temp/s3/3/main.pml:344, state 569, "temp.numPods = sortedDomains[p].numPods"
+	/opt/kivi/temp/s3/3/main.pml:345, state 570, "sortedDomains[p].index = sortedDomains[(p+1)].index"
+	/opt/kivi/temp/s3/3/main.pml:346, state 571, "sortedDomains[p].numPods = sortedDomains[(p+1)].numPods"
+	/opt/kivi/temp/s3/3/main.pml:347, state 572, "sortedDomains[(p+1)].index = temp.index"
+	/opt/kivi/temp/s3/3/main.pml:348, state 573, "sortedDomains[(p+1)].numPods = temp.numPods"
+	/opt/kivi/temp/s3/3/main.pml:339, state 589
+	/opt/kivi/temp/s3/3/main.pml:33, state 608, "cur_min = (sortedDomains[p].numPods-idealAvgFloor)"
+	/opt/kivi/temp/s3/3/main.pml:58, state 613, "ceil_a = ((((sortedDomains[p].numPods-sortedDomains[k].numPods)-podTemplates[i].topoSpreadConstraints[j].maxSkew)/2)+1)"
+	/opt/kivi/temp/s3/3/main.pml:55, state 617, "(((((sortedDomains[p].numPods-sortedDomains[k].numPods)-podTemplates[i].topoSpreadConstraints[j].maxSkew)%2)==0))"
+	/opt/kivi/temp/s3/3/main.pml:55, state 617, "else"
+	/opt/kivi/temp/s3/3/main.pml:33, state 625, "cur_min = cur_min"
+	/opt/kivi/temp/s3/3/main.pml:416, state 635, "sortedDomains[p].evictedNumPods = (sortedDomains[p].evictedNumPods+cur_min)"
+	/opt/kivi/temp/s3/3/main.pml:419, state 636, "sortedDomains[p].numPods = (sortedDomains[p].numPods-cur_min)"
+	/opt/kivi/temp/s3/3/main.pml:420, state 637, "sortedDomains[k].numPods = (sortedDomains[k].numPods+cur_min)"
+	/opt/kivi/temp/s3/3/main.pml:429, state 646, "idealAvgFloor = 0"
+	/opt/kivi/temp/s3/3/main.pml:430, state 647, "ceil_a = 0"
+	/opt/kivi/temp/s3/3/main.pml:357, state 648, "idealAvgFloor = 0"
+	/opt/kivi/temp/s3/3/main.pml:502, state 649, "k = 0"
+	/opt/kivi/temp/s3/3/main.pml:504, state 652, "p = 1"
+	/opt/kivi/temp/s3/3/main.pml:506, state 657, "((count==sortedDomains[k].evictedNumPods))"
+	/opt/kivi/temp/s3/3/main.pml:506, state 657, "else"
+	/opt/kivi/temp/s3/3/main.pml:513, state 661, "count = (count+1)"
+	/opt/kivi/temp/s3/3/main.pml:514, state 662, "printf('[*][DeScheduler] Pod violating TopoSpread constraints (topoKey %d), Pod %d pending for deletion\n',podTemplates[i].topoSpreadConstraints[j].topologyKey,p)"
+	/opt/kivi/temp/s3/3/main.pml:521, state 679, "printf('[**][DeScheduler] Skipping constraint %d in podTemplates %d, it's balanced\n',j,i)"
+	/opt/kivi/temp/s3/3/main.pml:498, state 680, "((flag==0))"
+	/opt/kivi/temp/s3/3/main.pml:498, state 680, "else"
+	/opt/kivi/temp/s3/3/main.pml:442, state 687, "j = (j+1)"
+	/opt/kivi/temp/s3/3/main.pml:69, state 705, "flag = 1"
+	/opt/kivi/temp/s3/3/main.pml:71, state 707, "printf('[*][Descheduler] Pod %d on node %d pending for deletion!\n',i,pods[i].loc)"
+	/opt/kivi/temp/s3/3/main.pml:74, state 709, "pods[i].status = 3"
+	/opt/kivi/temp/s3/3/main.pml:292, state 784, "D_STEP292"
+	/opt/kivi/temp/s3/3/main.pml:77, state 785, "nodePodCount[pods[i].loc] = (nodePodCount[pods[i].loc]+1)"
+	/opt/kivi/temp/s3/3/main.pml:67, state 789, "((((nodePodCount[pods[i].loc]+1)>5000)||((namespacePodCount[podsStable[i].namespace]+1)>5000)))"
+	/opt/kivi/temp/s3/3/main.pml:67, state 789, "else"
+	/opt/kivi/temp/s3/3/main.pml:530, state 797, "((i<=6))"
+	/opt/kivi/temp/s3/3/main.pml:530, state 797, "else"
+	/opt/kivi/temp/s3/3/main.pml:437, state 800, "podsForEviction[0] = 0"
+	/opt/kivi/temp/s3/3/main.pml:79, state 801, "(1)"
+	/opt/kivi/temp/s3/3/main.pml:82, state 803, "printf('[*Warning] Unknown types of deschedule Plugins!\n')"
+	/opt/kivi/temp/s3/3/main.pml:75, state 804, "((deschedulerProfiles[ii].balancePlugins[jj]==1))"
+	/opt/kivi/temp/s3/3/main.pml:75, state 804, "((deschedulerProfiles[ii].balancePlugins[jj]==2))"
+	/opt/kivi/temp/s3/3/main.pml:75, state 804, "else"
+	/opt/kivi/temp/s3/3/main.pml:70, state 815, "((ii<=(1-1)))"
+	/opt/kivi/temp/s3/3/main.pml:70, state 815, "else"
+	/opt/kivi/temp/s3/3/main.pml:363, state 826, "D_STEP363"
+	/opt/kivi/temp/s3/3/main.pml:89, state 827, "i = 0"
+	/opt/kivi/temp/s3/3/main.pml:91, state 829, "ii = 0"
+	/opt/kivi/temp/s3/3/main.pml:92, state 830, "jj = 0"
+	/opt/kivi/temp/s3/3/main.pml:93, state 831, "k = 0"
+	/opt/kivi/temp/s3/3/main.pml:94, state 832, "p = 0"
+	/opt/kivi/temp/s3/3/main.pml:95, state 833, "count = 0"
+	/opt/kivi/temp/s3/3/main.pml:96, state 834, "flag = 0"
+	/opt/kivi/temp/s3/3/main.pml:22, state 835, "(((dsIndex!=dsTail)&&(((time-local_last_time)>=3000)||((((sIndex==sTail)&&(kblIndex==kblTail))&&(dcIndex==dcTail))&&(ncIndex==ncTail)))))"
+	/opt/kivi/temp/s3/3/main.pml:22, state 838, "(((dsIndex!=dsTail)&&(((time-local_last_time)>=3000)||((((sIndex==sTail)&&(kblIndex==kblTail))&&(dcIndex==dcTail))&&(ncIndex==ncTail)))))"
+	/opt/kivi/temp/s3/3/main.pml:104, state 839, "-end-"
+	(135 of 839 states)
+unreached in proctype maintenance
+	/opt/kivi/kivi/templates/../templates/event.pml:15, state 6, "printf('[***][maintenanceNode] # of %d nodes in maintenance\n',cur_node_in_maintenance)"
+	/opt/kivi/kivi/templates/../templates/event.pml:16, state 7, "(run maintenanceNode(i))"
+	/opt/kivi/kivi/templates/../templates/event.pml:13, state 8, "((((nodes[i].status==1)&&(nodes[i].maintained==0))&&(cur_node_in_maintenance<p)))"
+	/opt/kivi/kivi/templates/../templates/event.pml:19, state 16, "i = 0"
+	/opt/kivi/kivi/templates/../templates/event.pml:11, state 17, "i = 1"
+	/opt/kivi/kivi/templates/../templates/event.pml:21, state 18, "-end-"
+	(6 of 18 states)
+unreached in proctype maintenanceNode
+	/opt/kivi/kivi/templates/../templates/event.pml:28, state 3, "nodes[i].status = 0"
+	/opt/kivi/kivi/templates/../templates/util.pml:292, state 78, "D_STEP292"
+	/opt/kivi/kivi/templates/../templates/event.pml:34, state 81, "nodes[i].maintained = 1"
+	/opt/kivi/kivi/templates/../templates/event.pml:35, state 82, "cur_node_in_maintenance = (cur_node_in_maintenance-1)"
+	/opt/kivi/kivi/templates/../templates/event.pml:36, state 83, "printf('[*][maintenanceNode] end; %d; End maintenance for node %d\n',i,i)"
+	/opt/kivi/kivi/templates/../templates/event.pml:32, state 90, "((((time-local_last_time)>=600)||(((((ncIndex==ncTail)&&(hpaTail==hpaIndex))&&(sIndex==sTail))&&(kblIndex==kblTail))&&(dcIndex==dcTail))))"
+	/opt/kivi/kivi/templates/../templates/event.pml:27, state 92, "local_last_time = time"
+	/opt/kivi/kivi/templates/../templates/event.pml:45, state 93, "-end-"
+	(8 of 93 states)
+unreached in proctype nodeFailure
+	/opt/kivi/kivi/templates/../templates/event.pml:49, state 1, "nodes[i].status = 0"
+	/opt/kivi/kivi/templates/../templates/util.pml:292, state 76, "D_STEP292"
+	/opt/kivi/kivi/templates/../templates/event.pml:51, state 77, "nodes[i].status = 1"
+	/opt/kivi/kivi/templates/../templates/event.pml:52, state 78, "-end-"
+	(4 of 78 states)
+unreached in proctype eventCpuChange
+	(0 of 133 states)
+unreached in proctype applyDeployment
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:49, state 251, "D_STEP49"
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:101, state 252, "-end-"
+	(2 of 252 states)
+unreached in proctype createDeployment
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:108, state 148, "D_STEP108"
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:146, state 149, "-end-"
+	(2 of 149 states)
+unreached in proctype createTargetDeployment
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:153, state 85, "D_STEP153"
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:165, state 86, "-end-"
+	(2 of 86 states)
+unreached in proctype scaleDeployment
+	/opt/kivi/kivi/templates/../templates/util.pml:292, state 92, "D_STEP292"
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:192, state 93, "curD = 0"
+	/opt/kivi/kivi/templates/../templates/userCommand.pml:200, state 94, "-end-"
+	(3 of 94 states)
+unreached in proctype podCpuChangeWithPattern
+	/opt/kivi/temp/s3/3/event.pml:87, state 4, "j = 0"
+	/opt/kivi/temp/s3/3/event.pml:88, state 5, "flag = 0"
+	/opt/kivi/temp/s3/3/event.pml:89, state 7, "j = 1"
+	/opt/kivi/temp/s3/3/event.pml:81, state 129, "(1)"
+	/opt/kivi/temp/s3/3/event.pml:102, state 132, "-end-"
+	(5 of 132 states)
+unreached in proctype kernelPanic
+	/opt/kivi/temp/s3/3/event.pml:116, state 4, "nodes[i].status = 2"
+	/opt/kivi/kivi/templates/../templates/util.pml:292, state 79, "D_STEP292"
+	/opt/kivi/temp/s3/3/event.pml:114, state 84, "times = (times+1)"
+	/opt/kivi/temp/s3/3/event.pml:132, state 88, "printf('[*]node %d kernel panic recovered\n',i)"
+	/opt/kivi/temp/s3/3/event.pml:112, state 89, "(((nodes[i].status==1)&&(((nodes[i].cpuLeft*100)/nodes[i].cpu)<=2)))"
+	/opt/kivi/temp/s3/3/event.pml:112, state 89, "(((nodes[i].status==2)&&(((nodes[i].cpuLeft*100)/nodes[i].cpu)>2)))"
+	/opt/kivi/temp/s3/3/event.pml:136, state 92, "-end-"
+	(6 of 92 states)
+unreached in proctype checkOscillationReplicaNum
+	/opt/kivi/temp/s3/3/intentsCheck.pml:11, state 2, "printf('[**] Entering stage 2 for check!\n')"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:15, state 6, "printf('[*][checkOscillationReplicaNum] The number of replicas was oscillating, now %d\n',d[did].replicas)"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:13, state 7, "(((d[did].replicas==d[did].hpaSpec.minReplicas)||((d[did].replicas<=(d[did].hpaSpec.maxReplicas-3))&&!(loadChange))))"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:10, state 9, "((((d[did].hpaSpec.maxReplicas!=d[did].hpaSpec.minReplicas)&&(d[did].replicas==d[did].hpaSpec.maxReplicas))&&!(loadChange)))"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:20, state 11, "-end-"
+	(5 of 11 states)
+unreached in proctype checkMinReplicas
+	/opt/kivi/temp/s3/3/intentsCheck.pml:28, state 2, "printf('[**] Entering stage 2 for check! The deployment is table...\n')"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:32, state 6, "printf('[*][checkMinReplicas] The number of replicas in deployment %d is less than the minium/spec replicas! Now %d.\n',did,d[did].replicas)"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:30, state 7, "(((d[did].hpaSpec.isEnabled&&(d[did].replicas<d[did].hpaSpec.minReplicas))||(!(d[did].hpaSpec.isEnabled)&&(d[did].replicas<d[did].specReplicas))))"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:27, state 9, "(((init_status==1)&&((d[did].hpaSpec.isEnabled&&(d[did].replicas>=d[did].hpaSpec.minReplicas))||(!(d[did].hpaSpec.isEnabled)&&(d[did].replicas>=d[did].specReplicas)))))"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:37, state 11, "-end-"
+	(5 of 11 states)
+unreached in proctype checkExpReplicas
+	/opt/kivi/temp/s3/3/intentsCheck.pml:45, state 2, "printf('[**] Entering stage 2 for check! The deployment is table...\n')"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:49, state 6, "printf('[*][checkExpReplicas] The number of replicas in deployment %d is less than the expected replicas! Now %d, expected %d.\n',did,d[did].replicas,0)"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:47, state 7, "((d[did].replicas<0))"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:44, state 9, "(((init_status==1)&&(d[did].replicas>=0)))"
+	/opt/kivi/temp/s3/3/intentsCheck.pml:54, state 11, "-end-"
+	(5 of 11 states)
+unreached in init
+	(0 of 346 states)
+
+pan: elapsed time 0 seconds

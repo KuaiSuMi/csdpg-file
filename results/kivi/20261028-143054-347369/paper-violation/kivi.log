@@ -1,0 +1,31 @@
+Working on the intents: pod_always_schedulable 
+========================
+1 failure(s) are found!
+-----Failure #1-----
+Counterexample:
+[00][Scheduler] Scheduler started.
+[11][nodeController] Node controller started.
+[22] kubelet controller started.
+[33][HPA] HPA working on deployment 1
+[44][HPA] Got new desiredReplicas 5, was 5
+[55][HPA] HPA finished on deployment 1
+[66][eventCpuChange] Index 1 is selected
+[7][CPU Change] CPU change 2 on pod 2, now 10, and node 1, now 46
+[88][HPA] HPA working on deployment 1
+[99][HPA] Exceed the HPA tolerence
+[1010][HPA] Got new desiredReplicas 6, was 5
+[11][HPA] Need to rescale, pod number change from 5 to 6
+[1212][HPA] HPA finished on deployment 1
+[1313][Deployment] Start to work on deployment 1
+[14][Deployment] Too few replicas, need to create 1
+[15][Deployment] Adding a new pod 6 to deployment 1
+[1616][Scheduler] Attempting to schedule Pod 6
+[17][Scheduler - no_feasible_node] No feasible node!
+
+
+
+Summary:
+    1 failure(s) found!
+    Violating intent(s): pod_always_schedulable 
+    Elapsed time: 1.26 seconds
+

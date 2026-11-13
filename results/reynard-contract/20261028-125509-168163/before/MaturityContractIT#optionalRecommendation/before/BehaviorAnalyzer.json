@@ -1,0 +1,14 @@
+{
+  "max_arity" : {
+    "frontend:GET /#0" : 1
+  },
+  "failures" : [ {
+    "uid" : "frontend:GET /#0",
+    "mode" : "HTTP_ERROR(500)",
+    "causes" : [ {
+      "causes" : [ "frontend:GET /#0>recommendations:GET /#0" ],
+      "all_modes" : true
+    } ]
+  } ],
+  "resiliency" : [ ]
+}

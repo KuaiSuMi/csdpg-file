@@ -1,0 +1,118 @@
+05:16:07.901 WARN  Property 'sonar.working.directory' with value '/tmp/.scannerwork' is overridden with value '/tmp/sonarwork'
+05:16:07.908 INFO  Scanner configuration file: /opt/sonar-scanner/conf/sonar-scanner.properties
+05:16:07.909 INFO  Project root configuration file: NONE
+05:16:07.925 INFO  SonarScanner CLI 8.1.0.6389
+05:16:07.930 INFO  Linux 6.18.54.1-microsoft-standard-WSL2 amd64
+05:16:08.833 INFO  Communicating with SonarQube Community Build 26.10.0.133078
+05:16:08.834 INFO  JRE provisioning: os[linux], arch[x86_64]
+05:16:10.383 INFO  Starting SonarScanner Engine...
+05:16:10.383 INFO  Java 21.0.12.1 Eclipse Adoptium (64-bit)
+05:16:11.336 INFO  Load global settings
+05:16:11.446 INFO  Load global settings (done) | time=109ms
+05:16:11.449 INFO  Server id: 147B411E-AaE0VYrH975JNT4ZsVIu
+05:16:11.457 INFO  Loading required plugins
+05:16:11.457 INFO  Load plugins index
+05:16:11.482 INFO  Load plugins index (done) | time=24ms
+05:16:11.482 INFO  Load/download plugins
+05:16:11.725 INFO  Load/download plugins (done) | time=242ms
+05:16:11.964 INFO  Load project settings for component key: 'maturity-jsoup-1.15.3'
+05:16:11.994 INFO  Load project settings for component key: 'maturity-jsoup-1.15.3' (done) | time=30ms
+05:16:12.006 INFO  Process project properties
+05:16:12.018 INFO  Process project properties (done) | time=12ms
+05:16:12.027 INFO  Project key: maturity-jsoup-1.15.3
+05:16:12.027 INFO  Base dir: /usr/src
+05:16:12.027 INFO  Working dir: /tmp/sonarwork
+05:16:12.155 INFO  Load quality profiles
+05:16:12.309 INFO  Load quality profiles (done) | time=154ms
+05:16:12.334 INFO  Load active rules
+05:16:12.584 INFO  Load active rules (done) | time=249ms
+05:16:12.589 INFO  Load analysis cache
+05:16:12.611 INFO  Load analysis cache (2.9 kB) | time=22ms
+05:16:12.695 INFO  Preprocessing files...
+05:16:12.850 INFO  1 language detected in 75 preprocessed files (done) | time=154ms
+05:16:12.852 INFO  Loading plugins for detected languages
+05:16:12.852 INFO  Load/download plugins
+05:16:12.986 INFO  Load/download plugins (done) | time=133ms
+05:16:13.085 INFO  Load project repositories
+05:16:13.186 INFO  Load project repositories (done) | time=101ms
+05:16:13.211 INFO  Indexing files...
+05:16:13.211 INFO  Project configuration:
+05:16:13.457 INFO  75 files indexed (done) | time=245ms
+05:16:13.458 INFO  Quality profile for java: Sonar way core
+05:16:13.458 INFO  ------------- Run sensors on module maturity-jsoup-1.15.3
+05:16:13.519 INFO  Load metrics repository
+05:16:13.541 INFO  Load metrics repository (done) | time=22ms
+05:16:14.014 INFO  Sensor IaC YAML File Type Classification Sensor [iac]
+05:16:14.018 INFO  Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=3ms
+05:16:14.019 INFO  Sensor JavaSensor [java]
+05:16:14.210 INFO  Server-side caching is enabled. The Java analyzer will not try to leverage data from a previous analysis.
+05:16:14.211 INFO  Using ECJ batch to parse 75 Main java source files with batch size 207 KB.
+05:16:14.668 INFO  Starting batch processing.
+05:16:16.018 INFO  The Java analyzer cannot skip unchanged files in this context. A full analysis is performed for all files.
+05:16:28.169 INFO  100% analyzed
+05:16:28.169 INFO  Batch processing: Done.
+05:16:28.172 INFO  Did not optimize analysis for any files, performed a full analysis for all 75 files.
+05:16:28.173 WARN  Missing 'sonar.java.libraries' property. You might end up with less precise analysis results.
+05:16:28.174 WARN  Unresolved imports/types have been detected during analysis. Enable DEBUG mode to see them.
+05:16:28.174 WARN  Use of preview features have been detected during analysis. Enable DEBUG mode to see them.
+05:16:28.174 INFO  No "Test" source files to scan.
+05:16:28.174 INFO  No "Generated" source files to scan.
+05:16:28.175 INFO  Sensor JavaSensor [java] (done) | time=14156ms
+05:16:28.175 INFO  Sensor JaCoCo XML Report Importer [jacoco]
+05:16:28.176 INFO  'sonar.coverage.jacoco.xmlReportPaths' is not defined. Using default locations: target/site/jacoco/jacoco.xml,target/site/jacoco-it/jacoco.xml,build/reports/jacoco/test/jacocoTestReport.xml
+05:16:28.177 INFO  No report imported, no coverage information will be imported by JaCoCo XML Report Importer
+05:16:28.178 INFO  Sensor JaCoCo XML Report Importer [jacoco] (done) | time=2ms
+05:16:28.178 INFO  Sensor IaC hadolint report Sensor [iac]
+05:16:28.178 INFO  Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+05:16:28.178 INFO  Sensor Java Config Sensor [iac]
+05:16:28.178 INFO  There are no files to be analyzed for the Java language
+05:16:28.179 INFO  Sensor Java Config Sensor [iac] (done) | time=0ms
+05:16:28.179 INFO  Sensor IaC Docker Sensor [iac]
+05:16:28.182 INFO  There are no files to be analyzed for the Docker language
+05:16:28.182 INFO  Sensor IaC Docker Sensor [iac] (done) | time=3ms
+05:16:28.182 INFO  Sensor SurefireSensor [java]
+05:16:28.182 INFO  parsing [/usr/src/target/surefire-reports]
+05:16:28.183 INFO  Sensor SurefireSensor [java] (done) | time=1ms
+05:16:28.183 INFO  Sensor TextAndSecretsSensor [text]
+05:16:28.197 INFO  Available processors: 16
+05:16:28.197 INFO  Using 16 threads for analysis.
+05:16:28.394 INFO  The property "sonar.tests" is not set. To improve the analysis accuracy, we categorize a file as a test file if any of the following is true:
+  * The filename starts with "test"
+  * The filename contains "test." or "tests."
+  * Any directory in the file path is named: "doc", "docs", "test", "tests", "mock" or "mocks"
+  * Any directory in the file path has a name ending in "test" or "tests"
+
+05:16:28.413 INFO  Start fetching files for the text and secrets analysis
+05:16:28.419 INFO  Using Git CLI to retrieve dirty files
+05:16:28.425 WARN  Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+05:16:28.425 INFO  Starting the text and secrets analysis
+05:16:28.427 INFO  75 source files to be analyzed for the text and secrets analysis
+05:16:28.521 INFO  75/75 source files have been analyzed for the text and secrets analysis
+05:16:28.523 INFO  Sensor TextAndSecretsSensor [text] (done) | time=339ms
+05:16:28.524 INFO  ------------- Run sensors on project
+05:16:28.617 INFO  Sensor JaCoCo Aggregate XML Report Importer [jacoco]
+05:16:28.617 INFO  Sensor JaCoCo Aggregate XML Report Importer [jacoco] (done) | time=0ms
+05:16:28.618 INFO  Sensor IaC Project Sensor [iac]
+05:16:28.618 INFO  Sensor IaC Project Sensor [iac] (done) | time=1ms
+05:16:28.618 INFO  Sensor JavaProjectSensor [java]
+05:16:28.620 INFO  Sensor JavaProjectSensor [java] (done) | time=1ms
+05:16:28.620 INFO  Sensor Zero Coverage Sensor
+05:16:28.643 INFO  Sensor Zero Coverage Sensor (done) | time=22ms
+05:16:28.643 INFO  Sensor Java CPD Block Indexer
+05:16:28.956 INFO  Sensor Java CPD Block Indexer (done) | time=312ms
+05:16:28.956 INFO  ------------- Gather SCA dependencies on project
+05:16:28.962 INFO  Dependency analysis skipped
+05:16:28.963 INFO  SCM Publisher is disabled
+05:16:28.977 INFO  CPD Executor 20 files had no CPD blocks
+05:16:28.977 INFO  CPD Executor Calculating CPD for 55 files
+05:16:29.004 INFO  CPD Executor CPD calculation finished (done) | time=28ms
+05:16:29.305 INFO  Analysis report generated in 294ms, dir size=1.6 MB
+05:16:29.399 INFO  Analysis report compressed in 93ms, zip size=546.0 kB
+05:16:29.452 INFO  Analysis report uploaded in 52ms
+05:16:29.453 INFO  ------------- Check Quality Gate status
+05:16:29.453 INFO  Waiting for the analysis report to be processed (max 300s)
+05:16:34.516 INFO  QUALITY GATE STATUS: PASSED - View details on http://maturity-sonarqube:9000/dashboard?id=maturity-jsoup-1.15.3
+05:16:34.532 INFO  Analysis total time: 24.111 s
+05:16:34.533 INFO  SonarScanner Engine completed successfully
+05:16:34.570 INFO  EXECUTION SUCCESS
+05:16:34.570 INFO  Total time: 26.666s

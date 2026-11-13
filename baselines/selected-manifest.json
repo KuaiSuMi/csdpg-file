@@ -1,0 +1,108 @@
+{
+  "date": "2026-11-13",
+  "selected": [
+    "glitch",
+    "infer"
+  ],
+  "supplementary": [
+    "fetruth"
+  ],
+  "retired_from_general_baselines": [
+    "kivi",
+    "reynard"
+  ],
+  "excluded_by_user": [
+    "sonarqube"
+  ],
+  "criteria": {
+    "minimum_ccf": "B",
+    "minimum_ccf_A_count": 1,
+    "custom_business_rules": false,
+    "reuse": "same native checks across projects within supported technologies"
+  },
+  "repositories": {
+    "glitch": {
+      "url": "https://github.com/sr-lab/GLITCH.git",
+      "commit": "b518fb3ad3b9a45bf2b9aa0d3e1e452f8eb2d122",
+      "status": ""
+    },
+    "ansible-role-nginx": {
+      "url": "https://github.com/geerlingguy/ansible-role-nginx.git",
+      "commit": "5ff0b235006390a0d5666fd4cce7477410982cdf",
+      "status": ""
+    },
+    "ansible-role-redis": {
+      "url": "https://github.com/geerlingguy/ansible-role-redis.git",
+      "commit": "9e8c2faa4ed44add3860c117e708d9cbada99ff5",
+      "status": ""
+    },
+    "jsoup": {
+      "url": "https://github.com/jhy/jsoup.git",
+      "commit": "c5964172763e1495786ad584c368ac3346d0ca8c",
+      "status": ""
+    },
+    "commons-cli": {
+      "url": "https://github.com/apache/commons-cli.git",
+      "commit": "e81a871025cd2dd5bc1d3b473c3c495533e7b8f4",
+      "status": ""
+    },
+    "maturity-evaluate": {
+      "url": "https://github.com/xiaorenwu234/maturity-evaluate.git",
+      "commit": "116706ac26e17e782374c5b5229a93aef6bfa13f",
+      "status": ""
+    }
+  },
+  "tools": {
+    "glitch": {
+      "version": "v1.0.1",
+      "image": "maturity-glitch:1.0.1",
+      "venue": "ASE 2022 Research Papers",
+      "ccf": "A",
+      "doi": "10.1145/3551349.3556945",
+      "rules": "author default security checks",
+      "runtime": "Python 3.10.6",
+      "scope": "Ansible/Chef/Puppet; reproduced Ansible and Puppet upstream security tests"
+    },
+    "infer": {
+      "version": "1.3.0",
+      "image": "maturity-infer:1.3.0",
+      "analysis": "Pulse only",
+      "venue": "CAV 2020",
+      "ccf": "A",
+      "doi": "10.1007/978-3-030-53291-8_14",
+      "related_paper": "OOPSLA 2022, 10.1145/3527325; Pulse-X is a sibling prototype, not the executed binary",
+      "runtime": "Ubuntu 24.04, JDK 17",
+      "scope": "Java reproduced; official C/C++/ObjC support not tested here"
+    }
+  },
+  "downloads": [
+    {
+      "path": ".runtime/infer-download/infer-linux-x86_64-v1.3.0.tar.xz",
+      "url": "https://github.com/meta/infer/releases/download/v1.3.0/infer-linux-x86_64-v1.3.0.tar.xz",
+      "bytes": 275901768,
+      "sha256": "02be62ba931cb43e2d42bbf7abf4bd9a410cf8464cce5453934e25c90a825850"
+    },
+    {
+      "path": ".runtime/infer-download/deps/jsr305-3.0.2.jar",
+      "url": "https://repo.maven.apache.org/maven2/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar",
+      "sha256": "766ad2a0783f2687962c8ad74ceecc38a28b9f72a2d085ee438b7813e928d0c7"
+    }
+  ],
+  "results": {
+    "root": "results/academic-20261113",
+    "glitch": "results/academic-20261113/glitch/summary.json",
+    "infer": "results/academic-20261113/infer/summary.json"
+  },
+  "scope": {
+    "level": "pinned public-tool functional reproduction and cross-project execution",
+    "not_run": [
+      "full-paper datasets and precision/recall tables",
+      "team otel-demo",
+      "Python/FaaS",
+      "Chef execution",
+      "C/C++ execution"
+    ]
+  },
+  "history_manifest": "baselines/history/selected-manifest-20261028.json",
+  "purpose": "Historical GLITCH/Infer execution manifest; current selection is in academic-review-manifest.json"
+}

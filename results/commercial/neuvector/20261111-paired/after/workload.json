@@ -1,0 +1,82 @@
+{
+  "workload": {
+    "app_ports": {},
+    "applications": [],
+    "author": "",
+    "baseline_profile": "basic",
+    "cap_change_mode": true,
+    "cap_quarantine": true,
+    "cap_sniff": true,
+    "children": null,
+    "cpus": "",
+    "created_at": "2026-11-10T18:15:36Z",
+    "display_name": "http",
+    "domain": "maturity-nv-check-20261110181528",
+    "enforcer_id": "4ed666e04f2db42523b921626185a7a4d40f0af127119da67d7ad6c18720cc1f",
+    "enforcer_name": "neuvector-enforcer-pod-rzgz7",
+    "exit_code": 0,
+    "finished_at": "",
+    "groups": [
+      "containers",
+      "nv.maturity-http.maturity-nv-check-20261110181528"
+    ],
+    "has_datapath": false,
+    "host_id": "maturity-baselines-control-plane:",
+    "host_name": "maturity-baselines-control-plane",
+    "id": "8d8c336fc72f86e2da54237f960ecb631e151c360d45c1bace2bd090e7e0b90c",
+    "image": "docker.io/library/node:22-alpine",
+    "image_created_at": "2026-09-23T21:09:27Z",
+    "image_digest": "sha256:2c752226d477b4a886378baa95b9af252be59301b725fdb0b7e15208131505a8",
+    "image_id": "7c3b093add7c43400ee83b815ab2cda98794a10045bcf76ce9bb2f89b97cbc5c",
+    "image_reg_scanned": false,
+    "image_repo_digests": null,
+    "interfaces": {
+      "eth0": [
+        {
+          "gateway": "",
+          "ip": "10.244.0.11",
+          "ip_prefix": 24
+        }
+      ]
+    },
+    "labels": {
+      "io.cri-containerd.kind": "container",
+      "io.kubernetes.container.name": "http",
+      "io.kubernetes.pod.name": "maturity-http-6db7bc579c-dn9lv",
+      "io.kubernetes.pod.namespace": "maturity-nv-check-20261110181528",
+      "io.kubernetes.pod.uid": "0854b784-1f09-4623-9efc-469a76639d5e"
+    },
+    "memory_limit": 134217728,
+    "name": "k8s_http_maturity-http-6db7bc579c-dn9lv_maturity-nv-check-20261110181528_0854b784-1f09-4623-9efc-469a76639d5e_0",
+    "network_mode": "/proc/10217/ns/net",
+    "platform_role": "",
+    "pod_name": "maturity-http-6db7bc579c-dn9lv",
+    "policy_mode": "Discover",
+    "ports": [],
+    "privileged": false,
+    "profile_mode": "Discover",
+    "run_as_root": false,
+    "running": true,
+    "scan_summary": {
+      "base_os": "",
+      "critical": 0,
+      "cvedb_create_time": "",
+      "high": 0,
+      "medium": 0,
+      "result": "",
+      "scanned_at": "",
+      "scanned_timestamp": 0,
+      "scanner_version": "",
+      "status": ""
+    },
+    "secured_at": "2026-11-10T18:15:37Z",
+    "service": "maturity-http.maturity-nv-check-20261110181528",
+    "service_account": "default",
+    "service_group": "nv.maturity-http.maturity-nv-check-20261110181528",
+    "service_mesh": false,
+    "service_mesh_sidecar": false,
+    "share_ns_with": "bdbb8f54e3b8aea65d3095597fef0b8fb3ef2b5e9b864049b283f916b60e1884",
+    "started_at": "2026-11-10T18:15:36Z",
+    "state": "discover"
+  }
+}

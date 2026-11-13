@@ -1,0 +1,13 @@
+{
+  "max_arity" : {
+    "frontend:GET /#0" : 1
+  },
+  "failures" : [ ],
+  "resiliency" : [ {
+    "point" : "frontend:GET /#0",
+    "redundancies" : [ {
+      "redundancy" : [ "frontend:GET /#0>recommendations:GET /#0" ],
+      "all_modes" : true
+    } ]
+  } ]
+}

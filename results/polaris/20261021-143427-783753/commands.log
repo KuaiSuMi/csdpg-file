@@ -1,0 +1,5 @@
+.runtime/tools/kind.exe load docker-image node:22-alpine --name maturity-baselines
+Image: "node:22-alpine" with ID "sha256:0a7108bf6c7bf5de370ffb1a3ed6be93d405b43ff159f681a8d18c0e2bc2e402" not yet present on node "maturity-baselines-control-plane", loading...
+ERROR: failed to load image: command "docker exec --privileged -i maturity-baselines-control-plane ctr --namespace=k8s.io images import --all-platforms --digests --snapshotter=overlayfs -" failed with error: exit status 1
+
+Command Output: ctr: rpc error: code = NotFound desc = content digest sha256:099ba81786a642d2e5570f8a1825f4e932c94653273a3f2f5dcb42ea2d306435: not found

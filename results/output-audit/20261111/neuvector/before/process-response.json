@@ -1,0 +1,20 @@
+{
+  "http_status": 200,
+  "body": {
+    "processes": [
+      {
+        "action": "allow",
+        "cmdline": "node",
+        "group": 17947,
+        "name": "node",
+        "parent": 17896,
+        "pid": 17947,
+        "root": true,
+        "session": 17947,
+        "start_timestamp": 1794377650,
+        "status": "Sleeping",
+        "user": "root"
+      }
+    ]
+  }
+}

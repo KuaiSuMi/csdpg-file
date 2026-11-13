@@ -1,0 +1,10 @@
+- fileURI: D:\文档\ChatGPT\成熟度评估\baselines\fixtures\appcat\before\.mvn\wrapper\maven-wrapper.jar\maven-wrapper.jar
+  provider: java
+  dependencies:
+  - name: io.takari.maven-wrapper
+    version: 0.5.6
+    resolvedIdentifier: 99c11907918309fe94d7e7574a144c7c08077dd4
+    labels:
+    - konveyor.io/dep-source=open-source
+    - konveyor.io/language=java
+    prefix: file://C:\Users\YuRui\.m2\repository\io\takari\maven-wrapper\0.5.6

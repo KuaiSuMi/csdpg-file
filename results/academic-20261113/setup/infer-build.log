@@ -1,0 +1,46 @@
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 282B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/eclipse-temurin:17-jdk-noble@sha256:1bedb04434bd275ef072355e9caec2a22be5240fbe82ad51a59323f2bbcab4a6
+#2 DONE 0.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [internal] load build context
+#4 DONE 0.0s
+
+#5 [1/3] FROM docker.io/library/eclipse-temurin:17-jdk-noble@sha256:1bedb04434bd275ef072355e9caec2a22be5240fbe82ad51a59323f2bbcab4a6
+#5 resolve docker.io/library/eclipse-temurin:17-jdk-noble@sha256:1bedb04434bd275ef072355e9caec2a22be5240fbe82ad51a59323f2bbcab4a6 0.0s done
+#5 ...
+
+#4 [internal] load build context
+#4 transferring context: 57B done
+#4 DONE 0.1s
+
+#5 [1/3] FROM docker.io/library/eclipse-temurin:17-jdk-noble@sha256:1bedb04434bd275ef072355e9caec2a22be5240fbe82ad51a59323f2bbcab4a6
+#5 DONE 0.4s
+
+#6 [2/3] ADD infer-linux-x86_64-v1.3.0.tar.xz /opt/
+#6 DONE 19.9s
+
+#7 [3/3] WORKDIR /workspace
+#7 DONE 0.2s
+
+#8 exporting to image
+#8 exporting layers
+#8 exporting layers 37.5s done
+#8 exporting manifest sha256:5647165d69abb3a9bf14f00a54b01dcf328973ec55e8678885512e4c2c652cc1 0.0s done
+#8 exporting config sha256:ef6dc50e30775e4d92e24a442287bc034eadc576505be996ec4b6bde0886c4ca 0.0s done
+#8 exporting attestation manifest sha256:018bb3cb1424b0b23a057e73dbc45e0e109aeaf8cef3ab96e81ec2a8002a5efb
+#8 exporting attestation manifest sha256:018bb3cb1424b0b23a057e73dbc45e0e109aeaf8cef3ab96e81ec2a8002a5efb 0.1s done
+#8 exporting manifest list sha256:3955a2b64a1d773255a72994811c77f7fa56bb4a672fcdeb24074dd0761f9715 0.0s done
+#8 naming to docker.io/library/maturity-infer:1.3.0
+#8 naming to docker.io/library/maturity-infer:1.3.0 done
+#8 unpacking to docker.io/library/maturity-infer:1.3.0
+#8 unpacking to docker.io/library/maturity-infer:1.3.0 6.7s done
+#8 DONE 44.6s

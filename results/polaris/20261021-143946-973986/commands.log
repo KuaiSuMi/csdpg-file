@@ -1,0 +1,14 @@
+docker save --platform linux/amd64 -o D:\文档\ChatGPT\成熟度评估\.runtime\tools\node-amd64.tar node:22-alpine
+.runtime/tools/kind.exe load image-archive D:\文档\ChatGPT\成熟度评估\.runtime\tools\node-amd64.tar --name maturity-baselines
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines apply -f D:\文档\ChatGPT\成熟度评估\results\polaris\20261021-143946-973986\namespace.json
+namespace/maturity-audit unchanged
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines apply -f D:\文档\ChatGPT\成熟度评估\baselines\polaris\before.yaml
+deployment.apps/audit-demo configured
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit rollout status deployment/audit-demo --timeout=180s
+Waiting for deployment "audit-demo" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "audit-demo" rollout to finish: 1 old replicas are pending termination...
+deployment "audit-demo" successfully rolled out
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit get deployment,pods -o json
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit exec deployment/audit-demo -- node -e "fetch('http://127.0.0.1:8080/').then(async r=>{console.log(r.status,await r.text());if(r.status!==200)process.exit(1)})"
+.runtime/tools/polaris/polaris.exe audit --context kind-maturity-baselines --resource maturity-audit/Deployment.apps/v1/audit-demo --format json --output-file D:\文档\ChatGPT\成熟度评估\results\polaris\20261021-143946-973986\before.json
+time="2026-10-21T14:39:54+08:00" level=error msg="Error fetching Kubernetes resources could not find workload maturity-audit/Deployment.apps/v1/audit-demo: no matches for kind \"Deployment.apps\" in version \"v1\""

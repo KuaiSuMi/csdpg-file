@@ -1,0 +1,17 @@
+{
+  "date_local": "2026-11-11",
+  "checks": [
+    "Both paired native reproductions passed and raw evidence retained",
+    "Commercial aggregate equals the two archived baseline summaries",
+    "15 authored Markdown files checked: no broken local links",
+    "No obsolete commercial candidates in authored reports; original requirements preserved verbatim",
+    "Python reproduction scripts parsed successfully",
+    "AppCAT PowerShell reproduction script parsed successfully"
+  ],
+  "not_run": [
+    "Unchanged academic experiments and integration test suite",
+    "Full CIS or CVE assessment",
+    "Team production system, Python source or FaaS evaluation",
+    "Paid commercial subscription acceptance"
+  ]
+}

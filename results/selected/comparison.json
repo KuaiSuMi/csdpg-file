@@ -1,0 +1,345 @@
+{
+  "observations": [
+    {
+      "id": "Metric/designite_035ab8e4d63b436f2021#af587bf5e566",
+      "baseline": "designite",
+      "rule": "Unutilized Abstraction",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/designite_206b8dd0dd9b1926743e#86e6e21349c3",
+      "baseline": "designite",
+      "rule": "Magic Number",
+      "before_count": 4,
+      "after_count": 0,
+      "outcome": "not-observed-after"
+    },
+    {
+      "id": "Metric/designite_20757b3c3a7fb83647f6#74c2677846af",
+      "baseline": "designite",
+      "rule": "Unutilized Abstraction",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/designite_39586beb484b24912b88#4aef5223aa53",
+      "baseline": "designite",
+      "rule": "Magic Number",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "not-observed-after"
+    },
+    {
+      "id": "Metric/designite_63eb507441da45f92665#c404c4122c83",
+      "baseline": "designite",
+      "rule": "Magic Number",
+      "before_count": 4,
+      "after_count": 4,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/designite_dcdb898bb3e35ec0225e#798f7e04e56f",
+      "baseline": "designite",
+      "rule": "Magic Number",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "not-observed-after"
+    },
+    {
+      "id": "Metric/polaris_0739076ce7a8d7c3fc38#31fdfaee7d0e",
+      "baseline": "polaris",
+      "rule": "pullPolicyNotAlways",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_14803426c0e0d60bb706#a7cc26fc65d7",
+      "baseline": "polaris",
+      "rule": "deploymentMissingReplicas",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_19d71418195906d94d55#6053370e0f00",
+      "baseline": "polaris",
+      "rule": "runAsRootAllowed",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_19f59f595cf5f049b308#39ca0a8cc31e",
+      "baseline": "polaris",
+      "rule": "hostProcess",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_23ee19c3928ca594c2bb#311fb72c124b",
+      "baseline": "polaris",
+      "rule": "topologySpreadConstraint",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_2b18c2e14730d736a73b#13c49bc06d17",
+      "baseline": "polaris",
+      "rule": "missingPodDisruptionBudget",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_3371cf8cf6e53e309c07#b3ac21899fd2",
+      "baseline": "polaris",
+      "rule": "sensitiveContainerEnvVar",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_3ac576bd43b1232d609f#fe398af891f1",
+      "baseline": "polaris",
+      "rule": "hostIPCSet",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_3e7fcba59a6f9bf73811#a7fc97800273",
+      "baseline": "polaris",
+      "rule": "cpuRequestsMissing",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_4f36d7ad55cd27a3a6d4#381022b17e5d",
+      "baseline": "polaris",
+      "rule": "hostPortSet",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_5a65d044b34ca5d0485c#cf4a9a4a436f",
+      "baseline": "polaris",
+      "rule": "notReadOnlyRootFilesystem",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_63778065ef005d938b81#18d9d2476089",
+      "baseline": "polaris",
+      "rule": "pdbMinAvailableGreaterThanHPAMinReplicas",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_6c79cc08fbe54531b3dc#56ed75a658dc",
+      "baseline": "polaris",
+      "rule": "linuxHardening",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_856ac1900b80f802be3a#d93124a2c69e",
+      "baseline": "polaris",
+      "rule": "memoryLimitsMissing",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_a0ccd69f7a46f6c8e02f#7ba696690cfe",
+      "baseline": "polaris",
+      "rule": "missingNetworkPolicy",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_a224b936fd060c16beb8#57ec9265e6db",
+      "baseline": "polaris",
+      "rule": "memoryRequestsMissing",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_aa5bc2f94da91d261e39#7db3cc4af6b4",
+      "baseline": "polaris",
+      "rule": "procMount",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_ab8da00fe734f7769556#4f3d83a811c3",
+      "baseline": "polaris",
+      "rule": "privilegeEscalationAllowed",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_ac9cab044dd1d13f25d6#b4bff91fef94",
+      "baseline": "polaris",
+      "rule": "runAsPrivileged",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_adeaf33a4a00be7b9c56#42329f0b93b7",
+      "baseline": "polaris",
+      "rule": "tagNotSpecified",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_b01a7b10895af11c61f3#57f98d9e753a",
+      "baseline": "polaris",
+      "rule": "readinessProbeMissing",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_ba4e28716d4040e4abe0#52e198fe91e3",
+      "baseline": "polaris",
+      "rule": "hostPIDSet",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_c0e3380b881d4cfe25c9#a4970d681ee8",
+      "baseline": "polaris",
+      "rule": "insecureCapabilities",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_c71f14c55e05ac6239a9#1873499ca9c6",
+      "baseline": "polaris",
+      "rule": "livenessProbeMissing",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_d2317e9058f96ad44246#e5986e112deb",
+      "baseline": "polaris",
+      "rule": "cpuLimitsMissing",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_d8f445b114186967a7f0#bc274fcb076c",
+      "baseline": "polaris",
+      "rule": "metadataAndInstanceMismatched",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_e2d28c63e82e09f4c56d#a66bc09c73c3",
+      "baseline": "polaris",
+      "rule": "hostNetworkSet",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_ea6d5f0ae26a1462e2a0#6174fa1eac92",
+      "baseline": "polaris",
+      "rule": "priorityClassNotSet",
+      "before_count": 1,
+      "after_count": 1,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_f07f7805bfeedbc1179f#071a28290d2f",
+      "baseline": "polaris",
+      "rule": "dangerousCapabilities",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/polaris_f3e8364e6d61cf931b52#c194977893ab",
+      "baseline": "polaris",
+      "rule": "automountServiceAccountToken",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/polaris_f9f907ae57c76760e504#c9fee2ba5aa1",
+      "baseline": "polaris",
+      "rule": "hostPathSet",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/reynard_46524bc4bb2e237460f6#b1725d30c6ff",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/reynard_5dbcaf7f275320bd174f#3662ff8a903b",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 0,
+      "after_count": 0,
+      "outcome": "unchanged"
+    },
+    {
+      "id": "Metric/reynard_60bd66719c3d4aa7ac24#a4b449fe6e5f",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/reynard_baae9ee50d376ad56db4#a7fb2fb89d3c",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    },
+    {
+      "id": "Metric/reynard_fa03ee607ecfacbc142c#5ff220042b83",
+      "baseline": "reynard",
+      "rule": "optional-recommendation",
+      "before_count": 1,
+      "after_count": 0,
+      "outcome": "check-passed-after"
+    }
+  ],
+  "counts": {
+    "check-passed-after": 16,
+    "not-observed-after": 3,
+    "unchanged": 23
+  }
+}

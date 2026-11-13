@@ -1,0 +1,89 @@
+{
+  "scope": "selection smoke checks only; no image builds, functional tests or full reproduction",
+  "tool": "@tdurieux/docker-parfum@1.0.0",
+  "node": "v22.19.0",
+  "inputs": [
+    {
+      "name": "reynard-proxy",
+      "source": "baselines\\sources\\reynard\\instrumentation\\proxy\\Dockerfile",
+      "commit": "7fc79c85f5eefd766946a6d878abd441f7641f81",
+      "sha256": "35e37d2911f43b627bac691624854ac78ada63ed4f66ed387ee0532ac19535d3"
+    },
+    {
+      "name": "cinema-bookings",
+      "source": "baselines\\sources\\filibuster-corpus\\cinema-1\\services\\bookings\\Dockerfile",
+      "commit": "1e2e2fc490d928807d56688e1b6c9f5f504c4b24",
+      "sha256": "0fa035aadefea700fa050f234939a9454f08c8738d20367fc0ddaa3b40d26e06"
+    }
+  ],
+  "runs": [
+    {
+      "label": "rules",
+      "command": [
+        "node",
+        "D:\\文档\\ChatGPT\\成熟度评估\\.runtime\\academic-review-20261113\\parfum\\node_modules\\@tdurieux\\docker-parfum\\build\\cli\\index.js",
+        "rules"
+      ],
+      "returncode": 0,
+      "findings": null
+    },
+    {
+      "label": "reynard-proxy",
+      "command": [
+        "node",
+        "D:\\文档\\ChatGPT\\成熟度评估\\.runtime\\academic-review-20261113\\parfum\\node_modules\\@tdurieux\\docker-parfum\\build\\cli\\index.js",
+        "analyze",
+        "D:\\文档\\ChatGPT\\成熟度评估\\results\\academic-review-20261113\\parfum-smoke\\reynard-proxy.Dockerfile"
+      ],
+      "returncode": 0,
+      "findings": 0
+    },
+    {
+      "label": "cinema-bookings",
+      "command": [
+        "node",
+        "D:\\文档\\ChatGPT\\成熟度评估\\.runtime\\academic-review-20261113\\parfum\\node_modules\\@tdurieux\\docker-parfum\\build\\cli\\index.js",
+        "analyze",
+        "D:\\文档\\ChatGPT\\成熟度评估\\results\\academic-review-20261113\\parfum-smoke\\cinema-bookings.Dockerfile"
+      ],
+      "returncode": 0,
+      "findings": 0
+    },
+    {
+      "label": "control-before",
+      "command": [
+        "node",
+        "D:\\文档\\ChatGPT\\成熟度评估\\.runtime\\academic-review-20261113\\parfum\\node_modules\\@tdurieux\\docker-parfum\\build\\cli\\index.js",
+        "analyze",
+        "D:\\文档\\ChatGPT\\成熟度评估\\results\\academic-review-20261113\\parfum-smoke\\control-before.Dockerfile"
+      ],
+      "returncode": 0,
+      "findings": 1
+    },
+    {
+      "label": "control-repair",
+      "command": [
+        "node",
+        "D:\\文档\\ChatGPT\\成熟度评估\\.runtime\\academic-review-20261113\\parfum\\node_modules\\@tdurieux\\docker-parfum\\build\\cli\\index.js",
+        "repair",
+        "D:\\文档\\ChatGPT\\成熟度评估\\results\\academic-review-20261113\\parfum-smoke\\control-before.Dockerfile",
+        "-o",
+        "D:\\文档\\ChatGPT\\成熟度评估\\results\\academic-review-20261113\\parfum-smoke\\control-after.Dockerfile"
+      ],
+      "returncode": 0,
+      "findings": 1
+    },
+    {
+      "label": "control-after",
+      "command": [
+        "node",
+        "D:\\文档\\ChatGPT\\成熟度评估\\.runtime\\academic-review-20261113\\parfum\\node_modules\\@tdurieux\\docker-parfum\\build\\cli\\index.js",
+        "analyze",
+        "D:\\文档\\ChatGPT\\成熟度评估\\results\\academic-review-20261113\\parfum-smoke\\control-after.Dockerfile"
+      ],
+      "returncode": 0,
+      "findings": 0
+    }
+  ],
+  "rule_count": 32
+}

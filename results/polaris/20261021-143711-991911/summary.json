@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-21T06:37:18.843990+00:00",
+  "context": "kind-maturity-baselines",
+  "cases": {
+    "before": {
+      "score": 65,
+      "source_type": "ClusterNamespace",
+      "cluster_info": {
+        "Version": "1.32",
+        "Nodes": 1,
+        "Pods": 1,
+        "Namespaces": 1,
+        "Controllers": 9
+      },
+      "http": "200 ok"
+    },
+    "after": {
+      "score": 70,
+      "source_type": "ClusterNamespace",
+      "cluster_info": {
+        "Version": "1.32",
+        "Nodes": 1,
+        "Pods": 2,
+        "Namespaces": 1,
+        "Controllers": 9
+      },
+      "http": "200 ok"
+    }
+  }
+}

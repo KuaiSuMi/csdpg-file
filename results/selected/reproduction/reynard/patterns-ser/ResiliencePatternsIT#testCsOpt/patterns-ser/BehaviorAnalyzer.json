@@ -1,0 +1,62 @@
+{
+  "max_arity" : {
+    "a-backend:GET /{}#0" : 5,
+    "a-backend:GET /{}#0>c-fallback:GET /{b-retry:GET /:0}#0" : 1,
+    "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:0,c-fallback:GET /:0}#0" : 1,
+    "a-backend:GET /{}#0>c-fallback:GET /{b-retry:GET /:1}#0" : 1,
+    "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:1,c-fallback:GET /:0}#0" : 1
+  },
+  "failures" : [ {
+    "uid" : "a-backend:GET /{}#0",
+    "mode" : "HTTP_ERROR(500)",
+    "causes" : [ {
+      "causes" : [ "a-backend:GET /{}#0>b-retry:GET /{}#∞" ],
+      "all_modes" : true
+    }, {
+      "causes" : [ "a-backend:GET /{}#0>g-fallback-f:GET /{b-retry:GET /:0,c-fallback:GET /:0,e-propagate:GET /:0}#0", "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:0,c-fallback:GET /:0}#0" ],
+      "all_modes" : true
+    }, {
+      "causes" : [ "a-backend:GET /{}#0>b-retry:GET /{}#0", "a-backend:GET /{}#0>g-fallback-f:GET /{b-retry:GET /:1,c-fallback:GET /:0,e-propagate:GET /:0}#0", "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:1,c-fallback:GET /:0}#0" ],
+      "all_modes" : true
+    } ]
+  }, {
+    "uid" : "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:0,c-fallback:GET /:0}#0",
+    "mode" : "HTTP_ERROR(500)",
+    "causes" : [ {
+      "causes" : [ "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:0,c-fallback:GET /:0}#0>f-leaf:GET /{}#0" ],
+      "all_modes" : true
+    } ]
+  }, {
+    "uid" : "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:1,c-fallback:GET /:0}#0",
+    "mode" : "HTTP_ERROR(500)",
+    "causes" : [ {
+      "causes" : [ "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:1,c-fallback:GET /:0}#0>f-leaf:GET /{}#0" ],
+      "all_modes" : true
+    } ]
+  } ],
+  "resiliency" : [ {
+    "point" : "a-backend:GET /{}#0",
+    "redundancies" : [ {
+      "redundancy" : [ "a-backend:GET /{}#0>b-retry:GET /{}#0" ],
+      "all_modes" : true
+    }, {
+      "redundancy" : [ "a-backend:GET /{}#0>c-fallback:GET /{b-retry:GET /:0}#0" ],
+      "all_modes" : true
+    }, {
+      "redundancy" : [ "a-backend:GET /{}#0>e-propagate:GET /{b-retry:GET /:0,c-fallback:GET /:0}#0" ],
+      "all_modes" : true
+    } ]
+  }, {
+    "point" : "a-backend:GET /{}#0>c-fallback:GET /{b-retry:GET /:0}#0",
+    "redundancies" : [ {
+      "redundancy" : [ "a-backend:GET /{}#0>c-fallback:GET /{b-retry:GET /:0}#0>d-leaf:GET /{}#0" ],
+      "all_modes" : true
+    } ]
+  }, {
+    "point" : "a-backend:GET /{}#0>c-fallback:GET /{b-retry:GET /:1}#0",
+    "redundancies" : [ {
+      "redundancy" : [ "a-backend:GET /{}#0>c-fallback:GET /{b-retry:GET /:1}#0>d-leaf:GET /{}#0" ],
+      "all_modes" : true
+    } ]
+  } ]
+}

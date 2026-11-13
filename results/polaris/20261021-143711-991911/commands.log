@@ -1,0 +1,53 @@
+docker save --platform linux/amd64 -o D:\文档\ChatGPT\成熟度评估\.runtime\tools\node-amd64.tar node:22-alpine
+.runtime/tools/kind.exe load image-archive D:\文档\ChatGPT\成熟度评估\.runtime\tools\node-amd64.tar --name maturity-baselines
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines apply -f D:\文档\ChatGPT\成熟度评估\results\polaris\20261021-143711-991911\namespace.json
+namespace/maturity-audit created
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines apply -f D:\文档\ChatGPT\成熟度评估\baselines\polaris\before.yaml
+deployment.apps/audit-demo created
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit rollout status deployment/audit-demo --timeout=180s
+Waiting for deployment "audit-demo" rollout to finish: 0 of 1 updated replicas are available...
+deployment "audit-demo" successfully rolled out
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit get deployment,pods -o json
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit exec deployment/audit-demo -- node -e "fetch('http://127.0.0.1:8080/').then(async r=>{console.log(r.status,await r.text());if(r.status!==200)process.exit(1)})"
+.runtime/tools/polaris/polaris.exe audit --context kind-maturity-baselines --namespace maturity-audit --format json --output-file D:\文档\ChatGPT\成熟度评估\results\polaris\20261021-143711-991911\before.json
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading nodes"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading namespaces"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading pods"
+time="2026-10-21T14:37:20+08:00" level=info msg="Setting up restmapper"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading rbac.authorization.k8s.io/Role"
+time="2026-10-21T14:37:20+08:00" level=info msg="Skipping rbac.authorization.k8s.io/v1, Kind=ClusterRoleBinding because of auditing specific namespace"
+time="2026-10-21T14:37:20+08:00" level=info msg="Skipping rbac.authorization.k8s.io/v1, Kind=ClusterRole because of auditing specific namespace"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading autoscaling/HorizontalPodAutoscaler"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading rbac.authorization.k8s.io/RoleBinding"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading networking.k8s.io/Ingress"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading /ConfigMap"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading ServiceAccount"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading policy/PodDisruptionBudget"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading networking.k8s.io/NetworkPolicy"
+time="2026-10-21T14:37:20+08:00" level=info msg="Loading controllers"
+time="2026-10-21T14:37:20+08:00" level=info msg="Done loading Kubernetes resources"
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines apply -f D:\文档\ChatGPT\成熟度评估\baselines\polaris\after.yaml
+deployment.apps/audit-demo configured
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit rollout status deployment/audit-demo --timeout=180s
+Waiting for deployment "audit-demo" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "audit-demo" rollout to finish: 1 old replicas are pending termination...
+deployment "audit-demo" successfully rolled out
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit get deployment,pods -o json
+kubectl --kubeconfig D:\文档\ChatGPT\成熟度评估\.runtime\tools\maturity-kubeconfig --context kind-maturity-baselines -n maturity-audit exec deployment/audit-demo -- node -e "fetch('http://127.0.0.1:8080/').then(async r=>{console.log(r.status,await r.text());if(r.status!==200)process.exit(1)})"
+.runtime/tools/polaris/polaris.exe audit --context kind-maturity-baselines --namespace maturity-audit --format json --output-file D:\文档\ChatGPT\成熟度评估\results\polaris\20261021-143711-991911\after.json
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading nodes"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading namespaces"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading pods"
+time="2026-10-21T14:37:23+08:00" level=info msg="Setting up restmapper"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading networking.k8s.io/Ingress"
+time="2026-10-21T14:37:23+08:00" level=info msg="Skipping rbac.authorization.k8s.io/v1, Kind=ClusterRoleBinding because of auditing specific namespace"
+time="2026-10-21T14:37:23+08:00" level=info msg="Skipping rbac.authorization.k8s.io/v1, Kind=ClusterRole because of auditing specific namespace"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading networking.k8s.io/NetworkPolicy"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading rbac.authorization.k8s.io/RoleBinding"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading policy/PodDisruptionBudget"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading /ConfigMap"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading rbac.authorization.k8s.io/Role"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading autoscaling/HorizontalPodAutoscaler"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading ServiceAccount"
+time="2026-10-21T14:37:23+08:00" level=info msg="Loading controllers"
+time="2026-10-21T14:37:23+08:00" level=info msg="Done loading Kubernetes resources"
